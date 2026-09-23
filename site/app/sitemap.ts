@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/methodology/',
     '/guides/funeral-rule-rights/',
     '/guides/funeral-service-types/',
+    '/guides/funeral-glossary/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

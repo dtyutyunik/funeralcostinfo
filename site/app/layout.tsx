@@ -71,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><Link href="/methodology/">Methodology &amp; data</Link></li>
                   <li><Link href="/guides/funeral-rule-rights/">FTC Funeral Rule rights</Link></li>
                   <li><Link href="/guides/funeral-service-types/">Funeral service types</Link></li>
+                  <li><Link href="/guides/funeral-glossary/">Funeral terms glossary</Link></li>
                 </ul>
               </div>
               <div>
