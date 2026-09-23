@@ -29,8 +29,9 @@ export default function CalculatorPage() {
         <p className="answer-first">
           <strong>Quick answer:</strong> choose your state and service type below, add typical
           cemetery and cash-advance costs, and get a transparent modeled estimate — every number
-          labeled, every input cited. The national starting point is the NFDA 2023 median of $8,300
-          for a funeral with viewing and burial. Then print the receipt and compare it against
+          labeled, every input cited. The national starting point is the NFDA 2023 median of $8,300 —
+          $9,140 in August 2026 dollars after adjusting with the BLS funeral-expenses CPI — for a
+          funeral with viewing and burial. Then print the receipt and compare it against
           real General Price Lists from local funeral homes.
         </p>
         <Calculator defaultState="CA" />

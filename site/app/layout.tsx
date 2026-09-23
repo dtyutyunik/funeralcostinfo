@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | FuneralCostInfo',
   },
   description:
-    'Independent, modeled funeral-cost estimates for every U.S. state, built from 2024 BEA regional price parities and 2023 NFDA national medians. We take no money from funeral homes.',
+    'Independent, modeled funeral-cost estimates for every U.S. state, built from 2024 BEA regional price parities and 2023 NFDA national medians adjusted to August 2026 dollars via BLS funeral-expenses CPI. We take no money from funeral homes.',
   openGraph: {
     type: 'website',
     siteName: 'FuneralCostInfo',

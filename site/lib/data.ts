@@ -52,5 +52,5 @@ export function fmtRange(e: ServiceEstimate): string {
 
 /** Visible on every page: the data-vintage line (freshness is a trust issue). */
 export const VINTAGE_LABEL =
-  'Estimates modeled from 2024 BEA regional price parities and 2023 NFDA medians';
-export const VINTAGE_SHORT = 'BEA 2024 · NFDA 2023';
+  'NFDA 2023 medians adjusted to August 2026 dollars via BLS CPI for funeral expenses; 2024 BEA regional price parities';
+export const VINTAGE_SHORT = 'BEA 2024 · NFDA 2023 in Aug 2026 $';

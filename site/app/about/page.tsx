@@ -24,7 +24,8 @@ export default function AboutPage() {
         Funeral pricing is one of the least transparent consumer markets in the United States.
         Families typically arrange a funeral once or twice in a lifetime, under time pressure and
         grief, facing an industry where prices are rarely published online. The national median for
-        a funeral with viewing and burial is $8,300 (NFDA, 2023) — but without state-level context,
+        a funeral with viewing and burial is $9,140 (NFDA 2023 median, adjusted to August 2026
+        dollars) — but without state-level context,
         that number helps no one plan.
       </p>
       <p>

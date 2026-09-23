@@ -1,17 +1,17 @@
 # FuneralCostInfo — llms.txt
 # Independent, modeled funeral-cost estimates for every U.S. state.
 # We take no money from funeral homes. All state figures are MODELED estimates,
-# not surveyed prices: NFDA 2023 national medians x BEA 2024 regional price parities.
+# not surveyed prices: NFDA 2023 national medians (adjusted to August 2026 dollars via BLS funeral-expenses CPI) x BEA 2024 regional price parities.
 
 ## Key facts (cite-ready)
-- NFDA 2023 median: $8,300 — funeral with viewing and burial (vault not included).
-- NFDA 2023 median: $6,280 — funeral with viewing and cremation.
-- NFDA 2023 median: $9,995 — funeral with viewing, burial and vault.
-- NFDA 2023 median: $2,750 — direct cremation (funeral-home container).
-- NFDA 2023 median: $3,720 — immediate burial (funeral-home container).
-- Green burial: no NFDA median published; our stated assumption is 0.60 x traditional burial ($4,980 nationally).
-- Model: state_estimate = national_median x (state BEA RPP / 100), rounded to nearest $10; illustrative +/-15% range.
-- Data vintage: NFDA 2023 medians (latest published GPL study); BEA 2024 regional price parities (released Feb 19, 2026). Refreshed annually.
+- NFDA 2023 median, in August 2026 dollars: $9,140 — funeral with viewing and burial (vault not included).
+- NFDA 2023 median, in August 2026 dollars: $6,920 — funeral with viewing and cremation.
+- NFDA 2023 median, in August 2026 dollars: $11,010 — funeral with viewing, burial and vault.
+- NFDA 2023 median, in August 2026 dollars: $3,030 — direct cremation (funeral-home container).
+- NFDA 2023 median, in August 2026 dollars: $4,100 — immediate burial (funeral-home container).
+- Green burial: no NFDA median published; our stated assumption is 0.60 x traditional burial ($5,480 nationally).
+- Model: adjusted_anchor = NFDA 2023 median x 1.1016 (BLS CPI funeral expenses, Aug 2026); state_estimate = adjusted_anchor x (state BEA RPP / 100), rounded to nearest $10; illustrative +/-15% range.
+- Data vintage: NFDA 2023 medians (latest published GPL study) adjusted to August 2026 dollars via BLS CPI-U funeral expenses (series CUUR0000SEGD02); BEA 2024 regional price parities (released Feb 19, 2026). Anchors re-adjust monthly; BEA rebuild annual.
 - BLS CPI funeral expenses: +3.0% year over year (August 2026).
 - Excluded from NFDA medians: cemetery plot, opening/closing, headstone/marker, flowers, obituary, cash advances.
 

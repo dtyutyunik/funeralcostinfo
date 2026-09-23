@@ -1,307 +1,307 @@
 state_abbr,state_name,rpp_2024_all_items,service,point,low,high
-AL,Alabama,88.823,traditional_burial,7370,6260,8480
-AL,Alabama,88.823,burial_with_vault,8880,7550,10210
-AL,Alabama,88.823,cremation_with_service,5580,4740,6420
-AL,Alabama,88.823,direct_cremation,2440,2070,2810
-AL,Alabama,88.823,direct_burial,3300,2800,3790
-AL,Alabama,88.823,green_burial,4420,3760,5080
-AK,Alaska,102.359,traditional_burial,8500,7220,9780
-AK,Alaska,102.359,burial_with_vault,10230,8700,11760
-AK,Alaska,102.359,cremation_with_service,6430,5470,7390
-AK,Alaska,102.359,direct_cremation,2810,2390,3230
-AK,Alaska,102.359,direct_burial,3810,3240,4380
-AK,Alaska,102.359,green_burial,5100,4340,5860
-AZ,Arizona,100.677,traditional_burial,8360,7110,9610
-AZ,Arizona,100.677,burial_with_vault,10060,8550,11570
-AZ,Arizona,100.677,cremation_with_service,6320,5370,7270
-AZ,Arizona,100.677,direct_cremation,2770,2350,3190
-AZ,Arizona,100.677,direct_burial,3750,3190,4310
-AZ,Arizona,100.677,green_burial,5010,4260,5760
-AR,Arkansas,86.937,traditional_burial,7220,6140,8300
-AR,Arkansas,86.937,burial_with_vault,8690,7390,9990
-AR,Arkansas,86.937,cremation_with_service,5460,4640,6280
-AR,Arkansas,86.937,direct_cremation,2390,2030,2750
-AR,Arkansas,86.937,direct_burial,3230,2750,3710
-AR,Arkansas,86.937,green_burial,4330,3680,4980
-CA,California,110.72,traditional_burial,9190,7810,10570
-CA,California,110.72,burial_with_vault,11070,9410,12730
-CA,California,110.72,cremation_with_service,6950,5910,7990
-CA,California,110.72,direct_cremation,3040,2580,3500
-CA,California,110.72,direct_burial,4120,3500,4740
-CA,California,110.72,green_burial,5510,4680,6340
-CO,Colorado,103.052,traditional_burial,8550,7270,9830
-CO,Colorado,103.052,burial_with_vault,10300,8760,11840
-CO,Colorado,103.052,cremation_with_service,6470,5500,7440
-CO,Colorado,103.052,direct_cremation,2830,2410,3250
-CO,Colorado,103.052,direct_burial,3830,3260,4400
-CO,Colorado,103.052,green_burial,5130,4360,5900
-CT,Connecticut,103.61,traditional_burial,8600,7310,9890
-CT,Connecticut,103.61,burial_with_vault,10360,8810,11910
-CT,Connecticut,103.61,cremation_with_service,6510,5530,7490
-CT,Connecticut,103.61,direct_cremation,2850,2420,3280
-CT,Connecticut,103.61,direct_burial,3850,3270,4430
-CT,Connecticut,103.61,green_burial,5160,4390,5930
-DE,Delaware,99.808,traditional_burial,8280,7040,9520
-DE,Delaware,99.808,burial_with_vault,9980,8480,11480
-DE,Delaware,99.808,cremation_with_service,6270,5330,7210
-DE,Delaware,99.808,direct_cremation,2740,2330,3150
-DE,Delaware,99.808,direct_burial,3710,3150,4270
-DE,Delaware,99.808,green_burial,4970,4220,5720
-DC,District of Columbia,109.901,traditional_burial,9120,7750,10490
-DC,District of Columbia,109.901,burial_with_vault,10980,9330,12630
-DC,District of Columbia,109.901,cremation_with_service,6900,5860,7930
-DC,District of Columbia,109.901,direct_cremation,3020,2570,3470
-DC,District of Columbia,109.901,direct_burial,4090,3480,4700
-DC,District of Columbia,109.901,green_burial,5470,4650,6290
-FL,Florida,103.414,traditional_burial,8580,7290,9870
-FL,Florida,103.414,burial_with_vault,10340,8790,11890
-FL,Florida,103.414,cremation_with_service,6490,5520,7460
-FL,Florida,103.414,direct_cremation,2840,2410,3270
-FL,Florida,103.414,direct_burial,3850,3270,4430
-FL,Florida,103.414,green_burial,5150,4380,5920
-GA,Georgia,96.293,traditional_burial,7990,6790,9190
-GA,Georgia,96.293,burial_with_vault,9620,8180,11060
-GA,Georgia,96.293,cremation_with_service,6050,5140,6960
-GA,Georgia,96.293,direct_cremation,2650,2250,3050
-GA,Georgia,96.293,direct_burial,3580,3040,4120
-GA,Georgia,96.293,green_burial,4800,4080,5520
-HI,Hawaii,109.951,traditional_burial,9130,7760,10500
-HI,Hawaii,109.951,burial_with_vault,10990,9340,12640
-HI,Hawaii,109.951,cremation_with_service,6900,5860,7930
-HI,Hawaii,109.951,direct_cremation,3020,2570,3470
-HI,Hawaii,109.951,direct_burial,4090,3480,4700
-HI,Hawaii,109.951,green_burial,5480,4660,6300
-ID,Idaho,95.494,traditional_burial,7930,6740,9120
-ID,Idaho,95.494,burial_with_vault,9540,8110,10970
-ID,Idaho,95.494,cremation_with_service,6000,5100,6900
-ID,Idaho,95.494,direct_cremation,2630,2240,3020
-ID,Idaho,95.494,direct_burial,3550,3020,4080
-ID,Idaho,95.494,green_burial,4760,4050,5470
-IL,Illinois,99.958,traditional_burial,8300,7060,9540
-IL,Illinois,99.958,burial_with_vault,9990,8490,11490
-IL,Illinois,99.958,cremation_with_service,6280,5340,7220
-IL,Illinois,99.958,direct_cremation,2750,2340,3160
-IL,Illinois,99.958,direct_burial,3720,3160,4280
-IL,Illinois,99.958,green_burial,4980,4230,5730
-IN,Indiana,93.329,traditional_burial,7750,6590,8910
-IN,Indiana,93.329,burial_with_vault,9330,7930,10730
-IN,Indiana,93.329,cremation_with_service,5860,4980,6740
-IN,Indiana,93.329,direct_cremation,2570,2180,2960
-IN,Indiana,93.329,direct_burial,3470,2950,3990
-IN,Indiana,93.329,green_burial,4650,3950,5350
-IA,Iowa,87.762,traditional_burial,7280,6190,8370
-IA,Iowa,87.762,burial_with_vault,8770,7450,10090
-IA,Iowa,87.762,cremation_with_service,5510,4680,6340
-IA,Iowa,87.762,direct_cremation,2410,2050,2770
-IA,Iowa,87.762,direct_burial,3260,2770,3750
-IA,Iowa,87.762,green_burial,4370,3710,5030
-KS,Kansas,90.068,traditional_burial,7480,6360,8600
-KS,Kansas,90.068,burial_with_vault,9000,7650,10350
-KS,Kansas,90.068,cremation_with_service,5660,4810,6510
-KS,Kansas,90.068,direct_cremation,2480,2110,2850
-KS,Kansas,90.068,direct_burial,3350,2850,3850
-KS,Kansas,90.068,green_burial,4490,3820,5160
-KY,Kentucky,90.159,traditional_burial,7480,6360,8600
-KY,Kentucky,90.159,burial_with_vault,9010,7660,10360
-KY,Kentucky,90.159,cremation_with_service,5660,4810,6510
-KY,Kentucky,90.159,direct_cremation,2480,2110,2850
-KY,Kentucky,90.159,direct_burial,3350,2850,3850
-KY,Kentucky,90.159,green_burial,4490,3820,5160
-LA,Louisiana,88.207,traditional_burial,7320,6220,8420
-LA,Louisiana,88.207,burial_with_vault,8820,7500,10140
-LA,Louisiana,88.207,cremation_with_service,5540,4710,6370
-LA,Louisiana,88.207,direct_cremation,2430,2070,2790
-LA,Louisiana,88.207,direct_burial,3280,2790,3770
-LA,Louisiana,88.207,green_burial,4390,3730,5050
-ME,Maine,97.05,traditional_burial,8060,6850,9270
-ME,Maine,97.05,burial_with_vault,9700,8240,11160
-ME,Maine,97.05,cremation_with_service,6090,5180,7000
-ME,Maine,97.05,direct_cremation,2670,2270,3070
-ME,Maine,97.05,direct_burial,3610,3070,4150
-ME,Maine,97.05,green_burial,4830,4110,5550
-MD,Maryland,104.959,traditional_burial,8710,7400,10020
-MD,Maryland,104.959,burial_with_vault,10490,8920,12060
-MD,Maryland,104.959,cremation_with_service,6590,5600,7580
-MD,Maryland,104.959,direct_cremation,2890,2460,3320
-MD,Maryland,104.959,direct_burial,3900,3320,4480
-MD,Maryland,104.959,green_burial,5230,4450,6010
-MA,Massachusetts,105.757,traditional_burial,8780,7460,10100
-MA,Massachusetts,105.757,burial_with_vault,10570,8980,12160
-MA,Massachusetts,105.757,cremation_with_service,6640,5640,7640
-MA,Massachusetts,105.757,direct_cremation,2910,2470,3350
-MA,Massachusetts,105.757,direct_burial,3930,3340,4520
-MA,Massachusetts,105.757,green_burial,5270,4480,6060
-MI,Michigan,96.217,traditional_burial,7990,6790,9190
-MI,Michigan,96.217,burial_with_vault,9620,8180,11060
-MI,Michigan,96.217,cremation_with_service,6040,5130,6950
-MI,Michigan,96.217,direct_cremation,2650,2250,3050
-MI,Michigan,96.217,direct_burial,3580,3040,4120
-MI,Michigan,96.217,green_burial,4790,4070,5510
-MN,Minnesota,98.621,traditional_burial,8190,6960,9420
-MN,Minnesota,98.621,burial_with_vault,9860,8380,11340
-MN,Minnesota,98.621,cremation_with_service,6190,5260,7120
-MN,Minnesota,98.621,direct_cremation,2710,2300,3120
-MN,Minnesota,98.621,direct_burial,3670,3120,4220
-MN,Minnesota,98.621,green_burial,4910,4170,5650
-MS,Mississippi,86.953,traditional_burial,7220,6140,8300
-MS,Mississippi,86.953,burial_with_vault,8690,7390,9990
-MS,Mississippi,86.953,cremation_with_service,5460,4640,6280
-MS,Mississippi,86.953,direct_cremation,2390,2030,2750
-MS,Mississippi,86.953,direct_burial,3230,2750,3710
-MS,Mississippi,86.953,green_burial,4330,3680,4980
-MO,Missouri,90.817,traditional_burial,7540,6410,8670
-MO,Missouri,90.817,burial_with_vault,9080,7720,10440
-MO,Missouri,90.817,cremation_with_service,5700,4840,6550
-MO,Missouri,90.817,direct_cremation,2500,2120,2880
-MO,Missouri,90.817,direct_burial,3380,2870,3890
-MO,Missouri,90.817,green_burial,4520,3840,5200
-MT,Montana,94.645,traditional_burial,7860,6680,9040
-MT,Montana,94.645,burial_with_vault,9460,8040,10880
-MT,Montana,94.645,cremation_with_service,5940,5050,6830
-MT,Montana,94.645,direct_cremation,2600,2210,2990
-MT,Montana,94.645,direct_burial,3520,2990,4050
-MT,Montana,94.645,green_burial,4710,4000,5420
-NE,Nebraska,90.103,traditional_burial,7480,6360,8600
-NE,Nebraska,90.103,burial_with_vault,9010,7660,10360
-NE,Nebraska,90.103,cremation_with_service,5660,4810,6510
-NE,Nebraska,90.103,direct_cremation,2480,2110,2850
-NE,Nebraska,90.103,direct_burial,3350,2850,3850
-NE,Nebraska,90.103,green_burial,4490,3820,5160
-NV,Nevada,99.979,traditional_burial,8300,7060,9540
-NV,Nevada,99.979,burial_with_vault,9990,8490,11490
-NV,Nevada,99.979,cremation_with_service,6280,5340,7220
-NV,Nevada,99.979,direct_cremation,2750,2340,3160
-NV,Nevada,99.979,direct_burial,3720,3160,4280
-NV,Nevada,99.979,green_burial,4980,4230,5730
-NH,New Hampshire,104.165,traditional_burial,8650,7350,9950
-NH,New Hampshire,104.165,burial_with_vault,10410,8850,11970
-NH,New Hampshire,104.165,cremation_with_service,6540,5560,7520
-NH,New Hampshire,104.165,direct_cremation,2860,2430,3290
-NH,New Hampshire,104.165,direct_burial,3870,3290,4450
-NH,New Hampshire,104.165,green_burial,5190,4410,5970
-NJ,New Jersey,108.805,traditional_burial,9030,7680,10380
-NJ,New Jersey,108.805,burial_with_vault,10880,9250,12510
-NJ,New Jersey,108.805,cremation_with_service,6830,5810,7850
-NJ,New Jersey,108.805,direct_cremation,2990,2540,3440
-NJ,New Jersey,108.805,direct_burial,4050,3440,4660
-NJ,New Jersey,108.805,green_burial,5420,4610,6230
-NM,New Mexico,92.212,traditional_burial,7650,6500,8800
-NM,New Mexico,92.212,burial_with_vault,9220,7840,10600
-NM,New Mexico,92.212,cremation_with_service,5790,4920,6660
-NM,New Mexico,92.212,direct_cremation,2540,2160,2920
-NM,New Mexico,92.212,direct_burial,3430,2920,3940
-NM,New Mexico,92.212,green_burial,4590,3900,5280
-NY,New York,107.921,traditional_burial,8960,7620,10300
-NY,New York,107.921,burial_with_vault,10790,9170,12410
-NY,New York,107.921,cremation_with_service,6780,5760,7800
-NY,New York,107.921,direct_cremation,2970,2520,3420
-NY,New York,107.921,direct_burial,4010,3410,4610
-NY,New York,107.921,green_burial,5370,4560,6180
-NC,North Carolina,94.326,traditional_burial,7830,6660,9000
-NC,North Carolina,94.326,burial_with_vault,9430,8020,10840
-NC,North Carolina,94.326,cremation_with_service,5920,5030,6810
-NC,North Carolina,94.326,direct_cremation,2590,2200,2980
-NC,North Carolina,94.326,direct_burial,3510,2980,4040
-NC,North Carolina,94.326,green_burial,4700,4000,5400
-ND,North Dakota,88.959,traditional_burial,7380,6270,8490
-ND,North Dakota,88.959,burial_with_vault,8890,7560,10220
-ND,North Dakota,88.959,cremation_with_service,5590,4750,6430
-ND,North Dakota,88.959,direct_cremation,2450,2080,2820
-ND,North Dakota,88.959,direct_burial,3310,2810,3810
-ND,North Dakota,88.959,green_burial,4430,3770,5090
-OH,Ohio,92.774,traditional_burial,7700,6540,8860
-OH,Ohio,92.774,burial_with_vault,9270,7880,10660
-OH,Ohio,92.774,cremation_with_service,5830,4960,6700
-OH,Ohio,92.774,direct_cremation,2550,2170,2930
-OH,Ohio,92.774,direct_burial,3450,2930,3970
-OH,Ohio,92.774,green_burial,4620,3930,5310
-OK,Oklahoma,87.843,traditional_burial,7290,6200,8380
-OK,Oklahoma,87.843,burial_with_vault,8780,7460,10100
-OK,Oklahoma,87.843,cremation_with_service,5520,4690,6350
-OK,Oklahoma,87.843,direct_cremation,2420,2060,2780
-OK,Oklahoma,87.843,direct_burial,3270,2780,3760
-OK,Oklahoma,87.843,green_burial,4370,3710,5030
-OR,Oregon,103.361,traditional_burial,8580,7290,9870
-OR,Oregon,103.361,burial_with_vault,10330,8780,11880
-OR,Oregon,103.361,cremation_with_service,6490,5520,7460
-OR,Oregon,103.361,direct_cremation,2840,2410,3270
-OR,Oregon,103.361,direct_burial,3850,3270,4430
-OR,Oregon,103.361,green_burial,5150,4380,5920
-PA,Pennsylvania,97.572,traditional_burial,8100,6880,9320
-PA,Pennsylvania,97.572,burial_with_vault,9750,8290,11210
-PA,Pennsylvania,97.572,cremation_with_service,6130,5210,7050
-PA,Pennsylvania,97.572,direct_cremation,2680,2280,3080
-PA,Pennsylvania,97.572,direct_burial,3630,3090,4170
-PA,Pennsylvania,97.572,green_burial,4860,4130,5590
-RI,Rhode Island,102.28,traditional_burial,8490,7220,9760
-RI,Rhode Island,102.28,burial_with_vault,10220,8690,11750
-RI,Rhode Island,102.28,cremation_with_service,6420,5460,7380
-RI,Rhode Island,102.28,direct_cremation,2810,2390,3230
-RI,Rhode Island,102.28,direct_burial,3800,3230,4370
-RI,Rhode Island,102.28,green_burial,5090,4330,5850
-SC,South Carolina,93.749,traditional_burial,7780,6610,8950
-SC,South Carolina,93.749,burial_with_vault,9370,7960,10780
-SC,South Carolina,93.749,cremation_with_service,5890,5010,6770
-SC,South Carolina,93.749,direct_cremation,2580,2190,2970
-SC,South Carolina,93.749,direct_burial,3490,2970,4010
-SC,South Carolina,93.749,green_burial,4670,3970,5370
-SD,South Dakota,88.586,traditional_burial,7350,6250,8450
-SD,South Dakota,88.586,burial_with_vault,8850,7520,10180
-SD,South Dakota,88.586,cremation_with_service,5560,4730,6390
-SD,South Dakota,88.586,direct_cremation,2440,2070,2810
-SD,South Dakota,88.586,direct_burial,3300,2800,3790
-SD,South Dakota,88.586,green_burial,4410,3750,5070
-TN,Tennessee,91.87,traditional_burial,7630,6490,8770
-TN,Tennessee,91.87,burial_with_vault,9180,7800,10560
-TN,Tennessee,91.87,cremation_with_service,5770,4900,6640
-TN,Tennessee,91.87,direct_cremation,2530,2150,2910
-TN,Tennessee,91.87,direct_burial,3420,2910,3930
-TN,Tennessee,91.87,green_burial,4580,3890,5270
-TX,Texas,97.057,traditional_burial,8060,6850,9270
-TX,Texas,97.057,burial_with_vault,9700,8240,11160
-TX,Texas,97.057,cremation_with_service,6100,5180,7010
-TX,Texas,97.057,direct_cremation,2670,2270,3070
-TX,Texas,97.057,direct_burial,3610,3070,4150
-TX,Texas,97.057,green_burial,4830,4110,5550
-UT,Utah,98.864,traditional_burial,8210,6980,9440
-UT,Utah,98.864,burial_with_vault,9880,8400,11360
-UT,Utah,98.864,cremation_with_service,6210,5280,7140
-UT,Utah,98.864,direct_cremation,2720,2310,3130
-UT,Utah,98.864,direct_burial,3680,3130,4230
-UT,Utah,98.864,green_burial,4920,4180,5660
-VT,Vermont,97.958,traditional_burial,8130,6910,9350
-VT,Vermont,97.958,burial_with_vault,9790,8320,11260
-VT,Vermont,97.958,cremation_with_service,6150,5230,7070
-VT,Vermont,97.958,direct_cremation,2690,2290,3090
-VT,Vermont,97.958,direct_burial,3640,3090,4190
-VT,Vermont,97.958,green_burial,4880,4150,5610
-VA,Virginia,101.104,traditional_burial,8390,7130,9650
-VA,Virginia,101.104,burial_with_vault,10110,8590,11630
-VA,Virginia,101.104,cremation_with_service,6350,5400,7300
-VA,Virginia,101.104,direct_cremation,2780,2360,3200
-VA,Virginia,101.104,direct_burial,3760,3200,4320
-VA,Virginia,101.104,green_burial,5030,4280,5780
-WA,Washington,107.013,traditional_burial,8880,7550,10210
-WA,Washington,107.013,burial_with_vault,10700,9100,12300
-WA,Washington,107.013,cremation_with_service,6720,5710,7730
-WA,Washington,107.013,direct_cremation,2940,2500,3380
-WA,Washington,107.013,direct_burial,3980,3380,4580
-WA,Washington,107.013,green_burial,5330,4530,6130
-WV,West Virginia,89.497,traditional_burial,7430,6320,8540
-WV,West Virginia,89.497,burial_with_vault,8950,7610,10290
-WV,West Virginia,89.497,cremation_with_service,5620,4780,6460
-WV,West Virginia,89.497,direct_cremation,2460,2090,2830
-WV,West Virginia,89.497,direct_burial,3330,2830,3830
-WV,West Virginia,89.497,green_burial,4460,3790,5130
-WI,Wisconsin,94.095,traditional_burial,7810,6640,8980
-WI,Wisconsin,94.095,burial_with_vault,9400,7990,10810
-WI,Wisconsin,94.095,cremation_with_service,5910,5020,6800
-WI,Wisconsin,94.095,direct_cremation,2590,2200,2980
-WI,Wisconsin,94.095,direct_burial,3500,2980,4020
-WI,Wisconsin,94.095,green_burial,4690,3990,5390
-WY,Wyoming,92.691,traditional_burial,7690,6540,8840
-WY,Wyoming,92.691,burial_with_vault,9260,7870,10650
-WY,Wyoming,92.691,cremation_with_service,5820,4950,6690
-WY,Wyoming,92.691,direct_cremation,2550,2170,2930
-WY,Wyoming,92.691,direct_burial,3450,2930,3970
-WY,Wyoming,92.691,green_burial,4620,3930,5310
+AL,Alabama,88.823,traditional_burial,8120,6900,9340
+AL,Alabama,88.823,burial_with_vault,9780,8310,11250
+AL,Alabama,88.823,cremation_with_service,6150,5230,7070
+AL,Alabama,88.823,direct_cremation,2690,2290,3090
+AL,Alabama,88.823,direct_burial,3640,3090,4190
+AL,Alabama,88.823,green_burial,4870,4140,5600
+AK,Alaska,102.359,traditional_burial,9360,7960,10760
+AK,Alaska,102.359,burial_with_vault,11270,9580,12960
+AK,Alaska,102.359,cremation_with_service,7080,6020,8140
+AK,Alaska,102.359,direct_cremation,3100,2640,3560
+AK,Alaska,102.359,direct_burial,4200,3570,4830
+AK,Alaska,102.359,green_burial,5610,4770,6450
+AZ,Arizona,100.677,traditional_burial,9200,7820,10580
+AZ,Arizona,100.677,burial_with_vault,11080,9420,12740
+AZ,Arizona,100.677,cremation_with_service,6970,5920,8020
+AZ,Arizona,100.677,direct_cremation,3050,2590,3510
+AZ,Arizona,100.677,direct_burial,4130,3510,4750
+AZ,Arizona,100.677,green_burial,5520,4690,6350
+AR,Arkansas,86.937,traditional_burial,7950,6760,9140
+AR,Arkansas,86.937,burial_with_vault,9570,8130,11010
+AR,Arkansas,86.937,cremation_with_service,6020,5120,6920
+AR,Arkansas,86.937,direct_cremation,2630,2240,3020
+AR,Arkansas,86.937,direct_burial,3560,3030,4090
+AR,Arkansas,86.937,green_burial,4760,4050,5470
+CA,California,110.72,traditional_burial,10120,8600,11640
+CA,California,110.72,burial_with_vault,12190,10360,14020
+CA,California,110.72,cremation_with_service,7660,6510,8810
+CA,California,110.72,direct_cremation,3350,2850,3850
+CA,California,110.72,direct_burial,4540,3860,5220
+CA,California,110.72,green_burial,6070,5160,6980
+CO,Colorado,103.052,traditional_burial,9420,8010,10830
+CO,Colorado,103.052,burial_with_vault,11350,9650,13050
+CO,Colorado,103.052,cremation_with_service,7130,6060,8200
+CO,Colorado,103.052,direct_cremation,3120,2650,3590
+CO,Colorado,103.052,direct_burial,4230,3600,4860
+CO,Colorado,103.052,green_burial,5650,4800,6500
+CT,Connecticut,103.61,traditional_burial,9470,8050,10890
+CT,Connecticut,103.61,burial_with_vault,11410,9700,13120
+CT,Connecticut,103.61,cremation_with_service,7170,6090,8250
+CT,Connecticut,103.61,direct_cremation,3140,2670,3610
+CT,Connecticut,103.61,direct_burial,4250,3610,4890
+CT,Connecticut,103.61,green_burial,5680,4830,6530
+DE,Delaware,99.808,traditional_burial,9120,7750,10490
+DE,Delaware,99.808,burial_with_vault,10990,9340,12640
+DE,Delaware,99.808,cremation_with_service,6910,5870,7950
+DE,Delaware,99.808,direct_cremation,3020,2570,3470
+DE,Delaware,99.808,direct_burial,4090,3480,4700
+DE,Delaware,99.808,green_burial,5470,4650,6290
+DC,District of Columbia,109.901,traditional_burial,10040,8530,11550
+DC,District of Columbia,109.901,burial_with_vault,12100,10280,13910
+DC,District of Columbia,109.901,cremation_with_service,7610,6470,8750
+DC,District of Columbia,109.901,direct_cremation,3330,2830,3830
+DC,District of Columbia,109.901,direct_burial,4510,3830,5190
+DC,District of Columbia,109.901,green_burial,6020,5120,6920
+FL,Florida,103.414,traditional_burial,9450,8030,10870
+FL,Florida,103.414,burial_with_vault,11390,9680,13100
+FL,Florida,103.414,cremation_with_service,7160,6090,8230
+FL,Florida,103.414,direct_cremation,3130,2660,3600
+FL,Florida,103.414,direct_burial,4240,3600,4880
+FL,Florida,103.414,green_burial,5670,4820,6520
+GA,Georgia,96.293,traditional_burial,8800,7480,10120
+GA,Georgia,96.293,burial_with_vault,10600,9010,12190
+GA,Georgia,96.293,cremation_with_service,6660,5660,7660
+GA,Georgia,96.293,direct_cremation,2920,2480,3360
+GA,Georgia,96.293,direct_burial,3950,3360,4540
+GA,Georgia,96.293,green_burial,5280,4490,6070
+HI,Hawaii,109.951,traditional_burial,10050,8540,11560
+HI,Hawaii,109.951,burial_with_vault,12110,10290,13930
+HI,Hawaii,109.951,cremation_with_service,7610,6470,8750
+HI,Hawaii,109.951,direct_cremation,3330,2830,3830
+HI,Hawaii,109.951,direct_burial,4510,3830,5190
+HI,Hawaii,109.951,green_burial,6030,5130,6930
+ID,Idaho,95.494,traditional_burial,8730,7420,10040
+ID,Idaho,95.494,burial_with_vault,10510,8930,12090
+ID,Idaho,95.494,cremation_with_service,6610,5620,7600
+ID,Idaho,95.494,direct_cremation,2890,2460,3320
+ID,Idaho,95.494,direct_burial,3920,3330,4510
+ID,Idaho,95.494,green_burial,5230,4450,6010
+IL,Illinois,99.958,traditional_burial,9140,7770,10510
+IL,Illinois,99.958,burial_with_vault,11010,9360,12660
+IL,Illinois,99.958,cremation_with_service,6920,5880,7960
+IL,Illinois,99.958,direct_cremation,3030,2580,3480
+IL,Illinois,99.958,direct_burial,4100,3480,4720
+IL,Illinois,99.958,green_burial,5480,4660,6300
+IN,Indiana,93.329,traditional_burial,8530,7250,9810
+IN,Indiana,93.329,burial_with_vault,10280,8740,11820
+IN,Indiana,93.329,cremation_with_service,6460,5490,7430
+IN,Indiana,93.329,direct_cremation,2830,2410,3250
+IN,Indiana,93.329,direct_burial,3830,3260,4400
+IN,Indiana,93.329,green_burial,5110,4340,5880
+IA,Iowa,87.762,traditional_burial,8020,6820,9220
+IA,Iowa,87.762,burial_with_vault,9660,8210,11110
+IA,Iowa,87.762,cremation_with_service,6070,5160,6980
+IA,Iowa,87.762,direct_cremation,2660,2260,3060
+IA,Iowa,87.762,direct_burial,3600,3060,4140
+IA,Iowa,87.762,green_burial,4810,4090,5530
+KS,Kansas,90.068,traditional_burial,8230,7000,9460
+KS,Kansas,90.068,burial_with_vault,9920,8430,11410
+KS,Kansas,90.068,cremation_with_service,6230,5300,7160
+KS,Kansas,90.068,direct_cremation,2730,2320,3140
+KS,Kansas,90.068,direct_burial,3690,3140,4240
+KS,Kansas,90.068,green_burial,4940,4200,5680
+KY,Kentucky,90.159,traditional_burial,8240,7000,9480
+KY,Kentucky,90.159,burial_with_vault,9930,8440,11420
+KY,Kentucky,90.159,cremation_with_service,6240,5300,7180
+KY,Kentucky,90.159,direct_cremation,2730,2320,3140
+KY,Kentucky,90.159,direct_burial,3700,3140,4260
+KY,Kentucky,90.159,green_burial,4940,4200,5680
+LA,Louisiana,88.207,traditional_burial,8060,6850,9270
+LA,Louisiana,88.207,burial_with_vault,9710,8250,11170
+LA,Louisiana,88.207,cremation_with_service,6100,5180,7010
+LA,Louisiana,88.207,direct_cremation,2670,2270,3070
+LA,Louisiana,88.207,direct_burial,3620,3080,4160
+LA,Louisiana,88.207,green_burial,4830,4110,5550
+ME,Maine,97.05,traditional_burial,8870,7540,10200
+ME,Maine,97.05,burial_with_vault,10690,9090,12290
+ME,Maine,97.05,cremation_with_service,6720,5710,7730
+ME,Maine,97.05,direct_cremation,2940,2500,3380
+ME,Maine,97.05,direct_burial,3980,3380,4580
+ME,Maine,97.05,green_burial,5320,4520,6120
+MD,Maryland,104.959,traditional_burial,9590,8150,11030
+MD,Maryland,104.959,burial_with_vault,11560,9830,13290
+MD,Maryland,104.959,cremation_with_service,7260,6170,8350
+MD,Maryland,104.959,direct_cremation,3180,2700,3660
+MD,Maryland,104.959,direct_burial,4300,3660,4940
+MD,Maryland,104.959,green_burial,5750,4890,6610
+MA,Massachusetts,105.757,traditional_burial,9670,8220,11120
+MA,Massachusetts,105.757,burial_with_vault,11640,9890,13390
+MA,Massachusetts,105.757,cremation_with_service,7320,6220,8420
+MA,Massachusetts,105.757,direct_cremation,3200,2720,3680
+MA,Massachusetts,105.757,direct_burial,4340,3690,4990
+MA,Massachusetts,105.757,green_burial,5800,4930,6670
+MI,Michigan,96.217,traditional_burial,8790,7470,10110
+MI,Michigan,96.217,burial_with_vault,10590,9000,12180
+MI,Michigan,96.217,cremation_with_service,6660,5660,7660
+MI,Michigan,96.217,direct_cremation,2920,2480,3360
+MI,Michigan,96.217,direct_burial,3940,3350,4530
+MI,Michigan,96.217,green_burial,5270,4480,6060
+MN,Minnesota,98.621,traditional_burial,9010,7660,10360
+MN,Minnesota,98.621,burial_with_vault,10860,9230,12490
+MN,Minnesota,98.621,cremation_with_service,6820,5800,7840
+MN,Minnesota,98.621,direct_cremation,2990,2540,3440
+MN,Minnesota,98.621,direct_burial,4040,3430,4650
+MN,Minnesota,98.621,green_burial,5400,4590,6210
+MS,Mississippi,86.953,traditional_burial,7950,6760,9140
+MS,Mississippi,86.953,burial_with_vault,9570,8130,11010
+MS,Mississippi,86.953,cremation_with_service,6020,5120,6920
+MS,Mississippi,86.953,direct_cremation,2630,2240,3020
+MS,Mississippi,86.953,direct_burial,3570,3030,4110
+MS,Mississippi,86.953,green_burial,4770,4050,5490
+MO,Missouri,90.817,traditional_burial,8300,7060,9540
+MO,Missouri,90.817,burial_with_vault,10000,8500,11500
+MO,Missouri,90.817,cremation_with_service,6280,5340,7220
+MO,Missouri,90.817,direct_cremation,2750,2340,3160
+MO,Missouri,90.817,direct_burial,3720,3160,4280
+MO,Missouri,90.817,green_burial,4980,4230,5730
+MT,Montana,94.645,traditional_burial,8650,7350,9950
+MT,Montana,94.645,burial_with_vault,10420,8860,11980
+MT,Montana,94.645,cremation_with_service,6550,5570,7530
+MT,Montana,94.645,direct_cremation,2870,2440,3300
+MT,Montana,94.645,direct_burial,3880,3300,4460
+MT,Montana,94.645,green_burial,5190,4410,5970
+NE,Nebraska,90.103,traditional_burial,8240,7000,9480
+NE,Nebraska,90.103,burial_with_vault,9920,8430,11410
+NE,Nebraska,90.103,cremation_with_service,6240,5300,7180
+NE,Nebraska,90.103,direct_cremation,2730,2320,3140
+NE,Nebraska,90.103,direct_burial,3690,3140,4240
+NE,Nebraska,90.103,green_burial,4940,4200,5680
+NV,Nevada,99.979,traditional_burial,9140,7770,10510
+NV,Nevada,99.979,burial_with_vault,11010,9360,12660
+NV,Nevada,99.979,cremation_with_service,6920,5880,7960
+NV,Nevada,99.979,direct_cremation,3030,2580,3480
+NV,Nevada,99.979,direct_burial,4100,3480,4720
+NV,Nevada,99.979,green_burial,5480,4660,6300
+NH,New Hampshire,104.165,traditional_burial,9520,8090,10950
+NH,New Hampshire,104.165,burial_with_vault,11470,9750,13190
+NH,New Hampshire,104.165,cremation_with_service,7210,6130,8290
+NH,New Hampshire,104.165,direct_cremation,3160,2690,3630
+NH,New Hampshire,104.165,direct_burial,4270,3630,4910
+NH,New Hampshire,104.165,green_burial,5710,4850,6570
+NJ,New Jersey,108.805,traditional_burial,9940,8450,11430
+NJ,New Jersey,108.805,burial_with_vault,11980,10180,13780
+NJ,New Jersey,108.805,cremation_with_service,7530,6400,8660
+NJ,New Jersey,108.805,direct_cremation,3300,2800,3790
+NJ,New Jersey,108.805,direct_burial,4460,3790,5130
+NJ,New Jersey,108.805,green_burial,5960,5070,6850
+NM,New Mexico,92.212,traditional_burial,8430,7170,9690
+NM,New Mexico,92.212,burial_with_vault,10150,8630,11670
+NM,New Mexico,92.212,cremation_with_service,6380,5420,7340
+NM,New Mexico,92.212,direct_cremation,2790,2370,3210
+NM,New Mexico,92.212,direct_burial,3780,3210,4350
+NM,New Mexico,92.212,green_burial,5050,4290,5810
+NY,New York,107.921,traditional_burial,9860,8380,11340
+NY,New York,107.921,burial_with_vault,11880,10100,13660
+NY,New York,107.921,cremation_with_service,7470,6350,8590
+NY,New York,107.921,direct_cremation,3270,2780,3760
+NY,New York,107.921,direct_burial,4420,3760,5080
+NY,New York,107.921,green_burial,5910,5020,6800
+NC,North Carolina,94.326,traditional_burial,8620,7330,9910
+NC,North Carolina,94.326,burial_with_vault,10390,8830,11950
+NC,North Carolina,94.326,cremation_with_service,6530,5550,7510
+NC,North Carolina,94.326,direct_cremation,2860,2430,3290
+NC,North Carolina,94.326,direct_burial,3870,3290,4450
+NC,North Carolina,94.326,green_burial,5170,4390,5950
+ND,North Dakota,88.959,traditional_burial,8130,6910,9350
+ND,North Dakota,88.959,burial_with_vault,9790,8320,11260
+ND,North Dakota,88.959,cremation_with_service,6160,5240,7080
+ND,North Dakota,88.959,direct_cremation,2700,2300,3100
+ND,North Dakota,88.959,direct_burial,3650,3100,4200
+ND,North Dakota,88.959,green_burial,4870,4140,5600
+OH,Ohio,92.774,traditional_burial,8480,7210,9750
+OH,Ohio,92.774,burial_with_vault,10210,8680,11740
+OH,Ohio,92.774,cremation_with_service,6420,5460,7380
+OH,Ohio,92.774,direct_cremation,2810,2390,3230
+OH,Ohio,92.774,direct_burial,3800,3230,4370
+OH,Ohio,92.774,green_burial,5080,4320,5840
+OK,Oklahoma,87.843,traditional_burial,8030,6830,9230
+OK,Oklahoma,87.843,burial_with_vault,9670,8220,11120
+OK,Oklahoma,87.843,cremation_with_service,6080,5170,6990
+OK,Oklahoma,87.843,direct_cremation,2660,2260,3060
+OK,Oklahoma,87.843,direct_burial,3600,3060,4140
+OK,Oklahoma,87.843,green_burial,4810,4090,5530
+OR,Oregon,103.361,traditional_burial,9450,8030,10870
+OR,Oregon,103.361,burial_with_vault,11380,9670,13090
+OR,Oregon,103.361,cremation_with_service,7150,6080,8220
+OR,Oregon,103.361,direct_cremation,3130,2660,3600
+OR,Oregon,103.361,direct_burial,4240,3600,4880
+OR,Oregon,103.361,green_burial,5660,4810,6510
+PA,Pennsylvania,97.572,traditional_burial,8920,7580,10260
+PA,Pennsylvania,97.572,burial_with_vault,10740,9130,12350
+PA,Pennsylvania,97.572,cremation_with_service,6750,5740,7760
+PA,Pennsylvania,97.572,direct_cremation,2960,2520,3400
+PA,Pennsylvania,97.572,direct_burial,4000,3400,4600
+PA,Pennsylvania,97.572,green_burial,5350,4550,6150
+RI,Rhode Island,102.28,traditional_burial,9350,7950,10750
+RI,Rhode Island,102.28,burial_with_vault,11260,9570,12950
+RI,Rhode Island,102.28,cremation_with_service,7080,6020,8140
+RI,Rhode Island,102.28,direct_cremation,3100,2640,3560
+RI,Rhode Island,102.28,direct_burial,4190,3560,4820
+RI,Rhode Island,102.28,green_burial,5600,4760,6440
+SC,South Carolina,93.749,traditional_burial,8570,7280,9860
+SC,South Carolina,93.749,burial_with_vault,10320,8770,11870
+SC,South Carolina,93.749,cremation_with_service,6490,5520,7460
+SC,South Carolina,93.749,direct_cremation,2840,2410,3270
+SC,South Carolina,93.749,direct_burial,3840,3260,4420
+SC,South Carolina,93.749,green_burial,5140,4370,5910
+SD,South Dakota,88.586,traditional_burial,8100,6880,9320
+SD,South Dakota,88.586,burial_with_vault,9750,8290,11210
+SD,South Dakota,88.586,cremation_with_service,6130,5210,7050
+SD,South Dakota,88.586,direct_cremation,2680,2280,3080
+SD,South Dakota,88.586,direct_burial,3630,3090,4170
+SD,South Dakota,88.586,green_burial,4850,4120,5580
+TN,Tennessee,91.87,traditional_burial,8400,7140,9660
+TN,Tennessee,91.87,burial_with_vault,10110,8590,11630
+TN,Tennessee,91.87,cremation_with_service,6360,5410,7310
+TN,Tennessee,91.87,direct_cremation,2780,2360,3200
+TN,Tennessee,91.87,direct_burial,3770,3200,4340
+TN,Tennessee,91.87,green_burial,5030,4280,5780
+TX,Texas,97.057,traditional_burial,8870,7540,10200
+TX,Texas,97.057,burial_with_vault,10690,9090,12290
+TX,Texas,97.057,cremation_with_service,6720,5710,7730
+TX,Texas,97.057,direct_cremation,2940,2500,3380
+TX,Texas,97.057,direct_burial,3980,3380,4580
+TX,Texas,97.057,green_burial,5320,4520,6120
+UT,Utah,98.864,traditional_burial,9040,7680,10400
+UT,Utah,98.864,burial_with_vault,10880,9250,12510
+UT,Utah,98.864,cremation_with_service,6840,5810,7870
+UT,Utah,98.864,direct_cremation,3000,2550,3450
+UT,Utah,98.864,direct_burial,4050,3440,4660
+UT,Utah,98.864,green_burial,5420,4610,6230
+VT,Vermont,97.958,traditional_burial,8950,7610,10290
+VT,Vermont,97.958,burial_with_vault,10790,9170,12410
+VT,Vermont,97.958,cremation_with_service,6780,5760,7800
+VT,Vermont,97.958,direct_cremation,2970,2520,3420
+VT,Vermont,97.958,direct_burial,4020,3420,4620
+VT,Vermont,97.958,green_burial,5370,4560,6180
+VA,Virginia,101.104,traditional_burial,9240,7850,10630
+VA,Virginia,101.104,burial_with_vault,11130,9460,12800
+VA,Virginia,101.104,cremation_with_service,7000,5950,8050
+VA,Virginia,101.104,direct_cremation,3060,2600,3520
+VA,Virginia,101.104,direct_burial,4150,3530,4770
+VA,Virginia,101.104,green_burial,5540,4710,6370
+WA,Washington,107.013,traditional_burial,9780,8310,11250
+WA,Washington,107.013,burial_with_vault,11780,10010,13550
+WA,Washington,107.013,cremation_with_service,7410,6300,8520
+WA,Washington,107.013,direct_cremation,3240,2750,3730
+WA,Washington,107.013,direct_burial,4390,3730,5050
+WA,Washington,107.013,green_burial,5860,4980,6740
+WV,West Virginia,89.497,traditional_burial,8180,6950,9410
+WV,West Virginia,89.497,burial_with_vault,9850,8370,11330
+WV,West Virginia,89.497,cremation_with_service,6190,5260,7120
+WV,West Virginia,89.497,direct_cremation,2710,2300,3120
+WV,West Virginia,89.497,direct_burial,3670,3120,4220
+WV,West Virginia,89.497,green_burial,4900,4160,5640
+WI,Wisconsin,94.095,traditional_burial,8600,7310,9890
+WI,Wisconsin,94.095,burial_with_vault,10360,8810,11910
+WI,Wisconsin,94.095,cremation_with_service,6510,5530,7490
+WI,Wisconsin,94.095,direct_cremation,2850,2420,3280
+WI,Wisconsin,94.095,direct_burial,3860,3280,4440
+WI,Wisconsin,94.095,green_burial,5160,4390,5930
+WY,Wyoming,92.691,traditional_burial,8470,7200,9740
+WY,Wyoming,92.691,burial_with_vault,10210,8680,11740
+WY,Wyoming,92.691,cremation_with_service,6410,5450,7370
+WY,Wyoming,92.691,direct_cremation,2810,2390,3230
+WY,Wyoming,92.691,direct_burial,3800,3230,4370
+WY,Wyoming,92.691,green_burial,5080,4320,5840

@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   const crem = st.estimates.direct_cremation;
   const title = `Funeral Costs in ${st.name} (2026): Modeled Estimates by Service Type`;
   const description =
-    `How much does a funeral cost in ${st.name}? Modeled estimate: ${fmt(trad.point)} for a traditional burial with viewing (NFDA 2023 median $${dataset.anchors.traditional_burial.value.toLocaleString()} adjusted for ${st.name} prices), ${fmt(crem.point)} for direct cremation. Independent — no funeral-home money.`;
+    `How much does a funeral cost in ${st.name}? Modeled estimate: ${fmt(trad.point)} for a traditional burial with viewing (NFDA 2023 median $${dataset.anchors.traditional_burial.value.toLocaleString()} in August 2026 dollars, scaled for ${st.name} prices), ${fmt(crem.point)} for direct cremation. Independent — no funeral-home money.`;
   const url = `${SITE_URL}/funeral-costs/${state}/`;
   return {
     title, description,
@@ -108,7 +108,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   const faqs = [
     {
       q: `Are these real prices from ${st.name} funeral homes?`,
-      a: `No. These are modeled estimates: the NFDA 2023 national median adjusted by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). No state-level funeral price survey exists. Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
+      a: `No. These are modeled estimates: the NFDA 2023 national median, adjusted to August 2026 dollars with the BLS funeral-expenses CPI and scaled by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). No state-level funeral price survey exists. Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
     },
     {
       q: `What does the ${fmt(trad.point)} traditional-burial estimate include?`,
@@ -145,10 +145,10 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         <div className="answer-first">
           <strong>Quick answer:</strong> a traditional funeral with viewing and burial in {st.name}{' '}
           is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), versus the NFDA
-          2023 national median of {fmt(dataset.anchors.traditional_burial.value)}. Direct cremation
+          2023 national median of {fmt(dataset.anchors.traditional_burial.value)} (in August 2026 dollars). Direct cremation
           is modeled at <strong>{fmt(st.estimates.direct_cremation.point)}</strong>. These are
           modeled estimates — not surveyed prices or quotes — built from the NFDA 2023 national
-          medians adjusted by {st.name}&apos;s BEA 2024 regional price parity ({st.rpp_all_items.toFixed(1)}).
+          medians (adjusted to August 2026 dollars via the BLS funeral-expenses CPI) scaled by {st.name}&apos;s BEA 2024 regional price parity ({st.rpp_all_items.toFixed(1)}).
         </div>
 
         <h2>Modeled estimates by service type — {st.name}</h2>
@@ -234,7 +234,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         </div>
 
         <p className="updated">
-          {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v2. <a href="/methodology/">Full methodology</a>.
+          {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v3. <a href="/methodology/">Full methodology</a>.
         </p>
       </div>
     </>

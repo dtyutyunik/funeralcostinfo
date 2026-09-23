@@ -1,16 +1,32 @@
 #!/usr/bin/env python3
-"""Build the FuneralCostInfo dataset (model v2).
+"""Build the FuneralCostInfo dataset (model v3).
 
 Pipeline (all free sources, all verifiable):
   NFDA 2023 national medians (latest published GPL study; the NFDA's next GPL
   study was fielded in 2025 but its price results had not been published as of
   2026-09-23)
+    x  BLS CPI-U "Funeral expenses" inflation factor (series CUUR0000SEGD02,
+       not seasonally adjusted, Dec 1986 = 100):
+       factor = latest monthly index / 2023 annual-average index
+    =  national anchors expressed in latest-month dollars
     x  BEA 2024 Regional Price Parities by state (official Feb 19, 2026 release,
        pulled 2026-09-23 from the BEA Interactive Data Application, Table SARPP)
   =  state-level modeled estimates for 50 states + D.C.
 
-Formula:  estimate = national_median * (state_RPP_all_items / 100),
-rounded to the nearest $10, with an illustrative +/-15% band.
+Formula:
+  adjusted_anchor = round_to_$10(nfda_2023_median * cpi_factor)
+  state_estimate  = round_to_$10(adjusted_anchor * (state_RPP_all_items / 100))
+  illustrative range = point * 0.85 .. point * 1.15
+
+The CPI adjustment is standard inflation-adjustment practice: the funeral-
+expenses component of the CPI is the closest official price index to what
+funeral homes charge, and it is published monthly, so anchors stay current
+between the infrequent NFDA studies. It assumes funeral-price inflation
+tracked the national index; it does not capture state-level differences.
+
+Refresh: re-pull the BLS series monthly and re-adjust anchors (new vintage
+month + factor); rebuild from the newest BEA RPP release each spring; adopt a
+newer NFDA GPL study the moment one is published.
 
 Outputs:
   methodology.json        full ledger (formula, anchors, add-ons, states, sources, limitations)
@@ -26,13 +42,15 @@ HERE = Path(__file__).resolve().parent
 SITE_DATA = HERE / "../site/data/estimates.json"
 
 TODAY = "2026-09-23"
+MODEL = "v3"
 
 # ---- NFDA 2023 national medians (latest PUBLISHED GPL study results, verified 2026-09-23)
 # Sources: NFDA 2023 Member General Price List Study; 2024 NFDA Cremation & Burial
 # Report (p. 11); 2023 GPL Study press release. The NFDA said it would conduct
 # the next GPL study in 2025; as of 2026-09-23 no price results from a 2025
 # study had been publicly released, so 2023 remains the latest citable data.
-ANCHORS = {
+# These are adjusted to current dollars with the BLS funeral-expenses CPI below.
+NFDA_2023 = {
     "traditional_burial":  {"value": 8300, "label": "Funeral with viewing + burial",
                             "basis": "NFDA 2023 Member GPL Study median; vault not included"},
     "burial_with_vault":   {"value": 9995, "label": "Funeral with viewing + burial + vault",
@@ -43,9 +61,6 @@ ANCHORS = {
                             "basis": "NFDA 2023 Member GPL Study median (funeral-home container)"},
     "direct_burial":       {"value": 3720, "label": "Immediate burial",
                             "basis": "NFDA 2023 Member GPL Study median"},
-    "green_burial":        {"value": 4980, "label": "Green burial (assumption-based)",
-                            "basis": "Assumption: 0.60 x traditional burial. No NFDA median exists; "
-                                     "labeled as an assumption everywhere it appears."},
 }
 
 ADDONS = {
@@ -100,6 +115,43 @@ def r10(n):
 
 
 def main():
+    # ---- BLS CPI-U "Funeral expenses" (series CUUR0000SEGD02, NSA, Dec 1986=100).
+    # Raw monthly values archived in raw_bls_cpi_funeral.json (official BLS API,
+    # retrieved 2026-09-23; cross-checked against the Aug 2026 CPI news release
+    # Table 2: funeral expenses +3.0% unadjusted 12-month change).
+    # Oct 2025 is null (BLS: "Data unavailable due to the 2025 lapse in
+    # appropriations") — it is simply skipped; the factor only needs the 2023
+    # average and the latest month.
+    bls = json.loads((HERE / "raw_bls_cpi_funeral.json").read_text())
+    monthly = {k: v for k, v in bls["monthly_index"].items() if v is not None}
+    avg_2023 = sum(v for k, v in monthly.items() if k.startswith("2023-")) / 12
+    vintage_month = max(monthly)  # e.g. "2026-08"
+    latest_index = monthly[vintage_month]
+    cpi_factor = latest_index / avg_2023
+    vintage_label_my = {"2026-08": "August 2026"}.get(
+        vintage_month, vintage_month)
+    print(f"BLS {bls['series_id']}: 2023 avg={avg_2023:.3f}, "
+          f"latest {vintage_month}={latest_index:.3f}, factor={cpi_factor:.6f}")
+
+    # ---- Adjusted national anchors: NFDA 2023 median x CPI factor, rounded $10.
+    ANCHORS = {}
+    for key, a in NFDA_2023.items():
+        adj = r10(a["value"] * cpi_factor)
+        ANCHORS[key] = {
+            "value": adj,
+            "label": a["label"],
+            "basis": (f"NFDA 2023 Member GPL Study median ${a['value']:,} × "
+                      f"{cpi_factor:.4f} (BLS CPI funeral expenses, {vintage_label_my}) "
+                      f"= ${adj:,}. {a['basis']}"),
+        }
+    trad_adj = ANCHORS["traditional_burial"]["value"]
+    ANCHORS["green_burial"] = {
+        "value": r10(0.60 * trad_adj),
+        "label": "Green burial (assumption-based)",
+        "basis": (f"Assumption: 0.60 × adjusted traditional burial (${trad_adj:,}). "
+                  f"No NFDA median exists; labeled as an assumption everywhere it appears."),
+    }
+
     # ---- Load official 2024 BEA RPP data (fetched 2026-09-23 from the BEA
     # Interactive Data Application: AppID 70, TableID 101 "SARPP Regional price
     # parities by state", 2024, statistics = All items / Goods / Services:
@@ -142,14 +194,34 @@ def main():
             "nfda_projected_cremation_rate_2035": NFDA_CREMA2025[abbr],
         })
 
+    vintage_label = (f"NFDA 2023 medians adjusted to {vintage_label_my} dollars via "
+                     f"BLS CPI for funeral expenses; 2024 BEA regional price parities")
     methodology = {
-        "model_version": "v2",
+        "model_version": MODEL,
         "built": TODAY,
         "is_modeled": True,
-        "vintage_label": ("Estimates modeled from 2024 BEA regional price parities "
-                         "and 2023 NFDA medians"),
-        "formula": "state_estimate = nfda_2023_national_median * (state_bea_2024_rpp_all_items / 100), "
-                   "rounded to nearest $10; illustrative range = point * 0.85 .. point * 1.15",
+        "vintage_label": vintage_label,
+        "formula": (f"adjusted_anchor = round_to_$10(nfda_2023_median × {cpi_factor:.6f} "
+                    f"[BLS CPI funeral expenses, {vintage_label_my}]); "
+                    f"state_estimate = adjusted_anchor × (state_bea_2024_rpp_all_items / 100), "
+                    f"rounded to nearest $10; illustrative range = point × 0.85 .. point × 1.15"),
+        "bls_adjustment": {
+            "bls_series_id": bls["series_id"],
+            "bls_vintage_month": vintage_month,
+            "bls_vintage_label": vintage_label_my,
+            "bls_base_period": bls["base_period"],
+            "bls_2023_annual_average": round(avg_2023, 3),
+            "bls_latest_index": latest_index,
+            "cpi_factor": round(cpi_factor, 6),
+            "retrieved": bls["retrieved"],
+            "note": ("Standard inflation adjustment: the funeral-expenses component of the CPI "
+                     "is the closest official price index to funeral-home charges and is published "
+                     "monthly, keeping anchors current between infrequent NFDA studies. Assumes "
+                     "funeral-price inflation tracked the national index; does not capture "
+                     "state-level inflation differences. October 2025 is missing from the BLS series "
+                     "(2025 lapse in appropriations); the factor uses only the 2023 average and the "
+                     "latest month, so the gap has no effect."),
+        },
         "anchors": {k: {"value": v["value"], "label": v["label"], "assumption": None,
                         "basis": v["basis"]} for k, v in ANCHORS.items()},
         "addons": ADDONS,
@@ -169,13 +241,18 @@ def main():
                       "publicly published NFDA price study. The NFDA said it would conduct "
                       "the next GPL study in 2025; as of 2026-09-23 no price results from a "
                       "2025 study had been published, and NFDA 2023 medians remain the most "
-                      "recent citable figures (confirmed against 2026 press coverage)."),
+                      "recent citable figures (confirmed against 2026 press coverage). All "
+                      f"anchors are expressed in {vintage_label_my} dollars via the BLS "
+                      "funeral-expenses CPI adjustment described above."),
         "limitations": [
             "State values are modeled from national medians; actual local prices vary widely.",
             "NFDA medians come from member funeral homes and exclude cemetery and cash-advance costs.",
             "RPP vintage is 2024 (BEA February 2026 release); the dataset refreshes annually as new releases arrive.",
-            "NFDA price medians are 2023 vintage because no newer official GPL study results have been published.",
-            "Green burial has no published NFDA median; it is a stated assumption (0.60x traditional burial), labeled as such everywhere it appears.",
+            (f"NFDA price medians are 2023 vintage because no newer official GPL study results have been "
+             f"published; they are adjusted to {vintage_label_my} dollars with the BLS CPI for funeral "
+             f"expenses (×{cpi_factor:.4f})."),
+            "The CPI adjustment assumes funeral-price inflation tracked the national funeral-expenses index; it does not capture state-level inflation differences.",
+            "Green burial has no published NFDA median; it is a stated assumption (0.60x adjusted traditional burial), labeled as such everywhere it appears.",
             "Calculator add-on ranges (flowers, obituary) are typical market ranges, not surveyed prices.",
             "This site is educational content, not financial, legal, or funeral-planning advice.",
         ],
@@ -188,6 +265,13 @@ def main():
              "url": "https://content.nfda.org/Portals/0/12-8-2023--2023%20GPL%20Survey.pdf",
              "retrieved": TODAY,
              "provides": "Burial-with-vault median $9,995; confirms 2023 as the study year"},
+            {"name": f"BLS CPI-U: Funeral expenses (series {bls['series_id']}, not seasonally adjusted; December 1986 = 100)",
+             "url": "https://www.bls.gov/news.release/cpi.t02.htm",
+             "retrieved": TODAY,
+             "provides": (f"Monthly index values Jan 2023–{vintage_label_my} (via BLS public API) used to adjust "
+                          f"NFDA 2023 medians to {vintage_label_my} dollars: factor = {latest_index:.3f} ÷ "
+                          f"{avg_2023:.3f} = {cpi_factor:.4f}. August 2026 release Table 2: +3.0% unadjusted "
+                          f"12-month change. October 2025 missing (2025 lapse in appropriations).")},
             {"name": "BEA Regional Price Parities by State — 2024 release (February 19, 2026)",
              "url": "https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area",
              "retrieved": TODAY,
@@ -196,10 +280,6 @@ def main():
              "url": "https://www.bea.gov/sites/default/files/2026-02/rpp0226.pdf",
              "retrieved": TODAY,
              "provides": "Official release confirming 2024 RPPs for all 50 states + D.C.; used to cross-check API values"},
-            {"name": "BLS CPI — Funeral expenses (+3.0% 12-month, August 2026)",
-             "url": "https://www.bls.gov/news.release/cpi.t02.htm",
-             "retrieved": TODAY,
-             "provides": "Inflation context; index base December 1986 = 100"},
             {"name": "FTC Funeral Rule consumer guide",
              "url": "https://consumer.ftc.gov/articles/ftc-funeral-rule",
              "retrieved": TODAY,
@@ -209,12 +289,14 @@ def main():
              "retrieved": TODAY,
              "provides": "Cemetery plot ($1,000-$5,000+), opening/closing ($1,500-$3,000), marker ($1,000-$3,000) ranges used as calculator add-ons"},
         ],
-        "refresh_policy": "Rebuild annually: pull the newest BEA RPP release each spring and "
-                         "check for a newer published NFDA GPL study; publish a changelog.",
+        "refresh_policy": ("Rebuild monthly: re-pull the BLS funeral-expenses CPI, re-adjust anchors, "
+                           "and publish the new vintage month. Rebuild annually from the newest BEA RPP "
+                           "release each spring; adopt a newer published NFDA GPL study the moment one "
+                           "appears; publish a changelog with each model version."),
         "rounding": "nearest $10",
     }
     methodology["anchors"]["green_burial"]["assumption"] = (
-        "0.60 x traditional burial; no published NFDA median exists")
+        f"0.60 × adjusted traditional burial (${trad_adj:,}); no published NFDA median exists")
 
     (HERE / "methodology.json").write_text(json.dumps(methodology, indent=1) + "\n")
 
@@ -230,7 +312,7 @@ def main():
 
     # ---- Slim site JSON
     site_payload = {
-        "model_version": "v2",
+        "model_version": MODEL,
         "built": TODAY,
         "is_modeled": True,
         "anchors": methodology["anchors"],
@@ -240,10 +322,13 @@ def main():
     SITE_DATA.write_text(json.dumps(site_payload) + "\n")
 
     # ---- SOURCES.md
-    lines = ["# FuneralCostInfo — source ledger (model v2, built %s)" % TODAY, ""]
+    lines = [f"# FuneralCostInfo — source ledger (model {MODEL}, built {TODAY})", ""]
     lines.append("## Formula")
     lines.append("")
-    lines.append("`state_estimate = NFDA 2023 national median × (state BEA 2024 RPP all-items ÷ 100)`")
+    lines.append("`adjusted_anchor = NFDA 2023 national median × BLS funeral-expenses CPI factor`  "
+                 f"(factor = {latest_index:.3f} ÷ {avg_2023:.3f} = {cpi_factor:.4f}, {vintage_label_my})")
+    lines.append("")
+    lines.append("`state_estimate = adjusted_anchor × (state BEA 2024 RPP all-items ÷ 100)`")
     lines.append("")
     lines.append("Rounded to the nearest $10; illustrative range ±15%. All figures are modeled estimates.")
     lines.append("")
@@ -255,11 +340,18 @@ def main():
                  "(Table SARPP: AppID 70, TableID 101; statistics All items, Goods, Services: "
                  "Housing/Utilities/Other; year 2024) and cross-checked against the official "
                  "release highlights (CA 110.720, HI 109.951, NJ 108.805, DC 109.901, AR 86.937, MS 86.953).")
-    lines.append("- **NFDA medians: 2023.** The 2023 Member General Price List Study remains the "
-                 "latest *published* NFDA price study. The NFDA said it would field the next GPL "
-                 "study in 2025, but as of 2026-09-23 no price results from a 2025 study had been "
-                 "published — and 2026 press coverage still cites the 2023 medians as current. "
-                 "We refresh anchors the moment a newer official study is published.")
+    lines.append("- **NFDA medians: 2023, expressed in August 2026 dollars.** The 2023 Member General "
+                 "Price List Study remains the latest *published* NFDA price study. The NFDA said it "
+                 "would field the next GPL study in 2025, but as of 2026-09-23 no price results from "
+                 "a 2025 study had been published — and 2026 press coverage still cites the 2023 "
+                 "medians as current. Rather than show stale 2023 dollars, we bring the medians "
+                 "forward with the BLS CPI-U *Funeral expenses* index (series CUUR0000SEGD02, not "
+                 "seasonally adjusted, December 1986 = 100): the August 2026 index (417.820) divided "
+                 "by the 2023 annual average (379.301) = ×1.1016. This is standard inflation "
+                 "adjustment; the funeral-expenses component is the closest official index to "
+                 "funeral-home charges. The October 2025 index is missing from the BLS series "
+                 "('Data unavailable due to the 2025 lapse in appropriations'); the factor uses "
+                 "only the 2023 average and the latest month, so the gap has no effect.")
     lines.append("")
     lines.append("## Sources")
     lines.append("")
@@ -270,6 +362,9 @@ def main():
     lines.append("")
     lines.append("## Raw inputs archived in this folder")
     lines.append("")
+    lines.append("- `raw_bls_cpi_funeral.json` — BLS CPI-U funeral-expenses monthly index, Jan 2023–Aug 2026, "
+                 "as returned by the BLS public API 2026-09-23 (official data; cross-checked against the "
+                 "Aug 2026 CPI news release Table 2: +3.0% unadjusted 12-month change)")
     lines.append("- `raw_bea_rpp2024.json` — 2024 RPP values as returned by the BEA Interactive "
                  "Data Application, 2026-09-23 (official data for the Feb 19, 2026 release)")
     lines.append("- `raw_bea_rpp1224.xlsx` — superseded; the December 2024 spreadsheet carrying "
@@ -286,7 +381,8 @@ def main():
     ca = next(s for s in states if s["abbr"] == "CA")
     ms = next(s for s in states if s["abbr"] == "MS")
     ar = next(s for s in states if s["abbr"] == "AR")
-    print("states:", len(states))
+    print("model:", MODEL, "| states:", len(states))
+    print("adjusted national traditional_burial:", ANCHORS["traditional_burial"]["value"])
     print("CA traditional_burial:", ca["estimates"]["traditional_burial"]["point"],
           "(RPP", ca["rpp_all_items"], ")")
     print("AR traditional_burial:", ar["estimates"]["traditional_burial"]["point"],

@@ -154,7 +154,8 @@ export default function Calculator({ defaultState = 'CA', compact = false }: { d
           </div>
           <div className="disclaimer">
             <strong>Modeled estimate, not a price quote.</strong> Built from the NFDA 2023 national
-            median ({fmt(dataset.anchors[service].value)}) adjusted by the BEA 2024 regional price
+            median ({fmt(dataset.anchors[service].value)}) adjusted to August 2026 dollars via the
+            BLS funeral-expenses CPI, then scaled by the BEA 2024 regional price
             parity for {st.name} ({st.rpp_all_items.toFixed(1)}). Actual funeral-home prices vary
             widely. Always request an itemized General Price List (GPL) — it is your right under
             the FTC Funeral Rule. Excludes cemetery plot unless you added it above.

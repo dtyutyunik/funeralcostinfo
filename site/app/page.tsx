@@ -8,12 +8,12 @@ import { SITE_URL, LAST_UPDATED, dataset, fmt, VINTAGE_LABEL } from '../lib/data
 export const metadata: Metadata = {
   title: 'FuneralCostInfo — What funerals really cost, by state',
   description:
-    'Modeled funeral-cost estimates for all 50 states, built from 2024 BEA regional price parities and 2023 NFDA national medians. National median: $8,300 for a funeral with viewing and burial. We take no money from funeral homes.',
+    'Modeled funeral-cost estimates for all 50 states, built from 2024 BEA regional price parities and 2023 NFDA national medians adjusted to August 2026 dollars via BLS CPI. National median: $9,140 for a funeral with viewing and burial. We take no money from funeral homes.',
   alternates: { canonical: SITE_URL + '/' },
   openGraph: {
     title: 'FuneralCostInfo — What funerals really cost, by state',
     description:
-      'Independent, modeled funeral-cost estimates for every U.S. state. National median $8,300 (burial with viewing, NFDA 2023).',
+      'Independent, modeled funeral-cost estimates for every U.S. state. National median $9,140 (burial with viewing, NFDA 2023 in Aug 2026 dollars).',
     url: SITE_URL + '/',
   },
 };
@@ -22,7 +22,7 @@ const WHY = [
   {
     icon: '◈',
     title: 'Named sources, dated',
-    body: 'Every input is cited with its publisher and retrieval date — 2024 BEA price parities, 2023 NFDA medians — on our open methodology page.',
+    body: 'Every input is cited with its publisher and retrieval date — 2024 BEA price parities, 2023 NFDA medians adjusted to August 2026 dollars via BLS CPI — on our open methodology page.',
   },
   {
     icon: '⬔',
@@ -68,7 +68,7 @@ export default function Home() {
               </h1>
               <p className="lede">
                 The national median is <strong>{fmt(a.traditional_burial.value)}</strong> for a
-                funeral with viewing and burial (NFDA, 2023). But prices swing widely by state —
+                funeral with viewing and burial (NFDA 2023, adjusted to August 2026 dollars). But prices swing widely by state —
                 our modeled estimates put California near{' '}
                 <strong>{fmt(ca.estimates.traditional_burial.point)}</strong> and Arkansas near{' '}
                 <strong>{fmt(ar.estimates.traditional_burial.point)}</strong>. Build a line-item
@@ -77,11 +77,11 @@ export default function Home() {
               <div className="hero-facts">
                 <div className="hero-fact">
                   <div className="num">{fmt(a.traditional_burial.value)}</div>
-                  <div className="lbl"><strong>National median</strong>, funeral with viewing + burial (NFDA 2023)</div>
+                  <div className="lbl"><strong>National median</strong>, funeral with viewing + burial (NFDA 2023, in Aug 2026 dollars)</div>
                 </div>
                 <div className="hero-fact">
                   <div className="num">{fmt(a.direct_cremation.value)}</div>
-                  <div className="lbl"><strong>National median</strong>, direct cremation (NFDA 2023)</div>
+                  <div className="lbl"><strong>National median</strong>, direct cremation (NFDA 2023, in Aug 2026 dollars)</div>
                 </div>
                 <div className="hero-fact">
                   <div className="num">51</div>
@@ -101,7 +101,8 @@ export default function Home() {
             <h2 id="map-heading">One map, fifty-one price levels</h2>
             <p>
               Every state colored by its <strong>modeled cost of a traditional funeral</strong> —
-              the NFDA 2023 national median adjusted by the state&rsquo;s 2024 BEA regional price
+              the NFDA 2023 national median (adjusted to August 2026 dollars with the BLS
+              funeral-expenses CPI) scaled by the state&rsquo;s 2024 BEA regional price
               parity. Hover any state for its estimate; the five outlined states have full cost guides.
             </p>
           </div>
@@ -148,7 +149,7 @@ export default function Home() {
             <a href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</a>
           </p>
           <p className="updated">
-            {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v2 · Next refresh: annual, with each new BEA release.
+            {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v3 · Next refresh: monthly CPI adjustment, annual BEA rebuild.
           </p>
         </div>
       </section>
