@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calculator/',
     '/methodology/',
     '/guides/funeral-rule-rights/',
+    '/guides/funeral-service-types/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

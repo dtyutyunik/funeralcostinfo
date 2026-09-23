@@ -148,6 +148,8 @@ export default function Home() {
           <p>
             <Link href="/methodology/">Read the full open methodology →</Link>
             {' · '}
+            <Link href="/guides/funeral-service-types/">Funeral service types explained →</Link>
+            {' · '}
             <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>
           </p>
           <p className="updated">
