@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Editorial Policy',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function EditorialPolicyPage() {
   return (
     <div className="wrap prose">
-      <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Editorial policy</nav>
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Editorial policy</nav>
       <h1>Editorial policy</h1>
       <p className="updated">Effective 2026-09-23.</p>
       <ol>

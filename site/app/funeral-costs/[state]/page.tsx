@@ -5,6 +5,7 @@ import {
   dataset, getState, stateSlug, fmt, fmtRange, SITE_URL, LAST_UPDATED,
   SERVICE_ORDER, PHASE0_STATES, VINTAGE_LABEL, type ServiceKey,
 } from '../../../lib/data';
+import Link from 'next/link';
 
 interface StateNote {
   boardName: string;
@@ -88,7 +89,7 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   const crem = st.estimates.direct_cremation;
   const title = `Funeral Costs in ${st.name} (2026): Modeled Estimates by Service Type`;
   const description =
-    `How much does a funeral cost in ${st.name}? Modeled estimate: ${fmt(trad.point)} for a traditional burial with viewing (NFDA 2023 median $${dataset.anchors.traditional_burial.value.toLocaleString()} in August 2026 dollars, scaled for ${st.name} prices), ${fmt(crem.point)} for direct cremation. Independent — no funeral-home money.`;
+    `How much does a funeral cost in ${st.name}? Modeled estimate in August 2026 dollars: ${fmt(trad.point)} for a traditional burial with viewing (NFDA 2023 median $${dataset.anchors.traditional_burial.value_2023.toLocaleString()} inflated via the BLS funeral-expenses CPI, adjusted for ${st.name} prices), ${fmt(crem.point)} for direct cremation. Independent — no funeral-home money.`;
   const url = `${SITE_URL}/funeral-costs/${state}/`;
   return {
     title, description,
@@ -137,18 +138,19 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
       ])} />
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a> › Funeral costs in {st.name}
+          <Link href="/">Home</Link> › Funeral costs in {st.name}
         </nav>
         <h1>
           Funeral Costs in {st.name} <span className="modeled-tag">Modeled estimate</span>
         </h1>
         <div className="answer-first">
           <strong>Quick answer:</strong> a traditional funeral with viewing and burial in {st.name}{' '}
-          is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), versus the NFDA
-          2023 national median of {fmt(dataset.anchors.traditional_burial.value)} (in August 2026 dollars). Direct cremation
+          is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), versus the
+          inflation-adjusted national anchor of {fmt(dataset.anchors.traditional_burial.value)} (the NFDA
+          2023 median of {fmt(dataset.anchors.traditional_burial.value_2023)} in August 2026 dollars). Direct cremation
           is modeled at <strong>{fmt(st.estimates.direct_cremation.point)}</strong>. These are
           modeled estimates — not surveyed prices or quotes — built from the NFDA 2023 national
-          medians (adjusted to August 2026 dollars via the BLS funeral-expenses CPI) scaled by {st.name}&apos;s BEA 2024 regional price parity ({st.rpp_all_items.toFixed(1)}).
+          medians, inflated with the BLS funeral-expenses CPI, and adjusted by {st.name}&apos;s BEA 2024 regional price parity ({st.rpp_all_items.toFixed(1)}).
         </div>
 
         <h2>Modeled estimates by service type — {st.name}</h2>
@@ -207,7 +209,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           <p style={{ margin: '8px 0' }}>
             <strong>Planning ahead?</strong> Final-expense insurance is one way families fund funeral costs.
             We have no insurance partnerships yet, so there is nothing to click — when we add vetted,
-            clearly-labeled options, they will appear here. <a href="/affiliate-disclosure/">Read our disclosure</a>.
+            clearly-labeled options, they will appear here. <Link href="/affiliate-disclosure/">Read our disclosure</Link>.
           </p>
         </div>
 
@@ -220,7 +222,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             <li>{notes.boardName} — verify licenses and file complaints (search the bureau&apos;s site directly).</li>
           )}
           <li><a href="https://consumer.ftc.gov/articles/ftc-funeral-rule">FTC Funeral Rule — your federal rights</a></li>
-          <li><a href="/guides/funeral-rule-rights/">Our plain-English guide to the Funeral Rule</a></li>
+          <li><Link href="/guides/funeral-rule-rights/">Our plain-English guide to the Funeral Rule</Link></li>
         </ul>
 
         <h2>Frequently asked questions</h2>
@@ -234,7 +236,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         </div>
 
         <p className="updated">
-          {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v3. <a href="/methodology/">Full methodology</a>.
+          {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v3. <Link href="/methodology/">Full methodology</Link>.
         </p>
       </div>
     </>

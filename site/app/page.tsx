@@ -4,6 +4,7 @@ import StateTable from '../components/StateTable';
 import UsMap from '../components/UsMap';
 import JsonLd, { breadcrumbJsonLd } from '../components/JsonLd';
 import { SITE_URL, LAST_UPDATED, dataset, fmt, VINTAGE_LABEL } from '../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'FuneralCostInfo — What funerals really cost, by state',
@@ -67,8 +68,9 @@ export default function Home() {
                 What does a funeral <em>actually</em> cost in your state?
               </h1>
               <p className="lede">
-                The national median is <strong>{fmt(a.traditional_burial.value)}</strong> for a
-                funeral with viewing and burial (NFDA 2023, adjusted to August 2026 dollars). But prices swing widely by state —
+                The national anchor is <strong>{fmt(a.traditional_burial.value)}</strong> for a
+                funeral with viewing and burial — the NFDA 2023 median of {fmt(a.traditional_burial.value_2023)}{' '}
+                restated in August 2026 dollars. But prices swing widely by state —
                 our modeled estimates put California near{' '}
                 <strong>{fmt(ca.estimates.traditional_burial.point)}</strong> and Arkansas near{' '}
                 <strong>{fmt(ar.estimates.traditional_burial.point)}</strong>. Build a line-item
@@ -144,9 +146,9 @@ export default function Home() {
             ))}
           </div>
           <p>
-            <a href="/methodology/">Read the full open methodology →</a>
+            <Link href="/methodology/">Read the full open methodology →</Link>
             {' · '}
-            <a href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</a>
+            <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>
           </p>
           <p className="updated">
             {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v3 · Next refresh: monthly CPI adjustment, annual BEA rebuild.

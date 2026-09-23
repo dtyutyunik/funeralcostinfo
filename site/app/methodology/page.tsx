@@ -166,6 +166,34 @@ export default function MethodologyPage() {
           </tbody>
         </table>
 
+        <h2>Why our direct-cremation figure differs from some quotes</h2>
+        <p>
+          Our direct-cremation anchor is <strong>{fmt(dataset.anchors.direct_cremation.value)}</strong> (the
+          NFDA 2023 median of {fmt(dataset.anchors.direct_cremation.value_2023)} in August 2026 dollars).
+          You will see lower numbers advertised — sometimes under $1,500 — and both can be honest. The
+          NFDA median reflects <strong>full-service funeral homes</strong> and includes the funeral home&rsquo;s
+          container; the wider market includes discount and direct-only providers advertising
+          &ldquo;starting at&rdquo; prices. A median also isn&rsquo;t an average: it&rsquo;s the midpoint
+          provider, so half of funeral homes charge more. Treat our figure as the typical full-service
+          price, and treat a much lower quote as real but not typical — then compare what&rsquo;s included.
+        </p>
+        <h3>Medians, not averages</h3>
+        <p>
+          Every anchor here is a <strong>median</strong> (the midpoint of surveyed funeral homes), not an
+          average. Averages get pulled up by a few very expensive providers; medians don&rsquo;t. When a
+          competitor cites an &ldquo;average&rdquo; funeral cost, expect it to run higher than our
+          median-based figures for the same market — that&rsquo;s arithmetic, not disagreement.
+        </p>
+
+        <h2>Optional calculator features</h2>
+        <ul>
+          <li><strong>Religious traditions</strong> (Jewish, Muslim, Catholic, Hindu, Buddhist): optional toggles that adjust <em>specific line items</em> — never a blanket multiplier. Each shows what changes (e.g., no embalming, plain casket, ritual washing fees) with sourced typical ranges. These figures are provider and regional examples, <em>not</em> a national survey.</li>
+          <li><strong>VA burial benefits:</strong> optional deductions using current VA.gov amounts (up to $2,000 service-connected; $1,002 + $1,002 non-service-connected; $441 headstone). Benefits must be claimed — they are not automatic — and amounts reset every October 1.</li>
+          <li><strong>Upkeep:</strong> an explainer that &ldquo;perpetual care&rdquo; is usually baked into the plot price and covers common grounds only — plus an optional marker-upkeep range from a 2025 NY state-approved price list.</li>
+          <li><strong>Cash-advance items:</strong> clergy/celebrant honoraria and death certificates join flowers and obituaries as optional add-ons. All are industry-published typical ranges, not surveyed prices.</li>
+          <li><strong>Body donation to science:</strong> an optional path noting that programs typically cover cremation, transport, and the death certificate free — with strong disclaimers that acceptance is decided at the time of death and never guaranteed.</li>
+        </ul>
+
         <h2>What the NFDA medians include — and exclude</h2>
         <h3>Included</h3>
         <ul>

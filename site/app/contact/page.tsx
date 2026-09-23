@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="wrap prose">
-      <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Contact</nav>
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Contact</nav>
       <h1>Contact</h1>
       <p className="answer-first">
         <strong>Quick answer:</strong> corrections, source updates, and methodology questions are

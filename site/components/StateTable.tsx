@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { dataset, fmt, stateSlug, PHASE0_STATES, VINTAGE_SHORT } from '../lib/data';
+import Link from 'next/link';
 
 type SortKey = 'name' | 'burial' | 'cremation' | 'rpp';
 
@@ -92,7 +93,7 @@ export default function StateTable() {
                 <tr key={s.abbr}>
                   <td>
                     {linked ? (
-                      <a className="state-link" href={`/funeral-costs/${slug}/`}>{s.name}</a>
+                      <Link className="state-link" href={`/funeral-costs/${slug}/`}>{s.name}</Link>
                     ) : (
                       <>{s.name}</>
                     )}

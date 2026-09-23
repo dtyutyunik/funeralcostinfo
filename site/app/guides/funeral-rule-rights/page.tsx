@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Your Rights Under the FTC Funeral Rule',
@@ -75,7 +76,7 @@ export default function FuneralRuleGuide() {
         { name: 'Your Rights Under the FTC Funeral Rule', url: SITE_URL + '/guides/funeral-rule-rights/' },
       ])} />
       <div className="wrap prose">
-        <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Guides › FTC Funeral Rule rights</nav>
+        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › FTC Funeral Rule rights</nav>
         <h1>Your rights under the FTC Funeral Rule</h1>
         <p className="answer-first">
           <strong>Quick answer:</strong> the FTC Funeral Rule gives you the right to price
@@ -97,7 +98,7 @@ export default function FuneralRuleGuide() {
         <h2>How to use these rights when comparing prices</h2>
         <ol>
           <li>Call two or three funeral homes and ask for prices by phone — compare the totals for the same service type.</li>
-          <li>Visit your top choice and take the GPL home. Compare it line by line with our <a href="/calculator/">calculator estimate</a>.</li>
+          <li>Visit your top choice and take the GPL home. Compare it line by line with our <Link href="/calculator/">calculator estimate</Link>.</li>
           <li>Cross out anything you don&apos;t want. Ask which fees are truly required (the basic services fee usually is; most else is optional).</li>
           <li>Price caskets and urns online — providers cannot charge you extra for bringing your own.</li>
           <li>Get the final itemized statement in writing before you pay or sign.</li>

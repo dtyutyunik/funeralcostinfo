@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About FuneralCostInfo',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="wrap prose">
-      <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › About</nav>
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › About</nav>
       <h1>About FuneralCostInfo</h1>
       <p className="answer-first">
         <strong>Quick answer:</strong> FuneralCostInfo is an independent consumer-information site
@@ -36,18 +37,18 @@ export default function AboutPage() {
       <p>
         This site currently has <strong>no revenue and no commercial relationships</strong>. There are
         no ads, no affiliate links, and no funeral-home partnerships. If that ever changes, changes will
-        be disclosed prominently — see our <a href="/affiliate-disclosure/">affiliate disclosure</a>.
+        be disclosed prominently — see our <Link href="/affiliate-disclosure/">affiliate disclosure</Link>.
       </p>
       <h2>What we will never do</h2>
       <ul>
         <li>Accept money from a funeral home, cemetery, or casket seller in exchange for coverage or placement.</li>
         <li>Present a modeled estimate as a surveyed price or a quote.</li>
         <li>Use popups, countdown timers, fake urgency, or dark patterns.</li>
-        <li>Sell or share personal data (we collect none — see our <a href="/privacy/">privacy policy</a>).</li>
+        <li>Sell or share personal data (we collect none — see our <Link href="/privacy/">privacy policy</Link>).</li>
       </ul>
       <h2>Editorial standards</h2>
       <p>
-        Our research and writing standards are published in our <a href="/editorial-policy/">editorial policy</a>:
+        Our research and writing standards are published in our <Link href="/editorial-policy/">editorial policy</Link>:
         official sources only, every input dated, assumptions labeled, annual refresh.
       </p>
     </div>

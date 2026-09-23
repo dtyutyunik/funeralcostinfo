@@ -1,0 +1,398 @@
+{
+  "religious_traditions": [
+    {
+      "id": "jewish",
+      "label": "Jewish burial",
+      "line_changes": [
+        {
+          "change": "remove",
+          "item": "Embalming",
+          "detail": "Prohibited except in rare cases; refrigeration used instead ($295-$495 flat)."
+        },
+        {
+          "change": "remove",
+          "item": "Public viewing / visitation",
+          "detail": "No open-casket viewing in traditional practice."
+        },
+        {
+          "change": "change",
+          "item": "Casket becomes a plain all-wood aron",
+          "detail": "Wooden pegs, no metal, unlined; ~$985-$1,510 via funeral homes, ~$995 retail."
+        },
+        {
+          "change": "add",
+          "item": "Tahara (ritual washing) + tachrichim (linen shrouds)",
+          "detail": "$0-$500; some chapels include it free."
+        },
+        {
+          "change": "add",
+          "item": "Shomer / shmira (watcher until burial)",
+          "detail": "$295-$575 per night, or family volunteers at no cost."
+        },
+        {
+          "change": "note",
+          "item": "Timing",
+          "detail": "Burial ideally within 24-48 hours; no funerals on Shabbat or holidays (some mortuaries add ~$250)."
+        },
+        {
+          "change": "note",
+          "item": "Flowers and music",
+          "detail": "Not customary - modest savings."
+        }
+      ],
+      "typical_totals": [
+        {
+          "label": "Funeral-home portion (excl. cemetery)",
+          "range": "$4,300-$6,500",
+          "detail": "Mount Sinai LA Traditions Program $4,300 all-in; Am Israel San Diego $6,408 itemized; Beth Israel Ann Arbor ~$5,600."
+        }
+      ],
+      "cemetery_note": "Jewish cemetery costs vary enormously by metro: San Diego all-in ~$20,000-$30,000; NY/NJ plots ~$1,200 (member) to ~$5,000+ retail per plot before opening/closing; NJ adds a 15% perpetual-care transfer fee on plot resales.",
+      "addons": [
+        {
+          "key": "trad_tahara",
+          "mid": 250,
+          "low": 0,
+          "high": 500,
+          "label": "Tahara + tachrichim",
+          "note": "$0-$500; varies by provider and volunteer model."
+        },
+        {
+          "key": "trad_shomer",
+          "mid": 290,
+          "low": 0,
+          "high": 575,
+          "label": "Shomer (one night)",
+          "note": "$295-$575/night; often done by family at no cost."
+        },
+        {
+          "key": "trad_rabbi",
+          "mid": 250,
+          "low": 0,
+          "high": 500,
+          "label": "Rabbi honorarium",
+          "note": "$0-$500; often $0 for synagogue members."
+        }
+      ],
+      "disclaimer": "No national survey of Jewish funeral costs exists. Figures are provider price lists and consumer guides describing typical practices, not requirements. Confirm with local clergy and funeral homes.",
+      "sources": [
+        "http://www.chevrakadisha.com/documents/mortuary-price-list.pdf",
+        "http://www.sinaichapel.org/tools-resources/price-list-sinai-memorial-chapel.pdf",
+        "https://mountsinaiparks.org/what-is-tahara/",
+        "https://www.bethisrael-aa.org/pre-planning"
+      ]
+    },
+    {
+      "id": "muslim",
+      "label": "Muslim burial",
+      "line_changes": [
+        {
+          "change": "remove",
+          "item": "Embalming",
+          "detail": "Not used."
+        },
+        {
+          "change": "remove",
+          "item": "Viewing",
+          "detail": "No viewing."
+        },
+        {
+          "change": "remove",
+          "item": "Casket",
+          "detail": "Simple wooden box, or no casket where the cemetery permits; body wrapped in kafan shroud."
+        },
+        {
+          "change": "add",
+          "item": "Ghusl (ritual washing) + kafan",
+          "detail": "$0-$350; often performed by community volunteers at no charge."
+        },
+        {
+          "change": "add",
+          "item": "Janaza prayer",
+          "detail": "Usually no fixed fee."
+        },
+        {
+          "change": "note",
+          "item": "Concrete vault",
+          "detail": "Often still required by the cemetery (~$1,100)."
+        },
+        {
+          "change": "note",
+          "item": "Timing",
+          "detail": "Burial within 24-48 hours."
+        }
+      ],
+      "typical_totals": [
+        {
+          "label": "Complete burial total",
+          "range": "$3,500-$5,500 in most markets",
+          "detail": "Sourced KY, TN, FL, VA price lists (e.g., Lexington KY itemized $5,156; Nashville ~$3,500)."
+        },
+        {
+          "label": "Complete burial total, Long Island NY",
+          "range": "~$12,000+",
+          "detail": "Outlier market: plot $8,000 + opening/closing $1,830 + liner $865 + ghusl $350 + transport."
+        }
+      ],
+      "cemetery_note": "Standalone burial fees at Muslim cemeteries run ~$1,500-$2,800 (VA, Memphis examples); transport $700-$1,820 depending on market.",
+      "addons": [
+        {
+          "key": "trad_ghusl",
+          "mid": 175,
+          "low": 0,
+          "high": 350,
+          "label": "Ghusl + kafan",
+          "note": "$0-$350; often community-performed at no charge."
+        }
+      ],
+      "disclaimer": "No national Muslim burial cost survey exists; figures vary 4x+ between markets (Kentucky ~$5,200 vs Long Island ~$12,000+). Always confirm locally.",
+      "sources": [
+        "https://mccky.org/wp-content/uploads/2025/09/MCCK-Price-list-9-3-2025.pdf",
+        "https://icmny.org/funeral/",
+        "https://www.icwctn.org/services/funeral/"
+      ]
+    },
+    {
+      "id": "catholic",
+      "label": "Catholic burial",
+      "line_changes": [
+        {
+          "change": "note",
+          "item": "Base model",
+          "detail": "Essentially the standard traditional model (visitation + Funeral Mass + burial); no embalming or viewing changes."
+        },
+        {
+          "change": "add",
+          "item": "Priest stipend",
+          "detail": "~$100 suggested (parish cemetery fee schedules)."
+        },
+        {
+          "change": "add",
+          "item": "Church / Funeral Mass fee",
+          "detail": "$1,000 parishioners / $2,000 non-parishioners at one NYC parish (Apr 2024 policy); varies widely by parish."
+        },
+        {
+          "change": "optional",
+          "item": "Mausoleum crypt instead of ground burial",
+          "detail": "$4,300-$40,000+ single crypt (Archdiocese of Newark 2025 disclosure); a common Catholic preference."
+        },
+        {
+          "change": "note",
+          "item": "Cremation",
+          "detail": "Permitted since 1963; ashes to be buried or interred, not scattered, per Church guidance."
+        }
+      ],
+      "typical_totals": [
+        {
+          "label": "Total",
+          "range": "At or above the standard traditional-burial estimate",
+          "detail": "Base NFDA median plus stipends and any church fees above."
+        }
+      ],
+      "cemetery_note": "Catholic cemetery ground plot with vault: $2,100 parishioner / $3,100 non-parishioner (one parish schedule).",
+      "addons": [
+        {
+          "key": "trad_priest",
+          "mid": 100,
+          "low": 100,
+          "high": 100,
+          "label": "Priest stipend",
+          "note": "~$100 suggested; choir stipend $50-$100 if applicable."
+        },
+        {
+          "key": "trad_mass_fee",
+          "mid": 1000,
+          "low": 0,
+          "high": 2000,
+          "label": "Church / Funeral Mass fee",
+          "note": "One NYC parish: $1,000 parishioners / $2,000 non-parishioners; many parishes charge members less."
+        }
+      ],
+      "disclaimer": "No distinct national 'Catholic funeral average' survey exists - the base remains NFDA medians plus the stipends above. Music/organist fees vary widely by parish.",
+      "sources": [
+        "https://rcancem.org/pdfs/2025_HCMausoleumPriceDisclosure.pdf"
+      ]
+    },
+    {
+      "id": "hindu",
+      "label": "Hindu rites (cremation)",
+      "suggests_service": "cremation_with_service",
+      "line_changes": [
+        {
+          "change": "note",
+          "item": "Disposition",
+          "detail": "Cremation is the norm - modeled as cremation-with-ceremony, not burial."
+        },
+        {
+          "change": "remove",
+          "item": "Embalming",
+          "detail": "Quick cremation; refrigeration if there is a viewing."
+        },
+        {
+          "change": "remove",
+          "item": "Burial plot / vault",
+          "detail": "Not applicable."
+        },
+        {
+          "change": "add",
+          "item": "Puja ceremony before cremation",
+          "detail": "Family typically provides samagri items (coconut, ghee, flowers, cloth) - nominal cost."
+        },
+        {
+          "change": "add",
+          "item": "Priest / pandit dakshina (gratuity)",
+          "detail": "~$50-$300."
+        },
+        {
+          "change": "note",
+          "item": "Ashes",
+          "detail": "Commonly scattered or transported to India; transport cost is significant with no reliable published source."
+        }
+      ],
+      "typical_totals": [
+        {
+          "label": "Hindu cremation packages (examples)",
+          "range": "$2,500-$5,300",
+          "detail": "Sourced NJ, IL, WA providers and the Hindu Temple of Albany bereavement guide."
+        }
+      ],
+      "cemetery_note": "Not applicable for cremation; niche or scattering costs vary.",
+      "addons": [
+        {
+          "key": "trad_dakshina",
+          "mid": 175,
+          "low": 50,
+          "high": 300,
+          "label": "Priest dakshina",
+          "note": "~$50-$300 gratuity."
+        }
+      ],
+      "disclaimer": "Package prices are provider examples with location labels, not a national survey. Transporting remains to India is a major cost variable with no reliable published source.",
+      "sources": [
+        "https://www.boulevardfuneralhome.com/hindu-cremation-package",
+        "https://www.hindutemplealbany.org/wp-content/uploads/2020/03/Revised-BSG-Guide.pdf"
+      ]
+    },
+    {
+      "id": "buddhist",
+      "label": "Buddhist rites",
+      "suggests_service": "cremation_with_service",
+      "line_changes": [
+        {
+          "change": "note",
+          "item": "Disposition",
+          "detail": "Cremation common; burial also practiced."
+        },
+        {
+          "change": "add",
+          "item": "Temple + minister donations (ofuse / dana)",
+          "detail": "Donation-based, not fixed fees; ~$175-$1,000+ on one West Coast temple schedule."
+        },
+        {
+          "change": "note",
+          "item": "Services",
+          "detail": "Multi-day chanting / memorial services possible (venue and facility time)."
+        },
+        {
+          "change": "note",
+          "item": "49-day memorial",
+          "detail": "A separate later cost, not part of the funeral itself."
+        }
+      ],
+      "typical_totals": [
+        {
+          "label": "Complete Buddhist funeral + cremation package (one provider)",
+          "range": "$8,900",
+          "detail": "Lotus Package, Baldi / Pennsylvania Burial Company, Philadelphia - example only."
+        }
+      ],
+      "cemetery_note": "Varies by sub-tradition and practice.",
+      "addons": [
+        {
+          "key": "trad_temple",
+          "mid": 590,
+          "low": 175,
+          "high": 1000,
+          "label": "Temple + minister donations",
+          "note": "Donation-based; ~$175-$1,000+ on one West Coast temple schedule."
+        }
+      ],
+      "disclaimer": "Thinnest data of the five traditions: practices and costs vary hugely across sub-traditions (Chinese, Vietnamese, Japanese, Tibetan). No national survey; the $8,900 package is one provider's offering.",
+      "sources": [
+        "https://www.pennsylvaniaburialcompany.com/lotus-package-buddhist-traditional-funeral-cremation-package-baldi-funeral-home",
+        "https://fresnobuddhisttemple.org/wp-content/uploads/2023/01/Subsequent-Memorial-Services-Homyo-and-Donations.pdf"
+      ]
+    }
+  ],
+  "religious_global_disclaimer": "Figures are provider and regional examples, not a national survey. Requirements and costs vary by denomination, community, and metro area. Families should confirm with local clergy and funeral homes. Full source list: data/research_religious_costs.md.",
+  "va_benefits": {
+    "label": "VA burial benefits (optional)",
+    "intro": "If the deceased was a U.S. veteran, the VA may offset part of the cost. Amounts below are current for deaths on/after Oct 1, 2025.",
+    "allowances": [
+      {
+        "key": "va_service_connected",
+        "amount": 2000,
+        "label": "VA burial allowance - service-connected death",
+        "detail": "Up to $2,000 for deaths on/after Sept 11, 2001 ($1,500 if before). Deducted from the estimate."
+      },
+      {
+        "key": "va_non_service",
+        "amount": 2004,
+        "label": "VA burial + plot allowances - non-service-connected",
+        "detail": "$1,002 burial allowance + $1,002 plot/interment allowance. Deducted from the estimate."
+      },
+      {
+        "key": "va_headstone",
+        "amount": 441,
+        "label": "VA headstone / marker allowance (private cemetery)",
+        "detail": "$441 toward a headstone or marker in a private cemetery. Optional add-on deduction."
+      }
+    ],
+    "national_cemetery": "Burial in a VA national cemetery is free to the family: gravesite, opening and closing, government liner, headstone or marker, perpetual care of the gravesite, burial flag, Presidential Memorial Certificate, and military funeral honors. VA may also reimburse some transportation costs.",
+    "eligibility": "Veteran discharged under conditions other than dishonorable, plus one qualifying condition (service-connected death, died while receiving VA care, etc.). The person who paid the costs claims it.",
+    "disclaimers": [
+      "Benefits are NOT automatic - they must be claimed (VA Form 21P-530EZ). Non-service-connected claims must be filed within 2 years of burial.",
+      "Amounts reset every October 1 (start of the federal fiscal year). Verify current amounts at va.gov before planning.",
+      "Scam warning (AARP 2026): '$25,000 VA burial benefit' messages are fraudulent. Real allowances are up to $1,002 (non-service-connected) / $2,000 (service-connected)."
+    ],
+    "sources": [
+      "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+      "https://www.va.gov/resources/what-does-burial-in-a-va-national-cemetery-include/",
+      "https://www.aarp.org/content/dam/aarp/home-and-family/voices/veterans/2026/Veterans_Burial_Benefits_Guide_2026.pdf"
+    ]
+  },
+  "upkeep": {
+    "label": "Cemetery upkeep - what 'perpetual care' really covers",
+    "explainer": "Most states require cemeteries to deposit a slice of each plot sale into a trust whose principal is held forever - e.g., California 10% or $250 (whichever is greater), Texas $1.75/sq ft or 15%. This is baked into the plot price, not a separate add-on, and it covers common grounds only (mowing, walkways, landscaping) - never your individual marker. Cleaning, straightening, or resetting a headstone is the family's responsibility and billed separately.",
+    "sources": [
+      "https://legiscan.com/CA/text/AB651/id/2435652",
+      "https://www.mountlebanoncemetery.com/static/MLC-PriceList-2025-Misc-Charges.pdf"
+    ]
+  },
+  "body_donation": {
+    "label": "Body donation to science (optional)",
+    "intro": "Whole-body donation programs typically cover cremation, transportation, and the death certificate at no cost, with cremated remains returned to the family. If accepted, the funeral-home portion of the estimate above would not apply.",
+    "programs": [
+      {
+        "name": "Science Care",
+        "detail": "Free cremation, transport of the body, and filing of the death certificate. Ashes typically returned in 3-5 weeks. No age limit; pre-registration not required."
+      },
+      {
+        "name": "MedCure (nonprofit)",
+        "detail": "No-cost option covering transportation, one certified death certificate, cremation, and return of ashes or scattering at sea. No upper age limit."
+      }
+    ],
+    "catches": [
+      "Open-casket funerals are NOT possible with whole-body donation; memorial services happen after the ashes are returned.",
+      "Final acceptance is decided AT THE TIME OF DEATH - pre-registration does not guarantee acceptance.",
+      "The body must be transferred to the program promptly; families are told not to engage a funeral home themselves at time of passing.",
+      "Common exclusions (MedCure): HIV/AIDS, hepatitis B/C, history of IV drug use, severe over/underweight at time of passing.",
+      "University willed-body programs follow the same general model, but return timelines (a semester to ~2 years) and transport radius vary by school - check the specific program."
+    ],
+    "sources": [
+      "https://www.sciencecare.com/blog/how-to-donate-your-body-to-science",
+      "https://medcure.org/veterans-benefits-and-body-donation/"
+    ]
+  },
+  "cash_advance_note": "Cash-advance items are third-party goods and services the funeral home passes through at cost: flowers, obituary notices, clergy honoraria, death certificates. Ranges on this site are industry-published typical ranges, not designed surveys, and vary by market."
+}

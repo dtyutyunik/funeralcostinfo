@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="wrap prose">
-      <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Privacy</nav>
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Privacy</nav>
       <h1>Privacy policy</h1>
       <p className="updated">Effective 2026-09-23.</p>
       <p className="answer-first">
@@ -25,7 +26,7 @@ export default function PrivacyPage() {
       <p>We set no cookies.</p>
       <h2>Contact</h2>
       <p>
-        If you email us (see our <a href="/contact/">contact page</a>), your message is used only to
+        If you email us (see our <Link href="/contact/">contact page</Link>), your message is used only to
         respond to you. We do not add addresses to any list.
       </p>
       <h2>Changes</h2>

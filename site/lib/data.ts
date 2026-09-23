@@ -1,8 +1,14 @@
 import raw from '../data/estimates.json';
+import optionsRaw from '../data/options.json';
+import methodologyRaw from '../data/methodology.json';
 
 export interface ServiceEstimate { point: number; low: number; high: number }
-export interface Anchor { value: number; label: string; assumption?: string | null }
-export interface Addon { mid: number; low: number; high: number; label: string; note: string }
+export interface Anchor { value: number; value_2023: number; label: string; assumption?: string | null }
+export interface Addon { mid: number; low: number; high: number; label: string; note: string; state_adjust?: boolean }
+export interface InflationMeta {
+  series: string; base_period: string; target_period: string;
+  factor: number; factor_percent: number;
+}
 export interface StateData {
   abbr: string; name: string;
   rpp_all_items: number; rpp_goods: number;
@@ -12,6 +18,8 @@ export interface StateData {
 }
 export interface Dataset {
   model_version: string; built: string; is_modeled: boolean;
+  anchor_vintage?: string;
+  inflation?: InflationMeta;
   anchors: Record<string, Anchor>;
   addons: Record<string, Addon>;
   states: StateData[];
@@ -19,7 +27,54 @@ export interface Dataset {
 
 export const dataset = raw as Dataset;
 
-export const SITE_URL = 'https://funeralcostinfo.com';
+export interface TraditionLineChange { change: string; item: string; detail: string }
+export interface TraditionAddon { key: string; mid: number; low: number; high: number; label: string; note: string }
+export interface TraditionTotal { label: string; range: string; detail: string }
+export interface ReligiousTradition {
+  id: string; label: string;
+  suggests_service?: string;
+  line_changes: TraditionLineChange[];
+  typical_totals: TraditionTotal[];
+  cemetery_note: string;
+  addons: TraditionAddon[];
+  disclaimer: string;
+  sources: string[];
+}
+export interface VaAllowance { key: string; amount: number; label: string; detail: string }
+export interface OptionsData {
+  religious_traditions: ReligiousTradition[];
+  religious_global_disclaimer: string;
+  va_benefits: {
+    label: string; intro: string; allowances: VaAllowance[];
+    national_cemetery: string; eligibility: string;
+    disclaimers: string[]; sources: string[];
+  };
+  upkeep: { label: string; explainer: string; sources: string[] };
+  body_donation: {
+    label: string; intro: string;
+    programs: { name: string; detail: string }[];
+    catches: string[]; sources: string[];
+  };
+  cash_advance_note: string;
+}
+
+export const options = optionsRaw as OptionsData;
+
+export interface InflationLink {
+  period: string; change_pct: number; kind: string;
+  source: string; note?: string;
+}
+export interface MethodologyData {
+  model_version: string; built: string;
+  inflation: InflationMeta & {
+    index_base: string; why_december_2023: string;
+    chain: InflationLink[]; caveats: string[];
+  };
+}
+
+export const methodology = methodologyRaw as MethodologyData;
+
+export const SITE_URL = 'https://dtyutyunik.github.io/funeralcostinfo';
 export const LAST_UPDATED = dataset.built;
 
 export const SERVICE_ORDER = [  'traditional_burial',
@@ -43,11 +98,19 @@ export function getState(slug: string): StateData | undefined {
 export const PHASE0_STATES = ['california', 'texas', 'florida', 'new-york', 'mississippi'];
 
 export function fmt(n: number): string {
-  return '$' + n.toLocaleString('en-US');
+  const sign = n < 0 ? '−' : '';
+  return sign + '$' + Math.abs(n).toLocaleString('en-US');
 }
 
 export function fmtRange(e: ServiceEstimate): string {
   return `${fmt(e.low)} – ${fmt(e.high)}`;
+}
+
+/** State-adjust an add-on figure (nearest $10), unless it opts out (e.g. government fees). */
+export function adjAddon(a: { mid: number; low: number; high: number; state_adjust?: boolean }, mult: number) {
+  if (a.state_adjust === false) return { mid: a.mid, low: a.low, high: a.high };
+  const r = (x: number) => Math.round((x * mult) / 10) * 10;
+  return { mid: r(a.mid), low: r(a.low), high: r(a.high) };
 }
 
 /** Visible on every page: the data-vintage line (freshness is a trust issue). */

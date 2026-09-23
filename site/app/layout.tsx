@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, VINTAGE_LABEL, LAST_UPDATED } from '../lib/data';
+import Link from 'next/link';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -37,15 +38,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="site-header no-print">
           <div className="wrap">
-            <a className="brand" href="/">
+            <Link className="brand" href="/">
               Funeral<span className="dot">Cost</span>Info
               <small>Independent cost transparency</small>
-            </a>
+            </Link>
             <nav className="main-nav" aria-label="Main">
-              <a href="/calculator/">Calculator</a>
-              <a href="/methodology/">Methodology</a>
-              <a href="/guides/funeral-rule-rights/">Your Rights</a>
-              <a href="/about/">About</a>
+              <Link href="/calculator/">Calculator</Link>
+              <Link href="/methodology/">Methodology</Link>
+              <Link href="/guides/funeral-rule-rights/">Your Rights</Link>
+              <Link href="/about/">About</Link>
             </nav>
           </div>
         </header>
@@ -66,19 +67,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <strong>Explore</strong>
                 <ul>
-                  <li><a href="/calculator/">Cost calculator</a></li>
-                  <li><a href="/methodology/">Methodology &amp; data</a></li>
-                  <li><a href="/guides/funeral-rule-rights/">FTC Funeral Rule rights</a></li>
+                  <li><Link href="/calculator/">Cost calculator</Link></li>
+                  <li><Link href="/methodology/">Methodology &amp; data</Link></li>
+                  <li><Link href="/guides/funeral-rule-rights/">FTC Funeral Rule rights</Link></li>
                 </ul>
               </div>
               <div>
                 <strong>Company</strong>
                 <ul>
-                  <li><a href="/about/">About</a></li>
-                  <li><a href="/editorial-policy/">Editorial policy</a></li>
-                  <li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li>
-                  <li><a href="/privacy/">Privacy</a></li>
-                  <li><a href="/contact/">Contact</a></li>
+                  <li><Link href="/about/">About</Link></li>
+                  <li><Link href="/editorial-policy/">Editorial policy</Link></li>
+                  <li><Link href="/affiliate-disclosure/">Affiliate disclosure</Link></li>
+                  <li><Link href="/privacy/">Privacy</Link></li>
+                  <li><Link href="/contact/">Contact</Link></li>
                 </ul>
               </div>
             </div>
@@ -89,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </span>
               All state figures are modeled estimates, not surveyed prices. Educational content
               only — not financial, legal, or funeral-planning advice. See our{' '}
-              <a href="/methodology/">methodology</a>.
+              <Link href="/methodology/">methodology</Link>.
             </div>
           </div>
         </footer>

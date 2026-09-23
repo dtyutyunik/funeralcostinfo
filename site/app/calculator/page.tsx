@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Calculator from '../../components/Calculator';
 import JsonLd, { breadcrumbJsonLd } from '../../components/JsonLd';
 import { SITE_URL } from '../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Funeral Cost Calculator — Build Your Estimate',
@@ -24,14 +25,15 @@ export default function CalculatorPage() {
         { name: 'Calculator', url: SITE_URL + '/calculator/' },
       ])} />
       <div className="wrap prose">
-        <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Calculator</nav>
+        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Calculator</nav>
         <h1>Funeral cost calculator</h1>
         <p className="answer-first">
           <strong>Quick answer:</strong> choose your state and service type below, add typical
           cemetery and cash-advance costs, and get a transparent modeled estimate — every number
           labeled, every input cited. The national starting point is the NFDA 2023 median of $8,300 —
           $9,140 in August 2026 dollars after adjusting with the BLS funeral-expenses CPI — for a
-          funeral with viewing and burial. Then print the receipt and compare it against
+          funeral with viewing and burial. Optional toggles cover religious traditions, VA burial
+          benefits, cemetery upkeep, and body donation to science. Then print the receipt and compare it against
           real General Price Lists from local funeral homes.
         </p>
         <Calculator defaultState="CA" />
@@ -42,7 +44,7 @@ export default function CalculatorPage() {
           <li>Compare their itemized prices against your modeled estimate, line by line.</li>
           <li>Buy only the goods and services you want. You can supply your own casket or urn.</li>
         </ol>
-        <p><a href="/guides/funeral-rule-rights/">Know your rights under the FTC Funeral Rule →</a></p>
+        <p><Link href="/guides/funeral-rule-rights/">Know your rights under the FTC Funeral Rule →</Link></p>
       </div>
     </>
   );

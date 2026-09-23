@@ -1,1 +1,2230 @@
-{"model_version": "v3", "built": "2026-09-23", "is_modeled": true, "anchors": {"traditional_burial": {"value": 9140, "label": "Funeral with viewing + burial", "assumption": null, "basis": "NFDA 2023 Member GPL Study median $8,300 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $9,140. NFDA 2023 Member GPL Study median; vault not included"}, "burial_with_vault": {"value": 11010, "label": "Funeral with viewing + burial + vault", "assumption": null, "basis": "NFDA 2023 Member GPL Study median $9,995 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $11,010. NFDA 2023 GPL Study median, via 2023 press release"}, "cremation_with_service": {"value": 6920, "label": "Funeral with viewing + cremation", "assumption": null, "basis": "NFDA 2023 Member GPL Study median $6,280 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $6,920. NFDA 2023 Member GPL Study median"}, "direct_cremation": {"value": 3030, "label": "Direct cremation", "assumption": null, "basis": "NFDA 2023 Member GPL Study median $2,750 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $3,030. NFDA 2023 Member GPL Study median (funeral-home container)"}, "direct_burial": {"value": 4100, "label": "Immediate burial", "assumption": null, "basis": "NFDA 2023 Member GPL Study median $3,720 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $4,100. NFDA 2023 Member GPL Study median"}, "green_burial": {"value": 5480, "label": "Green burial (assumption-based)", "assumption": "0.60 \u00d7 adjusted traditional burial ($9,140); no published NFDA median exists", "basis": "Assumption: 0.60 \u00d7 adjusted traditional burial ($9,140). No NFDA median exists; labeled as an assumption everywhere it appears."}}, "addons": {"cemetery_plot": {"mid": 2500, "low": 1000, "high": 5000, "label": "Cemetery plot / interment rights", "note": "FCA Maryland/DC survey, July 2026"}, "opening_closing": {"mid": 2000, "low": 1500, "high": 3000, "label": "Cemetery opening & closing", "note": "FCA Maryland/DC survey, July 2026"}, "headstone": {"mid": 1500, "low": 1000, "high": 3000, "label": "Headstone / marker", "note": "FCA Maryland/DC survey, July 2026"}, "flowers": {"mid": 500, "low": 300, "high": 800, "label": "Flowers", "note": "Typical market range, not a surveyed price"}, "obituary": {"mid": 400, "low": 150, "high": 700, "label": "Obituary notices", "note": "Typical market range, not a surveyed price"}}, "states": [{"abbr": "AL", "name": "Alabama", "rpp_all_items": 88.823, "rpp_goods": 96.399, "rpp_services_housing": 61.785, "rpp_services_utilities": 84.643, "rpp_services_other": 96.711, "estimates": {"traditional_burial": {"point": 8120, "low": 6900, "high": 9340}, "burial_with_vault": {"point": 9780, "low": 8310, "high": 11250}, "cremation_with_service": {"point": 6150, "low": 5230, "high": 7070}, "direct_cremation": {"point": 2690, "low": 2290, "high": 3090}, "direct_burial": {"point": 3640, "low": 3090, "high": 4190}, "green_burial": {"point": 4870, "low": 4140, "high": 5600}}, "nfda_projected_cremation_rate_2035": 59.3}, {"abbr": "AK", "name": "Alaska", "rpp_all_items": 102.359, "rpp_goods": 106.319, "rpp_services_housing": 93.784, "rpp_services_utilities": 119.021, "rpp_services_other": 102.208, "estimates": {"traditional_burial": {"point": 9360, "low": 7960, "high": 10760}, "burial_with_vault": {"point": 11270, "low": 9580, "high": 12960}, "cremation_with_service": {"point": 7080, "low": 6020, "high": 8140}, "direct_cremation": {"point": 3100, "low": 2640, "high": 3560}, "direct_burial": {"point": 4200, "low": 3570, "high": 4830}, "green_burial": {"point": 5610, "low": 4770, "high": 6450}}, "nfda_projected_cremation_rate_2035": 72.0}, {"abbr": "AZ", "name": "Arizona", "rpp_all_items": 100.677, "rpp_goods": 95.361, "rpp_services_housing": 106.804, "rpp_services_utilities": 92.317, "rpp_services_other": 102.808, "estimates": {"traditional_burial": {"point": 9200, "low": 7820, "high": 10580}, "burial_with_vault": {"point": 11080, "low": 9420, "high": 12740}, "cremation_with_service": {"point": 6970, "low": 5920, "high": 8020}, "direct_cremation": {"point": 3050, "low": 2590, "high": 3510}, "direct_burial": {"point": 4130, "low": 3510, "high": 4750}, "green_burial": {"point": 5520, "low": 4690, "high": 6350}}, "nfda_projected_cremation_rate_2035": 79.1}, {"abbr": "AR", "name": "Arkansas", "rpp_all_items": 86.937, "rpp_goods": 93.597, "rpp_services_housing": 58.203, "rpp_services_utilities": 74.731, "rpp_services_other": 95.312, "estimates": {"traditional_burial": {"point": 7950, "low": 6760, "high": 9140}, "burial_with_vault": {"point": 9570, "low": 8130, "high": 11010}, "cremation_with_service": {"point": 6020, "low": 5120, "high": 6920}, "direct_cremation": {"point": 2630, "low": 2240, "high": 3020}, "direct_burial": {"point": 3560, "low": 3030, "high": 4090}, "green_burial": {"point": 4760, "low": 4050, "high": 5470}}, "nfda_projected_cremation_rate_2035": 63.4}, {"abbr": "CA", "name": "California", "rpp_all_items": 110.72, "rpp_goods": 106.098, "rpp_services_housing": 154.346, "rpp_services_utilities": 158.899, "rpp_services_other": 102.591, "estimates": {"traditional_burial": {"point": 10120, "low": 8600, "high": 11640}, "burial_with_vault": {"point": 12190, "low": 10360, "high": 14020}, "cremation_with_service": {"point": 7660, "low": 6510, "high": 8810}, "direct_cremation": {"point": 3350, "low": 2850, "high": 3850}, "direct_burial": {"point": 4540, "low": 3860, "high": 5220}, "green_burial": {"point": 6070, "low": 5160, "high": 6980}}, "nfda_projected_cremation_rate_2035": 81.5}, {"abbr": "CO", "name": "Colorado", "rpp_all_items": 103.052, "rpp_goods": 98.727, "rpp_services_housing": 127.359, "rpp_services_utilities": 84.971, "rpp_services_other": 99.613, "estimates": {"traditional_burial": {"point": 9420, "low": 8010, "high": 10830}, "burial_with_vault": {"point": 11350, "low": 9650, "high": 13050}, "cremation_with_service": {"point": 7130, "low": 6060, "high": 8200}, "direct_cremation": {"point": 3120, "low": 2650, "high": 3590}, "direct_burial": {"point": 4230, "low": 3600, "high": 4860}, "green_burial": {"point": 5650, "low": 4800, "high": 6500}}, "nfda_projected_cremation_rate_2035": 79.6}, {"abbr": "CT", "name": "Connecticut", "rpp_all_items": 103.61, "rpp_goods": 97.33, "rpp_services_housing": 117.048, "rpp_services_utilities": 146.495, "rpp_services_other": 102.658, "estimates": {"traditional_burial": {"point": 9470, "low": 8050, "high": 10890}, "burial_with_vault": {"point": 11410, "low": 9700, "high": 13120}, "cremation_with_service": {"point": 7170, "low": 6090, "high": 8250}, "direct_cremation": {"point": 3140, "low": 2670, "high": 3610}, "direct_burial": {"point": 4250, "low": 3610, "high": 4890}, "green_burial": {"point": 5680, "low": 4830, "high": 6530}}, "nfda_projected_cremation_rate_2035": 72.3}, {"abbr": "DE", "name": "Delaware", "rpp_all_items": 99.808, "rpp_goods": 96.155, "rpp_services_housing": 102.015, "rpp_services_utilities": 103.81, "rpp_services_other": 101.235, "estimates": {"traditional_burial": {"point": 9120, "low": 7750, "high": 10490}, "burial_with_vault": {"point": 10990, "low": 9340, "high": 12640}, "cremation_with_service": {"point": 6910, "low": 5870, "high": 7950}, "direct_cremation": {"point": 3020, "low": 2570, "high": 3470}, "direct_burial": {"point": 4090, "low": 3480, "high": 4700}, "green_burial": {"point": 5470, "low": 4650, "high": 6290}}, "nfda_projected_cremation_rate_2035": 66.6}, {"abbr": "DC", "name": "District of Columbia", "rpp_all_items": 109.901, "rpp_goods": 106.502, "rpp_services_housing": 154.984, "rpp_services_utilities": 112.821, "rpp_services_other": 102.964, "estimates": {"traditional_burial": {"point": 10040, "low": 8530, "high": 11550}, "burial_with_vault": {"point": 12100, "low": 10280, "high": 13910}, "cremation_with_service": {"point": 7610, "low": 6470, "high": 8750}, "direct_cremation": {"point": 3330, "low": 2830, "high": 3830}, "direct_burial": {"point": 4510, "low": 3830, "high": 5190}, "green_burial": {"point": 6020, "low": 5120, "high": 6920}}, "nfda_projected_cremation_rate_2035": 66.0}, {"abbr": "FL", "name": "Florida", "rpp_all_items": 103.414, "rpp_goods": 98.059, "rpp_services_housing": 122.107, "rpp_services_utilities": 90.074, "rpp_services_other": 101.324, "estimates": {"traditional_burial": {"point": 9450, "low": 8030, "high": 10870}, "burial_with_vault": {"point": 11390, "low": 9680, "high": 13100}, "cremation_with_service": {"point": 7160, "low": 6090, "high": 8230}, "direct_cremation": {"point": 3130, "low": 2660, "high": 3600}, "direct_burial": {"point": 4240, "low": 3600, "high": 4880}, "green_burial": {"point": 5670, "low": 4820, "high": 6520}}, "nfda_projected_cremation_rate_2035": 79.8}, {"abbr": "GA", "name": "Georgia", "rpp_all_items": 96.293, "rpp_goods": 98.929, "rpp_services_housing": 88.694, "rpp_services_utilities": 92.814, "rpp_services_other": 97.343, "estimates": {"traditional_burial": {"point": 8800, "low": 7480, "high": 10120}, "burial_with_vault": {"point": 10600, "low": 9010, "high": 12190}, "cremation_with_service": {"point": 6660, "low": 5660, "high": 7660}, "direct_cremation": {"point": 2920, "low": 2480, "high": 3360}, "direct_burial": {"point": 3950, "low": 3360, "high": 4540}, "green_burial": {"point": 5280, "low": 4490, "high": 6070}}, "nfda_projected_cremation_rate_2035": 69.0}, {"abbr": "HI", "name": "Hawaii", "rpp_all_items": 109.951, "rpp_goods": 111.562, "rpp_services_housing": 125.304, "rpp_services_utilities": 190.178, "rpp_services_other": 102.898, "estimates": {"traditional_burial": {"point": 10050, "low": 8540, "high": 11560}, "burial_with_vault": {"point": 12110, "low": 10290, "high": 13930}, "cremation_with_service": {"point": 7610, "low": 6470, "high": 8750}, "direct_cremation": {"point": 3330, "low": 2830, "high": 3830}, "direct_burial": {"point": 4510, "low": 3830, "high": 5190}, "green_burial": {"point": 6030, "low": 5130, "high": 6930}}, "nfda_projected_cremation_rate_2035": 86.7}, {"abbr": "ID", "name": "Idaho", "rpp_all_items": 95.494, "rpp_goods": 96.311, "rpp_services_housing": 90.027, "rpp_services_utilities": 70.444, "rpp_services_other": 99.015, "estimates": {"traditional_burial": {"point": 8730, "low": 7420, "high": 10040}, "burial_with_vault": {"point": 10510, "low": 8930, "high": 12090}, "cremation_with_service": {"point": 6610, "low": 5620, "high": 7600}, "direct_cremation": {"point": 2890, "low": 2460, "high": 3320}, "direct_burial": {"point": 3920, "low": 3330, "high": 4510}, "green_burial": {"point": 5230, "low": 4450, "high": 6010}}, "nfda_projected_cremation_rate_2035": 68.9}, {"abbr": "IL", "name": "Illinois", "rpp_all_items": 99.958, "rpp_goods": 103.832, "rpp_services_housing": 93.944, "rpp_services_utilities": 84.952, "rpp_services_other": 100.156, "estimates": {"traditional_burial": {"point": 9140, "low": 7770, "high": 10510}, "burial_with_vault": {"point": 11010, "low": 9360, "high": 12660}, "cremation_with_service": {"point": 6920, "low": 5880, "high": 7960}, "direct_cremation": {"point": 3030, "low": 2580, "high": 3480}, "direct_burial": {"point": 4100, "low": 3480, "high": 4720}, "green_burial": {"point": 5480, "low": 4660, "high": 6300}}, "nfda_projected_cremation_rate_2035": 70.5}, {"abbr": "IN", "name": "Indiana", "rpp_all_items": 93.329, "rpp_goods": 95.509, "rpp_services_housing": 73.926, "rpp_services_utilities": 85.545, "rpp_services_other": 99.145, "estimates": {"traditional_burial": {"point": 8530, "low": 7250, "high": 9810}, "burial_with_vault": {"point": 10280, "low": 8740, "high": 11820}, "cremation_with_service": {"point": 6460, "low": 5490, "high": 7430}, "direct_cremation": {"point": 2830, "low": 2410, "high": 3250}, "direct_burial": {"point": 3830, "low": 3260, "high": 4400}, "green_burial": {"point": 5110, "low": 4340, "high": 5880}}, "nfda_projected_cremation_rate_2035": 67.4}, {"abbr": "IA", "name": "Iowa", "rpp_all_items": 87.762, "rpp_goods": 93.73, "rpp_services_housing": 65.322, "rpp_services_utilities": 83.274, "rpp_services_other": 92.927, "estimates": {"traditional_burial": {"point": 8020, "low": 6820, "high": 9220}, "burial_with_vault": {"point": 9660, "low": 8210, "high": 11110}, "cremation_with_service": {"point": 6070, "low": 5160, "high": 6980}, "direct_cremation": {"point": 2660, "low": 2260, "high": 3060}, "direct_burial": {"point": 3600, "low": 3060, "high": 4140}, "green_burial": {"point": 4810, "low": 4090, "high": 5530}}, "nfda_projected_cremation_rate_2035": 67.1}, {"abbr": "KS", "name": "Kansas", "rpp_all_items": 90.068, "rpp_goods": 94.027, "rpp_services_housing": 71.156, "rpp_services_utilities": 88.438, "rpp_services_other": 93.816, "estimates": {"traditional_burial": {"point": 8230, "low": 7000, "high": 9460}, "burial_with_vault": {"point": 9920, "low": 8430, "high": 11410}, "cremation_with_service": {"point": 6230, "low": 5300, "high": 7160}, "direct_cremation": {"point": 2730, "low": 2320, "high": 3140}, "direct_burial": {"point": 3690, "low": 3140, "high": 4240}, "green_burial": {"point": 4940, "low": 4200, "high": 5680}}, "nfda_projected_cremation_rate_2035": 65.6}, {"abbr": "KY", "name": "Kentucky", "rpp_all_items": 90.159, "rpp_goods": 95.967, "rpp_services_housing": 64.313, "rpp_services_utilities": 75.313, "rpp_services_other": 97.25, "estimates": {"traditional_burial": {"point": 8240, "low": 7000, "high": 9480}, "burial_with_vault": {"point": 9930, "low": 8440, "high": 11420}, "cremation_with_service": {"point": 6240, "low": 5300, "high": 7180}, "direct_cremation": {"point": 2730, "low": 2320, "high": 3140}, "direct_burial": {"point": 3700, "low": 3140, "high": 4260}, "green_burial": {"point": 4940, "low": 4200, "high": 5680}}, "nfda_projected_cremation_rate_2035": 63.8}, {"abbr": "LA", "name": "Louisiana", "rpp_all_items": 88.207, "rpp_goods": 93.7, "rpp_services_housing": 63.104, "rpp_services_utilities": 71.463, "rpp_services_other": 95.706, "estimates": {"traditional_burial": {"point": 8060, "low": 6850, "high": 9270}, "burial_with_vault": {"point": 9710, "low": 8250, "high": 11170}, "cremation_with_service": {"point": 6100, "low": 5180, "high": 7010}, "direct_cremation": {"point": 2670, "low": 2270, "high": 3070}, "direct_burial": {"point": 3620, "low": 3080, "high": 4160}, "green_burial": {"point": 4830, "low": 4110, "high": 5550}}, "nfda_projected_cremation_rate_2035": 55.9}, {"abbr": "ME", "name": "Maine", "rpp_all_items": 97.05, "rpp_goods": 97.171, "rpp_services_housing": 78.94, "rpp_services_utilities": 135.189, "rpp_services_other": 103.191, "estimates": {"traditional_burial": {"point": 8870, "low": 7540, "high": 10200}, "burial_with_vault": {"point": 10690, "low": 9090, "high": 12290}, "cremation_with_service": {"point": 6720, "low": 5710, "high": 7730}, "direct_cremation": {"point": 2940, "low": 2500, "high": 3380}, "direct_burial": {"point": 3980, "low": 3380, "high": 4580}, "green_burial": {"point": 5320, "low": 4520, "high": 6120}}, "nfda_projected_cremation_rate_2035": 80.4}, {"abbr": "MD", "name": "Maryland", "rpp_all_items": 104.959, "rpp_goods": 102.524, "rpp_services_housing": 121.079, "rpp_services_utilities": 110.86, "rpp_services_other": 101.596, "estimates": {"traditional_burial": {"point": 9590, "low": 8150, "high": 11030}, "burial_with_vault": {"point": 11560, "low": 9830, "high": 13290}, "cremation_with_service": {"point": 7260, "low": 6170, "high": 8350}, "direct_cremation": {"point": 3180, "low": 2700, "high": 3660}, "direct_burial": {"point": 4300, "low": 3660, "high": 4940}, "green_burial": {"point": 5750, "low": 4890, "high": 6610}}, "nfda_projected_cremation_rate_2035": 68.2}, {"abbr": "MA", "name": "Massachusetts", "rpp_all_items": 105.757, "rpp_goods": 98.82, "rpp_services_housing": 128.068, "rpp_services_utilities": 152.07, "rpp_services_other": 102.852, "estimates": {"traditional_burial": {"point": 9670, "low": 8220, "high": 11120}, "burial_with_vault": {"point": 11640, "low": 9890, "high": 13390}, "cremation_with_service": {"point": 7320, "low": 6220, "high": 8420}, "direct_cremation": {"point": 3200, "low": 2720, "high": 3680}, "direct_burial": {"point": 4340, "low": 3690, "high": 4990}, "green_burial": {"point": 5800, "low": 4930, "high": 6670}}, "nfda_projected_cremation_rate_2035": 70.9}, {"abbr": "MI", "name": "Michigan", "rpp_all_items": 96.217, "rpp_goods": 95.993, "rpp_services_housing": 82.332, "rpp_services_utilities": 100.15, "rpp_services_other": 100.933, "estimates": {"traditional_burial": {"point": 8790, "low": 7470, "high": 10110}, "burial_with_vault": {"point": 10590, "low": 9000, "high": 12180}, "cremation_with_service": {"point": 6660, "low": 5660, "high": 7660}, "direct_cremation": {"point": 2920, "low": 2480, "high": 3360}, "direct_burial": {"point": 3940, "low": 3350, "high": 4530}, "green_burial": {"point": 5270, "low": 4480, "high": 6060}}, "nfda_projected_cremation_rate_2035": 69.8}, {"abbr": "MN", "name": "Minnesota", "rpp_all_items": 98.621, "rpp_goods": 100.519, "rpp_services_housing": 91.281, "rpp_services_utilities": 90.836, "rpp_services_other": 100.213, "estimates": {"traditional_burial": {"point": 9010, "low": 7660, "high": 10360}, "burial_with_vault": {"point": 10860, "low": 9230, "high": 12490}, "cremation_with_service": {"point": 6820, "low": 5800, "high": 7840}, "direct_cremation": {"point": 2990, "low": 2540, "high": 3440}, "direct_burial": {"point": 4040, "low": 3430, "high": 4650}, "green_burial": {"point": 5400, "low": 4590, "high": 6210}}, "nfda_projected_cremation_rate_2035": 74.9}, {"abbr": "MS", "name": "Mississippi", "rpp_all_items": 86.953, "rpp_goods": 96.219, "rpp_services_housing": 56.456, "rpp_services_utilities": 78.415, "rpp_services_other": 96.09, "estimates": {"traditional_burial": {"point": 7950, "low": 6760, "high": 9140}, "burial_with_vault": {"point": 9570, "low": 8130, "high": 11010}, "cremation_with_service": {"point": 6020, "low": 5120, "high": 6920}, "direct_cremation": {"point": 2630, "low": 2240, "high": 3020}, "direct_burial": {"point": 3570, "low": 3030, "high": 4110}, "green_burial": {"point": 4770, "low": 4050, "high": 5490}}, "nfda_projected_cremation_rate_2035": 54.5}, {"abbr": "MO", "name": "Missouri", "rpp_all_items": 90.817, "rpp_goods": 96.299, "rpp_services_housing": 69.88, "rpp_services_utilities": 79.406, "rpp_services_other": 95.169, "estimates": {"traditional_burial": {"point": 8300, "low": 7060, "high": 9540}, "burial_with_vault": {"point": 10000, "low": 8500, "high": 11500}, "cremation_with_service": {"point": 6280, "low": 5340, "high": 7220}, "direct_cremation": {"point": 2750, "low": 2340, "high": 3160}, "direct_burial": {"point": 3720, "low": 3160, "high": 4280}, "green_burial": {"point": 4980, "low": 4230, "high": 5730}}, "nfda_projected_cremation_rate_2035": 69.7}, {"abbr": "MT", "name": "Montana", "rpp_all_items": 94.645, "rpp_goods": 96.006, "rpp_services_housing": 84.648, "rpp_services_utilities": 72.254, "rpp_services_other": 98.715, "estimates": {"traditional_burial": {"point": 8650, "low": 7350, "high": 9950}, "burial_with_vault": {"point": 10420, "low": 8860, "high": 11980}, "cremation_with_service": {"point": 6550, "low": 5570, "high": 7530}, "direct_cremation": {"point": 2870, "low": 2440, "high": 3300}, "direct_burial": {"point": 3880, "low": 3300, "high": 4460}, "green_burial": {"point": 5190, "low": 4410, "high": 5970}}, "nfda_projected_cremation_rate_2035": 76.4}, {"abbr": "NE", "name": "Nebraska", "rpp_all_items": 90.103, "rpp_goods": 94.101, "rpp_services_housing": 75.174, "rpp_services_utilities": 75.604, "rpp_services_other": 92.98, "estimates": {"traditional_burial": {"point": 8240, "low": 7000, "high": 9480}, "burial_with_vault": {"point": 9920, "low": 8430, "high": 11410}, "cremation_with_service": {"point": 6240, "low": 5300, "high": 7180}, "direct_cremation": {"point": 2730, "low": 2320, "high": 3140}, "direct_burial": {"point": 3690, "low": 3140, "high": 4240}, "green_burial": {"point": 4940, "low": 4200, "high": 5680}}, "nfda_projected_cremation_rate_2035": 68.7}, {"abbr": "NV", "name": "Nevada", "rpp_all_items": 99.979, "rpp_goods": 96.271, "rpp_services_housing": 114.135, "rpp_services_utilities": 90.51, "rpp_services_other": 98.744, "estimates": {"traditional_burial": {"point": 9140, "low": 7770, "high": 10510}, "burial_with_vault": {"point": 11010, "low": 9360, "high": 12660}, "cremation_with_service": {"point": 6920, "low": 5880, "high": 7960}, "direct_cremation": {"point": 3030, "low": 2580, "high": 3480}, "direct_burial": {"point": 4100, "low": 3480, "high": 4720}, "green_burial": {"point": 5480, "low": 4660, "high": 6300}}, "nfda_projected_cremation_rate_2035": 83.1}, {"abbr": "NH", "name": "New Hampshire", "rpp_all_items": 104.165, "rpp_goods": 98.578, "rpp_services_housing": 114.947, "rpp_services_utilities": 133.663, "rpp_services_other": 103.879, "estimates": {"traditional_burial": {"point": 9520, "low": 8090, "high": 10950}, "burial_with_vault": {"point": 11470, "low": 9750, "high": 13190}, "cremation_with_service": {"point": 7210, "low": 6130, "high": 8290}, "direct_cremation": {"point": 3160, "low": 2690, "high": 3630}, "direct_burial": {"point": 4270, "low": 3630, "high": 4910}, "green_burial": {"point": 5710, "low": 4850, "high": 6570}}, "nfda_projected_cremation_rate_2035": 80.2}, {"abbr": "NJ", "name": "New Jersey", "rpp_all_items": 108.805, "rpp_goods": 107.066, "rpp_services_housing": 134.292, "rpp_services_utilities": 114.187, "rpp_services_other": 103.529, "estimates": {"traditional_burial": {"point": 9940, "low": 8450, "high": 11430}, "burial_with_vault": {"point": 11980, "low": 10180, "high": 13780}, "cremation_with_service": {"point": 7530, "low": 6400, "high": 8660}, "direct_cremation": {"point": 3300, "low": 2800, "high": 3790}, "direct_burial": {"point": 4460, "low": 3790, "high": 5130}, "green_burial": {"point": 5960, "low": 5070, "high": 6850}}, "nfda_projected_cremation_rate_2035": 69.5}, {"abbr": "NM", "name": "New Mexico", "rpp_all_items": 92.212, "rpp_goods": 96.144, "rpp_services_housing": 73.611, "rpp_services_utilities": 77.895, "rpp_services_other": 98.54, "estimates": {"traditional_burial": {"point": 8430, "low": 7170, "high": 9690}, "burial_with_vault": {"point": 10150, "low": 8630, "high": 11670}, "cremation_with_service": {"point": 6380, "low": 5420, "high": 7340}, "direct_cremation": {"point": 2790, "low": 2370, "high": 3210}, "direct_burial": {"point": 3780, "low": 3210, "high": 4350}, "green_burial": {"point": 5050, "low": 4290, "high": 5810}}, "nfda_projected_cremation_rate_2035": 76.9}, {"abbr": "NY", "name": "New York", "rpp_all_items": 107.921, "rpp_goods": 107.254, "rpp_services_housing": 122.168, "rpp_services_utilities": 134.37, "rpp_services_other": 104.067, "estimates": {"traditional_burial": {"point": 9860, "low": 8380, "high": 11340}, "burial_with_vault": {"point": 11880, "low": 10100, "high": 13660}, "cremation_with_service": {"point": 7470, "low": 6350, "high": 8590}, "direct_cremation": {"point": 3270, "low": 2780, "high": 3760}, "direct_burial": {"point": 4420, "low": 3760, "high": 5080}, "green_burial": {"point": 5910, "low": 5020, "high": 6800}}, "nfda_projected_cremation_rate_2035": 70.7}, {"abbr": "NC", "name": "North Carolina", "rpp_all_items": 94.326, "rpp_goods": 96.621, "rpp_services_housing": 81.364, "rpp_services_utilities": 88.619, "rpp_services_other": 98.186, "estimates": {"traditional_burial": {"point": 8620, "low": 7330, "high": 9910}, "burial_with_vault": {"point": 10390, "low": 8830, "high": 11950}, "cremation_with_service": {"point": 6530, "low": 5550, "high": 7510}, "direct_cremation": {"point": 2860, "low": 2430, "high": 3290}, "direct_burial": {"point": 3870, "low": 3290, "high": 4450}, "green_burial": {"point": 5170, "low": 4390, "high": 5950}}, "nfda_projected_cremation_rate_2035": 71.2}, {"abbr": "ND", "name": "North Dakota", "rpp_all_items": 88.959, "rpp_goods": 95.701, "rpp_services_housing": 71.421, "rpp_services_utilities": 73.669, "rpp_services_other": 91.158, "estimates": {"traditional_burial": {"point": 8130, "low": 6910, "high": 9350}, "burial_with_vault": {"point": 9790, "low": 8320, "high": 11260}, "cremation_with_service": {"point": 6160, "low": 5240, "high": 7080}, "direct_cremation": {"point": 2700, "low": 2300, "high": 3100}, "direct_burial": {"point": 3650, "low": 3100, "high": 4200}, "green_burial": {"point": 4870, "low": 4140, "high": 5600}}, "nfda_projected_cremation_rate_2035": 66.4}, {"abbr": "OH", "name": "Ohio", "rpp_all_items": 92.774, "rpp_goods": 93.67, "rpp_services_housing": 73.012, "rpp_services_utilities": 95.823, "rpp_services_other": 98.947, "estimates": {"traditional_burial": {"point": 8480, "low": 7210, "high": 9750}, "burial_with_vault": {"point": 10210, "low": 8680, "high": 11740}, "cremation_with_service": {"point": 6420, "low": 5460, "high": 7380}, "direct_cremation": {"point": 2810, "low": 2390, "high": 3230}, "direct_burial": {"point": 3800, "low": 3230, "high": 4370}, "green_burial": {"point": 5080, "low": 4320, "high": 5840}}, "nfda_projected_cremation_rate_2035": 68.9}, {"abbr": "OK", "name": "Oklahoma", "rpp_all_items": 87.843, "rpp_goods": 93.778, "rpp_services_housing": 62.763, "rpp_services_utilities": 73.882, "rpp_services_other": 95.458, "estimates": {"traditional_burial": {"point": 8030, "low": 6830, "high": 9230}, "burial_with_vault": {"point": 9670, "low": 8220, "high": 11120}, "cremation_with_service": {"point": 6080, "low": 5170, "high": 6990}, "direct_cremation": {"point": 2660, "low": 2260, "high": 3060}, "direct_burial": {"point": 3600, "low": 3060, "high": 4140}, "green_burial": {"point": 4810, "low": 4090, "high": 5530}}, "nfda_projected_cremation_rate_2035": 66.1}, {"abbr": "OR", "name": "Oregon", "rpp_all_items": 103.361, "rpp_goods": 105.261, "rpp_services_housing": 108.628, "rpp_services_utilities": 107.046, "rpp_services_other": 100.298, "estimates": {"traditional_burial": {"point": 9450, "low": 8030, "high": 10870}, "burial_with_vault": {"point": 11380, "low": 9670, "high": 13090}, "cremation_with_service": {"point": 7150, "low": 6080, "high": 8220}, "direct_cremation": {"point": 3130, "low": 2660, "high": 3600}, "direct_burial": {"point": 4240, "low": 3600, "high": 4880}, "green_burial": {"point": 5660, "low": 4810, "high": 6510}}, "nfda_projected_cremation_rate_2035": 82.6}, {"abbr": "PA", "name": "Pennsylvania", "rpp_all_items": 97.572, "rpp_goods": 99.357, "rpp_services_housing": 85.068, "rpp_services_utilities": 109.321, "rpp_services_other": 99.762, "estimates": {"traditional_burial": {"point": 8920, "low": 7580, "high": 10260}, "burial_with_vault": {"point": 10740, "low": 9130, "high": 12350}, "cremation_with_service": {"point": 6750, "low": 5740, "high": 7760}, "direct_cremation": {"point": 2960, "low": 2520, "high": 3400}, "direct_burial": {"point": 4000, "low": 3400, "high": 4600}, "green_burial": {"point": 5350, "low": 4550, "high": 6150}}, "nfda_projected_cremation_rate_2035": 71.3}, {"abbr": "RI", "name": "Rhode Island", "rpp_all_items": 102.28, "rpp_goods": 97.165, "rpp_services_housing": 105.62, "rpp_services_utilities": 146.653, "rpp_services_other": 102.84, "estimates": {"traditional_burial": {"point": 9350, "low": 7950, "high": 10750}, "burial_with_vault": {"point": 11260, "low": 9570, "high": 12950}, "cremation_with_service": {"point": 7080, "low": 6020, "high": 8140}, "direct_cremation": {"point": 3100, "low": 2640, "high": 3560}, "direct_burial": {"point": 4190, "low": 3560, "high": 4820}, "green_burial": {"point": 5600, "low": 4760, "high": 6440}}, "nfda_projected_cremation_rate_2035": 74.5}, {"abbr": "SC", "name": "South Carolina", "rpp_all_items": 93.749, "rpp_goods": 96.339, "rpp_services_housing": 80.49, "rpp_services_utilities": 88.303, "rpp_services_other": 98.284, "estimates": {"traditional_burial": {"point": 8570, "low": 7280, "high": 9860}, "burial_with_vault": {"point": 10320, "low": 8770, "high": 11870}, "cremation_with_service": {"point": 6490, "low": 5520, "high": 7460}, "direct_cremation": {"point": 2840, "low": 2410, "high": 3270}, "direct_burial": {"point": 3840, "low": 3260, "high": 4420}, "green_burial": {"point": 5140, "low": 4370, "high": 5910}}, "nfda_projected_cremation_rate_2035": 68.3}, {"abbr": "SD", "name": "South Dakota", "rpp_all_items": 88.586, "rpp_goods": 95.473, "rpp_services_housing": 67.642, "rpp_services_utilities": 79.651, "rpp_services_other": 91.899, "estimates": {"traditional_burial": {"point": 8100, "low": 6880, "high": 9320}, "burial_with_vault": {"point": 9750, "low": 8290, "high": 11210}, "cremation_with_service": {"point": 6130, "low": 5210, "high": 7050}, "direct_cremation": {"point": 2680, "low": 2280, "high": 3080}, "direct_burial": {"point": 3630, "low": 3090, "high": 4170}, "green_burial": {"point": 4850, "low": 4120, "high": 5580}}, "nfda_projected_cremation_rate_2035": 69.8}, {"abbr": "TN", "name": "Tennessee", "rpp_all_items": 91.87, "rpp_goods": 96.247, "rpp_services_housing": 79.07, "rpp_services_utilities": 72.137, "rpp_services_other": 95.142, "estimates": {"traditional_burial": {"point": 8400, "low": 7140, "high": 9660}, "burial_with_vault": {"point": 10110, "low": 8590, "high": 11630}, "cremation_with_service": {"point": 6360, "low": 5410, "high": 7310}, "direct_cremation": {"point": 2780, "low": 2360, "high": 3200}, "direct_burial": {"point": 3770, "low": 3200, "high": 4340}, "green_burial": {"point": 5030, "low": 4280, "high": 5780}}, "nfda_projected_cremation_rate_2035": 66.9}, {"abbr": "TX", "name": "Texas", "rpp_all_items": 97.057, "rpp_goods": 98.083, "rpp_services_housing": 96.503, "rpp_services_utilities": 87.512, "rpp_services_other": 97.081, "estimates": {"traditional_burial": {"point": 8870, "low": 7540, "high": 10200}, "burial_with_vault": {"point": 10690, "low": 9090, "high": 12290}, "cremation_with_service": {"point": 6720, "low": 5710, "high": 7730}, "direct_cremation": {"point": 2940, "low": 2500, "high": 3380}, "direct_burial": {"point": 3980, "low": 3380, "high": 4580}, "green_burial": {"point": 5320, "low": 4520, "high": 6120}}, "nfda_projected_cremation_rate_2035": 70.2}, {"abbr": "UT", "name": "Utah", "rpp_all_items": 98.864, "rpp_goods": 96.446, "rpp_services_housing": 107.814, "rpp_services_utilities": 78.739, "rpp_services_other": 98.959, "estimates": {"traditional_burial": {"point": 9040, "low": 7680, "high": 10400}, "burial_with_vault": {"point": 10880, "low": 9250, "high": 12510}, "cremation_with_service": {"point": 6840, "low": 5810, "high": 7870}, "direct_cremation": {"point": 3000, "low": 2550, "high": 3450}, "direct_burial": {"point": 4050, "low": 3440, "high": 4660}, "green_burial": {"point": 5420, "low": 4610, "high": 6230}}, "nfda_projected_cremation_rate_2035": 63.1}, {"abbr": "VT", "name": "Vermont", "rpp_all_items": 97.958, "rpp_goods": 97.274, "rpp_services_housing": 86.502, "rpp_services_utilities": 125.833, "rpp_services_other": 101.586, "estimates": {"traditional_burial": {"point": 8950, "low": 7610, "high": 10290}, "burial_with_vault": {"point": 10790, "low": 9170, "high": 12410}, "cremation_with_service": {"point": 6780, "low": 5760, "high": 7800}, "direct_cremation": {"point": 2970, "low": 2520, "high": 3420}, "direct_burial": {"point": 4020, "low": 3420, "high": 4620}, "green_burial": {"point": 5370, "low": 4560, "high": 6180}}, "nfda_projected_cremation_rate_2035": 78.4}, {"abbr": "VA", "name": "Virginia", "rpp_all_items": 101.104, "rpp_goods": 100.368, "rpp_services_housing": 106.799, "rpp_services_utilities": 92.185, "rpp_services_other": 100.233, "estimates": {"traditional_burial": {"point": 9240, "low": 7850, "high": 10630}, "burial_with_vault": {"point": 11130, "low": 9460, "high": 12800}, "cremation_with_service": {"point": 7000, "low": 5950, "high": 8050}, "direct_cremation": {"point": 3060, "low": 2600, "high": 3520}, "direct_burial": {"point": 4150, "low": 3530, "high": 4770}, "green_burial": {"point": 5540, "low": 4710, "high": 6370}}, "nfda_projected_cremation_rate_2035": 69.6}, {"abbr": "WA", "name": "Washington", "rpp_all_items": 107.013, "rpp_goods": 104.359, "rpp_services_housing": 125.979, "rpp_services_utilities": 92.86, "rpp_services_other": 103.873, "estimates": {"traditional_burial": {"point": 9780, "low": 8310, "high": 11250}, "burial_with_vault": {"point": 11780, "low": 10010, "high": 13550}, "cremation_with_service": {"point": 7410, "low": 6300, "high": 8520}, "direct_cremation": {"point": 3240, "low": 2750, "high": 3730}, "direct_burial": {"point": 4390, "low": 3730, "high": 5050}, "green_burial": {"point": 5860, "low": 4980, "high": 6740}}, "nfda_projected_cremation_rate_2035": 82.9}, {"abbr": "WV", "name": "West Virginia", "rpp_all_items": 89.497, "rpp_goods": 96.539, "rpp_services_housing": 54.241, "rpp_services_utilities": 92.242, "rpp_services_other": 99.94, "estimates": {"traditional_burial": {"point": 8180, "low": 6950, "high": 9410}, "burial_with_vault": {"point": 9850, "low": 8370, "high": 11330}, "cremation_with_service": {"point": 6190, "low": 5260, "high": 7120}, "direct_cremation": {"point": 2710, "low": 2300, "high": 3120}, "direct_burial": {"point": 3670, "low": 3120, "high": 4220}, "green_burial": {"point": 4900, "low": 4160, "high": 5640}}, "nfda_projected_cremation_rate_2035": 72.9}, {"abbr": "WI", "name": "Wisconsin", "rpp_all_items": 94.095, "rpp_goods": 94.31, "rpp_services_housing": 79.312, "rpp_services_utilities": 89.906, "rpp_services_other": 99.501, "estimates": {"traditional_burial": {"point": 8600, "low": 7310, "high": 9890}, "burial_with_vault": {"point": 10360, "low": 8810, "high": 11910}, "cremation_with_service": {"point": 6510, "low": 5530, "high": 7490}, "direct_cremation": {"point": 2850, "low": 2420, "high": 3280}, "direct_burial": {"point": 3860, "low": 3280, "high": 4440}, "green_burial": {"point": 5160, "low": 4390, "high": 5930}}, "nfda_projected_cremation_rate_2035": 72.7}, {"abbr": "WY", "name": "Wyoming", "rpp_all_items": 92.691, "rpp_goods": 95.368, "rpp_services_housing": 71.127, "rpp_services_utilities": 78.422, "rpp_services_other": 100.428, "estimates": {"traditional_burial": {"point": 8470, "low": 7200, "high": 9740}, "burial_with_vault": {"point": 10210, "low": 8680, "high": 11740}, "cremation_with_service": {"point": 6410, "low": 5450, "high": 7370}, "direct_cremation": {"point": 2810, "low": 2390, "high": 3230}, "direct_burial": {"point": 3800, "low": 3230, "high": 4370}, "green_burial": {"point": 5080, "low": 4320, "high": 5840}}, "nfda_projected_cremation_rate_2035": 71.8}]}
+{
+ "model_version": "v3",
+ "built": "2026-09-23",
+ "is_modeled": true,
+ "anchors": {
+  "traditional_burial": {
+   "value": 9140,
+   "label": "Funeral with viewing + burial",
+   "assumption": null,
+   "basis": "NFDA 2023 Member GPL Study median $8,300 × 1.1016 (BLS CPI funeral expenses, August 2026) = $9,140. NFDA 2023 Member GPL Study median; vault not included",
+   "value_2023": 8300
+  },
+  "burial_with_vault": {
+   "value": 11010,
+   "label": "Funeral with viewing + burial + vault",
+   "assumption": null,
+   "basis": "NFDA 2023 Member GPL Study median $9,995 × 1.1016 (BLS CPI funeral expenses, August 2026) = $11,010. NFDA 2023 GPL Study median, via 2023 press release",
+   "value_2023": 9995
+  },
+  "cremation_with_service": {
+   "value": 6920,
+   "label": "Funeral with viewing + cremation",
+   "assumption": null,
+   "basis": "NFDA 2023 Member GPL Study median $6,280 × 1.1016 (BLS CPI funeral expenses, August 2026) = $6,920. NFDA 2023 Member GPL Study median",
+   "value_2023": 6280
+  },
+  "direct_cremation": {
+   "value": 3030,
+   "label": "Direct cremation",
+   "assumption": null,
+   "basis": "NFDA 2023 Member GPL Study median $2,750 × 1.1016 (BLS CPI funeral expenses, August 2026) = $3,030. NFDA 2023 Member GPL Study median (funeral-home container)",
+   "value_2023": 2750
+  },
+  "direct_burial": {
+   "value": 4100,
+   "label": "Immediate burial",
+   "assumption": null,
+   "basis": "NFDA 2023 Member GPL Study median $3,720 × 1.1016 (BLS CPI funeral expenses, August 2026) = $4,100. NFDA 2023 Member GPL Study median",
+   "value_2023": 3720
+  },
+  "green_burial": {
+   "value": 5480,
+   "label": "Green burial (assumption-based)",
+   "assumption": "0.60 × adjusted traditional burial ($9,140); no published NFDA median exists",
+   "basis": "Assumption: 0.60 × adjusted traditional burial ($9,140). No NFDA median exists; labeled as an assumption everywhere it appears.",
+   "value_2023": 4980
+  }
+ },
+ "addons": {
+  "cemetery_plot": {
+   "mid": 2500,
+   "low": 1000,
+   "high": 5000,
+   "label": "Cemetery plot / interment rights",
+   "note": "FCA Maryland/DC survey, July 2026"
+  },
+  "opening_closing": {
+   "mid": 2000,
+   "low": 1500,
+   "high": 3000,
+   "label": "Cemetery opening & closing",
+   "note": "FCA Maryland/DC survey, July 2026"
+  },
+  "headstone": {
+   "mid": 1500,
+   "low": 1000,
+   "high": 3000,
+   "label": "Headstone / marker",
+   "note": "FCA Maryland/DC survey, July 2026"
+  },
+  "flowers": {
+   "mid": 500,
+   "low": 300,
+   "high": 800,
+   "label": "Flowers",
+   "note": "Typical market range, not a surveyed price"
+  },
+  "obituary": {
+   "mid": 400,
+   "low": 150,
+   "high": 700,
+   "label": "Obituary notices",
+   "note": "Typical market range, not a surveyed price"
+  }
+ },
+ "states": [
+  {
+   "abbr": "AL",
+   "name": "Alabama",
+   "rpp_all_items": 88.823,
+   "rpp_goods": 96.399,
+   "rpp_services_housing": 61.785,
+   "rpp_services_utilities": 84.643,
+   "rpp_services_other": 96.711,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8120,
+     "low": 6900,
+     "high": 9340
+    },
+    "burial_with_vault": {
+     "point": 9780,
+     "low": 8310,
+     "high": 11250
+    },
+    "cremation_with_service": {
+     "point": 6150,
+     "low": 5230,
+     "high": 7070
+    },
+    "direct_cremation": {
+     "point": 2690,
+     "low": 2290,
+     "high": 3090
+    },
+    "direct_burial": {
+     "point": 3640,
+     "low": 3090,
+     "high": 4190
+    },
+    "green_burial": {
+     "point": 4870,
+     "low": 4140,
+     "high": 5600
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 59.3
+  },
+  {
+   "abbr": "AK",
+   "name": "Alaska",
+   "rpp_all_items": 102.359,
+   "rpp_goods": 106.319,
+   "rpp_services_housing": 93.784,
+   "rpp_services_utilities": 119.021,
+   "rpp_services_other": 102.208,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9360,
+     "low": 7960,
+     "high": 10760
+    },
+    "burial_with_vault": {
+     "point": 11270,
+     "low": 9580,
+     "high": 12960
+    },
+    "cremation_with_service": {
+     "point": 7080,
+     "low": 6020,
+     "high": 8140
+    },
+    "direct_cremation": {
+     "point": 3100,
+     "low": 2640,
+     "high": 3560
+    },
+    "direct_burial": {
+     "point": 4200,
+     "low": 3570,
+     "high": 4830
+    },
+    "green_burial": {
+     "point": 5610,
+     "low": 4770,
+     "high": 6450
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 72.0
+  },
+  {
+   "abbr": "AZ",
+   "name": "Arizona",
+   "rpp_all_items": 100.677,
+   "rpp_goods": 95.361,
+   "rpp_services_housing": 106.804,
+   "rpp_services_utilities": 92.317,
+   "rpp_services_other": 102.808,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9200,
+     "low": 7820,
+     "high": 10580
+    },
+    "burial_with_vault": {
+     "point": 11080,
+     "low": 9420,
+     "high": 12740
+    },
+    "cremation_with_service": {
+     "point": 6970,
+     "low": 5920,
+     "high": 8020
+    },
+    "direct_cremation": {
+     "point": 3050,
+     "low": 2590,
+     "high": 3510
+    },
+    "direct_burial": {
+     "point": 4130,
+     "low": 3510,
+     "high": 4750
+    },
+    "green_burial": {
+     "point": 5520,
+     "low": 4690,
+     "high": 6350
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 79.1
+  },
+  {
+   "abbr": "AR",
+   "name": "Arkansas",
+   "rpp_all_items": 86.937,
+   "rpp_goods": 93.597,
+   "rpp_services_housing": 58.203,
+   "rpp_services_utilities": 74.731,
+   "rpp_services_other": 95.312,
+   "estimates": {
+    "traditional_burial": {
+     "point": 7950,
+     "low": 6760,
+     "high": 9140
+    },
+    "burial_with_vault": {
+     "point": 9570,
+     "low": 8130,
+     "high": 11010
+    },
+    "cremation_with_service": {
+     "point": 6020,
+     "low": 5120,
+     "high": 6920
+    },
+    "direct_cremation": {
+     "point": 2630,
+     "low": 2240,
+     "high": 3020
+    },
+    "direct_burial": {
+     "point": 3560,
+     "low": 3030,
+     "high": 4090
+    },
+    "green_burial": {
+     "point": 4760,
+     "low": 4050,
+     "high": 5470
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 63.4
+  },
+  {
+   "abbr": "CA",
+   "name": "California",
+   "rpp_all_items": 110.72,
+   "rpp_goods": 106.098,
+   "rpp_services_housing": 154.346,
+   "rpp_services_utilities": 158.899,
+   "rpp_services_other": 102.591,
+   "estimates": {
+    "traditional_burial": {
+     "point": 10120,
+     "low": 8600,
+     "high": 11640
+    },
+    "burial_with_vault": {
+     "point": 12190,
+     "low": 10360,
+     "high": 14020
+    },
+    "cremation_with_service": {
+     "point": 7660,
+     "low": 6510,
+     "high": 8810
+    },
+    "direct_cremation": {
+     "point": 3350,
+     "low": 2850,
+     "high": 3850
+    },
+    "direct_burial": {
+     "point": 4540,
+     "low": 3860,
+     "high": 5220
+    },
+    "green_burial": {
+     "point": 6070,
+     "low": 5160,
+     "high": 6980
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 81.5
+  },
+  {
+   "abbr": "CO",
+   "name": "Colorado",
+   "rpp_all_items": 103.052,
+   "rpp_goods": 98.727,
+   "rpp_services_housing": 127.359,
+   "rpp_services_utilities": 84.971,
+   "rpp_services_other": 99.613,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9420,
+     "low": 8010,
+     "high": 10830
+    },
+    "burial_with_vault": {
+     "point": 11350,
+     "low": 9650,
+     "high": 13050
+    },
+    "cremation_with_service": {
+     "point": 7130,
+     "low": 6060,
+     "high": 8200
+    },
+    "direct_cremation": {
+     "point": 3120,
+     "low": 2650,
+     "high": 3590
+    },
+    "direct_burial": {
+     "point": 4230,
+     "low": 3600,
+     "high": 4860
+    },
+    "green_burial": {
+     "point": 5650,
+     "low": 4800,
+     "high": 6500
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 79.6
+  },
+  {
+   "abbr": "CT",
+   "name": "Connecticut",
+   "rpp_all_items": 103.61,
+   "rpp_goods": 97.33,
+   "rpp_services_housing": 117.048,
+   "rpp_services_utilities": 146.495,
+   "rpp_services_other": 102.658,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9470,
+     "low": 8050,
+     "high": 10890
+    },
+    "burial_with_vault": {
+     "point": 11410,
+     "low": 9700,
+     "high": 13120
+    },
+    "cremation_with_service": {
+     "point": 7170,
+     "low": 6090,
+     "high": 8250
+    },
+    "direct_cremation": {
+     "point": 3140,
+     "low": 2670,
+     "high": 3610
+    },
+    "direct_burial": {
+     "point": 4250,
+     "low": 3610,
+     "high": 4890
+    },
+    "green_burial": {
+     "point": 5680,
+     "low": 4830,
+     "high": 6530
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 72.3
+  },
+  {
+   "abbr": "DE",
+   "name": "Delaware",
+   "rpp_all_items": 99.808,
+   "rpp_goods": 96.155,
+   "rpp_services_housing": 102.015,
+   "rpp_services_utilities": 103.81,
+   "rpp_services_other": 101.235,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9120,
+     "low": 7750,
+     "high": 10490
+    },
+    "burial_with_vault": {
+     "point": 10990,
+     "low": 9340,
+     "high": 12640
+    },
+    "cremation_with_service": {
+     "point": 6910,
+     "low": 5870,
+     "high": 7950
+    },
+    "direct_cremation": {
+     "point": 3020,
+     "low": 2570,
+     "high": 3470
+    },
+    "direct_burial": {
+     "point": 4090,
+     "low": 3480,
+     "high": 4700
+    },
+    "green_burial": {
+     "point": 5470,
+     "low": 4650,
+     "high": 6290
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 66.6
+  },
+  {
+   "abbr": "DC",
+   "name": "District of Columbia",
+   "rpp_all_items": 109.901,
+   "rpp_goods": 106.502,
+   "rpp_services_housing": 154.984,
+   "rpp_services_utilities": 112.821,
+   "rpp_services_other": 102.964,
+   "estimates": {
+    "traditional_burial": {
+     "point": 10040,
+     "low": 8530,
+     "high": 11550
+    },
+    "burial_with_vault": {
+     "point": 12100,
+     "low": 10280,
+     "high": 13910
+    },
+    "cremation_with_service": {
+     "point": 7610,
+     "low": 6470,
+     "high": 8750
+    },
+    "direct_cremation": {
+     "point": 3330,
+     "low": 2830,
+     "high": 3830
+    },
+    "direct_burial": {
+     "point": 4510,
+     "low": 3830,
+     "high": 5190
+    },
+    "green_burial": {
+     "point": 6020,
+     "low": 5120,
+     "high": 6920
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 66.0
+  },
+  {
+   "abbr": "FL",
+   "name": "Florida",
+   "rpp_all_items": 103.414,
+   "rpp_goods": 98.059,
+   "rpp_services_housing": 122.107,
+   "rpp_services_utilities": 90.074,
+   "rpp_services_other": 101.324,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9450,
+     "low": 8030,
+     "high": 10870
+    },
+    "burial_with_vault": {
+     "point": 11390,
+     "low": 9680,
+     "high": 13100
+    },
+    "cremation_with_service": {
+     "point": 7160,
+     "low": 6090,
+     "high": 8230
+    },
+    "direct_cremation": {
+     "point": 3130,
+     "low": 2660,
+     "high": 3600
+    },
+    "direct_burial": {
+     "point": 4240,
+     "low": 3600,
+     "high": 4880
+    },
+    "green_burial": {
+     "point": 5670,
+     "low": 4820,
+     "high": 6520
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 79.8
+  },
+  {
+   "abbr": "GA",
+   "name": "Georgia",
+   "rpp_all_items": 96.293,
+   "rpp_goods": 98.929,
+   "rpp_services_housing": 88.694,
+   "rpp_services_utilities": 92.814,
+   "rpp_services_other": 97.343,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8800,
+     "low": 7480,
+     "high": 10120
+    },
+    "burial_with_vault": {
+     "point": 10600,
+     "low": 9010,
+     "high": 12190
+    },
+    "cremation_with_service": {
+     "point": 6660,
+     "low": 5660,
+     "high": 7660
+    },
+    "direct_cremation": {
+     "point": 2920,
+     "low": 2480,
+     "high": 3360
+    },
+    "direct_burial": {
+     "point": 3950,
+     "low": 3360,
+     "high": 4540
+    },
+    "green_burial": {
+     "point": 5280,
+     "low": 4490,
+     "high": 6070
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 69.0
+  },
+  {
+   "abbr": "HI",
+   "name": "Hawaii",
+   "rpp_all_items": 109.951,
+   "rpp_goods": 111.562,
+   "rpp_services_housing": 125.304,
+   "rpp_services_utilities": 190.178,
+   "rpp_services_other": 102.898,
+   "estimates": {
+    "traditional_burial": {
+     "point": 10050,
+     "low": 8540,
+     "high": 11560
+    },
+    "burial_with_vault": {
+     "point": 12110,
+     "low": 10290,
+     "high": 13930
+    },
+    "cremation_with_service": {
+     "point": 7610,
+     "low": 6470,
+     "high": 8750
+    },
+    "direct_cremation": {
+     "point": 3330,
+     "low": 2830,
+     "high": 3830
+    },
+    "direct_burial": {
+     "point": 4510,
+     "low": 3830,
+     "high": 5190
+    },
+    "green_burial": {
+     "point": 6030,
+     "low": 5130,
+     "high": 6930
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 86.7
+  },
+  {
+   "abbr": "ID",
+   "name": "Idaho",
+   "rpp_all_items": 95.494,
+   "rpp_goods": 96.311,
+   "rpp_services_housing": 90.027,
+   "rpp_services_utilities": 70.444,
+   "rpp_services_other": 99.015,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8730,
+     "low": 7420,
+     "high": 10040
+    },
+    "burial_with_vault": {
+     "point": 10510,
+     "low": 8930,
+     "high": 12090
+    },
+    "cremation_with_service": {
+     "point": 6610,
+     "low": 5620,
+     "high": 7600
+    },
+    "direct_cremation": {
+     "point": 2890,
+     "low": 2460,
+     "high": 3320
+    },
+    "direct_burial": {
+     "point": 3920,
+     "low": 3330,
+     "high": 4510
+    },
+    "green_burial": {
+     "point": 5230,
+     "low": 4450,
+     "high": 6010
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 68.9
+  },
+  {
+   "abbr": "IL",
+   "name": "Illinois",
+   "rpp_all_items": 99.958,
+   "rpp_goods": 103.832,
+   "rpp_services_housing": 93.944,
+   "rpp_services_utilities": 84.952,
+   "rpp_services_other": 100.156,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9140,
+     "low": 7770,
+     "high": 10510
+    },
+    "burial_with_vault": {
+     "point": 11010,
+     "low": 9360,
+     "high": 12660
+    },
+    "cremation_with_service": {
+     "point": 6920,
+     "low": 5880,
+     "high": 7960
+    },
+    "direct_cremation": {
+     "point": 3030,
+     "low": 2580,
+     "high": 3480
+    },
+    "direct_burial": {
+     "point": 4100,
+     "low": 3480,
+     "high": 4720
+    },
+    "green_burial": {
+     "point": 5480,
+     "low": 4660,
+     "high": 6300
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 70.5
+  },
+  {
+   "abbr": "IN",
+   "name": "Indiana",
+   "rpp_all_items": 93.329,
+   "rpp_goods": 95.509,
+   "rpp_services_housing": 73.926,
+   "rpp_services_utilities": 85.545,
+   "rpp_services_other": 99.145,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8530,
+     "low": 7250,
+     "high": 9810
+    },
+    "burial_with_vault": {
+     "point": 10280,
+     "low": 8740,
+     "high": 11820
+    },
+    "cremation_with_service": {
+     "point": 6460,
+     "low": 5490,
+     "high": 7430
+    },
+    "direct_cremation": {
+     "point": 2830,
+     "low": 2410,
+     "high": 3250
+    },
+    "direct_burial": {
+     "point": 3830,
+     "low": 3260,
+     "high": 4400
+    },
+    "green_burial": {
+     "point": 5110,
+     "low": 4340,
+     "high": 5880
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 67.4
+  },
+  {
+   "abbr": "IA",
+   "name": "Iowa",
+   "rpp_all_items": 87.762,
+   "rpp_goods": 93.73,
+   "rpp_services_housing": 65.322,
+   "rpp_services_utilities": 83.274,
+   "rpp_services_other": 92.927,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8020,
+     "low": 6820,
+     "high": 9220
+    },
+    "burial_with_vault": {
+     "point": 9660,
+     "low": 8210,
+     "high": 11110
+    },
+    "cremation_with_service": {
+     "point": 6070,
+     "low": 5160,
+     "high": 6980
+    },
+    "direct_cremation": {
+     "point": 2660,
+     "low": 2260,
+     "high": 3060
+    },
+    "direct_burial": {
+     "point": 3600,
+     "low": 3060,
+     "high": 4140
+    },
+    "green_burial": {
+     "point": 4810,
+     "low": 4090,
+     "high": 5530
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 67.1
+  },
+  {
+   "abbr": "KS",
+   "name": "Kansas",
+   "rpp_all_items": 90.068,
+   "rpp_goods": 94.027,
+   "rpp_services_housing": 71.156,
+   "rpp_services_utilities": 88.438,
+   "rpp_services_other": 93.816,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8230,
+     "low": 7000,
+     "high": 9460
+    },
+    "burial_with_vault": {
+     "point": 9920,
+     "low": 8430,
+     "high": 11410
+    },
+    "cremation_with_service": {
+     "point": 6230,
+     "low": 5300,
+     "high": 7160
+    },
+    "direct_cremation": {
+     "point": 2730,
+     "low": 2320,
+     "high": 3140
+    },
+    "direct_burial": {
+     "point": 3690,
+     "low": 3140,
+     "high": 4240
+    },
+    "green_burial": {
+     "point": 4940,
+     "low": 4200,
+     "high": 5680
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 65.6
+  },
+  {
+   "abbr": "KY",
+   "name": "Kentucky",
+   "rpp_all_items": 90.159,
+   "rpp_goods": 95.967,
+   "rpp_services_housing": 64.313,
+   "rpp_services_utilities": 75.313,
+   "rpp_services_other": 97.25,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8240,
+     "low": 7000,
+     "high": 9480
+    },
+    "burial_with_vault": {
+     "point": 9930,
+     "low": 8440,
+     "high": 11420
+    },
+    "cremation_with_service": {
+     "point": 6240,
+     "low": 5300,
+     "high": 7180
+    },
+    "direct_cremation": {
+     "point": 2730,
+     "low": 2320,
+     "high": 3140
+    },
+    "direct_burial": {
+     "point": 3700,
+     "low": 3140,
+     "high": 4260
+    },
+    "green_burial": {
+     "point": 4940,
+     "low": 4200,
+     "high": 5680
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 63.8
+  },
+  {
+   "abbr": "LA",
+   "name": "Louisiana",
+   "rpp_all_items": 88.207,
+   "rpp_goods": 93.7,
+   "rpp_services_housing": 63.104,
+   "rpp_services_utilities": 71.463,
+   "rpp_services_other": 95.706,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8060,
+     "low": 6850,
+     "high": 9270
+    },
+    "burial_with_vault": {
+     "point": 9710,
+     "low": 8250,
+     "high": 11170
+    },
+    "cremation_with_service": {
+     "point": 6100,
+     "low": 5180,
+     "high": 7010
+    },
+    "direct_cremation": {
+     "point": 2670,
+     "low": 2270,
+     "high": 3070
+    },
+    "direct_burial": {
+     "point": 3620,
+     "low": 3080,
+     "high": 4160
+    },
+    "green_burial": {
+     "point": 4830,
+     "low": 4110,
+     "high": 5550
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 55.9
+  },
+  {
+   "abbr": "ME",
+   "name": "Maine",
+   "rpp_all_items": 97.05,
+   "rpp_goods": 97.171,
+   "rpp_services_housing": 78.94,
+   "rpp_services_utilities": 135.189,
+   "rpp_services_other": 103.191,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8870,
+     "low": 7540,
+     "high": 10200
+    },
+    "burial_with_vault": {
+     "point": 10690,
+     "low": 9090,
+     "high": 12290
+    },
+    "cremation_with_service": {
+     "point": 6720,
+     "low": 5710,
+     "high": 7730
+    },
+    "direct_cremation": {
+     "point": 2940,
+     "low": 2500,
+     "high": 3380
+    },
+    "direct_burial": {
+     "point": 3980,
+     "low": 3380,
+     "high": 4580
+    },
+    "green_burial": {
+     "point": 5320,
+     "low": 4520,
+     "high": 6120
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 80.4
+  },
+  {
+   "abbr": "MD",
+   "name": "Maryland",
+   "rpp_all_items": 104.959,
+   "rpp_goods": 102.524,
+   "rpp_services_housing": 121.079,
+   "rpp_services_utilities": 110.86,
+   "rpp_services_other": 101.596,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9590,
+     "low": 8150,
+     "high": 11030
+    },
+    "burial_with_vault": {
+     "point": 11560,
+     "low": 9830,
+     "high": 13290
+    },
+    "cremation_with_service": {
+     "point": 7260,
+     "low": 6170,
+     "high": 8350
+    },
+    "direct_cremation": {
+     "point": 3180,
+     "low": 2700,
+     "high": 3660
+    },
+    "direct_burial": {
+     "point": 4300,
+     "low": 3660,
+     "high": 4940
+    },
+    "green_burial": {
+     "point": 5750,
+     "low": 4890,
+     "high": 6610
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 68.2
+  },
+  {
+   "abbr": "MA",
+   "name": "Massachusetts",
+   "rpp_all_items": 105.757,
+   "rpp_goods": 98.82,
+   "rpp_services_housing": 128.068,
+   "rpp_services_utilities": 152.07,
+   "rpp_services_other": 102.852,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9670,
+     "low": 8220,
+     "high": 11120
+    },
+    "burial_with_vault": {
+     "point": 11640,
+     "low": 9890,
+     "high": 13390
+    },
+    "cremation_with_service": {
+     "point": 7320,
+     "low": 6220,
+     "high": 8420
+    },
+    "direct_cremation": {
+     "point": 3200,
+     "low": 2720,
+     "high": 3680
+    },
+    "direct_burial": {
+     "point": 4340,
+     "low": 3690,
+     "high": 4990
+    },
+    "green_burial": {
+     "point": 5800,
+     "low": 4930,
+     "high": 6670
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 70.9
+  },
+  {
+   "abbr": "MI",
+   "name": "Michigan",
+   "rpp_all_items": 96.217,
+   "rpp_goods": 95.993,
+   "rpp_services_housing": 82.332,
+   "rpp_services_utilities": 100.15,
+   "rpp_services_other": 100.933,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8790,
+     "low": 7470,
+     "high": 10110
+    },
+    "burial_with_vault": {
+     "point": 10590,
+     "low": 9000,
+     "high": 12180
+    },
+    "cremation_with_service": {
+     "point": 6660,
+     "low": 5660,
+     "high": 7660
+    },
+    "direct_cremation": {
+     "point": 2920,
+     "low": 2480,
+     "high": 3360
+    },
+    "direct_burial": {
+     "point": 3940,
+     "low": 3350,
+     "high": 4530
+    },
+    "green_burial": {
+     "point": 5270,
+     "low": 4480,
+     "high": 6060
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 69.8
+  },
+  {
+   "abbr": "MN",
+   "name": "Minnesota",
+   "rpp_all_items": 98.621,
+   "rpp_goods": 100.519,
+   "rpp_services_housing": 91.281,
+   "rpp_services_utilities": 90.836,
+   "rpp_services_other": 100.213,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9010,
+     "low": 7660,
+     "high": 10360
+    },
+    "burial_with_vault": {
+     "point": 10860,
+     "low": 9230,
+     "high": 12490
+    },
+    "cremation_with_service": {
+     "point": 6820,
+     "low": 5800,
+     "high": 7840
+    },
+    "direct_cremation": {
+     "point": 2990,
+     "low": 2540,
+     "high": 3440
+    },
+    "direct_burial": {
+     "point": 4040,
+     "low": 3430,
+     "high": 4650
+    },
+    "green_burial": {
+     "point": 5400,
+     "low": 4590,
+     "high": 6210
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 74.9
+  },
+  {
+   "abbr": "MS",
+   "name": "Mississippi",
+   "rpp_all_items": 86.953,
+   "rpp_goods": 96.219,
+   "rpp_services_housing": 56.456,
+   "rpp_services_utilities": 78.415,
+   "rpp_services_other": 96.09,
+   "estimates": {
+    "traditional_burial": {
+     "point": 7950,
+     "low": 6760,
+     "high": 9140
+    },
+    "burial_with_vault": {
+     "point": 9570,
+     "low": 8130,
+     "high": 11010
+    },
+    "cremation_with_service": {
+     "point": 6020,
+     "low": 5120,
+     "high": 6920
+    },
+    "direct_cremation": {
+     "point": 2630,
+     "low": 2240,
+     "high": 3020
+    },
+    "direct_burial": {
+     "point": 3570,
+     "low": 3030,
+     "high": 4110
+    },
+    "green_burial": {
+     "point": 4770,
+     "low": 4050,
+     "high": 5490
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 54.5
+  },
+  {
+   "abbr": "MO",
+   "name": "Missouri",
+   "rpp_all_items": 90.817,
+   "rpp_goods": 96.299,
+   "rpp_services_housing": 69.88,
+   "rpp_services_utilities": 79.406,
+   "rpp_services_other": 95.169,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8300,
+     "low": 7060,
+     "high": 9540
+    },
+    "burial_with_vault": {
+     "point": 10000,
+     "low": 8500,
+     "high": 11500
+    },
+    "cremation_with_service": {
+     "point": 6280,
+     "low": 5340,
+     "high": 7220
+    },
+    "direct_cremation": {
+     "point": 2750,
+     "low": 2340,
+     "high": 3160
+    },
+    "direct_burial": {
+     "point": 3720,
+     "low": 3160,
+     "high": 4280
+    },
+    "green_burial": {
+     "point": 4980,
+     "low": 4230,
+     "high": 5730
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 69.7
+  },
+  {
+   "abbr": "MT",
+   "name": "Montana",
+   "rpp_all_items": 94.645,
+   "rpp_goods": 96.006,
+   "rpp_services_housing": 84.648,
+   "rpp_services_utilities": 72.254,
+   "rpp_services_other": 98.715,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8650,
+     "low": 7350,
+     "high": 9950
+    },
+    "burial_with_vault": {
+     "point": 10420,
+     "low": 8860,
+     "high": 11980
+    },
+    "cremation_with_service": {
+     "point": 6550,
+     "low": 5570,
+     "high": 7530
+    },
+    "direct_cremation": {
+     "point": 2870,
+     "low": 2440,
+     "high": 3300
+    },
+    "direct_burial": {
+     "point": 3880,
+     "low": 3300,
+     "high": 4460
+    },
+    "green_burial": {
+     "point": 5190,
+     "low": 4410,
+     "high": 5970
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 76.4
+  },
+  {
+   "abbr": "NE",
+   "name": "Nebraska",
+   "rpp_all_items": 90.103,
+   "rpp_goods": 94.101,
+   "rpp_services_housing": 75.174,
+   "rpp_services_utilities": 75.604,
+   "rpp_services_other": 92.98,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8240,
+     "low": 7000,
+     "high": 9480
+    },
+    "burial_with_vault": {
+     "point": 9920,
+     "low": 8430,
+     "high": 11410
+    },
+    "cremation_with_service": {
+     "point": 6240,
+     "low": 5300,
+     "high": 7180
+    },
+    "direct_cremation": {
+     "point": 2730,
+     "low": 2320,
+     "high": 3140
+    },
+    "direct_burial": {
+     "point": 3690,
+     "low": 3140,
+     "high": 4240
+    },
+    "green_burial": {
+     "point": 4940,
+     "low": 4200,
+     "high": 5680
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 68.7
+  },
+  {
+   "abbr": "NV",
+   "name": "Nevada",
+   "rpp_all_items": 99.979,
+   "rpp_goods": 96.271,
+   "rpp_services_housing": 114.135,
+   "rpp_services_utilities": 90.51,
+   "rpp_services_other": 98.744,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9140,
+     "low": 7770,
+     "high": 10510
+    },
+    "burial_with_vault": {
+     "point": 11010,
+     "low": 9360,
+     "high": 12660
+    },
+    "cremation_with_service": {
+     "point": 6920,
+     "low": 5880,
+     "high": 7960
+    },
+    "direct_cremation": {
+     "point": 3030,
+     "low": 2580,
+     "high": 3480
+    },
+    "direct_burial": {
+     "point": 4100,
+     "low": 3480,
+     "high": 4720
+    },
+    "green_burial": {
+     "point": 5480,
+     "low": 4660,
+     "high": 6300
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 83.1
+  },
+  {
+   "abbr": "NH",
+   "name": "New Hampshire",
+   "rpp_all_items": 104.165,
+   "rpp_goods": 98.578,
+   "rpp_services_housing": 114.947,
+   "rpp_services_utilities": 133.663,
+   "rpp_services_other": 103.879,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9520,
+     "low": 8090,
+     "high": 10950
+    },
+    "burial_with_vault": {
+     "point": 11470,
+     "low": 9750,
+     "high": 13190
+    },
+    "cremation_with_service": {
+     "point": 7210,
+     "low": 6130,
+     "high": 8290
+    },
+    "direct_cremation": {
+     "point": 3160,
+     "low": 2690,
+     "high": 3630
+    },
+    "direct_burial": {
+     "point": 4270,
+     "low": 3630,
+     "high": 4910
+    },
+    "green_burial": {
+     "point": 5710,
+     "low": 4850,
+     "high": 6570
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 80.2
+  },
+  {
+   "abbr": "NJ",
+   "name": "New Jersey",
+   "rpp_all_items": 108.805,
+   "rpp_goods": 107.066,
+   "rpp_services_housing": 134.292,
+   "rpp_services_utilities": 114.187,
+   "rpp_services_other": 103.529,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9940,
+     "low": 8450,
+     "high": 11430
+    },
+    "burial_with_vault": {
+     "point": 11980,
+     "low": 10180,
+     "high": 13780
+    },
+    "cremation_with_service": {
+     "point": 7530,
+     "low": 6400,
+     "high": 8660
+    },
+    "direct_cremation": {
+     "point": 3300,
+     "low": 2800,
+     "high": 3790
+    },
+    "direct_burial": {
+     "point": 4460,
+     "low": 3790,
+     "high": 5130
+    },
+    "green_burial": {
+     "point": 5960,
+     "low": 5070,
+     "high": 6850
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 69.5
+  },
+  {
+   "abbr": "NM",
+   "name": "New Mexico",
+   "rpp_all_items": 92.212,
+   "rpp_goods": 96.144,
+   "rpp_services_housing": 73.611,
+   "rpp_services_utilities": 77.895,
+   "rpp_services_other": 98.54,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8430,
+     "low": 7170,
+     "high": 9690
+    },
+    "burial_with_vault": {
+     "point": 10150,
+     "low": 8630,
+     "high": 11670
+    },
+    "cremation_with_service": {
+     "point": 6380,
+     "low": 5420,
+     "high": 7340
+    },
+    "direct_cremation": {
+     "point": 2790,
+     "low": 2370,
+     "high": 3210
+    },
+    "direct_burial": {
+     "point": 3780,
+     "low": 3210,
+     "high": 4350
+    },
+    "green_burial": {
+     "point": 5050,
+     "low": 4290,
+     "high": 5810
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 76.9
+  },
+  {
+   "abbr": "NY",
+   "name": "New York",
+   "rpp_all_items": 107.921,
+   "rpp_goods": 107.254,
+   "rpp_services_housing": 122.168,
+   "rpp_services_utilities": 134.37,
+   "rpp_services_other": 104.067,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9860,
+     "low": 8380,
+     "high": 11340
+    },
+    "burial_with_vault": {
+     "point": 11880,
+     "low": 10100,
+     "high": 13660
+    },
+    "cremation_with_service": {
+     "point": 7470,
+     "low": 6350,
+     "high": 8590
+    },
+    "direct_cremation": {
+     "point": 3270,
+     "low": 2780,
+     "high": 3760
+    },
+    "direct_burial": {
+     "point": 4420,
+     "low": 3760,
+     "high": 5080
+    },
+    "green_burial": {
+     "point": 5910,
+     "low": 5020,
+     "high": 6800
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 70.7
+  },
+  {
+   "abbr": "NC",
+   "name": "North Carolina",
+   "rpp_all_items": 94.326,
+   "rpp_goods": 96.621,
+   "rpp_services_housing": 81.364,
+   "rpp_services_utilities": 88.619,
+   "rpp_services_other": 98.186,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8620,
+     "low": 7330,
+     "high": 9910
+    },
+    "burial_with_vault": {
+     "point": 10390,
+     "low": 8830,
+     "high": 11950
+    },
+    "cremation_with_service": {
+     "point": 6530,
+     "low": 5550,
+     "high": 7510
+    },
+    "direct_cremation": {
+     "point": 2860,
+     "low": 2430,
+     "high": 3290
+    },
+    "direct_burial": {
+     "point": 3870,
+     "low": 3290,
+     "high": 4450
+    },
+    "green_burial": {
+     "point": 5170,
+     "low": 4390,
+     "high": 5950
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 71.2
+  },
+  {
+   "abbr": "ND",
+   "name": "North Dakota",
+   "rpp_all_items": 88.959,
+   "rpp_goods": 95.701,
+   "rpp_services_housing": 71.421,
+   "rpp_services_utilities": 73.669,
+   "rpp_services_other": 91.158,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8130,
+     "low": 6910,
+     "high": 9350
+    },
+    "burial_with_vault": {
+     "point": 9790,
+     "low": 8320,
+     "high": 11260
+    },
+    "cremation_with_service": {
+     "point": 6160,
+     "low": 5240,
+     "high": 7080
+    },
+    "direct_cremation": {
+     "point": 2700,
+     "low": 2300,
+     "high": 3100
+    },
+    "direct_burial": {
+     "point": 3650,
+     "low": 3100,
+     "high": 4200
+    },
+    "green_burial": {
+     "point": 4870,
+     "low": 4140,
+     "high": 5600
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 66.4
+  },
+  {
+   "abbr": "OH",
+   "name": "Ohio",
+   "rpp_all_items": 92.774,
+   "rpp_goods": 93.67,
+   "rpp_services_housing": 73.012,
+   "rpp_services_utilities": 95.823,
+   "rpp_services_other": 98.947,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8480,
+     "low": 7210,
+     "high": 9750
+    },
+    "burial_with_vault": {
+     "point": 10210,
+     "low": 8680,
+     "high": 11740
+    },
+    "cremation_with_service": {
+     "point": 6420,
+     "low": 5460,
+     "high": 7380
+    },
+    "direct_cremation": {
+     "point": 2810,
+     "low": 2390,
+     "high": 3230
+    },
+    "direct_burial": {
+     "point": 3800,
+     "low": 3230,
+     "high": 4370
+    },
+    "green_burial": {
+     "point": 5080,
+     "low": 4320,
+     "high": 5840
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 68.9
+  },
+  {
+   "abbr": "OK",
+   "name": "Oklahoma",
+   "rpp_all_items": 87.843,
+   "rpp_goods": 93.778,
+   "rpp_services_housing": 62.763,
+   "rpp_services_utilities": 73.882,
+   "rpp_services_other": 95.458,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8030,
+     "low": 6830,
+     "high": 9230
+    },
+    "burial_with_vault": {
+     "point": 9670,
+     "low": 8220,
+     "high": 11120
+    },
+    "cremation_with_service": {
+     "point": 6080,
+     "low": 5170,
+     "high": 6990
+    },
+    "direct_cremation": {
+     "point": 2660,
+     "low": 2260,
+     "high": 3060
+    },
+    "direct_burial": {
+     "point": 3600,
+     "low": 3060,
+     "high": 4140
+    },
+    "green_burial": {
+     "point": 4810,
+     "low": 4090,
+     "high": 5530
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 66.1
+  },
+  {
+   "abbr": "OR",
+   "name": "Oregon",
+   "rpp_all_items": 103.361,
+   "rpp_goods": 105.261,
+   "rpp_services_housing": 108.628,
+   "rpp_services_utilities": 107.046,
+   "rpp_services_other": 100.298,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9450,
+     "low": 8030,
+     "high": 10870
+    },
+    "burial_with_vault": {
+     "point": 11380,
+     "low": 9670,
+     "high": 13090
+    },
+    "cremation_with_service": {
+     "point": 7150,
+     "low": 6080,
+     "high": 8220
+    },
+    "direct_cremation": {
+     "point": 3130,
+     "low": 2660,
+     "high": 3600
+    },
+    "direct_burial": {
+     "point": 4240,
+     "low": 3600,
+     "high": 4880
+    },
+    "green_burial": {
+     "point": 5660,
+     "low": 4810,
+     "high": 6510
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 82.6
+  },
+  {
+   "abbr": "PA",
+   "name": "Pennsylvania",
+   "rpp_all_items": 97.572,
+   "rpp_goods": 99.357,
+   "rpp_services_housing": 85.068,
+   "rpp_services_utilities": 109.321,
+   "rpp_services_other": 99.762,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8920,
+     "low": 7580,
+     "high": 10260
+    },
+    "burial_with_vault": {
+     "point": 10740,
+     "low": 9130,
+     "high": 12350
+    },
+    "cremation_with_service": {
+     "point": 6750,
+     "low": 5740,
+     "high": 7760
+    },
+    "direct_cremation": {
+     "point": 2960,
+     "low": 2520,
+     "high": 3400
+    },
+    "direct_burial": {
+     "point": 4000,
+     "low": 3400,
+     "high": 4600
+    },
+    "green_burial": {
+     "point": 5350,
+     "low": 4550,
+     "high": 6150
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 71.3
+  },
+  {
+   "abbr": "RI",
+   "name": "Rhode Island",
+   "rpp_all_items": 102.28,
+   "rpp_goods": 97.165,
+   "rpp_services_housing": 105.62,
+   "rpp_services_utilities": 146.653,
+   "rpp_services_other": 102.84,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9350,
+     "low": 7950,
+     "high": 10750
+    },
+    "burial_with_vault": {
+     "point": 11260,
+     "low": 9570,
+     "high": 12950
+    },
+    "cremation_with_service": {
+     "point": 7080,
+     "low": 6020,
+     "high": 8140
+    },
+    "direct_cremation": {
+     "point": 3100,
+     "low": 2640,
+     "high": 3560
+    },
+    "direct_burial": {
+     "point": 4190,
+     "low": 3560,
+     "high": 4820
+    },
+    "green_burial": {
+     "point": 5600,
+     "low": 4760,
+     "high": 6440
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 74.5
+  },
+  {
+   "abbr": "SC",
+   "name": "South Carolina",
+   "rpp_all_items": 93.749,
+   "rpp_goods": 96.339,
+   "rpp_services_housing": 80.49,
+   "rpp_services_utilities": 88.303,
+   "rpp_services_other": 98.284,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8570,
+     "low": 7280,
+     "high": 9860
+    },
+    "burial_with_vault": {
+     "point": 10320,
+     "low": 8770,
+     "high": 11870
+    },
+    "cremation_with_service": {
+     "point": 6490,
+     "low": 5520,
+     "high": 7460
+    },
+    "direct_cremation": {
+     "point": 2840,
+     "low": 2410,
+     "high": 3270
+    },
+    "direct_burial": {
+     "point": 3840,
+     "low": 3260,
+     "high": 4420
+    },
+    "green_burial": {
+     "point": 5140,
+     "low": 4370,
+     "high": 5910
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 68.3
+  },
+  {
+   "abbr": "SD",
+   "name": "South Dakota",
+   "rpp_all_items": 88.586,
+   "rpp_goods": 95.473,
+   "rpp_services_housing": 67.642,
+   "rpp_services_utilities": 79.651,
+   "rpp_services_other": 91.899,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8100,
+     "low": 6880,
+     "high": 9320
+    },
+    "burial_with_vault": {
+     "point": 9750,
+     "low": 8290,
+     "high": 11210
+    },
+    "cremation_with_service": {
+     "point": 6130,
+     "low": 5210,
+     "high": 7050
+    },
+    "direct_cremation": {
+     "point": 2680,
+     "low": 2280,
+     "high": 3080
+    },
+    "direct_burial": {
+     "point": 3630,
+     "low": 3090,
+     "high": 4170
+    },
+    "green_burial": {
+     "point": 4850,
+     "low": 4120,
+     "high": 5580
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 69.8
+  },
+  {
+   "abbr": "TN",
+   "name": "Tennessee",
+   "rpp_all_items": 91.87,
+   "rpp_goods": 96.247,
+   "rpp_services_housing": 79.07,
+   "rpp_services_utilities": 72.137,
+   "rpp_services_other": 95.142,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8400,
+     "low": 7140,
+     "high": 9660
+    },
+    "burial_with_vault": {
+     "point": 10110,
+     "low": 8590,
+     "high": 11630
+    },
+    "cremation_with_service": {
+     "point": 6360,
+     "low": 5410,
+     "high": 7310
+    },
+    "direct_cremation": {
+     "point": 2780,
+     "low": 2360,
+     "high": 3200
+    },
+    "direct_burial": {
+     "point": 3770,
+     "low": 3200,
+     "high": 4340
+    },
+    "green_burial": {
+     "point": 5030,
+     "low": 4280,
+     "high": 5780
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 66.9
+  },
+  {
+   "abbr": "TX",
+   "name": "Texas",
+   "rpp_all_items": 97.057,
+   "rpp_goods": 98.083,
+   "rpp_services_housing": 96.503,
+   "rpp_services_utilities": 87.512,
+   "rpp_services_other": 97.081,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8870,
+     "low": 7540,
+     "high": 10200
+    },
+    "burial_with_vault": {
+     "point": 10690,
+     "low": 9090,
+     "high": 12290
+    },
+    "cremation_with_service": {
+     "point": 6720,
+     "low": 5710,
+     "high": 7730
+    },
+    "direct_cremation": {
+     "point": 2940,
+     "low": 2500,
+     "high": 3380
+    },
+    "direct_burial": {
+     "point": 3980,
+     "low": 3380,
+     "high": 4580
+    },
+    "green_burial": {
+     "point": 5320,
+     "low": 4520,
+     "high": 6120
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 70.2
+  },
+  {
+   "abbr": "UT",
+   "name": "Utah",
+   "rpp_all_items": 98.864,
+   "rpp_goods": 96.446,
+   "rpp_services_housing": 107.814,
+   "rpp_services_utilities": 78.739,
+   "rpp_services_other": 98.959,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9040,
+     "low": 7680,
+     "high": 10400
+    },
+    "burial_with_vault": {
+     "point": 10880,
+     "low": 9250,
+     "high": 12510
+    },
+    "cremation_with_service": {
+     "point": 6840,
+     "low": 5810,
+     "high": 7870
+    },
+    "direct_cremation": {
+     "point": 3000,
+     "low": 2550,
+     "high": 3450
+    },
+    "direct_burial": {
+     "point": 4050,
+     "low": 3440,
+     "high": 4660
+    },
+    "green_burial": {
+     "point": 5420,
+     "low": 4610,
+     "high": 6230
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 63.1
+  },
+  {
+   "abbr": "VT",
+   "name": "Vermont",
+   "rpp_all_items": 97.958,
+   "rpp_goods": 97.274,
+   "rpp_services_housing": 86.502,
+   "rpp_services_utilities": 125.833,
+   "rpp_services_other": 101.586,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8950,
+     "low": 7610,
+     "high": 10290
+    },
+    "burial_with_vault": {
+     "point": 10790,
+     "low": 9170,
+     "high": 12410
+    },
+    "cremation_with_service": {
+     "point": 6780,
+     "low": 5760,
+     "high": 7800
+    },
+    "direct_cremation": {
+     "point": 2970,
+     "low": 2520,
+     "high": 3420
+    },
+    "direct_burial": {
+     "point": 4020,
+     "low": 3420,
+     "high": 4620
+    },
+    "green_burial": {
+     "point": 5370,
+     "low": 4560,
+     "high": 6180
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 78.4
+  },
+  {
+   "abbr": "VA",
+   "name": "Virginia",
+   "rpp_all_items": 101.104,
+   "rpp_goods": 100.368,
+   "rpp_services_housing": 106.799,
+   "rpp_services_utilities": 92.185,
+   "rpp_services_other": 100.233,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9240,
+     "low": 7850,
+     "high": 10630
+    },
+    "burial_with_vault": {
+     "point": 11130,
+     "low": 9460,
+     "high": 12800
+    },
+    "cremation_with_service": {
+     "point": 7000,
+     "low": 5950,
+     "high": 8050
+    },
+    "direct_cremation": {
+     "point": 3060,
+     "low": 2600,
+     "high": 3520
+    },
+    "direct_burial": {
+     "point": 4150,
+     "low": 3530,
+     "high": 4770
+    },
+    "green_burial": {
+     "point": 5540,
+     "low": 4710,
+     "high": 6370
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 69.6
+  },
+  {
+   "abbr": "WA",
+   "name": "Washington",
+   "rpp_all_items": 107.013,
+   "rpp_goods": 104.359,
+   "rpp_services_housing": 125.979,
+   "rpp_services_utilities": 92.86,
+   "rpp_services_other": 103.873,
+   "estimates": {
+    "traditional_burial": {
+     "point": 9780,
+     "low": 8310,
+     "high": 11250
+    },
+    "burial_with_vault": {
+     "point": 11780,
+     "low": 10010,
+     "high": 13550
+    },
+    "cremation_with_service": {
+     "point": 7410,
+     "low": 6300,
+     "high": 8520
+    },
+    "direct_cremation": {
+     "point": 3240,
+     "low": 2750,
+     "high": 3730
+    },
+    "direct_burial": {
+     "point": 4390,
+     "low": 3730,
+     "high": 5050
+    },
+    "green_burial": {
+     "point": 5860,
+     "low": 4980,
+     "high": 6740
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 82.9
+  },
+  {
+   "abbr": "WV",
+   "name": "West Virginia",
+   "rpp_all_items": 89.497,
+   "rpp_goods": 96.539,
+   "rpp_services_housing": 54.241,
+   "rpp_services_utilities": 92.242,
+   "rpp_services_other": 99.94,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8180,
+     "low": 6950,
+     "high": 9410
+    },
+    "burial_with_vault": {
+     "point": 9850,
+     "low": 8370,
+     "high": 11330
+    },
+    "cremation_with_service": {
+     "point": 6190,
+     "low": 5260,
+     "high": 7120
+    },
+    "direct_cremation": {
+     "point": 2710,
+     "low": 2300,
+     "high": 3120
+    },
+    "direct_burial": {
+     "point": 3670,
+     "low": 3120,
+     "high": 4220
+    },
+    "green_burial": {
+     "point": 4900,
+     "low": 4160,
+     "high": 5640
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 72.9
+  },
+  {
+   "abbr": "WI",
+   "name": "Wisconsin",
+   "rpp_all_items": 94.095,
+   "rpp_goods": 94.31,
+   "rpp_services_housing": 79.312,
+   "rpp_services_utilities": 89.906,
+   "rpp_services_other": 99.501,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8600,
+     "low": 7310,
+     "high": 9890
+    },
+    "burial_with_vault": {
+     "point": 10360,
+     "low": 8810,
+     "high": 11910
+    },
+    "cremation_with_service": {
+     "point": 6510,
+     "low": 5530,
+     "high": 7490
+    },
+    "direct_cremation": {
+     "point": 2850,
+     "low": 2420,
+     "high": 3280
+    },
+    "direct_burial": {
+     "point": 3860,
+     "low": 3280,
+     "high": 4440
+    },
+    "green_burial": {
+     "point": 5160,
+     "low": 4390,
+     "high": 5930
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 72.7
+  },
+  {
+   "abbr": "WY",
+   "name": "Wyoming",
+   "rpp_all_items": 92.691,
+   "rpp_goods": 95.368,
+   "rpp_services_housing": 71.127,
+   "rpp_services_utilities": 78.422,
+   "rpp_services_other": 100.428,
+   "estimates": {
+    "traditional_burial": {
+     "point": 8470,
+     "low": 7200,
+     "high": 9740
+    },
+    "burial_with_vault": {
+     "point": 10210,
+     "low": 8680,
+     "high": 11740
+    },
+    "cremation_with_service": {
+     "point": 6410,
+     "low": 5450,
+     "high": 7370
+    },
+    "direct_cremation": {
+     "point": 2810,
+     "low": 2390,
+     "high": 3230
+    },
+    "direct_burial": {
+     "point": 3800,
+     "low": 3230,
+     "high": 4370
+    },
+    "green_burial": {
+     "point": 5080,
+     "low": 4320,
+     "high": 5840
+    }
+   },
+   "nfda_projected_cremation_rate_2035": 71.8
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+  "model_version": "3.0",
+  "built": "2026-09-23",
+  "is_modeled": true,
+  "formula": "state_estimate = nfda_2023_national_median x bls_funeral_expenses_inflation_factor_dec2023_to_aug2026 x (state_bea_2024_rpp_all_items / 100)",
+  "rounding": "Nearest $10 at every published figure.",
+  "range_note": "Illustrative +/-15% band around each point estimate: communicates typical within-state variation, not a statistical confidence interval.",
+  "anchor_vintage": "NFDA 2023 Member General Price List Study national medians - the latest published NFDA price study - inflated to August 2026 dollars.",
+  "inflation": {
+    "series": "CPI-U, U.S. city average, 'Funeral expenses', not seasonally adjusted",
+    "index_base": "December 1986 = 100",
+    "base_period": "December 2023",
+    "target_period": "August 2026",
+    "why_december_2023": "The NFDA 2023 Member GPL Study is the price study fielded in calendar 2023; December 2023 is the year-end reference point for chaining into 2024.",
+    "chain": [
+      {
+        "period": "Dec 2023 -> Dec 2024",
+        "change_pct": 3.0,
+        "kind": "NSA 12-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_01152025.htm",
+        "note": "Released Jan 15, 2025; Table 2 row: Funeral expenses(1)(6) | 0.157 | 3.0 | 0.3"
+      },
+      {
+        "period": "Dec 2024 -> Dec 2025",
+        "change_pct": 2.6,
+        "kind": "NSA 12-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_01132026.htm",
+        "note": "Released Jan 13, 2026; Table 2 row reports 2.6 (the 5.6% figure belongs to Jan 2026)"
+      },
+      {
+        "period": "Jan 2026",
+        "change_pct": 3.1,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_02132026.htm",
+        "note": "Largest single-month move in the window; 12-mo in this release = 5.6%"
+      },
+      {
+        "period": "Feb 2026",
+        "change_pct": -1.6,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_03112026.htm"
+      },
+      {
+        "period": "Mar 2026",
+        "change_pct": 0.4,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_04102026.htm"
+      },
+      {
+        "period": "Apr 2026",
+        "change_pct": 1.4,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_05122026.htm"
+      },
+      {
+        "period": "May 2026",
+        "change_pct": -1.1,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_06102026.htm"
+      },
+      {
+        "period": "Jun 2026",
+        "change_pct": -0.1,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_07142026.htm"
+      },
+      {
+        "period": "Jul 2026",
+        "change_pct": -0.1,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_08122026.htm"
+      },
+      {
+        "period": "Aug 2026",
+        "change_pct": 0.2,
+        "kind": "NSA 1-month",
+        "source": "https://www.bls.gov/news.release/archives/cpi_09112026.htm",
+        "note": "Released Sep 11, 2026; current release table: https://www.bls.gov/news.release/cpi.t02.htm"
+      }
+    ],
+    "caveats": [
+      "BLS publishes percent changes rounded to one decimal; the chained product inherits roughly 0.1-0.2pp of rounding error.",
+      "Only not-seasonally-adjusted (NSA) values are used, so the Oct/Nov 2025 SA gaps from the 2025 appropriations lapse are irrelevant.",
+      "The April 2026 rebasing of some CPI series to December 2024=100 does not affect percent changes, so chaining is unaffected."
+    ],
+    "factor": 1.079456,
+    "factor_percent": 7.95
+  },
+  "anchors_2023": {
+    "traditional_burial": 8300,
+    "burial_with_vault": 9995,
+    "cremation_with_service": 6280,
+    "direct_cremation": 2750,
+    "direct_burial": 3720,
+    "green_burial": 4980
+  },
+  "anchors_2026": {
+    "traditional_burial": 8960,
+    "burial_with_vault": 10790,
+    "cremation_with_service": 6780,
+    "direct_cremation": 2970,
+    "direct_burial": 4020,
+    "green_burial": 5380
+  },
+  "geography_vintage": "BEA Regional Price Parities, 2024 (official release February 19, 2026; next release December 10, 2026).",
+  "coverage": "50 states + District of Columbia.",
+  "rpp_source": "BEA Interactive Data Application, Table SARPP (all-items, goods, services components), pulled 2026-09-23, cross-checked against the Feb 19, 2026 release.",
+  "refresh_cadence": "Annual: each spring the dataset rebuilds from the newest BEA release, the newest published NFDA study, and the latest BLS CPI funeral-expenses data.",
+  "optional_features": {
+    "religious_traditions": "Optional calculator toggles adjust specific line items per tradition (never a blanket multiplier). Figures are sourced provider/regional examples, not a national survey; see data/research_religious_costs.md.",
+    "va_benefits": "Optional deductions using current VA.gov allowance amounts; must be claimed, amounts reset Oct 1.",
+    "upkeep": "Perpetual-care explainer plus optional marker-upkeep range from a 2025 NY state-approved price list.",
+    "cash_advances": "Clergy honoraria and death certificates added as optional items; industry ranges, not surveyed prices.",
+    "body_donation": "Optional disposition path with strong acceptance-not-guaranteed disclaimers."
+  },
+  "sources": {
+    "nfda_2023": "https://content.nfda.org/Portals/0/2024_NFDA_Cremation%20and%20Burial%20Report.pdf",
+    "bea_rpp": "https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area",
+    "bls_cpi_current": "https://www.bls.gov/news.release/cpi.t02.htm",
+    "bls_cpi_archives": "https://www.bls.gov/news.release/archives/",
+    "cpi_extraction_log": "data/cpi_extraction.md",
+    "fca_md_dc": "https://mdfunerals.org/wp-content/uploads/2026/07/Comparative-Costs-7.15.26.pdf",
+    "ftc_funeral_rule": "https://consumer.ftc.gov/articles/ftc-funeral-rule",
+    "va_burial_allowance": "https://www.va.gov/burials-memorials/veterans-burial-allowance/",
+    "religious_research": "data/research_religious_costs.md",
+    "benefits_research": "data/research_benefits_upkeep.md"
+  }
+}

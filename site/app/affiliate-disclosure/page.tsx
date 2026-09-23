@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '../../lib/data';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclosure',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 export default function AffiliateDisclosurePage() {
   return (
     <div className="wrap prose">
-      <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Affiliate disclosure</nav>
+      <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Affiliate disclosure</nav>
       <h1>Affiliate disclosure</h1>
       <p className="updated">Effective 2026-09-23.</p>
       <p className="answer-first">
