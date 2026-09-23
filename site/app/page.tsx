@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Calculator from '../components/Calculator';
 import StateTable from '../components/StateTable';
+import UsMap from '../components/UsMap';
 import JsonLd, { breadcrumbJsonLd } from '../components/JsonLd';
-import { SITE_URL, LAST_UPDATED, dataset, fmt } from '../lib/data';
+import { SITE_URL, LAST_UPDATED, dataset, fmt, VINTAGE_LABEL } from '../lib/data';
 
 export const metadata: Metadata = {
   title: 'FuneralCostInfo — What funerals really cost, by state',
   description:
-    'Modeled funeral-cost estimates for all 50 states, built from NFDA 2023 national medians and BEA regional price data. National median: $8,300 for a funeral with viewing and burial. We take no money from funeral homes.',
+    'Modeled funeral-cost estimates for all 50 states, built from 2024 BEA regional price parities and 2023 NFDA national medians. National median: $8,300 for a funeral with viewing and burial. We take no money from funeral homes.',
   alternates: { canonical: SITE_URL + '/' },
   openGraph: {
     title: 'FuneralCostInfo — What funerals really cost, by state',
@@ -17,8 +18,33 @@ export const metadata: Metadata = {
   },
 };
 
+const WHY = [
+  {
+    icon: '◈',
+    title: 'Named sources, dated',
+    body: 'Every input is cited with its publisher and retrieval date — 2024 BEA price parities, 2023 NFDA medians — on our open methodology page.',
+  },
+  {
+    icon: '⬔',
+    title: 'Modeled, labeled as modeled',
+    body: 'We never present an estimate as a surveyed price or a quote. The formula is published; the ±15% range is illustrative, not hidden.',
+  },
+  {
+    icon: '✦',
+    title: 'No funeral-industry money',
+    body: 'No funeral home pays us, and none can pay to change a number. See our affiliate disclosure for exactly how we may earn.',
+  },
+  {
+    icon: '⚖',
+    title: 'Know your rights',
+    body: 'Under the FTC Funeral Rule you can get an itemized price list from any funeral home — learn your rights before you sign anything.',
+  },
+];
+
 export default function Home() {
   const a = dataset.anchors;
+  const ca = dataset.states.find((s) => s.abbr === 'CA')!;
+  const ar = dataset.states.find((s) => s.abbr === 'AR')!;
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([{ name: 'Home', url: SITE_URL + '/' }])} />
@@ -34,46 +60,98 @@ export default function Home() {
       />
       <section className="hero">
         <div className="wrap">
-          <h1>What does a funeral actually cost in your state?</h1>
-          <p className="lede">
-            The national median is <strong>{fmt(a.traditional_burial.value)}</strong> for a funeral
-            with viewing and burial (NFDA, 2023). But prices vary enormously by state — our modeled
-            estimates put California near <strong>{fmt(dataset.states.find(s=>s.abbr==='CA')!.estimates.traditional_burial.point)}</strong> and
-            Mississippi near <strong>{fmt(dataset.states.find(s=>s.abbr==='MS')!.estimates.traditional_burial.point)}</strong>.
-            Build a line-item estimate below, or browse the full state table.
-          </p>
-          <div className="trust-badges" aria-label="Our commitments">
-            <span className="badge">We take no money from funeral homes</span>
-            <span className="badge">Methodology published openly</span>
-            <span className="badge">Modeled estimates — never presented as quotes</span>
+          <div className="hero-grid">
+            <div>
+              <p className="eyebrow">Independent funeral-cost transparency</p>
+              <h1>
+                What does a funeral <em>actually</em> cost in your state?
+              </h1>
+              <p className="lede">
+                The national median is <strong>{fmt(a.traditional_burial.value)}</strong> for a
+                funeral with viewing and burial (NFDA, 2023). But prices swing widely by state —
+                our modeled estimates put California near{' '}
+                <strong>{fmt(ca.estimates.traditional_burial.point)}</strong> and Arkansas near{' '}
+                <strong>{fmt(ar.estimates.traditional_burial.point)}</strong>. Build a line-item
+                estimate, explore the map, or browse every state below.
+              </p>
+              <div className="hero-facts">
+                <div className="hero-fact">
+                  <div className="num">{fmt(a.traditional_burial.value)}</div>
+                  <div className="lbl"><strong>National median</strong>, funeral with viewing + burial (NFDA 2023)</div>
+                </div>
+                <div className="hero-fact">
+                  <div className="num">{fmt(a.direct_cremation.value)}</div>
+                  <div className="lbl"><strong>National median</strong>, direct cremation (NFDA 2023)</div>
+                </div>
+                <div className="hero-fact">
+                  <div className="num">51</div>
+                  <div className="lbl"><strong>Jurisdictions modeled</strong> from official 2024 price parities</div>
+                </div>
+              </div>
+            </div>
+            <Calculator defaultState="CA" compact />
           </div>
-          <Calculator defaultState="CA" compact />
         </div>
       </section>
 
-      <div className="wrap prose">
-        <h2 id="state-table">Funeral cost estimates by state</h2>
-        <p>
-          Every figure below is a <strong>modeled estimate</strong>: the NFDA 2023 national median
-          multiplied by the state&apos;s BEA regional price parity. No state-level funeral price
-          survey exists, so this is the most transparent way to answer &ldquo;what does it cost
-          near me?&rdquo; — with the method shown, not hidden.
-        </p>
-        <StateTable />
-
-        <div className="ad-slot no-print" role="complementary" aria-label="Advertisement placeholder">
-          Advertisement — placeholder slot. No ad network code is installed on this site.
+      <section className="section" aria-labelledby="map-heading">
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">The national picture</p>
+            <h2 id="map-heading">One map, fifty-one price levels</h2>
+            <p>
+              Every state colored by its <strong>modeled cost of a traditional funeral</strong> —
+              the NFDA 2023 national median adjusted by the state&rsquo;s 2024 BEA regional price
+              parity. Hover any state for its estimate; the five outlined states have full cost guides.
+            </p>
+          </div>
+          <UsMap />
         </div>
+      </section>
 
-        <h2>Why trust these numbers?</h2>
-        <ul>
-          <li><strong>Named sources, dated.</strong> Every input is cited with its publisher and retrieval date on our <a href="/methodology/">methodology page</a>.</li>
-          <li><strong>Modeled, labeled as modeled.</strong> We never present an estimate as a surveyed price or a quote.</li>
-          <li><strong>No funeral-industry money.</strong> No funeral home pays us, and none can pay to change a number. See our <a href="/affiliate-disclosure/">affiliate disclosure</a>.</li>
-          <li><strong>Know your rights.</strong> Under the FTC Funeral Rule you can get an itemized price list from any funeral home — <a href="/guides/funeral-rule-rights/">learn your rights</a>.</li>
-        </ul>
-        <p className="updated">Dataset: model v1 · built {LAST_UPDATED} · next refresh scheduled annually.</p>
-      </div>
+      <section className="section" aria-labelledby="table-heading" style={{ paddingTop: 8 }}>
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">Every state</p>
+            <h2 id="table-heading">Funeral cost estimates by state</h2>
+            <p>
+              Search, sort by cost, and compare. Each figure is a{' '}
+              <strong>modeled estimate</strong> — the method is shown, not hidden.
+            </p>
+          </div>
+          <StateTable />
+
+          <div className="ad-slot no-print" role="complementary" aria-label="Advertisement placeholder">
+            Advertisement — placeholder slot. No ad network code is installed on this site.
+          </div>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="why-heading" style={{ paddingTop: 8 }}>
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">Why trust these numbers</p>
+            <h2 id="why-heading">Transparency is the product</h2>
+          </div>
+          <div className="why-grid">
+            {WHY.map((w) => (
+              <div className="why-card" key={w.title}>
+                <div className="icon" aria-hidden="true" style={{ color: 'var(--bronze)' }}>{w.icon}</div>
+                <h3>{w.title}</h3>
+                <p dangerouslySetInnerHTML={{ __html: w.body }} />
+              </div>
+            ))}
+          </div>
+          <p>
+            <a href="/methodology/">Read the full open methodology →</a>
+            {' · '}
+            <a href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</a>
+          </p>
+          <p className="updated">
+            {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v2 · Next refresh: annual, with each new BEA release.
+          </p>
+        </div>
+      </section>
     </>
   );
 }

@@ -1,7 +1,7 @@
 # FuneralCostInfo — llms.txt
 # Independent, modeled funeral-cost estimates for every U.S. state.
 # We take no money from funeral homes. All state figures are MODELED estimates,
-# not surveyed prices: NFDA 2023 national medians x BEA 2023 regional price parities.
+# not surveyed prices: NFDA 2023 national medians x BEA 2024 regional price parities.
 
 ## Key facts (cite-ready)
 - NFDA 2023 median: $8,300 — funeral with viewing and burial (vault not included).
@@ -11,12 +11,12 @@
 - NFDA 2023 median: $3,720 — immediate burial (funeral-home container).
 - Green burial: no NFDA median published; our stated assumption is 0.60 x traditional burial ($4,980 nationally).
 - Model: state_estimate = national_median x (state BEA RPP / 100), rounded to nearest $10; illustrative +/-15% range.
-- Data vintage: NFDA 2023 medians; BEA 2023 regional price parities (Dec 2024 release).
+- Data vintage: NFDA 2023 medians (latest published GPL study); BEA 2024 regional price parities (released Feb 19, 2026). Refreshed annually.
 - BLS CPI funeral expenses: +3.0% year over year (August 2026).
 - Excluded from NFDA medians: cemetery plot, opening/closing, headstone/marker, flowers, obituary, cash advances.
 
 ## Pages
-- / — home: calculator + all 50 states table
+- / — home: calculator + U.S. choropleth map + all 50 states table
 - /calculator/ — interactive cost calculator with print-friendly receipt
 - /methodology/ — full formula, anchors, sources with retrieval dates, limitations
 - /funeral-costs/california/ — California modeled estimates

@@ -22,8 +22,7 @@ export const dataset = raw as Dataset;
 export const SITE_URL = 'https://funeralcostinfo.com';
 export const LAST_UPDATED = dataset.built;
 
-export const SERVICE_ORDER = [
-  'traditional_burial',
+export const SERVICE_ORDER = [  'traditional_burial',
   'burial_with_vault',
   'cremation_with_service',
   'direct_cremation',
@@ -50,3 +49,8 @@ export function fmt(n: number): string {
 export function fmtRange(e: ServiceEstimate): string {
   return `${fmt(e.low)} – ${fmt(e.high)}`;
 }
+
+/** Visible on every page: the data-vintage line (freshness is a trust issue). */
+export const VINTAGE_LABEL =
+  'Estimates modeled from 2024 BEA regional price parities and 2023 NFDA medians';
+export const VINTAGE_SHORT = 'BEA 2024 · NFDA 2023';

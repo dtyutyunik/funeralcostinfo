@@ -1,0 +1,359 @@
+{
+ "Alabama": {
+  "all_items": 88.823,
+  "goods": 96.399,
+  "services_housing": 61.785,
+  "services_utilities": 84.643,
+  "services_other": 96.711
+ },
+ "Alaska": {
+  "all_items": 102.359,
+  "goods": 106.319,
+  "services_housing": 93.784,
+  "services_utilities": 119.021,
+  "services_other": 102.208
+ },
+ "Arizona": {
+  "all_items": 100.677,
+  "goods": 95.361,
+  "services_housing": 106.804,
+  "services_utilities": 92.317,
+  "services_other": 102.808
+ },
+ "Arkansas": {
+  "all_items": 86.937,
+  "goods": 93.597,
+  "services_housing": 58.203,
+  "services_utilities": 74.731,
+  "services_other": 95.312
+ },
+ "California": {
+  "all_items": 110.72,
+  "goods": 106.098,
+  "services_housing": 154.346,
+  "services_utilities": 158.899,
+  "services_other": 102.591
+ },
+ "Colorado": {
+  "all_items": 103.052,
+  "goods": 98.727,
+  "services_housing": 127.359,
+  "services_utilities": 84.971,
+  "services_other": 99.613
+ },
+ "Connecticut": {
+  "all_items": 103.61,
+  "goods": 97.33,
+  "services_housing": 117.048,
+  "services_utilities": 146.495,
+  "services_other": 102.658
+ },
+ "Delaware": {
+  "all_items": 99.808,
+  "goods": 96.155,
+  "services_housing": 102.015,
+  "services_utilities": 103.81,
+  "services_other": 101.235
+ },
+ "District of Columbia": {
+  "all_items": 109.901,
+  "goods": 106.502,
+  "services_housing": 154.984,
+  "services_utilities": 112.821,
+  "services_other": 102.964
+ },
+ "Florida": {
+  "all_items": 103.414,
+  "goods": 98.059,
+  "services_housing": 122.107,
+  "services_utilities": 90.074,
+  "services_other": 101.324
+ },
+ "Georgia": {
+  "all_items": 96.293,
+  "goods": 98.929,
+  "services_housing": 88.694,
+  "services_utilities": 92.814,
+  "services_other": 97.343
+ },
+ "Hawaii": {
+  "all_items": 109.951,
+  "goods": 111.562,
+  "services_housing": 125.304,
+  "services_utilities": 190.178,
+  "services_other": 102.898
+ },
+ "Idaho": {
+  "all_items": 95.494,
+  "goods": 96.311,
+  "services_housing": 90.027,
+  "services_utilities": 70.444,
+  "services_other": 99.015
+ },
+ "Illinois": {
+  "all_items": 99.958,
+  "goods": 103.832,
+  "services_housing": 93.944,
+  "services_utilities": 84.952,
+  "services_other": 100.156
+ },
+ "Indiana": {
+  "all_items": 93.329,
+  "goods": 95.509,
+  "services_housing": 73.926,
+  "services_utilities": 85.545,
+  "services_other": 99.145
+ },
+ "Iowa": {
+  "all_items": 87.762,
+  "goods": 93.73,
+  "services_housing": 65.322,
+  "services_utilities": 83.274,
+  "services_other": 92.927
+ },
+ "Kansas": {
+  "all_items": 90.068,
+  "goods": 94.027,
+  "services_housing": 71.156,
+  "services_utilities": 88.438,
+  "services_other": 93.816
+ },
+ "Kentucky": {
+  "all_items": 90.159,
+  "goods": 95.967,
+  "services_housing": 64.313,
+  "services_utilities": 75.313,
+  "services_other": 97.25
+ },
+ "Louisiana": {
+  "all_items": 88.207,
+  "goods": 93.7,
+  "services_housing": 63.104,
+  "services_utilities": 71.463,
+  "services_other": 95.706
+ },
+ "Maine": {
+  "all_items": 97.05,
+  "goods": 97.171,
+  "services_housing": 78.94,
+  "services_utilities": 135.189,
+  "services_other": 103.191
+ },
+ "Maryland": {
+  "all_items": 104.959,
+  "goods": 102.524,
+  "services_housing": 121.079,
+  "services_utilities": 110.86,
+  "services_other": 101.596
+ },
+ "Massachusetts": {
+  "all_items": 105.757,
+  "goods": 98.82,
+  "services_housing": 128.068,
+  "services_utilities": 152.07,
+  "services_other": 102.852
+ },
+ "Michigan": {
+  "all_items": 96.217,
+  "goods": 95.993,
+  "services_housing": 82.332,
+  "services_utilities": 100.15,
+  "services_other": 100.933
+ },
+ "Minnesota": {
+  "all_items": 98.621,
+  "goods": 100.519,
+  "services_housing": 91.281,
+  "services_utilities": 90.836,
+  "services_other": 100.213
+ },
+ "Mississippi": {
+  "all_items": 86.953,
+  "goods": 96.219,
+  "services_housing": 56.456,
+  "services_utilities": 78.415,
+  "services_other": 96.09
+ },
+ "Missouri": {
+  "all_items": 90.817,
+  "goods": 96.299,
+  "services_housing": 69.88,
+  "services_utilities": 79.406,
+  "services_other": 95.169
+ },
+ "Montana": {
+  "all_items": 94.645,
+  "goods": 96.006,
+  "services_housing": 84.648,
+  "services_utilities": 72.254,
+  "services_other": 98.715
+ },
+ "Nebraska": {
+  "all_items": 90.103,
+  "goods": 94.101,
+  "services_housing": 75.174,
+  "services_utilities": 75.604,
+  "services_other": 92.98
+ },
+ "Nevada": {
+  "all_items": 99.979,
+  "goods": 96.271,
+  "services_housing": 114.135,
+  "services_utilities": 90.51,
+  "services_other": 98.744
+ },
+ "New Hampshire": {
+  "all_items": 104.165,
+  "goods": 98.578,
+  "services_housing": 114.947,
+  "services_utilities": 133.663,
+  "services_other": 103.879
+ },
+ "New Jersey": {
+  "all_items": 108.805,
+  "goods": 107.066,
+  "services_housing": 134.292,
+  "services_utilities": 114.187,
+  "services_other": 103.529
+ },
+ "New Mexico": {
+  "all_items": 92.212,
+  "goods": 96.144,
+  "services_housing": 73.611,
+  "services_utilities": 77.895,
+  "services_other": 98.54
+ },
+ "New York": {
+  "all_items": 107.921,
+  "goods": 107.254,
+  "services_housing": 122.168,
+  "services_utilities": 134.37,
+  "services_other": 104.067
+ },
+ "North Carolina": {
+  "all_items": 94.326,
+  "goods": 96.621,
+  "services_housing": 81.364,
+  "services_utilities": 88.619,
+  "services_other": 98.186
+ },
+ "North Dakota": {
+  "all_items": 88.959,
+  "goods": 95.701,
+  "services_housing": 71.421,
+  "services_utilities": 73.669,
+  "services_other": 91.158
+ },
+ "Ohio": {
+  "all_items": 92.774,
+  "goods": 93.67,
+  "services_housing": 73.012,
+  "services_utilities": 95.823,
+  "services_other": 98.947
+ },
+ "Oklahoma": {
+  "all_items": 87.843,
+  "goods": 93.778,
+  "services_housing": 62.763,
+  "services_utilities": 73.882,
+  "services_other": 95.458
+ },
+ "Oregon": {
+  "all_items": 103.361,
+  "goods": 105.261,
+  "services_housing": 108.628,
+  "services_utilities": 107.046,
+  "services_other": 100.298
+ },
+ "Pennsylvania": {
+  "all_items": 97.572,
+  "goods": 99.357,
+  "services_housing": 85.068,
+  "services_utilities": 109.321,
+  "services_other": 99.762
+ },
+ "Rhode Island": {
+  "all_items": 102.28,
+  "goods": 97.165,
+  "services_housing": 105.62,
+  "services_utilities": 146.653,
+  "services_other": 102.84
+ },
+ "South Carolina": {
+  "all_items": 93.749,
+  "goods": 96.339,
+  "services_housing": 80.49,
+  "services_utilities": 88.303,
+  "services_other": 98.284
+ },
+ "South Dakota": {
+  "all_items": 88.586,
+  "goods": 95.473,
+  "services_housing": 67.642,
+  "services_utilities": 79.651,
+  "services_other": 91.899
+ },
+ "Tennessee": {
+  "all_items": 91.87,
+  "goods": 96.247,
+  "services_housing": 79.07,
+  "services_utilities": 72.137,
+  "services_other": 95.142
+ },
+ "Texas": {
+  "all_items": 97.057,
+  "goods": 98.083,
+  "services_housing": 96.503,
+  "services_utilities": 87.512,
+  "services_other": 97.081
+ },
+ "Utah": {
+  "all_items": 98.864,
+  "goods": 96.446,
+  "services_housing": 107.814,
+  "services_utilities": 78.739,
+  "services_other": 98.959
+ },
+ "Vermont": {
+  "all_items": 97.958,
+  "goods": 97.274,
+  "services_housing": 86.502,
+  "services_utilities": 125.833,
+  "services_other": 101.586
+ },
+ "Virginia": {
+  "all_items": 101.104,
+  "goods": 100.368,
+  "services_housing": 106.799,
+  "services_utilities": 92.185,
+  "services_other": 100.233
+ },
+ "Washington": {
+  "all_items": 107.013,
+  "goods": 104.359,
+  "services_housing": 125.979,
+  "services_utilities": 92.86,
+  "services_other": 103.873
+ },
+ "West Virginia": {
+  "all_items": 89.497,
+  "goods": 96.539,
+  "services_housing": 54.241,
+  "services_utilities": 92.242,
+  "services_other": 99.94
+ },
+ "Wisconsin": {
+  "all_items": 94.095,
+  "goods": 94.31,
+  "services_housing": 79.312,
+  "services_utilities": 89.906,
+  "services_other": 99.501
+ },
+ "Wyoming": {
+  "all_items": 92.691,
+  "goods": 95.368,
+  "services_housing": 71.127,
+  "services_utilities": 78.422,
+  "services_other": 100.428
+ }
+}

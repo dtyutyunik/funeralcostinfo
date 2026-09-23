@@ -1,6 +1,19 @@
 import type { Metadata } from 'next';
+import { Fraunces, Inter } from 'next/font/google';
 import './globals.css';
-import { SITE_URL } from '../lib/data';
+import { SITE_URL, VINTAGE_LABEL, LAST_UPDATED } from '../lib/data';
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-serif',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -9,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | FuneralCostInfo',
   },
   description:
-    'Independent, modeled funeral-cost estimates for every U.S. state, built from NFDA national medians and BEA regional price data. We take no money from funeral homes.',
+    'Independent, modeled funeral-cost estimates for every U.S. state, built from 2024 BEA regional price parities and 2023 NFDA national medians. We take no money from funeral homes.',
   openGraph: {
     type: 'website',
     siteName: 'FuneralCostInfo',
@@ -20,11 +33,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US">
+    <html lang="en-US" className={`${fraunces.variable} ${inter.variable}`}>
       <body>
         <header className="site-header no-print">
           <div className="wrap">
-            <a className="brand" href="/">Funeral<span>Cost</span>Info</a>
+            <a className="brand" href="/">
+              Funeral<span className="dot">Cost</span>Info
+              <small>Independent cost transparency</small>
+            </a>
             <nav className="main-nav" aria-label="Main">
               <a href="/calculator/">Calculator</a>
               <a href="/methodology/">Methodology</a>
@@ -33,16 +49,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
           </div>
         </header>
+        <div className="vintage-strip" role="note" aria-label="Data vintage">
+          <div className="wrap">
+            <span className="vdot" aria-hidden="true" />
+            <span><strong>Data vintage:</strong> {VINTAGE_LABEL} · Updated {LAST_UPDATED}</span>
+          </div>
+        </div>
         <main>{children}</main>
         <footer className="site-footer">
           <div className="wrap">
             <div className="cols">
               <div>
-                <strong style={{ color: 'var(--ink)' }}>FuneralCostInfo</strong>
+                <strong>FuneralCostInfo</strong>
                 <p>Independent funeral-cost transparency. We take no money from funeral homes.</p>
               </div>
               <div>
-                <strong style={{ color: 'var(--ink)' }}>Explore</strong>
+                <strong>Explore</strong>
                 <ul>
                   <li><a href="/calculator/">Cost calculator</a></li>
                   <li><a href="/methodology/">Methodology &amp; data</a></li>
@@ -50,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </ul>
               </div>
               <div>
-                <strong style={{ color: 'var(--ink)' }}>Company</strong>
+                <strong>Company</strong>
                 <ul>
                   <li><a href="/about/">About</a></li>
                   <li><a href="/editorial-policy/">Editorial policy</a></li>
@@ -61,9 +83,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </div>
             <div className="fineprint">
-              All state figures are modeled estimates (NFDA 2023 national medians adjusted by BEA
-              regional price parities), not surveyed prices. Educational content only — not
-              financial, legal, or funeral-planning advice. See our <a href="/methodology/">methodology</a>.
+              <span className="vintage">
+                <strong>Data vintage:</strong> {VINTAGE_LABEL} · Updated {LAST_UPDATED} ·
+                refreshed annually as official releases arrive.
+              </span>
+              All state figures are modeled estimates, not surveyed prices. Educational content
+              only — not financial, legal, or funeral-planning advice. See our{' '}
+              <a href="/methodology/">methodology</a>.
             </div>
           </div>
         </footer>

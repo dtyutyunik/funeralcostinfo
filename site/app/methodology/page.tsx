@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
 import JsonLd, { breadcrumbJsonLd } from '../../components/JsonLd';
-import { dataset, fmt, SITE_URL, LAST_UPDATED } from '../../lib/data';
+import { dataset, fmt, SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../lib/data';
 
 export const metadata: Metadata = {
   title: 'Methodology — How We Model Funeral Costs',
   description:
-    'Full methodology for FuneralCostInfo model v1: NFDA 2023 national medians adjusted by BEA regional price parities. Formula, sources, inclusions, exclusions, and limitations — published openly.',
+    'Full methodology for FuneralCostInfo model v2: 2023 NFDA national medians adjusted by 2024 BEA regional price parities. Formula, sources, inclusions, exclusions, limitations, and data-freshness policy — published openly.',
   alternates: { canonical: SITE_URL + '/methodology/' },
   openGraph: {
     title: 'Methodology — How We Model Funeral Costs',
     description:
-      'The complete, open formula behind our state estimates: NFDA 2023 medians × BEA regional price parity. Sources, inclusions, exclusions, limitations.',
+      'The complete, open formula behind our state estimates: NFDA 2023 medians × BEA 2024 regional price parity. Sources, inclusions, exclusions, limitations, freshness.',
     url: SITE_URL + '/methodology/',
   },
 };
@@ -23,10 +23,10 @@ const SOURCES = [
       'National medians: $8,300 funeral with viewing and burial (vault not included); $6,280 funeral with viewing and cremation; $3,720 immediate burial; $2,750 direct cremation (funeral-home container); $2,500 metal casket; $295 urn. The $9,995 burial-with-vault median is widely reported from the 2023 GPL Study press release.',
   },
   {
-    name: 'Bureau of Economic Analysis — Regional Price Parities by State (December 2024 release, 2023 data)',
+    name: 'Bureau of Economic Analysis — Regional Price Parities by State, 2024 (released February 19, 2026)',
     url: 'https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area',
     provides:
-      'State all-items, goods, and services-component (housing/utilities/other) RPP indexes. 2023 vintage — the December 2025 / February 2026 release spreadsheet was not available at fetch time.',
+      '2024 state all-items, goods, and services-component (housing/utilities/other) RPP indexes, pulled from the BEA Interactive Data Application (Table SARPP) and cross-checked against the official February 19, 2026 news release. Next BEA release: December 10, 2026.',
   },
   {
     name: 'Bureau of Labor Statistics — CPI: Funeral expenses (+3.0% 12-month, August 2026)',
@@ -45,7 +45,19 @@ const SOURCES = [
   },
 ];
 
+const LEDGER: [string, React.ReactNode][] = [
+  ['Model', <>v2 — every figure on this site is a <strong>modeled estimate</strong>, never a surveyed price or a quote.</>],
+  ['Formula', <><code>state_estimate = nfda_2023_national_median × (state_bea_2024_rpp_all_items ÷ 100)</code></>],
+  ['Rounding', <>Nearest $10.</>],
+  ['Range', <>Illustrative ±15% band around each point estimate — it communicates typical within-state variation, not a statistical confidence interval.</>],
+  ['Coverage', <>50 states + District of Columbia.</>],
+  ['Price anchors', <>NFDA 2023 national medians — the latest <em>published</em> NFDA price study (see “Data freshness” below).</>],
+  ['Geography factor', <>BEA 2024 Regional Price Parities, all-items index (official February 19, 2026 release).</>],
+  ['Refresh cadence', <>Annual: the dataset rebuilds each spring from the newest BEA release and the newest published NFDA study.</>],
+];
+
 export default function MethodologyPage() {
+  const ca = dataset.states.find((s) => s.abbr === 'CA')!;
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([
@@ -56,9 +68,9 @@ export default function MethodologyPage() {
         data={{
           '@context': 'https://schema.org',
           '@type': 'Dataset',
-          name: 'FuneralCostInfo state funeral-cost estimates, model v1',
+          name: 'FuneralCostInfo state funeral-cost estimates, model v2',
           description:
-            'Modeled state-level funeral-cost estimates for 50 states + D.C.: NFDA 2023 national medians adjusted by BEA 2023 regional price parities. Values are modeled, not surveyed.',
+            'Modeled state-level funeral-cost estimates for 50 states + D.C.: NFDA 2023 national medians adjusted by BEA 2024 regional price parities. Values are modeled, not surveyed.',
           url: SITE_URL + '/methodology/',
           creator: { '@type': 'Organization', name: 'FuneralCostInfo', url: SITE_URL + '/' },
           datePublished: LAST_UPDATED,
@@ -67,23 +79,58 @@ export default function MethodologyPage() {
       />
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › Methodology</nav>
-        <h1>Methodology — model v1</h1>
-        <p className="answer-first">
+        <p className="eyebrow">Open data</p>
+        <h1 style={{ marginTop: 0 }}>Methodology — model v2</h1>
+        <div className="answer-first">
           <strong>Quick answer:</strong> every state figure on this site is a modeled estimate
-          computed as <em>NFDA 2023 national median × (state BEA regional price parity ÷ 100)</em>,
+          computed as <em>NFDA 2023 national median × (state BEA 2024 regional price parity ÷ 100)</em>,
           rounded to the nearest $10, with an illustrative ±15% range. The NFDA publishes national
           medians only — no state-level funeral price survey exists — so modeling from official
           sources is the most transparent way to answer &ldquo;what does it cost near me?&rdquo;
-        </p>
+        </div>
+
+        <h2>The model at a glance</h2>
+        <div className="data-ledger">
+          {LEDGER.map(([k, v]) => (
+            <div className="ledger-row" key={k}>
+              <div className="k">{k}</div>
+              <div className="v">{v}</div>
+            </div>
+          ))}
+        </div>
 
         <h2>The formula</h2>
-        <p><code>state_estimate = national_median × (state_RPP_all_items / 100)</code></p>
-        <p>
-          Example — California traditional burial: $8,300 × (112.6 / 100) = $9,345.80 →{' '}
-          <strong>{fmt(dataset.states.find((s) => s.abbr === 'CA')!.estimates.traditional_burial.point)}</strong>{' '}
-          (rounded to the nearest $10). The ±15% range is illustrative, to communicate
-          within-state variation; it is not a statistical confidence interval.
-        </p>
+        <div className="formula-box" role="img" aria-label="Formula: state estimate equals NFDA 2023 national median times state BEA 2024 RPP all-items divided by 100">
+          state_estimate <span className="hl">=</span> national_median <span className="hl">×</span> (state_RPP_all_items <span className="hl">÷</span> 100)<br />
+          <span style={{ opacity: 0.65 }}># Example — California traditional burial:</span><br />
+          $8,300 <span className="hl">×</span> (110.72 <span className="hl">÷</span> 100) <span className="hl">=</span> $9,189.76 → <span className="hl">{fmt(ca.estimates.traditional_burial.point)}</span>
+        </div>
+
+        <div className="freshness">
+          <h3>Data freshness — why 2024 and 2023 are the newest honest vintages</h3>
+          <p>
+            <strong>BEA regional price parities: 2024.</strong> The Bureau of Economic Analysis
+            released 2024 RPPs on <strong>February 19, 2026</strong> — the current release, with the
+            next one scheduled for December 10, 2026. We pulled all 50 states plus D.C. from the
+            BEA&rsquo;s Interactive Data Application (Table SARPP) on September 23, 2026 and
+            cross-checked the values against the official release. Official statistics always lag
+            by a year or more; 2024 is the newest RPP data that exists.
+          </p>
+          <p>
+            <strong>NFDA price medians: 2023.</strong> The NFDA&rsquo;s 2023 Member General Price
+            List Study remains the latest <em>published</em> NFDA price study. The NFDA said it
+            would field the next GPL study in 2025, but as of September 23, 2026 no price results
+            from a 2025 study had been publicly released — and 2026 press coverage still cites the
+            2023 medians as current. We would rather show a clearly-dated 2023 median than invent
+            a newer one.
+          </p>
+          <p style={{ marginBottom: 0 }}>
+            <strong>Our commitment:</strong> this dataset rebuilds <strong>annually</strong> —
+            each spring we pull the newest BEA RPP release and check for a newer published NFDA
+            study, then publish a changelog with the new model version. The vintage line at the
+            top of every page always tells you exactly what you&rsquo;re looking at.
+          </p>
+        </div>
 
         <h2>National anchors (NFDA 2023 medians)</h2>
         <table className="data">
@@ -120,13 +167,13 @@ export default function MethodologyPage() {
             .map((x) => <li key={x}>{x}</li>)}
         </ul>
 
-        <h2>Sources</h2>
+        <h2>Source ledger</h2>
         {SOURCES.map((s) => (
-          <div key={s.url} style={{ marginBottom: 18 }}>
+          <div className="source-card" key={s.url}>
             <strong>{s.name}</strong>
-            <br /><a href={s.url} rel="noopener noreferrer">{s.url}</a>
-            <br /><span style={{ color: 'var(--muted)' }}>{s.provides}</span>
-            <br /><span className="updated">Retrieved {LAST_UPDATED}</span>
+            <br /><a className="url" href={s.url} rel="noopener noreferrer">{s.url}</a>
+            <p>{s.provides}</p>
+            <p className="updated">Retrieved {LAST_UPDATED}</p>
           </div>
         ))}
 
@@ -134,12 +181,13 @@ export default function MethodologyPage() {
         <ul>
           <li>State values are <strong>modeled from national medians</strong>; actual local prices vary widely.</li>
           <li>NFDA medians come from member funeral homes and exclude cemetery and cash-advance costs.</li>
-          <li>RPP vintage is 2023; the dataset will refresh annually as new BEA releases arrive.</li>
+          <li>RPP vintage is 2024 (BEA February 2026 release); the dataset refreshes annually as new releases arrive.</li>
+          <li>NFDA price medians are 2023 vintage because no newer official GPL study results have been published.</li>
           <li>Green burial has no published NFDA median; it is a stated assumption (0.60× traditional burial), labeled as such everywhere it appears.</li>
           <li>Calculator add-on ranges (flowers, obituary) are typical market ranges, not surveyed prices.</li>
           <li>This site is educational content, not financial, legal, or funeral-planning advice.</li>
         </ul>
-        <p className="updated">Model v1 · built {LAST_UPDATED} · refresh cadence: annual.</p>
+        <p className="updated">{VINTAGE_LABEL} · Built {LAST_UPDATED} · Model v2 · Refresh cadence: annual.</p>
       </div>
     </>
   );

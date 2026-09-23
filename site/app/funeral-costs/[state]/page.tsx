@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import {
   dataset, getState, stateSlug, fmt, fmtRange, SITE_URL, LAST_UPDATED,
-  SERVICE_ORDER, PHASE0_STATES, type ServiceKey,
+  SERVICE_ORDER, PHASE0_STATES, VINTAGE_LABEL, type ServiceKey,
 } from '../../../lib/data';
 
 interface StateNote {
@@ -18,7 +18,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     boardName: 'California Cemetery and Funeral Bureau',
     boardUrl: 'https://www.cfb.ca.gov/',
     context: [
-      'California has the highest regional price level of any state in our dataset (RPP 112.6), so its modeled estimates are the highest in the nation.',
+      'California has the highest regional price level of any state in our dataset (RPP 110.7), so its modeled estimates are the highest in the nation.',
       'The NFDA projects 81.5% of California dispositions will be cremations by 2035 — among the highest cremation rates in the country.',
     ],
     caveats: [
@@ -30,7 +30,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     boardName: 'Texas Funeral Service Commission',
     boardUrl: 'https://tfsc.texas.gov/',
     context: [
-      'Texas sits just below the national average price level (RPP 97.2), so modeled costs run slightly under the national medians.',
+      'Texas sits just below the national average price level (RPP 97.1), so modeled costs run slightly under the national medians.',
       'The NFDA projects 70.2% of Texas dispositions will be cremations by 2035.',
     ],
     caveats: [
@@ -42,7 +42,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     boardName: 'Florida Division of Funeral, Cemetery & Consumer Services',
     boardUrl: 'https://www.myfloridacfo.com/division/funeralcemetery',
     context: [
-      'Florida runs modestly above the national average price level (RPP 103.5).',
+      'Florida runs modestly above the national average price level (RPP 103.4).',
       'The NFDA projects 79.8% of Florida dispositions will be cremations by 2035, reflecting the state\u2019s large retiree population and transient communities.',
     ],
     caveats: [
@@ -54,7 +54,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     boardName: 'New York State Department of Health, Bureau of Funeral Directing',
     boardUrl: null,
     context: [
-      'New York has one of the highest price levels in the nation (RPP 107.6), driven largely by the New York City metro area.',
+      'New York has one of the highest price levels in the nation (RPP 107.9), driven largely by the New York City metro area.',
       'The NFDA projects 70.7% of New York dispositions will be cremations by 2035.',
     ],
     caveats: [
@@ -66,7 +66,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     boardName: 'Mississippi State Board of Funeral Service',
     boardUrl: 'https://www.msbfs.ms.gov/',
     context: [
-      'Mississippi has the lowest regional price level in our dataset (RPP 87.3), so its modeled estimates are the lowest in the nation.',
+      'Mississippi has the second-lowest regional price level in our dataset (RPP 87.0), just above Arkansas, so its modeled estimates are among the lowest in the nation.',
       'The NFDA projects Mississippi will retain one of the highest burial shares in the country, with only 54.5% cremations by 2035.',
     ],
     caveats: [
@@ -103,11 +103,12 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   if (!st) notFound();
   const notes = STATE_NOTES[state];
   const trad = st.estimates.traditional_burial;
+  const maxPoint = Math.max(...SERVICE_ORDER.map((k) => st.estimates[k].point));
 
   const faqs = [
     {
       q: `Are these real prices from ${st.name} funeral homes?`,
-      a: `No. These are modeled estimates: the NFDA 2023 national median adjusted by the BEA regional price parity for ${st.name} (RPP ${st.rpp_all_items}). No state-level funeral price survey exists. Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
+      a: `No. These are modeled estimates: the NFDA 2023 national median adjusted by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). No state-level funeral price survey exists. Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
     },
     {
       q: `What does the ${fmt(trad.point)} traditional-burial estimate include?`,
@@ -147,45 +148,51 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           2023 national median of {fmt(dataset.anchors.traditional_burial.value)}. Direct cremation
           is modeled at <strong>{fmt(st.estimates.direct_cremation.point)}</strong>. These are
           modeled estimates — not surveyed prices or quotes — built from the NFDA 2023 national
-          medians adjusted by {st.name}&apos;s BEA regional price parity ({st.rpp_all_items}).
+          medians adjusted by {st.name}&apos;s BEA 2024 regional price parity ({st.rpp_all_items.toFixed(1)}).
         </div>
 
         <h2>Modeled estimates by service type — {st.name}</h2>
-        <table className="data">
-          <caption style={{ textAlign: 'left', paddingBottom: 8, color: 'var(--muted)', fontSize: 14 }}>
-            Point estimates with illustrative ±15% ranges. Excludes cemetery and cash-advance costs unless noted.
-          </caption>
-          <thead>
-            <tr><th>Service type</th><th className="num">Modeled estimate</th><th className="num">Illustrative range</th></tr>
-          </thead>
-          <tbody>
-            {SERVICE_ORDER.map((k: ServiceKey) => {
-              const e = st.estimates[k];
-              const anchor = dataset.anchors[k];
-              return (
-                <tr key={k}>
-                  <td>
-                    {anchor.label}
-                    {anchor.assumption && (
-                      <><br /><span style={{ fontSize: 13, color: 'var(--muted)' }}>Stated assumption: {anchor.assumption}</span></>
-                    )}
-                  </td>
-                  <td className="num"><strong>{fmt(e.point)}</strong></td>
-                  <td className="num">{fmtRange(e)}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <p style={{ color: 'var(--muted)' }}>
+          Bars are scaled to the most expensive option. Ranges are illustrative (±15%), not
+          statistical confidence intervals. Excludes cemetery and cash-advance costs unless noted.
+        </p>
+        <div className="est-grid">
+          {SERVICE_ORDER.map((k: ServiceKey, i) => {
+            const e = st.estimates[k];
+            const anchor = dataset.anchors[k];
+            return (
+              <div className={`est-card${i === 0 ? ' featured' : ''}`} key={k}>
+                <div className="svc">
+                  {anchor.label}
+                  {anchor.assumption && <small>Stated assumption — no NFDA median exists</small>}
+                </div>
+                <div className="val">{fmt(e.point)}</div>
+                <div className="rng">Illustrative range {fmtRange(e)}</div>
+                <div className="bar-track" aria-hidden="true">
+                  <div className="bar-fill" style={{ width: `${(e.point / maxPoint) * 100}%` }} />
+                </div>
+                {anchor.assumption && (
+                  <div className="assumption">Assumption: {anchor.assumption}</div>
+                )}
+              </div>
+            );
+          })}
+        </div>
 
-        <h2>{st.name} in context</h2>
-        <ul>
-          {notes.context.map((c, i) => <li key={i}>{c}</li>)}
-        </ul>
-        <h3>Local caveats</h3>
-        <ul>
-          {notes.caveats.map((c, i) => <li key={i}>{c}</li>)}
-        </ul>
+        <div className="context-grid">
+          <div className="context-box">
+            <h3>{st.name} in context</h3>
+            <ul>
+              {notes.context.map((c, i) => <li key={i}>{c}</li>)}
+            </ul>
+          </div>
+          <div className="context-box">
+            <h3>Local caveats</h3>
+            <ul>
+              {notes.caveats.map((c, i) => <li key={i}>{c}</li>)}
+            </ul>
+          </div>
+        </div>
 
         <h2>What&apos;s included — and what isn&apos;t</h2>
         <p><strong>Included</strong> (per the NFDA median definition): basic services fee, removal/transfer,
@@ -227,7 +234,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         </div>
 
         <p className="updated">
-          Last updated {LAST_UPDATED} · Model v1 · NFDA 2023 medians × BEA 2023 regional price parities. <a href="/methodology/">Full methodology</a>.
+          {VINTAGE_LABEL} · Updated {LAST_UPDATED} · Model v2. <a href="/methodology/">Full methodology</a>.
         </p>
       </div>
     </>
