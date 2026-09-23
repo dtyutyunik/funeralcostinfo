@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FuneralCostInfo.com Buildout Plan</title>
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+:root{--ink:#162521;--muted:#56645f;--paper:#fbfaf6;--sage:#315e50;--mint:#e3eee9;--gold:#bd8b3a;--line:#d5dcd8;--soft:#f0f3f0;--warn:#8a4b35}
+html,body{margin:0;padding:0;background:#d9ddda;color:var(--ink);font-family:'Noto Sans','Liberation Sans',sans-serif;font-size:10.2pt;line-height:1.45}
+.page{width:210mm;height:297mm;min-height:297mm;padding:16mm 17mm 15mm;background:var(--paper);position:relative;overflow:hidden;page-break-after:always}
+.page:last-child{page-break-after:auto}
+h1,h2,h3,p,ul,ol,table,blockquote{margin-top:0}
+h1,h2,h3{font-family:'Noto Serif','Liberation Serif',serif;color:var(--ink)}
+h1{font-size:31pt;line-height:1.05;letter-spacing:-.5pt;margin-bottom:7mm}
+h2{font-size:20pt;line-height:1.15;margin:0 0 6mm}
+h3{font-size:12.2pt;line-height:1.25;margin:0 0 2mm}
+p{margin-bottom:3mm} ul,ol{padding-left:5mm;margin-bottom:3mm} li{margin-bottom:1.5mm}
+.small{font-size:8.4pt;line-height:1.38}.caption{font-size:8pt;color:var(--muted)}.muted{color:var(--muted)}
+.kicker{font-size:8.5pt;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--sage);margin-bottom:3mm}
+.lede{font-family:'Noto Serif','Liberation Serif',serif;font-size:15pt;line-height:1.38;color:#263b34;margin-bottom:7mm}
+.rule{height:1px;background:var(--line);margin:5mm 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:5mm}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}
+.card{border:1px solid var(--line);border-radius:2mm;padding:4mm;background:#fff;break-inside:avoid}
+.card.tint{background:var(--soft)}.card.accent{border-top:3px solid var(--gold)}
+.metric{font-family:'Noto Serif','Liberation Serif',serif;font-size:22pt;line-height:1;color:var(--sage);font-weight:700;margin-bottom:1mm}
+.label{font-size:8pt;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.callout{border-left:4px solid var(--gold);padding:3.5mm 4mm;background:#f7f0e4;margin:4mm 0}
+.callout strong{color:#664411}
+.warning{border-left-color:var(--warn);background:#f7ece7}
+table{width:100%;border-collapse:collapse;font-size:8.5pt;line-height:1.32;margin-bottom:4mm}th{background:var(--sage);color:#fff;text-align:left;padding:2.3mm;font-weight:700}td{padding:2.2mm;border-bottom:1px solid var(--line);vertical-align:top}tr:nth-child(even) td{background:#f7f8f6}
+.numbered{counter-reset:item;list-style:none;padding:0}.numbered li{counter-increment:item;display:grid;grid-template-columns:8mm 1fr;gap:2mm;margin-bottom:3mm}.numbered li:before{content:counter(item);width:6mm;height:6mm;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;font-size:8pt;font-weight:700}
+.flow{display:flex;gap:2mm;align-items:stretch;margin:4mm 0}.flow>div{flex:1;border:1px solid var(--line);padding:3mm;background:#fff;position:relative}.flow>div:not(:last-child):after{content:'›';position:absolute;right:-3mm;top:35%;font-size:18pt;color:var(--gold);z-index:2}
+.code{font-family:'Liberation Mono',monospace;font-size:8.2pt;line-height:1.45;background:#18231f;color:#e8efe9;border-radius:2mm;padding:4mm;white-space:pre-wrap}
+.check{list-style:none;padding-left:0}.check li{padding-left:5mm;position:relative}.check li:before{content:'□';position:absolute;left:0;color:var(--sage);font-weight:700}
+.tag{display:inline-block;font-size:8pt;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:1mm 2mm;border-radius:10mm;background:var(--mint);color:var(--sage);margin-right:1mm}
+.footer{position:absolute;left:17mm;right:17mm;bottom:7mm;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:2mm;color:var(--muted);font-size:8pt}.footer b{color:var(--sage)}
+a{color:var(--sage);text-decoration:none}.tight li{margin-bottom:.8mm}.no-break{break-inside:avoid}
+.cover{background:var(--ink);color:#eef5f1;padding:20mm}.cover h1,.cover h2,.cover h3{color:#fff}.cover .kicker{color:#9dc5b6}.cover .lede{color:#d5e3dd;max-width:150mm}.cover-band{position:absolute;left:20mm;right:20mm;bottom:33mm;border-top:1px solid #5d746c;padding-top:6mm;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:8mm}.cover .label{color:#9db0a9}.cover .footer{left:20mm;right:20mm;border-color:#5d746c;color:#aebfb8}.measure{padding-top:13mm}.measure h2{margin-bottom:3mm}.measure .callout{margin:2mm 0 3mm;padding:2.5mm 3.5mm}.measure h3{margin-bottom:1.5mm}.seal{width:22mm;height:22mm;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:'Noto Serif';font-size:18pt;color:#e8c27d;margin-bottom:18mm}
+</style>
+</head>
+<body>
+<section class="page cover">
+  <div class="seal">F</div>
+  <div class="kicker">Independent funeral-cost transparency</div>
+  <h1>FuneralCostInfo.com<br>buildout plan</h1>
+  <p class="lede">A complete product, data, technical, monetization, launch, and validation plan for a low-maintenance U.S. cost-transparency property.</p>
+  <div><span class="tag">Decision document</span><span class="tag">Phase 0 ready</span><span class="tag">$0 infrastructure</span></div>
+  <div class="cover-band">
+    <div><div class="label">Positioning</div><b>What funerals really cost, from a site that takes no money from funeral homes.</b></div>
+    <div><div class="label">Prepared</div><b>23 September 2026</b></div>
+    <div><div class="label">Recommendation</div><b>Conditional go</b></div>
+  </div>
+  <div class="footer"><span>Confidential working plan</span><span>01</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Executive decision brief</div>
+  <h2>Build the data asset first; earn the right to scale</h2>
+  <p class="lede">FuneralCostInfo is a credible low-operations bet because public data supports a useful estimator, demand is evergreen, and monetization can occur on a visitor's first session. The cost is patience: this project needs a deliberate 120-day search validation window, not a 14-day test.</p>
+  <div class="grid3">
+    <div class="card accent"><div class="metric">$8,300</div><div class="label">NFDA 2023 median</div><p class="small">Viewing and burial, excluding vault, cemetery, marker, and cash advances.[1]</p></div>
+    <div class="card accent"><div class="metric">$6,280</div><div class="label">NFDA 2023 median</div><p class="small">Viewing and cremation, with the defined NFDA bundle.[1]</p></div>
+    <div class="card accent"><div class="metric">$12/yr</div><div class="label">Required cash</div><p class="small">Approximate domain cost; static hosting and public data can start at $0.</p></div>
+  </div>
+  <div class="rule"></div>
+  <div class="grid2">
+    <div>
+      <h3>Why it can win</h3>
+      <ul>
+        <li><b>Open position:</b> no dominant, consumer-only funeral-cost data brand combines methodology, state estimates, and an interactive calculator.</li>
+        <li><b>Engineered economics:</b> ads provide a floor; disclosed final-expense leads can provide materially higher yield.</li>
+        <li><b>Autonomy fit:</b> static pages, versioned data, and an annual refresh avoid a database, account system, or support queue.</li>
+        <li><b>Owner fit:</b> a senior engineer can build the defensible component - model, calculator, and publishing pipeline - rather than compete on article volume.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What must be true</h3>
+      <ul>
+        <li>Google and AI engines index and cite the original data experience.</li>
+        <li>Modeled estimates are labeled so clearly that criticism strengthens, rather than erodes, trust.</li>
+        <li>Monetization remains restrained around bereaved families.</li>
+        <li>The owner accepts a slower evidence loop than the normal 7-14 day rule.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout"><strong>Recommendation:</strong> approve a five-state Phase 0 only. Do not build all 50 states, buy links, or create a directory until Search Console shows real demand.</div>
+  <h3>Phase 0 outcome</h3>
+  <p>One production-quality home page, five state pages, the calculator, methodology, statistics, trust pages, and launch instrumentation. Owner involvement is capped at five hours for decisions, domain purchase, account approvals, and final review.</p>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / decision brief</span><span>02</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Market and competition</div>
+  <h2>The opening is independence plus reproducible numbers</h2>
+  <p>Demand is pain-driven and renews with each family; repeat visits are not required. Searchers arrive with immediate price questions, and every new visitor can generate an ad impression or a voluntary referral. The gap is not “more funeral content.” It is a transparent estimate system with no funeral-home paymaster.</p>
+  <table>
+    <thead><tr><th>Competitor type</th><th>Strength</th><th>Business-model constraint</th><th>Opening for FuneralCostInfo</th></tr></thead>
+    <tbody>
+      <tr><td><b>Parting / Parting Pro</b></td><td>15,000+ provider directory; price data</td><td>Also sells operations software to funeral homes.[5]</td><td>Stay consumer-side; avoid provider software</td></tr>
+      <tr><td><b>Funeralocity</b></td><td>Provider comparison and rebates</td><td>Program members pay per resulting referred family.[6]</td><td>No funeral-home referral payments</td></tr>
+      <tr><td><b>Cake / Everplans</b></td><td>Large planning libraries and tools</td><td>Acquired in 2024 by funeral-industry players.[7][8]</td><td>Own cost transparency narrowly</td></tr>
+      <tr><td><b>Insurance affiliates</b></td><td>Commercial-intent landing pages</td><td>Quote-first content weakens neutrality</td><td>Lead with sources and methodology</td></tr>
+      <tr><td><b>Broad data publishers</b></td><td>Domain authority and state tables</td><td>Generic pages; limited funeral-specific method</td><td>Calculator, inclusions, uncertainty, updates</td></tr>
+    </tbody>
+  </table>
+  <div class="grid2">
+    <div class="card tint"><h3>Confirmed economic signals</h3><ul class="tight small"><li>Final-expense keyword research: roughly $8-$20 CPC for commercial terms.</li><li>Observed affiliate structures: $20-$60 per lead or $100-$300 per sale.</li><li>Lead buyers reportedly pay about $20-$45 for fresh final-expense leads.</li><li>Informational long-tail traffic often carries lower CPC, so affiliate intent matching matters.</li></ul></div>
+    <div class="card tint"><h3>Positioning rules</h3><ul class="tight small"><li>“Modeled estimate” appears beside every state number.</li><li>Never imply a provider quote or guaranteed local price.</li><li>Never rank funeral homes for payment.</li><li>Keep quote modules secondary to the answer.</li><li>Publish conflicts, affiliate relationships, and update dates.</li></ul></div>
+  </div>
+  <div class="callout warning"><strong>Strategic tension:</strong> insurance commissions can fund the site, but an aggressive quote funnel would erase the independence claim. Treat trust as the primary conversion asset.</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / market</span><span>03</span></div>
+</section>
+<section class="page">
+  <div class="kicker">Product and site architecture</div>
+  <h2>The site answers one question at three levels</h2>
+  <div class="flow">
+    <div><div class="label">Fast answer</div><b>State estimate</b><p class="small">A concise, source-dated range with inclusions.</p></div>
+    <div><div class="label">Personal answer</div><b>Calculator</b><p class="small">State, service type, and optional items.</p></div>
+    <div><div class="label">Defensible answer</div><b>Methodology</b><p class="small">Formula, caveats, calibration, and versions.</p></div>
+  </div>
+  <h3>Launch inventory and purpose</h3>
+  <table>
+    <thead><tr><th>Section</th><th>What ships</th><th>Primary user job</th><th>Conversion</th></tr></thead>
+    <tbody>
+      <tr><td>Home</td><td>Calculator hero, state index, trust proof</td><td>Orient and estimate</td><td>Start calculator</td></tr>
+      <tr><td>State pages</td><td>50 at maturity; 5 in Phase 0</td><td>Understand local cost</td><td>Print / optional quote</td></tr>
+      <tr><td>Calculator</td><td>Six service types, optional items</td><td>Build a realistic budget</td><td>Print / compare quotes</td></tr>
+      <tr><td>Methodology</td><td>Sources, formula, limits, versions</td><td>Verify the estimate</td><td>Cite / link</td></tr>
+      <tr><td>Statistics</td><td>Quotable national and state facts</td><td>Research and reporting</td><td>Cite / download</td></tr>
+      <tr><td>Guides</td><td>8 core decision guides</td><td>Act with less confusion</td><td>Calculator / official source</td></tr>
+      <tr><td>Trust pages</td><td>About, editorial, disclosure, contact, privacy</td><td>Assess independence</td><td>Trust</td></tr>
+    </tbody>
+  </table>
+  <div class="grid2">
+    <div>
+      <h3>Every state page lists</h3>
+      <ul class="tight"><li>Traditional burial with viewing</li><li>Burial plus vault</li><li>Cremation with viewing/service</li><li>Direct cremation</li><li>Immediate/direct burial</li><li>Green burial estimate</li><li>Included and excluded line items</li><li>State notes, official links, and FAQs</li></ul>
+    </div>
+    <div>
+      <h3>Core guides</h3>
+      <ul class="tight"><li>FTC Funeral Rule rights</li><li>Burial vs. cremation costs</li><li>Direct cremation</li><li>Green burial</li><li>Veterans burial benefits</li><li>Who pays / no money for a funeral</li><li>Prepaid plans: benefits and risks</li><li>Funeral-price glossary</li></ul>
+    </div>
+  </div>
+  <div class="callout"><strong>Scope guardrail:</strong> do not launch provider reviews, obituaries, memorial commerce, or user accounts. Each creates moderation, support, or independence problems without validating the core thesis.</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / product</span><span>04</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Data pipeline and methodology</div>
+  <h2>Public inputs support an honest model, not a local quote</h2>
+  <div class="flow">
+    <div><div class="label">Anchor</div><b>NFDA GPL study</b><p class="small">National and Census-region medians, bundle definitions.[1]</p></div>
+    <div><div class="label">Adjust</div><b>BEA price parities</b><p class="small">Annual state and metro price-level indexes.[2]</p></div>
+    <div><div class="label">Calibrate</div><b>Funeral-home GPLs</b><p class="small">Itemized lists obtained under Funeral Rule access.[3]</p></div>
+    <div><div class="label">Context</div><b>BLS funeral CPI</b><p class="small">Inflation trend, not a state price source.[4]</p></div>
+  </div>
+  <div class="grid2">
+    <div>
+      <h3>Launch formula</h3>
+      <div class="code">stateEstimate = nationalMedian
+  × (stateRPP / 100)
+
+Example only:
+$8,300 × (110.7 / 100)
+= $9,188 modeled estimate</div>
+      <p class="caption">California's 2024 all-items RPP was 110.7; Mississippi's was 87.0. BEA expresses the national price level as 100.[2] The example shows mechanics, not a provider quote.</p>
+    </div>
+    <div>
+      <h3>Versioned source files</h3>
+      <div class="code">/data/nfda-2023.json
+/data/bea-rpp-2024.json
+/data/bls-funeral-cpi.json
+/data/service-definitions.json
+/data/model-v1.json
+/data/sources.json</div>
+      <p class="caption">Every output stores source year, model version, generated date, and inclusion set.</p>
+    </div>
+  </div>
+  <h3>Methodology promises</h3>
+  <table>
+    <thead><tr><th>Promise</th><th>Implementation</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Label estimates</td><td>“Modeled state estimate,” never “average local price”</td><td>Avoid false precision</td></tr>
+      <tr><td>Name exclusions</td><td>Cemetery, monument, flowers, clergy, obituary, cash advances</td><td>NFDA bundles omit major extras</td></tr>
+      <tr><td>Publish uncertainty</td><td>Range plus confidence tier; no single-number pretense</td><td>In-state variation is large</td></tr>
+      <tr><td>Show provenance</td><td>Source, year, formula, update log on every result</td><td>Trust and citation</td></tr>
+      <tr><td>Calibrate</td><td>Sample GPLs; report N and geographic coverage</td><td>Test model against observed menus</td></tr>
+    </tbody>
+  </table>
+  <div class="callout warning"><strong>Legal precision:</strong> the Funeral Rule requires accurate price information by phone and a written General Price List when in-person discussions begin; it does not universally require a funeral home to email a GPL. Sampling workflows must ask, not misstate the law.[3]</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / data</span><span>05</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Calculator and content specification</div>
+  <h2>The calculator exposes choices, assumptions, and exclusions</h2>
+  <div class="grid2">
+    <div>
+      <h3>Inputs</h3>
+      <ol class="numbered small">
+        <li><div><b>Location:</b> state at launch; metro after validated demand.</div></li>
+        <li><div><b>Service type:</b> burial, burial with vault, cremation service, direct cremation, immediate burial, green burial.</div></li>
+        <li><div><b>Optional items:</b> embalming, viewing, ceremony, hearse, printed package, casket/urn tier.</div></li>
+        <li><div><b>Known local prices:</b> optional user overrides for cemetery or merchandise.</div></li>
+      </ol>
+      <h3>Outputs</h3>
+      <ul class="tight small"><li>Low / modeled center / high range</li><li>Printable line-item receipt</li><li>Included and excluded items</li><li>Source dates and model version</li><li>Questions to ask a funeral home</li><li>Optional, disclosed insurance quote link</li></ul>
+    </div>
+    <div>
+      <h3>Result logic</h3>
+      <div class="code">1. Load service bundle
+2. Apply state RPP factor
+3. Add selected options
+4. Add user-entered local costs
+5. Apply published uncertainty band
+6. Render result + provenance
+7. Track anonymous event only</div>
+      <div class="callout"><strong>No personal profile:</strong> calculations stay client-side. Do not collect a decedent's name, health information, beneficiary details, or exact address.</div>
+    </div>
+  </div>
+  <h3>Reusable state-page template</h3>
+  <table>
+    <thead><tr><th>Order</th><th>Module</th><th>Acceptance criterion</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Direct answer</td><td>40-60 words; source + year + “modeled”</td></tr>
+      <tr><td>2</td><td>Cost table</td><td>Six services; inclusions visible</td></tr>
+      <tr><td>3</td><td>Calculator</td><td>State preselected; no JS-only key facts</td></tr>
+      <tr><td>4</td><td>How estimated</td><td>Formula summary + methodology link</td></tr>
+      <tr><td>5</td><td>Cost drivers</td><td>Specific to service mix and RPP</td></tr>
+      <tr><td>6</td><td>Rights and savings</td><td>FTC facts + official state links</td></tr>
+      <tr><td>7</td><td>FAQs</td><td>Real questions; matching FAQ schema</td></tr>
+      <tr><td>8</td><td>Disclosure / update</td><td>Affiliate status, reviewed date, sources</td></tr>
+    </tbody>
+  </table>
+  <div class="callout warning"><strong>Editorial rule:</strong> generated prose is never the product. Each page must add the model output, service definitions, state-specific official resources, and a human-readable explanation of limits.</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / calculator</span><span>06</span></div>
+</section>
+<section class="page">
+  <div class="kicker">Technical architecture and sitemap</div>
+  <h2>Pre-render every answer and make discovery deterministic</h2>
+  <div class="grid2">
+    <div class="card"><h3>Application</h3><ul class="tight small"><li>Next.js static export</li><li>React calculator, client-side only</li><li>MDX guides + JSON datasets</li><li>No database, login, or server runtime</li><li>Cloudflare Pages free tier</li></ul></div>
+    <div class="card"><h3>Performance budget</h3><ul class="tight small"><li>LCP ≤2.5 seconds at p75</li><li>INP ≤200 ms at p75</li><li>CLS ≤0.10 at p75</li><li>Initial JS ≤120 KB compressed</li><li>No third-party script before consent</li></ul></div>
+  </div>
+  <h3 style="margin-top:4mm">Canonical URL blueprint</h3>
+  <div class="code">/                                  Home
+/funeral-costs/                   State hub
+/funeral-costs/california/        State page
+/calculator/                       Estimator
+/methodology/                      Model and changelog
+/statistics/                       Quotable data
+/guides/ftc-funeral-rule/         Guide
+/about/ /editorial-policy/ /privacy/ /affiliate-disclosure/
+</div>
+  <div class="grid2" style="margin-top:4mm">
+    <div>
+      <h3>Sitemap index</h3>
+      <ul class="tight small"><li><b>/sitemap.xml</b> → index</li><li><b>/sitemaps/core.xml</b> → home, trust, method</li><li><b>/sitemaps/states.xml</b> → hub + states</li><li><b>/sitemaps/guides.xml</b> → guides</li><li><b>/sitemaps/tools.xml</b> → calculator + statistics</li></ul>
+      <p class="caption">Include only canonical, indexable, 200-status URLs. Store accurate last-modified dates.</p>
+    </div>
+    <div>
+      <h3>Internal linking hierarchy</h3>
+      <ul class="tight small"><li>Home → state hub → every state</li><li>State page → calculator + 2-3 relevant guides</li><li>Guide → calculator + applicable state hub</li><li>Statistics → methodology + every source series</li><li>BreadcrumbList schema mirrors visible breadcrumbs</li></ul>
+      <p class="caption">Avoid paginated archives; the catalog is finite and static. Hreflang is unnecessary for a U.S.-only English launch.</p>
+    </div>
+  </div>
+  <h3>robots.txt policy</h3>
+  <div class="code">User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/*.map$
+Sitemap: [final canonical origin]/sitemap.xml</div>
+  <p class="caption">Do not block canonical HTML, CSS, JavaScript, images, or the calculator. Add explicit AI-bot groups only to document a permissive decision; rules must match the final domain after purchase.</p>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / technical SEO</span><span>07</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">AI search and citation design</div>
+  <h2>Write facts so humans can verify them and models can quote them</h2>
+  <p class="lede">Simple “average cost” answers may be consumed inside AI Overviews. The counterplay is not hiding data; it is becoming the named source for complex, reproducible answers that assistants cite.</p>
+  <div class="grid2">
+    <div>
+      <h3>Answer-first page contract</h3>
+      <ul class="tight"><li>First 40-60 words answer the exact query.</li><li>Use semantic <b>h1</b>, <b>h2</b>, tables, lists, and visible citations.</li><li>Repeat statistics consistently: “NFDA 2023 median: $8,300 for viewing and burial.”</li><li>Put key facts in pre-rendered HTML, never only after JavaScript runs.</li><li>Use FAQPage schema only when the same Q&A is visible.</li><li>Evaluate Speakable schema for concise answer blocks; never mark entire pages.</li></ul>
+    </div>
+    <div>
+      <h3>Machine-readable surfaces</h3>
+      <ul class="tight"><li><b>/llms.txt</b> - concise site purpose, methodology, canonical data pages, citation guidance.</li><li><b>/statistics/</b> - national facts, state table, definitions, source dates, downloadable CSV.</li><li><b>/methodology/</b> - formula, assumptions, validation sample, version history.</li><li><b>JSON-LD</b> - Organization, WebSite, BreadcrumbList, Article, FAQPage where eligible.</li><li><b>Stable anchors</b> - one URL and fragment per defined statistic or method step.</li></ul>
+    </div>
+  </div>
+  <h3>Deliberate crawler access</h3>
+  <table>
+    <thead><tr><th>Bot</th><th>Launch decision</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>GPTBot</td><td>Allow</td><td>Potential assistant discovery and citation</td></tr>
+      <tr><td>ClaudeBot</td><td>Allow</td><td>Potential assistant discovery and citation</td></tr>
+      <tr><td>PerplexityBot</td><td>Allow</td><td>Potential answer-engine citation</td></tr>
+      <tr><td>Google-Extended</td><td>Allow</td><td>Deliberate participation in Google AI uses</td></tr>
+    </tbody>
+  </table>
+  <p class="caption">Crawler names and controls change. Verify current documentation before launch and record the decision in the editorial policy. Permissive crawling does not guarantee citation.</p>
+  <div class="grid2">
+    <div class="card tint"><h3>Why models might cite it</h3><p class="small">Original modeled state data, named primary inputs, a public formula, versioned updates, and observed GPL calibration create a source rather than a summary.</p></div>
+    <div class="card tint"><h3>Dual risk</h3><p class="small">AI answers can reduce clicks on simple queries while increasing attribution for calculators, methodology questions, and state comparisons. Track both traffic and citations.</p></div>
+  </div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / AI search</span><span>08</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Monetization</div>
+  <h2>Ads set the floor; voluntary leads create the upside</h2>
+  <table>
+    <thead><tr><th>Layer</th><th>Placement</th><th>Economics to test</th><th>Guardrail</th></tr></thead>
+    <tbody>
+      <tr><td><b>Display ads</b></td><td>Below answer; between sections</td><td>Planning range: $15-$25 RPM</td><td>No takeover, auto-play, or dense ad load</td></tr>
+      <tr><td><b>Final-expense affiliate</b></td><td>State page and calculator result</td><td>Research range: $20-$60 CPL; $100-$300 CPS</td><td>Disclose; verify program and licenses</td></tr>
+      <tr><td><b>Prepaid-plan lead</b></td><td>Planning guides only, v2</td><td>Unknown until partner test</td><td>No personalized financial advice</td></tr>
+      <tr><td><b>GPL request tool</b></td><td>Local comparison flow, v2</td><td>Lead or sponsor model unproven</td><td>Do not sell rankings or imply endorsement</td></tr>
+    </tbody>
+  </table>
+  <h3>Illustrative 10,000-session month</h3>
+  <table>
+    <thead><tr><th>Scenario</th><th>Ad assumption</th><th>Lead assumption</th><th>Gross monthly result</th></tr></thead>
+    <tbody>
+      <tr><td>Conservative</td><td>$15 RPM = $150</td><td>0.25% × $20 = $500</td><td><b>$650</b></td></tr>
+      <tr><td>Base</td><td>$20 RPM = $200</td><td>0.50% × $30 = $1,500</td><td><b>$1,700</b></td></tr>
+      <tr><td>Optimistic</td><td>$25 RPM = $250</td><td>1.00% × $40 = $4,000</td><td><b>$4,250</b></td></tr>
+    </tbody>
+  </table>
+  <p class="caption">Illustrative model, not a forecast. “Lead assumption” is completed, accepted leads as a share of all sessions. Actual approval, payout, reversal, state eligibility, traffic mix, consent, and conversion may materially reduce results. Operating expenses and taxes are excluded.</p>
+  <div class="grid2">
+    <div>
+      <h3>Rollout order</h3>
+      <ol class="numbered small"><li><div>Launch without monetization clutter.</div></li><li><div>Apply to AdSense after the site is complete and indexable; there is no guaranteed approval.</div></li><li><div>Test one affiliate only after terms, disclosures, and state eligibility are verified.</div></li><li><div>At scale, compare premium ad networks; use 50,000 sessions/month as a planning checkpoint and verify then-current eligibility.</div></li></ol>
+    </div>
+    <div>
+      <h3>Never monetize with</h3>
+      <ul class="tight"><li>Funeral-home paid rankings</li><li>Fake scarcity or countdown timers</li><li>Exit-intent quote popups</li><li>Pre-checked consent boxes</li><li>Personalized insurance advice</li><li>Undisclosed referral fees</li><li>Sale of calculator inputs</li></ul>
+    </div>
+  </div>
+  <div class="callout"><strong>Policy:</strong> every monetized module is visually secondary to the answer and removable without making the page less useful.</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / economics</span><span>09</span></div>
+</section>
+<section class="page">
+  <div class="kicker">Build plan and resources</div>
+  <h2>Four weeks produce a measurable Phase 0</h2>
+  <table>
+    <thead><tr><th>Week</th><th>Build stream</th><th>Exit criterion</th><th>Owner time</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Domain, design system, source ingestion, model v1</td><td>Versioned data passes unit tests</td><td>60 min</td></tr>
+      <tr><td>2</td><td>Calculator, home, methodology, statistics</td><td>Printable result + provenance</td><td>45 min</td></tr>
+      <tr><td>3</td><td>Five state pages, guides, trust/legal pages</td><td>Every template passes content QA</td><td>60 min</td></tr>
+      <tr><td>4</td><td>SEO, analytics, accessibility, deployment, launch QA</td><td>Production crawl + event test clean</td><td>90 min</td></tr>
+      <tr><td>Buffer</td><td>Account approvals and fixes</td><td>No critical launch defect</td><td>45 min</td></tr>
+    </tbody>
+  </table>
+  <h3>Resource budget</h3>
+  <div class="grid3">
+    <div class="card"><div class="metric">$0</div><div class="label">Infrastructure</div><p class="small">Cloudflare Pages, public datasets, Search Console, Bing Webmaster, and basic analytics can start free.</p></div>
+    <div class="card"><div class="metric">~$12</div><div class="label">Annual cash</div><p class="small">Domain estimate only. Confirm registrar price and renewal before purchase.</p></div>
+    <div class="card"><div class="metric">≤5h</div><div class="label">Owner setup</div><p class="small">Decisions, accounts, domain purchase, compliance review, and launch sign-off.</p></div>
+  </div>
+  <h3 style="margin-top:5mm">Definition of done by workstream</h3>
+  <div class="grid2 small">
+    <div>
+      <h3>Data and engineering</h3>
+      <ul class="check"><li>Source files retain publication dates</li><li>Formula tests cover all service types</li><li>Every amount traces to a source or option</li><li>Static export renders without JavaScript</li><li>Calculator works keyboard-only</li><li>Annual refresh script is documented</li></ul>
+      <h3>Content and trust</h3>
+      <ul class="check"><li>Methodology names assumptions</li><li>Statistics page uses consistent labels</li><li>State pages name exclusions</li><li>About/editorial/disclosure pages live</li><li>No copied or generic filler prose</li></ul>
+    </div>
+    <div>
+      <h3>Search and measurement</h3>
+      <ul class="check"><li>Canonical tags and sitemap validated</li><li>Structured data matches visible content</li><li>Search Console and Bing verified</li><li>30-keyword baseline recorded</li><li>Affiliate events include page/placement IDs</li><li>Monthly scorecard job produces one page</li></ul>
+      <h3>Operations</h3>
+      <ul class="check"><li>Error alerts go to one inbox</li><li>No database or manual publishing queue</li><li>Dependency updates are monthly automated PRs</li><li>Annual data review is the only planned refresh</li></ul>
+    </div>
+  </div>
+  <div class="callout warning"><strong>Build boundary:</strong> this plan authorizes neither domain purchase nor implementation. Those remain owner decisions.</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / build</span><span>10</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Launch and white-hat distribution</div>
+  <h2>The calculator earns attention; the dataset earns links</h2>
+  <div class="grid2">
+    <div>
+      <h3>Production launch checklist</h3>
+      <ul class="check small"><li>Purchase domain after final availability check</li><li>Deploy Cloudflare Pages with HTTPS</li><li>Verify canonical host and redirects</li><li>Submit sitemap in Google Search Console</li><li>Submit sitemap in Bing Webmaster Tools</li><li>Test robots.txt, llms.txt, and structured data</li><li>Confirm all five launch pages in static HTML</li><li>Run performance and accessibility checks</li><li>Record 30-keyword ranking baseline</li><li>Test analytics and outbound click events</li><li>Apply to AdSense only after content QA</li><li>Apply to one verified affiliate program</li></ul>
+    </div>
+    <div>
+      <h3>Phase 0 linkable assets</h3>
+      <ul class="tight small"><li><b>Interactive estimator:</b> state-aware, printable, source-dated.</li><li><b>State cost map:</b> modeled relative costs with clear methodology.</li><li><b>Statistics page:</b> consistent, quotable national and state facts.</li><li><b>Methodology:</b> formula, versions, uncertainty, and GPL calibration.</li></ul>
+      <h3>First 30 days</h3>
+      <ul class="tight small"><li>Publish one data note explaining the model.</li><li>Send 10 personalized journalist pitches.</li><li>Submit 10 relevant nonprofit/library resource suggestions.</li><li>Contact 3 Funeral Consumers Alliance affiliates around the transparency mission.</li><li>Answer only genuinely relevant community questions; no dropped-link spam.</li></ul>
+    </div>
+  </div>
+  <h3>Year-one backlink playbook</h3>
+  <table>
+    <thead><tr><th>Motion</th><th>Asset</th><th>Cadence</th><th>Target</th></tr></thead>
+    <tbody>
+      <tr><td>Digital PR</td><td>Annual State of Funeral Costs</td><td>1 report/year</td><td>Finance reporters</td></tr>
+      <tr><td>Local news</td><td>“X% vs national median” state angle</td><td>50 tailored pitches</td><td>Local outlets</td></tr>
+      <tr><td>Expert queries</td><td>Named data methodology</td><td>2 checks/week</td><td>Reporter requests</td></tr>
+      <tr><td>Resource pages</td><td>FTC rights guide + calculator</td><td>5 tailored notes/month</td><td>.org, .edu, libraries</td></tr>
+      <tr><td>Partnerships</td><td>Transparency-aligned materials</td><td>1 conversation/month</td><td>Consumer advocates</td></tr>
+    </tbody>
+  </table>
+  <p class="caption">Connectively/HARO-style services change; use whichever legitimate reporter-query channels are operating at outreach time. Wikipedia-adjacent citation is appropriate only when the methodology is genuinely relevant and independent editors deem it useful.</p>
+  <div class="grid2">
+    <div class="card tint"><h3>Realistic year-one target</h3><div class="metric">10-20</div><div class="label">Quality referring domains</div><p class="small">Slow, relevant link velocity is healthier than hundreds of weak links.</p></div>
+    <div class="card tint"><h3>Prohibited</h3><p class="small">No link buying, private blog networks, automated outreach spam, reciprocal schemes, fake expert profiles, or paid citations. One penalty can end a new YMYL-adjacent property.</p></div>
+  </div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / launch</span><span>11</span></div>
+</section>
+<section class="page measure">
+  <div class="kicker">Measurability framework I</div>
+  <h2>Track visibility first; revenue is a month-six metric</h2>
+  <div class="callout"><strong>North-star metric:</strong> 30-day average organic sessions per day and its percentage change versus the prior 30 days. It measures whether search distribution is compounding without requiring daily work.</div>
+  <div class="grid2">
+    <div>
+      <h3>Launch instrumentation</h3>
+      <ul class="tight small"><li><b>Google Search Console:</b> indexation, queries, pages, impressions, clicks, position.</li><li><b>Plausible or Umami:</b> privacy-friendly sessions and events; GA4 as backup.</li><li><b>Rank tracker:</b> 30 terms - 5 national and 25 state long-tails - checked weekly.</li><li><b>Core Web Vitals:</b> field data plus deployment-time lab checks.</li><li><b>Affiliate events:</b> UTM plus network sub-ID for page, service type, and CTA placement.</li><li><b>Ad dashboard:</b> page RPM, viewability, earnings, policy notices.</li></ul>
+    </div>
+    <div>
+      <h3>Supporting metrics</h3>
+      <ul class="tight small"><li><b>Search impressions/day:</b> earliest demand signal.</li><li><b>Tracked-set average position:</b> visibility movement; report median too so outliers do not mislead.</li><li><b>Affiliate CTR:</b> outbound quote clicks / eligible pageviews by page type.</li><li><b>Revenue:</b> ads + accepted lead commissions, separately.</li><li><b>Referring domains:</b> quality, relevance, and cumulative count.</li></ul>
+      <p class="small"><b>Leading:</b> indexed coverage, impressions growth, position movement, crawl frequency, referring domains. <b>Lagging:</b> sessions, accepted leads, RPM, revenue. Do not judge revenue before month 6.</p>
+    </div>
+  </div>
+  <h3>Estimated 12-month trajectory</h3>
+  <div class="grid2">
+    <table class="small">
+      <thead><tr><th>Mo.</th><th>Indexed</th><th>Impr./day</th><th>Sessions/day</th><th>Avg. pos.</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>12-20</td><td>0-20</td><td>0-2</td><td>80+</td></tr><tr><td>2</td><td>25-45</td><td>5-50</td><td>0-5</td><td>60-90</td></tr><tr><td>3</td><td>55-70</td><td>25-150</td><td>2-15</td><td>45-75</td></tr><tr><td>4</td><td>60-75</td><td>75-350</td><td>5-30</td><td>35-60</td></tr><tr><td>5</td><td>65-80</td><td>150-700</td><td>10-60</td><td>25-50</td></tr><tr><td>6</td><td>65-80</td><td>300-1,200</td><td>20-100</td><td>20-40</td></tr><tr><td>7</td><td>70-85</td><td>500-2,000</td><td>30-150</td><td>18-35</td></tr><tr><td>8</td><td>70-90</td><td>750-3,000</td><td>50-220</td><td>15-30</td></tr><tr><td>9</td><td>75-95</td><td>1,000-4,500</td><td>70-300</td><td>12-25</td></tr><tr><td>10</td><td>80-100</td><td>1,500-6,000</td><td>100-400</td><td>10-22</td></tr><tr><td>11</td><td>85-110</td><td>2,000-8,000</td><td>150-500</td><td>8-20</td></tr><tr><td>12</td><td>90-120</td><td>2,500-10,000</td><td>200-700</td><td>7-18</td></tr>
+      </tbody>
+    </table>
+    <table class="small">
+      <thead><tr><th>Mo.</th><th>Ref. domains</th><th>Gross revenue</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>0-1</td><td>$0</td></tr><tr><td>2</td><td>0-2</td><td>$0</td></tr><tr><td>3</td><td>1-3</td><td>$0</td></tr><tr><td>4</td><td>2-4</td><td>$0-$25</td></tr><tr><td>5</td><td>3-6</td><td>$0-$60</td></tr><tr><td>6</td><td>4-8</td><td>$10-$150</td></tr><tr><td>7</td><td>5-9</td><td>$20-$250</td></tr><tr><td>8</td><td>6-11</td><td>$40-$400</td></tr><tr><td>9</td><td>7-13</td><td>$75-$650</td></tr><tr><td>10</td><td>8-15</td><td>$120-$1,000</td></tr><tr><td>11</td><td>9-18</td><td>$180-$1,500</td></tr><tr><td>12</td><td>10-20</td><td>$250-$2,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">Planning estimates, not promises. Assumptions: five-page MVP in month 1; all 50 state pages and core guides live by month 3; no manual action or algorithmic penalty; U.S.-weighted traffic; technically sound indexing; steady white-hat outreach; one approved affiliate by month 6. Average position refers only to the defined 30-keyword set.</p>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / measurement</span><span>12</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Measurability framework II</div>
+  <h2>Every review ends in fix, wait, continue, scale, or kill</h2>
+  <table>
+    <thead><tr><th>Review</th><th>Numeric checks</th><th>Decision and action</th></tr></thead>
+    <tbody>
+      <tr><td><b>Day 14</b><br>Technical</td><td>100% submitted URLs render 200; sitemap accepted; ≥80% launch URLs discovered; 0 blocking robots/canonical errors; CWV lab budget met.</td><td><b>Fix</b> any blocker within 7 days. Otherwise wait; traffic is not judged.</td></tr>
+      <tr><td><b>Day 60</b><br>First signal</td><td>≥90% launch URLs indexed; 28-day impressions average ≥20/day and ≥25% above prior 28 days; ≥1 tracked query top 10 or ≥3 top 20.</td><td><b>Proceed to Phase 1</b> if trend plus ranking criterion passes. If flat, run diagnostics before expanding.</td></tr>
+      <tr><td><b>Day 120</b><br>Continue / kill</td><td><b>Continue:</b> 30-day sessions average ≥10/day, ≥20% above prior 30 days; tracked average position improves ≥5 vs day 60 or ≥5 terms gain 10+ positions.<br><b>Kill:</b> 28-day impressions average &lt;20/day and changes &lt;10% for 60 days, after ≥90% indexation and diagnostics.</td><td><b>Scale lean</b> if continue test passes. <b>Hold</b> one 30-day repair cycle if one metric narrowly misses. <b>Kill</b> when the full falsifiable kill test passes.</td></tr>
+      <tr><td><b>Day 180</b><br>Expansion</td><td>30-day average ≥150 organic sessions/day; ≥5 tracked state terms top 10; ≥10 quality referring domains.</td><td>Add top-50 metros and GPL calibration only if at least 2 of 3 pass and trend is rising.</td></tr>
+      <tr><td><b>Day 365</b><br>Scale</td><td>500+ organic sessions/day or 50,000 sessions/month; positive 90-day trend; ≥10 accepted leads/month or ad RPM ≥$15.</td><td>Test second affiliate and premium ads; verify current network eligibility before applying.</td></tr>
+    </tbody>
+  </table>
+  <h3>Ordered miss-diagnostic - do not skip steps</h3>
+  <ol class="numbered small">
+    <li><div><b>Technical:</b> check indexation coverage, sitemap, canonicals, robots, noindex, rendered HTML, schema errors, mobile CWV, status codes. Fix and allow 14-30 days for recrawl.</div></li>
+    <li><div><b>Content:</b> compare search queries with page intent; test whether state pages are thin, repetitive, or omit inclusions, local rights, or direct answers. Upgrade the weakest five pages first.</div></li>
+    <li><div><b>Competition:</b> inspect the current top 10 for every tracked miss. Record new entrants, link gaps, information gain, and SERP features. Do not “add words”; add missing utility.</div></li>
+    <li><div><b>Demand:</b> compare actual impressions with the keyword thesis. If technically healthy, content-complete pages cannot generate impressions across the set, the demand estimate was wrong.</div></li>
+  </ol>
+  <div class="grid2">
+    <div class="card tint"><h3>Monthly 15-minute scorecard</h3><p class="small">Auto-generate one page with: indexed/total URLs; impressions/day and 30-day change; organic sessions/day and change; tracked average and median position; count in top 3/10/20; quality referring domains; affiliate eligible views, clicks, CTR, accepted leads and EPC; ad RPM and revenue; total revenue; CWV pass/fail; open technical errors; next decision date.</p></div>
+    <div class="card tint"><h3>Cadence</h3><p class="small"><b>Weekly automated:</b> rank snapshot, crawl error alert, uptime, affiliate event sanity check.<br><br><b>Monthly human:</b> 15-minute scorecard review and one chosen action.<br><br><b>Stage gates:</b> 30 minutes at days 60, 120, 180, and 365.</p></div>
+  </div>
+  <div class="callout"><strong>Interpretation:</strong> months 1-4 are judged on visibility. Revenue before month 6 is anecdotal and cannot rescue weak search signals or condemn a healthy ranking trajectory.</div>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / stage gates</span><span>13</span></div>
+</section>
+<section class="page">
+  <div class="kicker">Risk controls, decisions, and sources</div>
+  <h2>A narrow approval unlocks the next four weeks</h2>
+  <h3>Risk register</h3>
+  <table>
+    <thead><tr><th>Risk</th><th>Early warning</th><th>Mitigation</th><th>Residual</th></tr></thead>
+    <tbody>
+      <tr><td>YMYL-adjacent trust climb</td><td>Indexed, but positions stall</td><td>Method, sources, editorial policy, original data</td><td>High</td></tr>
+      <tr><td>AI answer cannibalization</td><td>Impressions rise; CTR falls</td><td>Calculator, printable output, citation pages</td><td>Medium</td></tr>
+      <tr><td>Modeled-data criticism</td><td>Source disputes or corrections</td><td>Clear labels, versioning, GPL calibration</td><td>Medium</td></tr>
+      <tr><td>Tastefulness backlash</td><td>Low engagement; complaints</td><td>Secondary CTAs, no dark patterns, calm copy</td><td>Low</td></tr>
+      <tr><td>Affiliate rejection</td><td>No approved partner</td><td>Ads floor; keep content partner-neutral</td><td>Medium</td></tr>
+      <tr><td>Search dependency</td><td>Broad ranking loss</td><td>Links, press citations, Bing/AI visibility</td><td>High</td></tr>
+    </tbody>
+  </table>
+  <div class="grid2">
+    <div>
+      <h3>Owner approvals required</h3>
+      <ol class="numbered small"><li><div><b>Domain:</b> approve purchase of funeralcostinfo.com after a fresh availability and renewal-price check. It was reported available on 23 September 2026; availability is not reserved.</div></li><li><div><b>Scope:</b> approve five states + home + calculator + methodology + statistics + trust pages.</div></li><li><div><b>Monetization:</b> confirm disclosed final-expense affiliate participation is acceptable.</div></li><li><div><b>Validation:</b> approve the explicit 120-day exception to the normal 14-day kill cycle.</div></li></ol>
+    </div>
+    <div>
+      <h3>Assumptions made</h3>
+      <ul class="tight small"><li>U.S.-only, English-language launch</li><li>Consumer-side positioning; no funeral-home revenue</li><li>Muse performs most build and research work</li><li>Owner time cap: five hours before external signal</li><li>Static hosting and no user accounts</li><li>Revenue figures are gross planning ranges</li><li>No legal, insurance, or financial advice</li></ul>
+      <div class="callout"><strong>Go order:</strong> approve the four decisions, purchase the domain, then start Week 1. Everything beyond Phase 0 remains gated by the Day 60 review.</div>
+    </div>
+  </div>
+  <h3>Primary sources</h3>
+  <div class="grid2 small">
+    <ol class="tight">
+      <li><a href="https://content.nfda.org/Portals/0/12-8-2023--2023%20GPL%20Survey.pdf">NFDA, 2023 General Price List Study release</a></li>
+      <li><a href="https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area">BEA, Regional Price Parities</a></li>
+      <li><a href="http://ftc.gov/system/files/ftc_gov/pdf/staff-report_-calling-for-funeral-services.pdf">FTC, Calling for Information About Funeral Pricing</a></li>
+      <li><a href="https://www.bls.gov/news.release/cpi.t07.htm">BLS, CPI 12-month analysis table</a></li>
+    </ol>
+    <ol start="5" class="tight">
+      <li><a href="https://en.wikipedia.org/wiki/Parting.com">Parting overview and cited company history</a></li>
+      <li><a href="https://hypepotamus.com/companies/funeralocity/">Funeralocity revenue-model profile</a></li>
+      <li><a href="https://foundationpartners.com/fpgnews/foundation-partners-group-acquires-cake-to-meet-growing-demand-for-end-of-life-planning-tools-and-resources/">Foundation Partners acquisition of Cake</a></li>
+      <li><a href="https://WWW.24-7pressrelease.com/press-release/515268/precoa-acquires-everplans">Precoa acquisition of Everplans</a></li>
+    </ol>
+  </div>
+  <p class="caption">Source access checked 23 September 2026. Market-rate ranges for CPC, affiliate payouts, lead prices, ad RPM, and domain cost are planning inputs from the commissioned research; all must be re-verified before a contract, purchase, or forecast.</p>
+  <div class="footer"><span><b>FuneralCostInfo.com</b> / decision</span><span>14</span></div>
+</section>
+</body>
+</html>

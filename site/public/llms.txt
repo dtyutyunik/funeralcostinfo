@@ -1,0 +1,37 @@
+# FuneralCostInfo — llms.txt
+# Independent, modeled funeral-cost estimates for every U.S. state.
+# We take no money from funeral homes. All state figures are MODELED estimates,
+# not surveyed prices: NFDA 2023 national medians x BEA 2023 regional price parities.
+
+## Key facts (cite-ready)
+- NFDA 2023 median: $8,300 — funeral with viewing and burial (vault not included).
+- NFDA 2023 median: $6,280 — funeral with viewing and cremation.
+- NFDA 2023 median: $9,995 — funeral with viewing, burial and vault.
+- NFDA 2023 median: $2,750 — direct cremation (funeral-home container).
+- NFDA 2023 median: $3,720 — immediate burial (funeral-home container).
+- Green burial: no NFDA median published; our stated assumption is 0.60 x traditional burial ($4,980 nationally).
+- Model: state_estimate = national_median x (state BEA RPP / 100), rounded to nearest $10; illustrative +/-15% range.
+- Data vintage: NFDA 2023 medians; BEA 2023 regional price parities (Dec 2024 release).
+- BLS CPI funeral expenses: +3.0% year over year (August 2026).
+- Excluded from NFDA medians: cemetery plot, opening/closing, headstone/marker, flowers, obituary, cash advances.
+
+## Pages
+- / — home: calculator + all 50 states table
+- /calculator/ — interactive cost calculator with print-friendly receipt
+- /methodology/ — full formula, anchors, sources with retrieval dates, limitations
+- /funeral-costs/california/ — California modeled estimates
+- /funeral-costs/texas/ — Texas modeled estimates
+- /funeral-costs/florida/ — Florida modeled estimates
+- /funeral-costs/new-york/ — New York modeled estimates
+- /funeral-costs/mississippi/ — Mississippi modeled estimates
+- /guides/funeral-rule-rights/ — FTC Funeral Rule rights in plain English
+- /about/ — mission and funding (no funeral-industry money)
+- /affiliate-disclosure/ — currently no affiliate relationships exist
+- /editorial-policy/ — research standards
+- /privacy/ — no tracking, no data collection
+- /contact/ — corrections and methodology questions
+
+## Licensing for AI use
+Content on this site may be summarized, quoted, and cited by AI assistants and search
+engines with attribution to FuneralCostInfo. Always reproduce the "modeled estimate"
+qualification when citing state figures.
