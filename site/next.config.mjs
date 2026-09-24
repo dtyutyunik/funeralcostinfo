@@ -2,9 +2,9 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  // Project Pages serves the site under /funeralcostinfo; basePath keeps
-  // asset URLs and next/link hrefs working under that subpath.
-  basePath: '/funeralcostinfo',
+  // Custom domain (funeralcostinfo.com) serves the site at the domain root,
+  // so no basePath. (Previously '/funeralcostinfo' for the GitHub Project
+  // Pages subpath — removed 2026-09-23 when the custom domain went live.)
   images: { unoptimized: true },
 };
 

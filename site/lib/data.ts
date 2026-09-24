@@ -74,7 +74,7 @@ export interface MethodologyData {
 
 export const methodology = methodologyRaw as MethodologyData;
 
-export const SITE_URL = 'https://dtyutyunik.github.io/funeralcostinfo';
+export const SITE_URL = 'https://funeralcostinfo.com';
 export const LAST_UPDATED = dataset.built;
 
 export const SERVICE_ORDER = [  'traditional_burial',
