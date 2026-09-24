@@ -105,7 +105,7 @@ export default function Home() {
               Every state colored by its <strong>modeled cost of a traditional funeral</strong> —
               the NFDA 2023 national median (adjusted to August 2026 dollars with the BLS
               funeral-expenses CPI) scaled by the state&rsquo;s 2024 BEA regional price
-              parity. Hover any state for its estimate; the five outlined states have full cost guides.
+              parity. Hover any state for its estimate; every state has a full cost guide — select any state.
             </p>
           </div>
           <UsMap />

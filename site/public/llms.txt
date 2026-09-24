@@ -16,21 +16,90 @@
 - Excluded from NFDA medians: cemetery plot, opening/closing, headstone/marker, flowers, obituary, cash advances.
 
 ## Pages
-- / — home: calculator + U.S. choropleth map + all 50 states table
-- /calculator/ — interactive cost calculator with print-friendly receipt
+- / — home: calculator + U.S. map + all 51 jurisdictions table
+- /calculator/ — interactive cost calculator
 - /methodology/ — full formula, anchors, sources with retrieval dates, limitations
-- /funeral-costs/california/ — California modeled estimates
-- /funeral-costs/texas/ — Texas modeled estimates
-- /funeral-costs/florida/ — Florida modeled estimates
-- /funeral-costs/new-york/ — New York modeled estimates
-- /funeral-costs/mississippi/ — Mississippi modeled estimates
-- /guides/funeral-rule-rights/ — FTC Funeral Rule rights in plain English
+- /guides/ — all guides index
+- /guides/funeral-cost-2026-breakdown/ — How Much Does a Funeral Cost in 2026? The Full Breakdown
+- /guides/funeral-costs-by-state-2026/ — Funeral Costs by State 2026: All 50 States + D.C.
+- /guides/cremation-cost-2026/ — How Much Does Cremation Cost in 2026?
+- /guides/burial-plot-costs/ — How Much Does a Burial Plot Cost?
+- /guides/headstone-costs/ — How Much Does a Headstone Cost? Markers vs. Monuments
+- /guides/why-funeral-cost-figures-disagree/ — Why Funeral Cost Figures Disagree
+- /guides/green-burial-composting/ — Green Burial & Human Composting: Costs and Where They’re Legal
+- /guides/casket-buying-guide/ — Caskets: What They Cost and Your Right to Buy Elsewhere
+- /guides/when-someone-dies-checklist/ — What to Do When Someone Dies: The First 48 Hours
+- /guides/compare-funeral-homes/ — How to Compare Funeral Homes & Read the Price List
+- /guides/paying-for-a-funeral/ — How to Pay for a Funeral: VA, Social Security & Aid
+- /guides/prepaid-funeral-plans/ — Prepaid Funeral Plans: Pros, Cons & Traps
+- /guides/who-can-arrange-funeral/ — Who Has the Legal Right to Make Funeral Arrangements?
+- /guides/funeral-service-types/ — Funeral Service Types Explained
+- /guides/funeral-rule-rights/ — Your Rights Under the FTC Funeral Rule
+- /guides/funeral-glossary/ — Funeral Glossary in Plain English
+- /guides/scattering-ashes-laws-costs/ — Scattering Ashes: Laws, Costs & How to Do It
+- /guides/body-organ-donation-guide/ — Body & Organ Donation: How It Works
+- /guides/urn-costs-guide/ — Urns: Types, Costs & Where to Buy
+- /guides/obituary-costs/ — Obituary Costs: Newspaper Prices & Free Alternatives
+- /guides/veterans-burial-benefits/ — Veterans Burial Benefits: Full 2026 Guide
+- /guides/shipping-remains/ — Transporting Remains Across State Lines: Rules & Costs
+- /guides/aquamation-guide/ — aquamation-guide
+- /funeral-costs/alabama/ — Alabama modeled funeral-cost estimates
+- /funeral-costs/alaska/ — Alaska modeled funeral-cost estimates
+- /funeral-costs/arizona/ — Arizona modeled funeral-cost estimates
+- /funeral-costs/arkansas/ — Arkansas modeled funeral-cost estimates
+- /funeral-costs/california/ — California modeled funeral-cost estimates
+- /funeral-costs/colorado/ — Colorado modeled funeral-cost estimates
+- /funeral-costs/connecticut/ — Connecticut modeled funeral-cost estimates
+- /funeral-costs/delaware/ — Delaware modeled funeral-cost estimates
+- /funeral-costs/district-of-columbia/ — District Of Columbia modeled funeral-cost estimates
+- /funeral-costs/florida/ — Florida modeled funeral-cost estimates
+- /funeral-costs/georgia/ — Georgia modeled funeral-cost estimates
+- /funeral-costs/hawaii/ — Hawaii modeled funeral-cost estimates
+- /funeral-costs/idaho/ — Idaho modeled funeral-cost estimates
+- /funeral-costs/illinois/ — Illinois modeled funeral-cost estimates
+- /funeral-costs/indiana/ — Indiana modeled funeral-cost estimates
+- /funeral-costs/iowa/ — Iowa modeled funeral-cost estimates
+- /funeral-costs/kansas/ — Kansas modeled funeral-cost estimates
+- /funeral-costs/kentucky/ — Kentucky modeled funeral-cost estimates
+- /funeral-costs/louisiana/ — Louisiana modeled funeral-cost estimates
+- /funeral-costs/maine/ — Maine modeled funeral-cost estimates
+- /funeral-costs/maryland/ — Maryland modeled funeral-cost estimates
+- /funeral-costs/massachusetts/ — Massachusetts modeled funeral-cost estimates
+- /funeral-costs/michigan/ — Michigan modeled funeral-cost estimates
+- /funeral-costs/minnesota/ — Minnesota modeled funeral-cost estimates
+- /funeral-costs/mississippi/ — Mississippi modeled funeral-cost estimates
+- /funeral-costs/missouri/ — Missouri modeled funeral-cost estimates
+- /funeral-costs/montana/ — Montana modeled funeral-cost estimates
+- /funeral-costs/nebraska/ — Nebraska modeled funeral-cost estimates
+- /funeral-costs/nevada/ — Nevada modeled funeral-cost estimates
+- /funeral-costs/new-hampshire/ — New Hampshire modeled funeral-cost estimates
+- /funeral-costs/new-jersey/ — New Jersey modeled funeral-cost estimates
+- /funeral-costs/new-mexico/ — New Mexico modeled funeral-cost estimates
+- /funeral-costs/new-york/ — New York modeled funeral-cost estimates
+- /funeral-costs/north-carolina/ — North Carolina modeled funeral-cost estimates
+- /funeral-costs/north-dakota/ — North Dakota modeled funeral-cost estimates
+- /funeral-costs/ohio/ — Ohio modeled funeral-cost estimates
+- /funeral-costs/oklahoma/ — Oklahoma modeled funeral-cost estimates
+- /funeral-costs/oregon/ — Oregon modeled funeral-cost estimates
+- /funeral-costs/pennsylvania/ — Pennsylvania modeled funeral-cost estimates
+- /funeral-costs/rhode-island/ — Rhode Island modeled funeral-cost estimates
+- /funeral-costs/south-carolina/ — South Carolina modeled funeral-cost estimates
+- /funeral-costs/south-dakota/ — South Dakota modeled funeral-cost estimates
+- /funeral-costs/tennessee/ — Tennessee modeled funeral-cost estimates
+- /funeral-costs/texas/ — Texas modeled funeral-cost estimates
+- /funeral-costs/utah/ — Utah modeled funeral-cost estimates
+- /funeral-costs/vermont/ — Vermont modeled funeral-cost estimates
+- /funeral-costs/virginia/ — Virginia modeled funeral-cost estimates
+- /funeral-costs/washington/ — Washington modeled funeral-cost estimates
+- /funeral-costs/west-virginia/ — West Virginia modeled funeral-cost estimates
+- /funeral-costs/wisconsin/ — Wisconsin modeled funeral-cost estimates
+- /funeral-costs/wyoming/ — Wyoming modeled funeral-cost estimates
 - /about/ — mission and funding (no funeral-industry money)
 - /affiliate-disclosure/ — currently no affiliate relationships exist
 - /editorial-policy/ — research standards
 - /privacy/ — no tracking, no data collection
 - /contact/ — corrections and methodology questions
-
+- /press/ — press kit
 ## Licensing for AI use
 Content on this site may be summarized, quoted, and cited by AI assistants and search
 engines with attribution to FuneralCostInfo. Always reproduce the "modeled estimate"

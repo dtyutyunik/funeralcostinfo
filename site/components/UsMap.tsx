@@ -116,7 +116,7 @@ export default function UsMap() {
         <span>Modeled traditional burial (viewing + burial)</span>
       </div>
       <p className="map-note">
-        Five states have full cost guides — select a highlighted state or browse the table below.
+        Every state has a full cost guide — select any highlighted state or browse the table below.
         Data vintage: {VINTAGE_SHORT} · Updated {dataset.built}.
       </p>
     </div>
