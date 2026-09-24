@@ -410,3 +410,62 @@ table.data a.state-link:hover { text-decoration: underline; }
   table.data th { position: static; }
   .calc-step-panel, .stepper, .calc-nav { display: none !important; }
 }
+
+/* ---------- Guides: blog-style cards ---------- */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+  margin: 22px 0 8px;
+}
+.guide-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.guide-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 4px rgba(38, 34, 25, 0.06), 0 20px 44px -16px rgba(38, 34, 25, 0.28);
+}
+.guide-card a.img-link { display: block; }
+.guide-card-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+.guide-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.guide-card-body h3 { margin: 0; font-size: 20px; line-height: 1.32; }
+.guide-card-body h3 a { text-decoration: none; color: var(--ink); }
+.guide-card-body h3 a:hover { color: var(--accent-ink); }
+.guide-card-body p { margin: 0; font-size: 15px; color: var(--muted); flex: 1; }
+.guide-readmore { font-weight: 600; font-size: 15px; text-decoration: none; }
+.guide-readmore:hover { text-decoration: underline; }
+
+/* Framed hero on guide article pages */
+.guide-hero { overflow: hidden; margin: 18px 0 6px; }
+.guide-hero-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+.guide-hero-body { padding: 24px 28px 10px; }
+.guide-hero-body h1 { margin: 0; font-size: clamp(28px, 3.4vw, 40px); }
+@media (max-width: 640px) {
+  .guide-hero-img { aspect-ratio: 16 / 9; }
+  .guide-hero-body { padding: 18px 20px 6px; }
+}
+
+/* Related guides section */
+.related { margin-top: 52px; }
+.related > h2 { margin-bottom: 4px; }

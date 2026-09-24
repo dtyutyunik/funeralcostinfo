@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -70,7 +72,7 @@ export default function CompareFuneralHomesGuide() {
           dateModified: LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
-        <h1>How to compare funeral homes & read the price list</h1>
+        <GuideHero slug="compare-funeral-homes" imageAlt="How to compare funeral homes & read the price list"><h1>How to compare funeral homes & read the price list</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -230,6 +232,7 @@ export default function CompareFuneralHomesGuide() {
         </p>
 
         <p className="updated">Data vintage: {VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+      <RelatedGuides currentSlug="compare-funeral-homes" />
       </div>
     </>
   );

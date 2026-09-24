@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -82,7 +84,7 @@ export default function GreenBurialCompostingGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>Green Burial &amp; Human Composting: Costs and Where They&apos;re Legal</h1>
+        <GuideHero slug="green-burial-composting" imageAlt="Green Burial & Human Composting: Costs and Where They're Legal"><h1>Green Burial &amp; Human Composting: Costs and Where They&apos;re Legal</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -278,6 +280,7 @@ export default function GreenBurialCompostingGuide() {
           <Link href="/methodology/">Methodology →</Link>
         </p>
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+      <RelatedGuides currentSlug="green-burial-composting" />
       </div>
     </>
   );

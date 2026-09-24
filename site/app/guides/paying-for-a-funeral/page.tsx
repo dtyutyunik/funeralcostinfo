@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'How to Pay for a Funeral: VA, Social Security & Aid',
@@ -59,7 +61,7 @@ export default function PayingForAFuneralGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>How to pay for a funeral</h1>
+        <GuideHero slug="paying-for-a-funeral" imageAlt="How to pay for a funeral"><h1>How to pay for a funeral</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -231,6 +233,7 @@ export default function PayingForAFuneralGuide() {
           Funeral cost estimates elsewhere on this site use {VINTAGE_LABEL}.
           Last updated {LAST_UPDATED}.
         </p>
+      <RelatedGuides currentSlug="paying-for-a-funeral" />
       </div>
     </>
   );

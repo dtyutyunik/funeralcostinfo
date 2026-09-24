@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '../../../components/Jso
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Why Funeral Cost Figures Disagree: 2023 vs 2026 Dollars, Explained',
@@ -31,7 +33,7 @@ export default function DisagreePage() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-      <h1>Why funeral cost figures disagree</h1>
+      <GuideHero slug="why-funeral-cost-figures-disagree" imageAlt="Why funeral cost figures disagree"><h1>Why funeral cost figures disagree</h1></GuideHero>
       <Byline />
 
 
@@ -150,6 +152,7 @@ export default function DisagreePage() {
       </ol>
 
       <p className="updated">{VINTAGE_LABEL} · Built {LAST_UPDATED} · Model v3.</p>
+    <RelatedGuides currentSlug="why-funeral-cost-figures-disagree" />
     </div>
   );
 }

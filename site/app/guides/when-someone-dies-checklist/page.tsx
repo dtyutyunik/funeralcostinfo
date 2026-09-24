@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'What to Do When Someone Dies: The First 48 Hours',
@@ -59,7 +61,7 @@ export default function WhenSomeoneDiesChecklist() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>What to do when someone dies: the first 48 hours</h1>
+        <GuideHero slug="when-someone-dies-checklist" imageAlt="What to do when someone dies: the first 48 hours"><h1>What to do when someone dies: the first 48 hours</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -226,6 +228,7 @@ export default function WhenSomeoneDiesChecklist() {
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
         </p>
         <p className="updated">Data vintage: {VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+      <RelatedGuides currentSlug="when-someone-dies-checklist" />
       </div>
     </>
   );

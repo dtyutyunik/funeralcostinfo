@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { breadcrumbJsonLd } from '../../components/JsonLd';
 import { SITE_URL, LAST_UPDATED } from '../../lib/data';
+import { GUIDES, type GuideGroup } from '../../lib/guides';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -16,103 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-const GROUPS: { heading: string; guides: { slug: string; title: string; blurb: string }[] }[] = [
-  {
-    heading: 'Costs & data',
-    guides: [
-      {
-        slug: 'funeral-cost-2026-breakdown',
-        title: 'How Much Does a Funeral Cost in 2026? The Full Breakdown',
-        blurb: 'Modeled national estimates for all six service types, what is included and excluded, and why quotes vary so much.',
-      },
-      {
-        slug: 'funeral-costs-by-state-2026',
-        title: 'Funeral Costs by State 2026: All 50 States + D.C.',
-        blurb: 'Every jurisdiction compared side by side, with modeled traditional-burial and direct-cremation figures.',
-      },
-      {
-        slug: 'cremation-cost-2026',
-        title: 'How Much Does Cremation Cost in 2026?',
-        blurb: 'Cremation with a service vs. direct cremation: what each includes and what drives the price.',
-      },
-      {
-        slug: 'burial-plot-costs',
-        title: 'How Much Does a Burial Plot Cost?',
-        blurb: 'The cemetery bill is separate from the funeral home: plots, opening and closing, and perpetual care.',
-      },
-      {
-        slug: 'headstone-costs',
-        title: 'How Much Does a Headstone Cost? Markers vs. Monuments',
-        blurb: 'Flat markers vs. upright monuments, engraving, installation, and the veteran headstone benefit.',
-      },
-      {
-        slug: 'why-funeral-cost-figures-disagree',
-        title: 'Why Funeral Cost Figures Disagree',
-        blurb: '2023 vs. 2026 dollars, medians vs. averages, and surveyed prices vs. modeled estimates — explained.',
-      },
-      {
-        slug: 'green-burial-composting',
-        title: 'Green Burial & Human Composting: Costs and Where They\u2019re Legal',
-        blurb: 'Natural burial, composting (14 states as of 2026), and what each costs.',
-      },
-      {
-        slug: 'casket-buying-guide',
-        title: 'Caskets: What They Cost and Your Right to Buy Elsewhere',
-        blurb: 'Metal, wood, and cremation caskets in plain English — plus the Funeral Rule right no seller can take from you.',
-      },
-    ],
-  },
-  {
-    heading: 'Planning',
-    guides: [
-      {
-        slug: 'when-someone-dies-checklist',
-        title: 'What to Do When Someone Dies: The First 48 Hours',
-        blurb: 'A calm, ordered checklist: pronouncement, who to call, choosing a funeral home, and paperwork.',
-      },
-      {
-        slug: 'compare-funeral-homes',
-        title: 'How to Compare Funeral Homes & Read the Price List',
-        blurb: 'Your Funeral Rule rights, how to compare General Price Lists line by line, and red flags.',
-      },
-      {
-        slug: 'paying-for-a-funeral',
-        title: 'How to Pay for a Funeral: VA, Social Security & Aid',
-        blurb: 'VA burial benefits, the $255 Social Security payment, FEMA limits, county aid, and life insurance.',
-      },
-      {
-        slug: 'prepaid-funeral-plans',
-        title: 'Prepaid Funeral Plans: Pros, Cons & Traps',
-        blurb: 'What prepaying locks in, where the money sits, and the questions to ask before you sign.',
-      },
-      {
-        slug: 'who-can-arrange-funeral',
-        title: 'Who Has the Legal Right to Make Funeral Arrangements?',
-        blurb: 'The usual priority order, why a written designation beats it, and what happens when families disagree.',
-      },
-      {
-        slug: 'funeral-service-types',
-        title: 'Funeral Service Types Explained',
-        blurb: 'Traditional burial, burial with vault, cremation with service, direct cremation, direct burial, green burial.',
-      },
-    ],
-  },
-  {
-    heading: 'Rights & terms',
-    guides: [
-      {
-        slug: 'funeral-rule-rights',
-        title: 'Your Rights Under the FTC Funeral Rule',
-        blurb: 'Prices by phone, the General Price List, itemized statements, and what no one can require you to buy.',
-      },
-      {
-        slug: 'funeral-glossary',
-        title: 'Funeral Glossary in Plain English',
-        blurb: 'Embalming, vaults, caskets, GPLs, cash advances and more — about 30 terms, no jargon.',
-      },
-    ],
-  },
-];
+const GROUP_ORDER: GuideGroup[] = ['Costs & data', 'Planning', 'Rights & terms'];
 
 export default function GuidesIndex() {
   return (
@@ -129,18 +34,35 @@ export default function GuidesIndex() {
           Every price on this site carries its source — see our <Link href="/methodology/">methodology</Link> for
           how the estimates are built.
         </p>
-        {GROUPS.map((g) => (
-          <div key={g.heading}>
-            <h2>{g.heading}</h2>
-            <ul>
-              {g.guides.map((guide) => (
-                <li key={guide.slug}>
-                  <Link href={`/guides/${guide.slug}/`}><strong>{guide.title}</strong></Link>
-                  <br />{guide.blurb}
-                </li>
+        {GROUP_ORDER.map((heading) => (
+          <section key={heading}>
+            <h2>{heading}</h2>
+            <div className="guide-grid">
+              {GUIDES.filter((g) => g.group === heading).map((guide) => (
+                <article key={guide.slug} className="card guide-card">
+                  <Link href={`/guides/${guide.slug}/`} aria-label={guide.title} className="img-link">
+                    <img
+                      src={guide.image}
+                      alt={guide.title}
+                      className="guide-card-img"
+                      width={600}
+                      height={400}
+                      loading="lazy"
+                    />
+                  </Link>
+                  <div className="guide-card-body">
+                    <h3>
+                      <Link href={`/guides/${guide.slug}/`}>{guide.title}</Link>
+                    </h3>
+                    <p>{guide.blurb}</p>
+                    <Link className="guide-readmore" href={`/guides/${guide.slug}/`}>
+                      Read more →
+                    </Link>
+                  </div>
+                </article>
               ))}
-            </ul>
-          </div>
+            </div>
+          </section>
         ))}
         <p className="updated">Last updated {LAST_UPDATED}.</p>
       </div>

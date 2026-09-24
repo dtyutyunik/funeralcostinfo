@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -174,7 +176,7 @@ export default function ServiceTypesGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>Funeral service types, explained</h1>
+        <GuideHero slug="funeral-service-types" imageAlt="Funeral service types, explained"><h1>Funeral service types, explained</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -256,6 +258,7 @@ export default function ServiceTypesGuide() {
           {' · '}
           <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>
         </p>
+      <RelatedGuides currentSlug="funeral-service-types" />
       </div>
     </>
   );

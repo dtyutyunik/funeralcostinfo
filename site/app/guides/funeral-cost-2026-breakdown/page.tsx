@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -82,7 +84,7 @@ export default function FuneralCost2026Breakdown() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>How much does a funeral cost in 2026?</h1>
+        <GuideHero slug="funeral-cost-2026-breakdown" imageAlt="How much does a funeral cost in 2026?"><h1>How much does a funeral cost in 2026?</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -256,6 +258,7 @@ export default function FuneralCost2026Breakdown() {
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
         </p>
         <p className="updated">Figures are modeled estimates in August 2026 dollars ({VINTAGE_LABEL}). Last updated {LAST_UPDATED}.</p>
+      <RelatedGuides currentSlug="funeral-cost-2026-breakdown" />
       </div>
     </>
   );

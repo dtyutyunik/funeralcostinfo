@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -65,7 +67,7 @@ export default function BurialPlotCostsGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>How much does a burial plot cost?</h1>
+        <GuideHero slug="burial-plot-costs" imageAlt="How much does a burial plot cost?"><h1>How much does a burial plot cost?</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -212,6 +214,7 @@ export default function BurialPlotCostsGuide() {
           <Link href="/methodology/">How we build our estimates →</Link>
         </p>
         <p className="updated">{VINTAGE_LABEL} · Last updated {LAST_UPDATED}.</p>
+      <RelatedGuides currentSlug="burial-plot-costs" />
       </div>
     </>
   );

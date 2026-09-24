@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Your Rights Under the FTC Funeral Rule',
@@ -86,7 +88,7 @@ export default function FuneralRuleGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>Your rights under the FTC Funeral Rule</h1>
+        <GuideHero slug="funeral-rule-rights" imageAlt="Your rights under the FTC Funeral Rule"><h1>Your rights under the FTC Funeral Rule</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -124,6 +126,7 @@ export default function FuneralRuleGuide() {
             </details>
           ))}
         </div>
+      <RelatedGuides currentSlug="funeral-rule-rights" />
       </div>
     </>
   );

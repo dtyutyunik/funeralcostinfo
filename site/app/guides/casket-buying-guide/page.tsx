@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -92,7 +94,7 @@ export default function CasketBuyingGuide() {
           dateModified: LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
-        <h1>Caskets: what they cost, and your right to buy elsewhere</h1>
+        <GuideHero slug="casket-buying-guide" imageAlt="Caskets: what they cost, and your right to buy elsewhere"><h1>Caskets: what they cost, and your right to buy elsewhere</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -215,6 +217,7 @@ export default function CasketBuyingGuide() {
           {' · '}
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
         </p>
+      <RelatedGuides currentSlug="casket-buying-guide" />
       </div>
     </>
   );

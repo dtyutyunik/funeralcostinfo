@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt, stateSlug, PHASE0_STATES } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Funeral Costs by State 2026: All 50 States + D.C.',
@@ -70,7 +72,7 @@ export default function FuneralCostsByStateGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>Funeral costs by state, 2026</h1>
+        <GuideHero slug="funeral-costs-by-state-2026" imageAlt="Funeral costs by state, 2026"><h1>Funeral costs by state, 2026</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -249,6 +251,7 @@ export default function FuneralCostsByStateGuide() {
           {' · '}
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
         </p>
+      <RelatedGuides currentSlug="funeral-costs-by-state-2026" />
       </div>
     </>
   );

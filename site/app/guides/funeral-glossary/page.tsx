@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Funeral Terms Glossary: Embalming, Vaults, Caskets & More in Plain English',
@@ -233,7 +235,7 @@ export default function GlossaryGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>Funeral terms, in plain English</h1>
+        <GuideHero slug="funeral-glossary" imageAlt="Funeral terms, in plain English"><h1>Funeral terms, in plain English</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -282,6 +284,7 @@ export default function GlossaryGuide() {
           {' · '}
           <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>
         </p>
+      <RelatedGuides currentSlug="funeral-glossary" />
       </div>
     </>
   );

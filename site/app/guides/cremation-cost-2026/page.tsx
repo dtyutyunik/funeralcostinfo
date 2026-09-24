@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 const A = dataset.anchors;
 
@@ -65,7 +67,7 @@ export default function CremationCostGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>How much does cremation cost in 2026?</h1>
+        <GuideHero slug="cremation-cost-2026" imageAlt="How much does cremation cost in 2026?"><h1>How much does cremation cost in 2026?</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -181,6 +183,7 @@ export default function CremationCostGuide() {
           {' · '}
           <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>
         </p>
+      <RelatedGuides currentSlug="cremation-cost-2026" />
       </div>
     </>
   );

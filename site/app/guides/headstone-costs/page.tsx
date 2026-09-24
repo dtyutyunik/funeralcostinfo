@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'How Much Does a Headstone Cost? Markers vs. Monuments',
@@ -63,7 +65,7 @@ export default function HeadstoneCostsGuide() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>How much does a headstone cost?</h1>
+        <GuideHero slug="headstone-costs" imageAlt="How much does a headstone cost?"><h1>How much does a headstone cost?</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -231,6 +233,7 @@ export default function HeadstoneCostsGuide() {
         </p>
 
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+      <RelatedGuides currentSlug="headstone-costs" />
       </div>
     </>
   );

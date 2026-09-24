@@ -3,6 +3,8 @@ import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../com
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
+import GuideHero from '../../../components/GuideHero';
+import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Who Has the Legal Right to Make Funeral Arrangements?',
@@ -64,7 +66,7 @@ export default function WhoCanArrangeFuneral() {
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <h1>Who has the legal right to make funeral arrangements?</h1>
+        <GuideHero slug="who-can-arrange-funeral" imageAlt="Who has the legal right to make funeral arrangements?"><h1>Who has the legal right to make funeral arrangements?</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -197,6 +199,7 @@ export default function WhoCanArrangeFuneral() {
           {' · '}
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
         </p>
+      <RelatedGuides currentSlug="who-can-arrange-funeral" />
       </div>
     </>
   );
