@@ -46,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <nav className="main-nav" aria-label="Main">
               <Link href="/calculator/">Calculator</Link>
+              <Link href="/guides/">Guides</Link>
               <Link href="/methodology/">Methodology</Link>
               <Link href="/guides/funeral-rule-rights/">Your Rights</Link>
               <Link href="/about/">About</Link>
@@ -69,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <strong>Explore</strong>
                 <ul>
+                  <li><Link href="/guides/">All guides</Link></li>
                   <li><Link href="/calculator/">Cost calculator</Link></li>
                   <li><Link href="/methodology/">Methodology &amp; data</Link></li>
                   <li><Link href="/guides/funeral-rule-rights/">FTC Funeral Rule rights</Link></li>
