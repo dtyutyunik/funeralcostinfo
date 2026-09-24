@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
-import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt, stateSlug, PHASE0_STATES } from '../../../lib/data';
+import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt, stateSlug, ALL_STATE_SLUGS } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
@@ -186,7 +186,7 @@ export default function FuneralCostsByStateGuide() {
             <tbody>
               {sorted.map((s) => {
                 const slug = stateSlug(s.name);
-                const linked = PHASE0_STATES.includes(slug);
+                const linked = ALL_STATE_SLUGS.includes(slug);
                 return (
                   <tr key={s.abbr}>
                     <td>{linked ? <Link href={'/funeral-costs/' + slug + '/'}>{s.name}</Link> : s.name}</td>

@@ -74,7 +74,17 @@ export function getState(slug: string): StateData | undefined {
   return dataset.states.find((s) => stateSlug(s.name) === slug);
 }
 
-export const PHASE0_STATES = ['california', 'texas', 'florida', 'new-york', 'mississippi'];
+export const ALL_STATE_SLUGS = [
+  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado',
+  'connecticut', 'delaware', 'district-of-columbia', 'florida', 'georgia',
+  'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky',
+  'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota',
+  'mississippi', 'missouri', 'montana', 'nebraska', 'nevada', 'new-hampshire',
+  'new-jersey', 'new-mexico', 'new-york', 'north-carolina', 'north-dakota',
+  'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode-island',
+  'south-carolina', 'south-dakota', 'tennessee', 'texas', 'utah', 'vermont',
+  'virginia', 'washington', 'west-virginia', 'wisconsin', 'wyoming',
+];
 
 export function fmt(n: number): string {
   const sign = n < 0 ? '−' : '';

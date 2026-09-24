@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { dataset, fmt, stateSlug, PHASE0_STATES, VINTAGE_SHORT } from '../lib/data';
+import { dataset, fmt, stateSlug, ALL_STATE_SLUGS, VINTAGE_SHORT } from '../lib/data';
 import Link from 'next/link';
 
 type SortKey = 'name' | 'burial' | 'cremation' | 'rpp';
@@ -87,7 +87,7 @@ export default function StateTable() {
           <tbody>
             {rows.map((s) => {
               const slug = stateSlug(s.name);
-              const linked = PHASE0_STATES.includes(slug);
+              const linked = ALL_STATE_SLUGS.includes(slug);
               const burial = s.estimates.traditional_burial.point;
               return (
                 <tr key={s.abbr}>

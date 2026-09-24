@@ -2,11 +2,11 @@
 
 import { useMemo, useRef, useState } from 'react';
 import { US_STATE_PATHS, MAP_VIEWBOX } from '../data/us-states';
-import { dataset, fmt, stateSlug, PHASE0_STATES, VINTAGE_SHORT } from '../lib/data';
+import { dataset, fmt, stateSlug, ALL_STATE_SLUGS, VINTAGE_SHORT } from '../lib/data';
 import Link from 'next/link';
 
 const BIN_COLORS = ['#EAF3F1', '#CBE0DB', '#9CC2B9', '#6FA196', '#3E7F74', '#0E5B56'];
-const PHASE0 = new Set(PHASE0_STATES);
+const PHASE0 = new Set(ALL_STATE_SLUGS);
 
 interface Tip {
   abbr: string;

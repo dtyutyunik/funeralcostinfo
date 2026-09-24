@@ -139,6 +139,62 @@ export const GUIDES: GuideMeta[] = [
     group: 'Rights & terms',
     image: '/images/guides/funeral-glossary.jpg',
   },
+  {
+    slug: 'scattering-ashes-laws-costs',
+    title: 'Scattering Ashes: Laws, Costs & How to Do It',
+    blurb:
+      'Where you can legally scatter ashes — EPA rules, park permits, private land, and what it costs.',
+    group: 'Planning',
+    image: '/images/guides/scattering-ashes-laws-costs.jpg',
+  },
+  {
+    slug: 'body-organ-donation-guide',
+    title: 'Body & Organ Donation: How It Works',
+    blurb:
+      'How organ and whole-body donation work, what it costs the family (usually nothing), and how it affects funeral plans.',
+    group: 'Planning',
+    image: '/images/guides/body-organ-donation-guide.jpg',
+  },
+  {
+    slug: 'urn-costs-guide',
+    title: 'Urns: Types, Costs & Where to Buy',
+    blurb:
+      'Metal, wood, biodegradable, and keepsake urns — types, sizing, and your right to buy anywhere.',
+    group: 'Costs & data',
+    image: '/images/guides/urn-costs-guide.jpg',
+  },
+  {
+    slug: 'obituary-costs',
+    title: 'Obituary Costs: Newspaper Prices & Free Alternatives',
+    blurb:
+      'Why newspaper obituaries cost hundreds of dollars, and the free alternatives most families miss.',
+    group: 'Planning',
+    image: '/images/guides/obituary-costs.jpg',
+  },
+  {
+    slug: 'veterans-burial-benefits',
+    title: 'Veterans Burial Benefits: Full 2026 Guide',
+    blurb:
+      'VA burial allowances, free national cemetery burial, headstones and markers, and how to apply.',
+    group: 'Planning',
+    image: '/images/guides/veterans-burial-benefits.jpg',
+  },
+  {
+    slug: 'shipping-remains',
+    title: 'Transporting Remains Across State Lines: Rules & Costs',
+    blurb:
+      'Burial transit permits, airline cargo rules, and what it costs to move remains across state lines.',
+    group: 'Planning',
+    image: '/images/guides/shipping-remains.jpg',
+  },
+  {
+    slug: 'aquamation-guide',
+    title: "Aquamation: Costs & Where It's Legal",
+    blurb:
+      'Alkaline hydrolysis explained — where it is legal, what providers charge, and how it compares to cremation.',
+    group: 'Costs & data',
+    image: '/images/guides/aquamation-guide.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
