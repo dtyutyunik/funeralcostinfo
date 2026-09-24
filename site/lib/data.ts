@@ -1,14 +1,9 @@
 import raw from '../data/estimates.json';
 import optionsRaw from '../data/options.json';
-import methodologyRaw from '../data/methodology.json';
 
 export interface ServiceEstimate { point: number; low: number; high: number }
 export interface Anchor { value: number; value_2023: number; label: string; assumption?: string | null }
 export interface Addon { mid: number; low: number; high: number; label: string; note: string; state_adjust?: boolean }
-export interface InflationMeta {
-  series: string; base_period: string; target_period: string;
-  factor: number; factor_percent: number;
-}
 export interface StateData {
   abbr: string; name: string;
   rpp_all_items: number; rpp_goods: number;
@@ -18,8 +13,6 @@ export interface StateData {
 }
 export interface Dataset {
   model_version: string; built: string; is_modeled: boolean;
-  anchor_vintage?: string;
-  inflation?: InflationMeta;
   anchors: Record<string, Anchor>;
   addons: Record<string, Addon>;
   states: StateData[];
@@ -60,20 +53,6 @@ export interface OptionsData {
 
 export const options = optionsRaw as OptionsData;
 
-export interface InflationLink {
-  period: string; change_pct: number; kind: string;
-  source: string; note?: string;
-}
-export interface MethodologyData {
-  model_version: string; built: string;
-  inflation: InflationMeta & {
-    index_base: string; why_december_2023: string;
-    chain: InflationLink[]; caveats: string[];
-  };
-}
-
-export const methodology = methodologyRaw as MethodologyData;
-
 export const SITE_URL = 'https://funeralcostinfo.com';
 export const LAST_UPDATED = dataset.built;
 
@@ -100,6 +79,14 @@ export const PHASE0_STATES = ['california', 'texas', 'florida', 'new-york', 'mis
 export function fmt(n: number): string {
   const sign = n < 0 ? '−' : '';
   return sign + '$' + Math.abs(n).toLocaleString('en-US');
+}
+
+export function longDate(iso: string): string {
+  return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 }
 
 export function fmtRange(e: ServiceEstimate): string {

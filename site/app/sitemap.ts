@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/affiliate-disclosure/',
     '/privacy/',
     '/contact/',
+    '/press/',
     ...PHASE0_STATES.map((s) => `/funeral-costs/${s}/`),
   ];
   return routes.map((r) => ({

@@ -107,6 +107,27 @@ nav.main-nav a:hover { color: var(--accent-ink); background: var(--paper-deep); 
 .card-pad { padding: 28px; }
 @media (max-width: 640px) { .card-pad { padding: 20px; } }
 
+/* ---------- Founder card ---------- */
+.founder-card {
+  display: flex; gap: 20px; align-items: center; margin: 20px 0 8px;
+}
+.founder-photo {
+  width: 112px; height: 112px; border-radius: 50%; object-fit: cover; flex: none;
+  border: 3px solid var(--card); box-shadow: 0 0 0 1px var(--line), 0 8px 20px -10px rgba(38, 34, 25, 0.35);
+}
+.founder-card h3 { margin: 0 0 2px; font-size: 20px; }
+.founder-role { color: var(--muted); font-size: 14.5px; margin: 0 0 6px; }
+.founder-card p { margin: 4px 0; }
+.founder-photo-sm {
+  width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none;
+  border: 2px solid var(--card); box-shadow: 0 0 0 1px var(--line);
+  vertical-align: middle; margin-right: 10px;
+}
+@media (max-width: 640px) {
+  .founder-card { gap: 14px; }
+  .founder-photo { width: 88px; height: 88px; }
+}
+
 /* ---------- Calculator stepper ---------- */
 .calc { margin: 0; }
 .calc-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
@@ -296,6 +317,9 @@ table.data a.state-link:hover { text-decoration: underline; }
 .breadcrumb { font-size: 13.5px; color: var(--faint); margin: 20px 0 4px; }
 .breadcrumb a { color: var(--muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--accent-ink); }
+.byline { font-size: 14px; color: var(--muted); margin: 0 0 22px; }
+.byline a { color: var(--accent-ink); text-decoration: none; }
+.byline a:hover { text-decoration: underline; }
 .faq details { border: 1px solid var(--line); border-radius: 10px; margin-bottom: 10px; padding: 14px 18px; background: var(--card); }
 .faq summary { font-weight: 600; cursor: pointer; font-family: var(--serif); font-size: 17px; }
 .faq summary:hover { color: var(--accent-ink); }

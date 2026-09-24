@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
+import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
+import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
 
@@ -77,7 +78,17 @@ export default function FuneralRuleGuide() {
       ])} />
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › FTC Funeral Rule rights</nav>
+      <JsonLd data={articleJsonLd({
+        title: 'Your Rights Under the FTC Funeral Rule',
+        description: 'The FTC Funeral Rule in plain English: price lists by phone, itemized GPLs, no forced packages, your own casket or urn, and more. Educational guide — not legal advice.',
+        url: SITE_URL + '/guides/funeral-rule-rights/',
+        datePublished: '2026-09-23',
+        dateModified: LAST_UPDATED,
+        siteUrl: SITE_URL,
+      })} />
         <h1>Your rights under the FTC Funeral Rule</h1>
+        <Byline />
+
         <p className="answer-first">
           <strong>Quick answer:</strong> the FTC Funeral Rule gives you the right to price
           information by phone, a written itemized General Price List when you visit, to buy only

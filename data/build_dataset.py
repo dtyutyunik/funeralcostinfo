@@ -151,6 +151,11 @@ def main():
         "basis": (f"Assumption: 0.60 × adjusted traditional burial (${trad_adj:,}). "
                   f"No NFDA median exists; labeled as an assumption everywhere it appears."),
     }
+    # value_2023: the unadjusted NFDA 2023 medians, carried through so the site can
+    # show "2023 median → current dollars" provenance. Green burial: 0.60 × 8300.
+    for key, a in NFDA_2023.items():
+        ANCHORS[key]["value_2023"] = a["value"]
+    ANCHORS["green_burial"]["value_2023"] = r10(0.60 * NFDA_2023["traditional_burial"]["value"])
 
     # ---- Load official 2024 BEA RPP data (fetched 2026-09-23 from the BEA
     # Interactive Data Application: AppID 70, TableID 101 "SARPP Regional price
@@ -223,7 +228,7 @@ def main():
                      "latest month, so the gap has no effect."),
         },
         "anchors": {k: {"value": v["value"], "label": v["label"], "assumption": None,
-                        "basis": v["basis"]} for k, v in ANCHORS.items()},
+                        "basis": v["basis"], "value_2023": v["value_2023"]} for k, v in ANCHORS.items()},
         "addons": ADDONS,
         "states": states,
         "bea_release": {
@@ -298,7 +303,7 @@ def main():
     methodology["anchors"]["green_burial"]["assumption"] = (
         f"0.60 × adjusted traditional burial (${trad_adj:,}); no published NFDA median exists")
 
-    (HERE / "methodology.json").write_text(json.dumps(methodology, indent=1) + "\n")
+    (HERE / "methodology.json").write_text(json.dumps(methodology, indent=1, ensure_ascii=False) + "\n")
 
     # ---- CSV
     with open(HERE / "state_estimates.csv", "w", newline="") as f:
@@ -319,7 +324,7 @@ def main():
         "addons": ADDONS,
         "states": states,
     }
-    SITE_DATA.write_text(json.dumps(site_payload) + "\n")
+    SITE_DATA.write_text(json.dumps(site_payload, indent=1, ensure_ascii=False) + "\n")
 
     # ---- SOURCES.md
     lines = [f"# FuneralCostInfo — source ledger (model {MODEL}, built {TODAY})", ""]
