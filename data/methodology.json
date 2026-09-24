@@ -3,7 +3,7 @@
  "built": "2026-09-23",
  "is_modeled": true,
  "vintage_label": "NFDA 2023 medians adjusted to August 2026 dollars via BLS CPI for funeral expenses; 2024 BEA regional price parities",
- "formula": "adjusted_anchor = round_to_$10(nfda_2023_median \u00d7 1.101552 [BLS CPI funeral expenses, August 2026]); state_estimate = adjusted_anchor \u00d7 (state_bea_2024_rpp_all_items / 100), rounded to nearest $10; illustrative range = point \u00d7 0.85 .. point \u00d7 1.15",
+ "formula": "adjusted_anchor = round_to_$10(nfda_2023_median × 1.101552 [BLS CPI funeral expenses, August 2026]); state_estimate = adjusted_anchor × (state_bea_2024_rpp_all_items / 100), rounded to nearest $10; illustrative range = point × 0.85 .. point × 1.15",
  "bls_adjustment": {
   "bls_series_id": "CUUR0000SEGD02",
   "bls_vintage_month": "2026-08",
@@ -20,37 +20,43 @@
    "value": 9140,
    "label": "Funeral with viewing + burial",
    "assumption": null,
-   "basis": "NFDA 2023 Member GPL Study median $8,300 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $9,140. NFDA 2023 Member GPL Study median; vault not included"
+   "basis": "NFDA 2023 Member GPL Study median $8,300 × 1.1016 (BLS CPI funeral expenses, August 2026) = $9,140. NFDA 2023 Member GPL Study median; vault not included",
+   "value_2023": 8300
   },
   "burial_with_vault": {
    "value": 11010,
    "label": "Funeral with viewing + burial + vault",
    "assumption": null,
-   "basis": "NFDA 2023 Member GPL Study median $9,995 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $11,010. NFDA 2023 GPL Study median, via 2023 press release"
+   "basis": "NFDA 2023 Member GPL Study median $9,995 × 1.1016 (BLS CPI funeral expenses, August 2026) = $11,010. NFDA 2023 GPL Study median, via 2023 press release",
+   "value_2023": 9995
   },
   "cremation_with_service": {
    "value": 6920,
    "label": "Funeral with viewing + cremation",
    "assumption": null,
-   "basis": "NFDA 2023 Member GPL Study median $6,280 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $6,920. NFDA 2023 Member GPL Study median"
+   "basis": "NFDA 2023 Member GPL Study median $6,280 × 1.1016 (BLS CPI funeral expenses, August 2026) = $6,920. NFDA 2023 Member GPL Study median",
+   "value_2023": 6280
   },
   "direct_cremation": {
    "value": 3030,
    "label": "Direct cremation",
    "assumption": null,
-   "basis": "NFDA 2023 Member GPL Study median $2,750 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $3,030. NFDA 2023 Member GPL Study median (funeral-home container)"
+   "basis": "NFDA 2023 Member GPL Study median $2,750 × 1.1016 (BLS CPI funeral expenses, August 2026) = $3,030. NFDA 2023 Member GPL Study median (funeral-home container)",
+   "value_2023": 2750
   },
   "direct_burial": {
    "value": 4100,
    "label": "Immediate burial",
    "assumption": null,
-   "basis": "NFDA 2023 Member GPL Study median $3,720 \u00d7 1.1016 (BLS CPI funeral expenses, August 2026) = $4,100. NFDA 2023 Member GPL Study median"
+   "basis": "NFDA 2023 Member GPL Study median $3,720 × 1.1016 (BLS CPI funeral expenses, August 2026) = $4,100. NFDA 2023 Member GPL Study median",
+   "value_2023": 3720
   },
   "green_burial": {
    "value": 5480,
    "label": "Green burial (assumption-based)",
-   "assumption": "0.60 \u00d7 adjusted traditional burial ($9,140); no published NFDA median exists",
-   "basis": "Assumption: 0.60 \u00d7 adjusted traditional burial ($9,140). No NFDA median exists; labeled as an assumption everywhere it appears."
+   "assumption": "0.60 × adjusted traditional burial ($9,140); no published NFDA median exists",
+   "basis": "Assumption: 0.60 × adjusted traditional burial ($9,140). No NFDA median exists; labeled as an assumption everywhere it appears.",
+   "value_2023": 4980
   }
  },
  "addons": {
@@ -2246,7 +2252,7 @@
   "State values are modeled from national medians; actual local prices vary widely.",
   "NFDA medians come from member funeral homes and exclude cemetery and cash-advance costs.",
   "RPP vintage is 2024 (BEA February 2026 release); the dataset refreshes annually as new releases arrive.",
-  "NFDA price medians are 2023 vintage because no newer official GPL study results have been published; they are adjusted to August 2026 dollars with the BLS CPI for funeral expenses (\u00d71.1016).",
+  "NFDA price medians are 2023 vintage because no newer official GPL study results have been published; they are adjusted to August 2026 dollars with the BLS CPI for funeral expenses (×1.1016).",
   "The CPI adjustment assumes funeral-price inflation tracked the national funeral-expenses index; it does not capture state-level inflation differences.",
   "Green burial has no published NFDA median; it is a stated assumption (0.60x adjusted traditional burial), labeled as such everywhere it appears.",
   "Calculator add-on ranges (flowers, obituary) are typical market ranges, not surveyed prices.",
@@ -2269,10 +2275,10 @@
    "name": "BLS CPI-U: Funeral expenses (series CUUR0000SEGD02, not seasonally adjusted; December 1986 = 100)",
    "url": "https://www.bls.gov/news.release/cpi.t02.htm",
    "retrieved": "2026-09-23",
-   "provides": "Monthly index values Jan 2023\u2013August 2026 (via BLS public API) used to adjust NFDA 2023 medians to August 2026 dollars: factor = 417.820 \u00f7 379.301 = 1.1016. August 2026 release Table 2: +3.0% unadjusted 12-month change. October 2025 missing (2025 lapse in appropriations)."
+   "provides": "Monthly index values Jan 2023–August 2026 (via BLS public API) used to adjust NFDA 2023 medians to August 2026 dollars: factor = 417.820 ÷ 379.301 = 1.1016. August 2026 release Table 2: +3.0% unadjusted 12-month change. October 2025 missing (2025 lapse in appropriations)."
   },
   {
-   "name": "BEA Regional Price Parities by State \u2014 2024 release (February 19, 2026)",
+   "name": "BEA Regional Price Parities by State — 2024 release (February 19, 2026)",
    "url": "https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area",
    "retrieved": "2026-09-23",
    "provides": "2024 state RPP indexes (all items, goods, services components), via BEA Interactive Data Application Table SARPP"
