@@ -116,6 +116,14 @@ export default function PressPage() {
 
       <h2>Contact</h2>
       <p>
+        <img
+          src="/images/founder.jpg"
+          alt="Dmitriy Tyutyunik, founder of FuneralCostInfo"
+          className="founder-photo-sm"
+          width={112}
+          height={112}
+          loading="lazy"
+        />
         For custom cuts of the data, methodology questions, or interviews:{' '}
         <a href="mailto:press@funeralcostinfo.com">press@funeralcostinfo.com</a>
         {' '}— Dmitriy Tyutyunik, founder.
