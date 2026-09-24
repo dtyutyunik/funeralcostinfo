@@ -31,3 +31,50 @@ export function breadcrumbJsonLd(crumbs: { name: string; url: string }[]) {
     })),
   };
 }
+
+export function organizationJsonLd(siteUrl: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'FuneralCostInfo',
+    url: siteUrl + '/',
+    description:
+      'Independent, modeled funeral-cost estimates for every U.S. state. We take no money from funeral homes.',
+    foundingDate: '2026-09',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'hello@funeralcostinfo.com',
+      contactType: 'customer service',
+    },
+  };
+}
+
+export function articleJsonLd(opts: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  siteUrl: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: opts.title,
+    description: opts.description,
+    url: opts.url,
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    author: {
+      '@type': 'Organization',
+      name: 'FuneralCostInfo',
+      url: opts.siteUrl + '/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FuneralCostInfo',
+      url: opts.siteUrl + '/',
+    },
+    inLanguage: 'en-US',
+  };
+}

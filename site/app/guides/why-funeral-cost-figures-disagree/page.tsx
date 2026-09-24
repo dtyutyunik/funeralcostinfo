@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import JsonLd, { breadcrumbJsonLd } from '../../../components/JsonLd';
+import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
+import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 
@@ -22,7 +23,17 @@ export default function DisagreePage() {
       <JsonLd data={breadcrumbJsonLd([{ name: 'Home', url: SITE_URL + '/' }, { name: 'Guides', url: SITE_URL + '/guides/funeral-service-types/' }, { name: 'Why figures disagree', url: SITE_URL + '/guides/why-funeral-cost-figures-disagree/' }])} />
       <nav className="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/guides/funeral-service-types/">Guides</a> › Why figures disagree</nav>
       <p className="eyebrow">Consumer guide</p>
+      <JsonLd data={articleJsonLd({
+        title: 'Why Funeral Cost Figures Disagree: 2023 vs 2026 Dollars, Explained',
+        description: 'One site says $8,300, another says $8,600, a third says $7,360. Funeral cost figures disagree for three honest reasons: data vintage, the basket being priced, and whether anyone shows their math. Here is how to compare them fairly.',
+        url: SITE_URL + '/guides/why-funeral-cost-figures-disagree/',
+        datePublished: '2026-09-23',
+        dateModified: LAST_UPDATED,
+        siteUrl: SITE_URL,
+      })} />
       <h1>Why funeral cost figures disagree</h1>
+      <Byline />
+
 
       <div className="answer-first">
         <p>

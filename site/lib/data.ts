@@ -81,6 +81,14 @@ export function fmt(n: number): string {
   return sign + '$' + Math.abs(n).toLocaleString('en-US');
 }
 
+export function longDate(iso: string): string {
+  return new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
 export function fmtRange(e: ServiceEstimate): string {
   return `${fmt(e.low)} – ${fmt(e.high)}`;
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
+import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
+import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
 
@@ -224,7 +225,17 @@ export default function GlossaryGuide() {
       ])} />
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Funeral terms glossary</nav>
+      <JsonLd data={articleJsonLd({
+        title: 'Funeral Terms Glossary: Embalming, Vaults, Caskets & More in Plain English',
+        description: 'What does embalming actually involve? What is a burial vault, a grave liner, a columbarium? Plain-English definitions of the funeral terms you will see on price lists.',
+        url: SITE_URL + '/guides/funeral-glossary/',
+        datePublished: '2026-09-23',
+        dateModified: LAST_UPDATED,
+        siteUrl: SITE_URL,
+      })} />
         <h1>Funeral terms, in plain English</h1>
+        <Byline />
+
         <p className="answer-first">
           <strong>Quick answer:</strong> funeral price lists are full of jargon — embalming, vaults,
           liners, columbariums, cash advance items. This glossary defines the terms you will

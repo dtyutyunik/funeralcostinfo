@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, VINTAGE_LABEL, LAST_UPDATED } from '../lib/data';
+import JsonLd, { organizationJsonLd } from '../components/JsonLd';
 import Link from 'next/link';
 
 const fraunces = Fraunces({
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-US" className={`${fraunces.variable} ${inter.variable}`}>
       <body>
+        <JsonLd data={organizationJsonLd(SITE_URL)} />
         <header className="site-header no-print">
           <div className="wrap">
             <Link className="brand" href="/">
