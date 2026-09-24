@@ -4,7 +4,7 @@ import { LAST_UPDATED, longDate } from '../lib/data';
 export default function Byline() {
   return (
     <p className="byline">
-      By <Link href="/about/">FuneralCostInfo</Link>
+      By <Link href="/about/">Dmitriy Tyutyunik</Link>
       <span aria-hidden="true"> · </span>
       Updated {longDate(LAST_UPDATED)}
       <span aria-hidden="true"> · </span>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from '../../lib/data';
+import JsonLd, { personJsonLd } from '../../components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="wrap prose">
+      <JsonLd data={{ '@context': 'https://schema.org', ...personJsonLd() }} />
       <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › About</nav>
       <h1>About FuneralCostInfo</h1>
       <p className="answer-first">
@@ -32,6 +34,24 @@ export default function AboutPage() {
       <p>
         We exist to close that gap: every state gets a modeled estimate, the formula is published,
         and every number is labeled as modeled — never presented as a quote.
+      </p>
+      <h2>Who runs FuneralCostInfo</h2>
+      <p>
+        FuneralCostInfo was founded by{' '}
+        <a href="https://www.linkedin.com/in/dmitriy-tyutyunik/" rel="noopener">
+          Dmitriy Tyutyunik
+        </a>
+        , a software engineer working in the tech industry. He is not a funeral director and has no
+        ties to the funeral industry — this is an independent data project, built the way an
+        engineer would build it: from official sources, with the method published and every number
+        labeled.
+      </p>
+      <p>
+        The motivation is simple. There are two things none of us escape — death and taxes. More
+        than 8,400 Americans die every day (CDC, 2023 provisional data), and nearly every family
+        meets the funeral industry for the first time under grief and time pressure, with no idea
+        what anything should cost. This site exists to make that hard time a little more
+        affordable, by making prices transparent before anyone has to negotiate them.
       </p>
       <h2>How we are funded</h2>
       <p>

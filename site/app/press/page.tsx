@@ -118,6 +118,7 @@ export default function PressPage() {
       <p>
         For custom cuts of the data, methodology questions, or interviews:{' '}
         <a href="mailto:press@funeralcostinfo.com">press@funeralcostinfo.com</a>
+        {' '}— Dmitriy Tyutyunik, founder.
       </p>
       <p className="updated">{VINTAGE_LABEL} · Built {LAST_UPDATED} · Model v3 · Refresh cadence: monthly CPI, annual BEA.</p>
     </div>

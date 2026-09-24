@@ -32,6 +32,16 @@ export function breadcrumbJsonLd(crumbs: { name: string; url: string }[]) {
   };
 }
 
+export function personJsonLd() {
+  return {
+    '@type': 'Person',
+    name: 'Dmitriy Tyutyunik',
+    url: 'https://www.linkedin.com/in/dmitriy-tyutyunik/',
+    jobTitle: 'Software engineer',
+    sameAs: ['https://www.linkedin.com/in/dmitriy-tyutyunik/'],
+  };
+}
+
 export function organizationJsonLd(siteUrl: string) {
   return {
     '@context': 'https://schema.org',
@@ -41,6 +51,7 @@ export function organizationJsonLd(siteUrl: string) {
     description:
       'Independent, modeled funeral-cost estimates for every U.S. state. We take no money from funeral homes.',
     foundingDate: '2026-09',
+    founder: personJsonLd(),
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'hello@funeralcostinfo.com',
@@ -65,11 +76,7 @@ export function articleJsonLd(opts: {
     url: opts.url,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified,
-    author: {
-      '@type': 'Organization',
-      name: 'FuneralCostInfo',
-      url: opts.siteUrl + '/',
-    },
+    author: personJsonLd(),
     publisher: {
       '@type': 'Organization',
       name: 'FuneralCostInfo',
