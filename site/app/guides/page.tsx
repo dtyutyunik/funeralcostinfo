@@ -50,6 +50,16 @@ const GROUPS: { heading: string; guides: { slug: string; title: string; blurb: s
         title: 'Why Funeral Cost Figures Disagree',
         blurb: '2023 vs. 2026 dollars, medians vs. averages, and surveyed prices vs. modeled estimates — explained.',
       },
+      {
+        slug: 'green-burial-composting',
+        title: 'Green Burial & Human Composting: Costs and Where They\u2019re Legal',
+        blurb: 'Natural burial, composting (14 states as of 2026), and what each costs.',
+      },
+      {
+        slug: 'casket-buying-guide',
+        title: 'Caskets: What They Cost and Your Right to Buy Elsewhere',
+        blurb: 'Metal, wood, and cremation caskets in plain English — plus the Funeral Rule right no seller can take from you.',
+      },
     ],
   },
   {
@@ -69,6 +79,16 @@ const GROUPS: { heading: string; guides: { slug: string; title: string; blurb: s
         slug: 'paying-for-a-funeral',
         title: 'How to Pay for a Funeral: VA, Social Security & Aid',
         blurb: 'VA burial benefits, the $255 Social Security payment, FEMA limits, county aid, and life insurance.',
+      },
+      {
+        slug: 'prepaid-funeral-plans',
+        title: 'Prepaid Funeral Plans: Pros, Cons & Traps',
+        blurb: 'What prepaying locks in, where the money sits, and the questions to ask before you sign.',
+      },
+      {
+        slug: 'who-can-arrange-funeral',
+        title: 'Who Has the Legal Right to Make Funeral Arrangements?',
+        blurb: 'The usual priority order, why a written designation beats it, and what happens when families disagree.',
       },
       {
         slug: 'funeral-service-types',
