@@ -44,6 +44,12 @@ const SOURCES = [
     url: 'https://mdfunerals.org/wp-content/uploads/2026/07/Comparative-Costs-7.15.26.pdf',
     provides: 'Cemetery plot ($1,000–$5,000+), opening/closing ($1,500–$3,000), and marker ($1,000–$3,000) typical ranges used as calculator add-ons.',
   },
+  {
+    name: 'Funeral Consumers Alliance — local chapter funeral home price surveys',
+    url: 'https://funerals.org/find-an-affiliate/',
+    provides:
+      'Independent, volunteer-run surveys of funeral home prices published by local FCA chapters (e.g., the Finger Lakes chapter\u2019s 2025 survey, linked from our New York state page). FCA has granted permission to link these surveys; we treat them as independent real-world price checks alongside our modeled estimates, not as inputs to the model. This is a resource link, not a partnership.',
+  },
 ];
 
 const LEDGER: [string, React.ReactNode][] = [
