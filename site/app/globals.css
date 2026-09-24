@@ -294,6 +294,16 @@ table.data a.state-link:hover { text-decoration: underline; }
 .cost-bar-cell { min-width: 150px; }
 .cost-bar-track { height: 8px; background: var(--paper-deep); border-radius: 4px; margin-top: 6px; overflow: hidden; }
 .cost-bar-fill { height: 100%; background: var(--accent); border-radius: 4px; }
+
+/* ---------- Tables: mobile ---------- */
+@media (max-width: 700px) {
+  table.data th { position: static; }
+  table.data { font-size: 14px; }
+  table.data th, table.data td { padding: 10px 12px; }
+  table.data caption { padding: 12px 14px 8px; }
+  .table-tools { margin: 4px 0 16px; }
+  .table-tools input[type="search"] { flex: 1 1 100%; min-width: 0; }
+}
 .modeled-tag {
   display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.06em; color: #7A5A1E; background: var(--bronze-soft);
