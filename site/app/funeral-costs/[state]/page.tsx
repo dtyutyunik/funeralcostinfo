@@ -10,6 +10,8 @@ import Link from 'next/link';
 interface StateNote {
   boardName: string;
   boardUrl: string | null;
+  fcaSurveyName: string | null;
+  fcaSurveyUrl: string | null;
   context: string[];
   caveats: string[];
 }
@@ -18,6 +20,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   california: {
     boardName: 'California Cemetery and Funeral Bureau',
     boardUrl: 'https://www.cfb.ca.gov/',
+    fcaSurveyName: null,
+    fcaSurveyUrl: null,
     context: [
       'California has the highest regional price level of any state in our dataset (RPP 110.7), so its modeled estimates are the highest in the nation.',
       'The NFDA projects 81.5% of California dispositions will be cremations by 2035 — among the highest cremation rates in the country.',
@@ -30,6 +34,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   texas: {
     boardName: 'Texas Funeral Service Commission',
     boardUrl: 'https://tfsc.texas.gov/',
+    fcaSurveyName: null,
+    fcaSurveyUrl: null,
     context: [
       'Texas sits just below the national average price level (RPP 97.1), so modeled costs run slightly under the national medians.',
       'The NFDA projects 70.2% of Texas dispositions will be cremations by 2035.',
@@ -42,6 +48,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   florida: {
     boardName: 'Florida Division of Funeral, Cemetery & Consumer Services',
     boardUrl: 'https://www.myfloridacfo.com/division/funeralcemetery',
+    fcaSurveyName: null,
+    fcaSurveyUrl: null,
     context: [
       'Florida runs modestly above the national average price level (RPP 103.4).',
       'The NFDA projects 79.8% of Florida dispositions will be cremations by 2035, reflecting the state\u2019s large retiree population and transient communities.',
@@ -54,6 +62,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   'new-york': {
     boardName: 'New York State Department of Health, Bureau of Funeral Directing',
     boardUrl: null,
+    fcaSurveyName: 'Funeral Consumers Alliance of the Finger Lakes — 2025 funeral home price survey (Tompkins County area)',
+    fcaSurveyUrl: 'https://www.fingerlakesfunerals.org/price-survey',
     context: [
       'New York has one of the highest price levels in the nation (RPP 107.9), driven largely by the New York City metro area.',
       'The NFDA projects 70.7% of New York dispositions will be cremations by 2035.',
@@ -66,6 +76,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   mississippi: {
     boardName: 'Mississippi State Board of Funeral Service',
     boardUrl: 'https://www.msbfs.ms.gov/',
+    fcaSurveyName: null,
+    fcaSurveyUrl: null,
     context: [
       'Mississippi has the second-lowest regional price level in our dataset (RPP 87.0), just above Arkansas, so its modeled estimates are among the lowest in the nation.',
       'The NFDA projects Mississippi will retain one of the highest burial shares in the country, with only 54.5% cremations by 2035.',
@@ -220,6 +232,9 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           )}
           {!notes.boardUrl && (
             <li>{notes.boardName} — verify licenses and file complaints (search the bureau&apos;s site directly).</li>
+          )}
+          {notes.fcaSurveyUrl && (
+            <li><a href={notes.fcaSurveyUrl} rel="noopener noreferrer">{notes.fcaSurveyName}</a> — independent, volunteer-run price survey of local funeral homes.</li>
           )}
           <li><a href="https://consumer.ftc.gov/articles/ftc-funeral-rule">FTC Funeral Rule — your federal rights</a></li>
           <li><Link href="/guides/funeral-rule-rights/">Our plain-English guide to the Funeral Rule</Link></li>
