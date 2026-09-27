@@ -79,6 +79,7 @@ export default function MethodologyPage() {
           description:
             'Modeled state-level funeral-cost estimates for 50 states + D.C.: NFDA 2023 national medians adjusted to August 2026 dollars via BLS funeral-expenses CPI, scaled by BEA 2024 regional price parities. Values are modeled, not surveyed.',
           url: SITE_URL + '/methodology/',
+          license: 'https://creativecommons.org/licenses/by/4.0/',
           creator: { '@type': 'Organization', name: 'FuneralCostInfo', url: SITE_URL + '/' },
           datePublished: LAST_UPDATED,
           variableMeasured: 'Modeled median funeral cost by service type and state (USD)',
