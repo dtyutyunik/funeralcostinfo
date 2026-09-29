@@ -195,6 +195,46 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/aquamation-guide.jpg',
   },
+  {
+    slug: 'funeral-costs-by-city',
+    title: 'Funeral Costs by City: Average Prices in the 25 Largest US Metros (2026)',
+    blurb:
+      'Published 2026 price data for the 25 largest US metros, why city prices differ, and how to shop locally.',
+    group: 'Costs & data',
+    image: '/images/guides/funeral-costs-by-city.jpg',
+  },
+  {
+    slug: 'corporate-vs-independent-funeral-homes',
+    title: 'Are Corporate Funeral Homes More Expensive? SCI/Dignity Memorial vs. Independent Prices',
+    blurb:
+      'The head-to-head price study, current ranges, the enforcement record, and how to check who owns your funeral home.',
+    group: 'Costs & data',
+    image: '/images/guides/corporate-vs-independent-funeral-homes.jpg',
+  },
+  {
+    slug: 'mausoleum-cost',
+    title: 'How Much Does a Mausoleum Cost? 2026 Price Guide',
+    blurb:
+      'Community crypts, columbarium niches, and lawn crypts from real 2025–2026 cemetery price lists, fee by fee.',
+    group: 'Costs & data',
+    image: '/images/guides/mausoleum-cost.jpg',
+  },
+  {
+    slug: 'embalming-costs-requirements',
+    title: 'How Much Does Embalming Cost? Prices, Law & Your Right to Refuse',
+    blurb:
+      'NFDA median $845, when any state actually requires embalming, and the FTC rule that lets you refuse.',
+    group: 'Costs & data',
+    image: '/images/guides/embalming-costs-requirements.jpg',
+  },
+  {
+    slug: 'religious-funeral-costs',
+    title: 'How Much Do Religious Funerals Cost? Jewish, Muslim, Catholic & Hindu (2026)',
+    blurb:
+      "Four traditions' rites and real 2025–2026 price tags, side by side.",
+    group: 'Costs & data',
+    image: '/images/guides/religious-funeral-costs.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
