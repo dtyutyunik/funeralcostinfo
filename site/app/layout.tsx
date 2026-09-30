@@ -79,6 +79,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><Link href="/guides/funeral-costs-by-city/">Funeral costs by city</Link></li>
                   <li><Link href="/guides/mausoleum-cost/">Mausoleum costs</Link></li>
                   <li><Link href="/guides/embalming-costs-requirements/">Embalming costs & your right to refuse</Link></li>
+                  <li><Link href="/guides/home-funeral-cost/">Home funeral cost & state legality</Link></li>
+                  <li><Link href="/guides/funeral-memorial-society/">Funeral memorial societies</Link></li>
+                  <li><Link href="/guides/international-repatriation-remains/">Repatriating remains internationally</Link></li>
+                  <li><Link href="/guides/death-certificates-cost/">Death certificate costs</Link></li>
                 </ul>
               </div>
               <div>

@@ -235,6 +235,38 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/religious-funeral-costs.jpg',
   },
+  {
+    slug: 'home-funeral-cost',
+    title: "How Much Does a Home Funeral Cost? (2026) + Where It's Legal State by State",
+    blurb:
+      'Usually under $500 vs. a $9,140 professional funeral: which states let families handle everything and the paperwork it takes.',
+    group: 'Planning',
+    image: '/images/guides/home-funeral-cost.jpg',
+  },
+  {
+    slug: 'funeral-memorial-society',
+    title: 'Funeral Memorial Societies: How They Cut Funeral Costs (2026 Guide)',
+    blurb:
+      'One-time $25–$50 memberships that unlock contracted funeral rates — member direct cremation around $995 vs. $2,695 for the public.',
+    group: 'Planning',
+    image: '/images/guides/funeral-memorial-society.jpg',
+  },
+  {
+    slug: 'international-repatriation-remains',
+    title: 'How Much Does It Cost to Repatriate a Body? International Rules, Paperwork & Prices (2026)',
+    blurb:
+      'Repatriating a body internationally costs $5,000–$15,000+: the paperwork chain and CDC rules for bringing remains into the US.',
+    group: 'Planning',
+    image: '/images/guides/international-repatriation-remains.jpg',
+  },
+  {
+    slug: 'death-certificates-cost',
+    title: "How Much Does a Death Certificate Cost? (2026) State Fees + How Many Copies You Need",
+    blurb:
+      'State fees run $5–$30+ per certified copy; families typically need 5–10. Who orders them and how long they take.',
+    group: 'Planning',
+    image: '/images/guides/death-certificates-cost.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
