@@ -3,7 +3,6 @@ import { Fraunces, Inter } from 'next/font/google';
 import './globals.css';
 import { SITE_URL, VINTAGE_LABEL, LAST_UPDATED } from '../lib/data';
 import JsonLd, { organizationJsonLd } from '../components/JsonLd';
-import GuidesDropdown from '../components/GuidesDropdown';
 import Link from 'next/link';
 
 const fraunces = Fraunces({
@@ -47,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
             <nav className="main-nav" aria-label="Main">
               <Link href="/calculator/">Calculator</Link>
-              <GuidesDropdown />
+              <Link href="/guides/">Guides</Link>
               <Link href="/methodology/">Methodology</Link>
               <Link href="/guides/funeral-rule-rights/">Your Rights</Link>
               <Link href="/about/">About</Link>
