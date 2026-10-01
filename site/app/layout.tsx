@@ -83,6 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <li><Link href="/guides/funeral-memorial-society/">Funeral memorial societies</Link></li>
                   <li><Link href="/guides/international-repatriation-remains/">Repatriating remains internationally</Link></li>
                   <li><Link href="/guides/death-certificates-cost/">Death certificate costs</Link></li>
+                  <li><Link href="/guides/burial-at-sea/">Burial at sea costs, Navy program & EPA rules</Link></li>
+                  <li><Link href="/guides/final-expense-burial-insurance/">Final expense insurance costs</Link></li>
+                  <li><Link href="/guides/file-complaint-funeral-home/">Filing a complaint against a funeral home</Link></li>
+                  <li><Link href="/guides/indigent-burial-assistance/">Indigent burial assistance programs</Link></li>
                 </ul>
               </div>
               <div>

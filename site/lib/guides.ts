@@ -267,6 +267,38 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/death-certificates-cost.jpg',
   },
+  {
+    slug: 'burial-at-sea',
+    title: 'How Much Does Burial at Sea Cost? (2026) — Navy Program, EPA Rules & Charter Prices',
+    blurb:
+      'Ash scattering ($100–$500 unattended) vs. full-body sea burial ($7,000–$17,000): EPA rules, Navy eligibility, and charter pricing.',
+    group: 'Planning',
+    image: '/images/guides/burial-at-sea.jpg',
+  },
+  {
+    slug: 'final-expense-burial-insurance',
+    title: "How Much Does Final Expense Insurance Cost? (2026) — and When It's a Bad Deal",
+    blurb:
+      'Typical premiums $30–$80/month for a $10,000 policy, simplified vs. guaranteed issue, and the traps that make it a bad deal.',
+    group: 'Rights & terms',
+    image: '/images/guides/final-expense-burial-insurance.jpg',
+  },
+  {
+    slug: 'indigent-burial-assistance',
+    title: 'Indigent Burial Assistance (2026): County Programs & What to Do With No Money for a Funeral',
+    blurb:
+      'How county indigent burial programs work, who qualifies, what they cover — plus veterans’ free burial and the SSA $255 payment explained.',
+    group: 'Planning',
+    image: '/images/guides/indigent-burial-assistance.jpg',
+  },
+  {
+    slug: 'file-complaint-funeral-home',
+    title: 'How to File a Complaint Against a Funeral Home (2026)',
+    blurb:
+      'The four doors: the funeral home itself, your state licensing board, the FTC, and your state attorney general — what each can do, what to document, and realistic timelines.',
+    group: 'Rights & terms',
+    image: '/images/guides/file-complaint-funeral-home.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
