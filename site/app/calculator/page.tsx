@@ -45,6 +45,70 @@ export default function CalculatorPage() {
           <li>Buy only the goods and services you want. You can supply your own casket or urn.</li>
         </ol>
         <p><Link href="/guides/funeral-rule-rights/">Know your rights under the FTC Funeral Rule →</Link></p>
+        <h2>How the estimate is built</h2>
+        <p>
+          Every number on this page comes from the same published model, so you can trace any
+          figure back to its source. It works in three layers.
+        </p>
+        <ol>
+          <li>
+            <strong>National benchmark.</strong> We start with the National Funeral Directors
+            Association 2023 median prices, the most widely cited national benchmark in the
+            industry. For example, the 2023 median for a funeral with viewing and burial was
+            $8,300.
+          </li>
+          <li>
+            <strong>Inflation adjustment.</strong> Those 2023 medians are brought forward to
+            August 2026 dollars using the Bureau of Labor Statistics Consumer Price Index for
+            funeral expenses (index 417.820 divided by the 2023 average of 379.301, a factor of
+            1.1016). That turns the $8,300 national median into $9,140 in current dollars.
+          </li>
+          <li>
+            <strong>State adjustment.</strong> National numbers are then scaled to your state
+            using the Bureau of Economic Analysis 2024 Regional Price Parities, which measure
+            how far above or below the national average each state prices goods and services.
+          </li>
+        </ol>
+        <p>
+          On top of that base, you add the pieces a funeral home median does not cover:
+          cemetery costs (plot, opening and closing, outer burial container, marker), cash
+          advances the funeral home pays to third parties on your behalf (flowers, obituary
+          notices, clergy honorarium, death certificates), and optional toggles for religious
+          traditions, VA burial benefits, and cemetery upkeep. The full method, with every
+          source linked, is on our <Link href="/methodology/">methodology page</Link>.
+        </p>
+        <h2>What this calculator cannot tell you</h2>
+        <p>
+          An honest tool lists its limits. These are modeled estimates, not quotes: any single
+          funeral home can price well above or below the modeled number, especially in high
+          cost metro areas. The model covers the six standard service types (traditional
+          burial, burial with vault, cremation with service, direct cremation, direct burial,
+          and green burial); it does not price alkaline hydrolysis, natural organic reduction,
+          or other newer dispositions, and availability of those options varies by state law.
+          Green burial figures are our own assumption, set at 60 percent of the traditional
+          burial anchor, because no national surveyed price exists yet. Treat the result as a
+          planning baseline and a negotiating reference, then verify against real General
+          Price Lists.
+        </p>
+        <h2>Calculator FAQ</h2>
+        <h3>Is this a quote from a funeral home?</h3>
+        <p>
+          No. It is an independent modeled estimate built from public data. Use it to plan a
+          budget and to sanity check the prices a funeral home gives you, not as a price any
+          specific provider will honor.
+        </p>
+        <h3>Why does my state differ from the national number?</h3>
+        <p>
+          Funeral costs track local price levels. A state whose overall prices run 15 percent
+          above the national average will show funeral estimates roughly 15 percent above the
+          national anchor. The state pages show the exact regional factor applied.
+        </p>
+        <h3>How current are these numbers?</h3>
+        <p>
+          The inflation adjustment runs through August 2026, the latest BLS funeral expenses
+          index available when the model was built. When newer CPI data is published, the
+          model is re run and every page updates together.
+        </p>
       </div>
     </>
   );
