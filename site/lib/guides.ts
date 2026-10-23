@@ -299,6 +299,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Rights & terms',
     image: '/images/guides/file-complaint-funeral-home.jpg',
   },
+  {
+    slug: 'burial-vault-cost',
+    title: 'How Much Does a Burial Vault Cost? Liners, Vaults & Your Rights',
+    blurb:
+      'A grave liner runs about $700 to $1,000; a sealed burial vault runs $900 to $13,000+. No law requires either one — most cemeteries do.',
+    group: 'Costs & data',
+    image: '/images/guides/burial-vault-cost.jpg',
+  },
+  {
+    slug: 'how-to-plan-a-funeral',
+    title: 'How to Plan a Funeral: A Step-by-Step Guide',
+    blurb:
+      'The ten steps in order, from the first phone calls to the paperwork after the service, with modeled 2026 costs at each decision point.',
+    group: 'Planning',
+    image: '/images/guides/how-to-plan-a-funeral.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

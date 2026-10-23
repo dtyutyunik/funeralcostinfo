@@ -46,6 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/final-expense-burial-insurance/',
     '/guides/file-complaint-funeral-home/',
     '/guides/indigent-burial-assistance/',
+    '/guides/burial-vault-cost/',
+    '/guides/how-to-plan-a-funeral/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
