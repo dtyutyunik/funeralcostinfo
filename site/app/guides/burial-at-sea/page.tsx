@@ -42,6 +42,14 @@ export default function BurialAtSea() {
       a: 'No. The committal ceremony is performed while the ship is deployed, so family members are not allowed to be present. The commanding officer notifies the family afterward with the date, time, and coordinates, and may send photos or video. Families who want to be present use a private charter company instead.',
     },
     {
+      q: 'How much does a Royal Caribbean burial at sea cost?',
+      a: 'Royal Caribbean does not publish a separate ceremony fee. Its guest policy allows the release of an approved biodegradable urn containing ashes while the ship is at sea: the urn must be free of plastic or wire, the entire urn is placed in the water, and the line may ask for proof that the urn is biodegradable. Confirm the current process with Guest Services before sailing. The family\u2019s practical costs are the cruise fare and the urn, unless the ship offers a paid extra.',
+    },
+    {
+      q: 'How much does burial at sea cost in San Diego?',
+      a: 'San Diego prices span the national range. One current operator lists $199 for an unattended scattering and $800 for a group of up to six, while the 1938 yacht JADA lists $2,925 for an all-inclusive 2.5-hour memorial for up to 28 guests. Vessel size, guest count, trip length, and whether the price includes permits and certificates explain most of the spread.',
+    },
+    {
       q: 'Do I have to report a burial at sea to the EPA?',
       a: 'Yes. Federal regulation 40 CFR 229.1 requires that all burials at sea be reported to the EPA within 30 days of the event. Private charter companies typically file this paperwork for you; if you do it yourself, the EPA provides an online reporting tool. State permits may also apply — California, for example, requires a disposition-of-remains permit.',
     },
@@ -177,6 +185,28 @@ export default function BurialAtSea() {
           allow ash scattering from the ship, and several charge no fee beyond the cruise fare and the urn —
           the ceremony is complimentary and the ship files the paperwork. But you're scattering on the ship's
           itinerary, not choosing the location or date, so it's not equivalent to a private charter.
+        </p>
+
+        <h2>Royal Caribbean burial at sea: cost and rules</h2>
+        <p>
+          Royal Caribbean is the cruise line families ask about most. Its guest policy allows the
+          release of a biodegradable urn containing ashes while the ship is at sea. This is not loose
+          scattering over a balcony: the urn must be an approved scattering or biodegradable urn, free
+          of plastic or wire, and the entire urn goes into the water. Royal Caribbean may request a
+          certificate proving the urn is biodegradable.
+        </p>
+        <p>
+          The line does not publish a separate ceremony fee in its policy. Ask Guest Services to confirm
+          the current shipboard process before you sail, because the crew controls the time and location
+          based on the itinerary and distance from land. Budget for the cruise fare and a compliant
+          biodegradable urn; do not assume a private ceremony space or officiant is included.
+        </p>
+        <p>
+          San Diego shows why private charters vary so much. Current local listings include a $199
+          unattended scattering, an $800 charter for up to six people, and a $2,925 all-inclusive
+          2.5-hour memorial aboard a vintage yacht for up to 28 guests. The cheapest option is not
+          comparable to the most expensive one unless guest count, trip time, permits, certificates,
+          and coordinates are matched line by line.
         </p>
 
         <h2>How burial at sea compares to other options</h2>

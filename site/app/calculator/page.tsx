@@ -1,32 +1,60 @@
 import type { Metadata } from 'next';
 import Calculator from '../../components/Calculator';
-import JsonLd, { breadcrumbJsonLd } from '../../components/JsonLd';
-import { SITE_URL } from '../../lib/data';
+import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '../../components/JsonLd';
+import { SITE_URL, dataset, fmt, SERVICE_ORDER } from '../../lib/data';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Funeral Cost Calculator — Build Your Estimate',
+  title: 'Funeral Cost Calculator and Estimator: 2026 State-by-State Estimate',
   description:
-    'Interactive funeral cost calculator: pick your state and service type, add cemetery and cash-advance costs, and get a modeled line-item estimate with an illustrative range. Print-friendly receipt included.',
+    'Free funeral cost calculator and estimator: pick your state and service type to build a 2026 modeled estimate for burial, cremation, cemetery charges, and cash advances. Compare the result with local funeral home price lists.',
   alternates: { canonical: SITE_URL + '/calculator/' },
   openGraph: {
-    title: 'Funeral Cost Calculator — Build Your Estimate',
+    title: 'Funeral Cost Calculator and Estimator: 2026 State-by-State Estimate',
     description:
-      'Pick your state and service type, add optional costs, and get a transparent modeled estimate with a print-friendly receipt.',
+      'Build a transparent funeral cost estimate by state and service type, with cemetery and cash-advance costs, a modeled range, and a printable receipt.',
     url: SITE_URL + '/calculator/',
   },
 };
 
+const faqs = [
+  {
+    q: 'What is the average funeral cost in the United States?',
+    a: 'Our modeled national estimates in August 2026 dollars are $9,140 for a traditional burial with viewing, $6,920 for cremation with a service, and $3,030 for direct cremation. These are planning estimates built from NFDA 2023 medians and the BLS funeral-expenses CPI, not quotes from a funeral home.',
+  },
+  {
+    q: 'How does this funeral cost estimator work?',
+    a: 'Choose a state and service type. The estimator starts with the NFDA 2023 national median, adjusts it to August 2026 dollars with the BLS funeral-expenses CPI, scales it with the state\u2019s BEA regional price parity, and then adds the cemetery and cash-advance items you select.',
+  },
+  {
+    q: 'Is the calculator result a funeral home quote?',
+    a: 'No. It is an independent modeled estimate for budgeting and comparison. A specific funeral home can charge more or less. Request its General Price List and compare each line with the calculator result.',
+  },
+  {
+    q: 'What funeral costs can I add to the estimate?',
+    a: 'The calculator can add cemetery plot, opening and closing, burial container, marker, flowers, obituary, clergy, death certificates, and other cash advances, plus optional adjustments for religious traditions, VA benefits, cemetery upkeep, and body donation where those options apply.',
+  },
+  {
+    q: 'Why does my state differ from the national number?',
+    a: 'Funeral costs track local price levels. A state whose overall prices run 15 percent above the national average will show funeral estimates roughly 15 percent above the national anchor. The state pages show the exact regional factor applied.',
+  },
+  {
+    q: 'How current are these numbers?',
+    a: 'The inflation adjustment runs through August 2026, the latest BLS funeral expenses index available when the model was built. When newer CPI data is published, the model is rerun and every page updates together.',
+  },
+];
+
 export default function CalculatorPage() {
   return (
     <>
+      <JsonLd data={faqJsonLd(faqs)} />
       <JsonLd data={breadcrumbJsonLd([
         { name: 'Home', url: SITE_URL + '/' },
         { name: 'Calculator', url: SITE_URL + '/calculator/' },
       ])} />
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Calculator</nav>
-        <h1>Funeral cost calculator</h1>
+        <h1>Funeral cost calculator and estimator</h1>
         <p className="answer-first">
           <strong>Quick answer:</strong> choose your state and service type below, add typical
           cemetery and cash-advance costs, and get a transparent modeled estimate — every number
@@ -37,6 +65,34 @@ export default function CalculatorPage() {
           real General Price Lists from local funeral homes.
         </p>
         <Calculator defaultState="CA" />
+        <h2>National funeral cost estimates used by this calculator</h2>
+        <p>
+          These national starting points are modeled estimates in August 2026 dollars. Select a state
+          in the calculator to scale them to local price levels.
+        </p>
+        <table>
+          <thead>
+            <tr><th>Service type</th><th>Modeled national estimate</th><th>State estimate</th></tr>
+          </thead>
+          <tbody>
+            {SERVICE_ORDER.map((key) => {
+              return (
+                <tr key={key}>
+                  <td>{dataset.anchors[key].label}</td>
+                  <td><strong>{fmt(dataset.anchors[key].value)}</strong></td>
+                  <td><Link href="/guides/funeral-costs-by-state-2026/">Compare all states</Link></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        <p>
+          For a state-specific breakdown before using the estimator, start with our{' '}
+          <Link href="/guides/funeral-costs-by-state-2026/">funeral costs by state guide</Link> or open a
+          state page such as <Link href="/funeral-costs/california/">California</Link>,{' '}
+          <Link href="/funeral-costs/texas/">Texas</Link>, <Link href="/funeral-costs/florida/">Florida</Link>,
+          or <Link href="/funeral-costs/new-york/">New York</Link>.
+        </p>
         <h2>How to use this with a real funeral home</h2>
         <ol>
           <li>Build your estimate above and print it.</li>
@@ -91,24 +147,14 @@ export default function CalculatorPage() {
           Price Lists.
         </p>
         <h2>Calculator FAQ</h2>
-        <h3>Is this a quote from a funeral home?</h3>
-        <p>
-          No. It is an independent modeled estimate built from public data. Use it to plan a
-          budget and to sanity check the prices a funeral home gives you, not as a price any
-          specific provider will honor.
-        </p>
-        <h3>Why does my state differ from the national number?</h3>
-        <p>
-          Funeral costs track local price levels. A state whose overall prices run 15 percent
-          above the national average will show funeral estimates roughly 15 percent above the
-          national anchor. The state pages show the exact regional factor applied.
-        </p>
-        <h3>How current are these numbers?</h3>
-        <p>
-          The inflation adjustment runs through August 2026, the latest BLS funeral expenses
-          index available when the model was built. When newer CPI data is published, the
-          model is re run and every page updates together.
-        </p>
+        <div className="faq">
+          {faqs.map((f) => (
+            <details key={f.q}>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </>
   );

@@ -189,9 +189,9 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'aquamation-guide',
-    title: "Aquamation: Costs & Where It's Legal",
+    title: 'Aquamation Cost: Alkaline Hydrolysis Prices, Definition & Where It Is Legal',
     blurb:
-      'Alkaline hydrolysis explained — where it is legal, what providers charge, and how it compares to cremation.',
+      'Water cremation explained: published provider prices, how alkaline hydrolysis compares with cremation, and where it is legal.',
     group: 'Costs & data',
     image: '/images/guides/aquamation-guide.jpg',
   },
@@ -277,9 +277,9 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'final-expense-burial-insurance',
-    title: "How Much Does Final Expense Insurance Cost? (2026) — and When It's a Bad Deal",
+    title: 'Burial Insurance and Final Expense Insurance Cost: 2026 Rates by Age',
     blurb:
-      'Typical premiums $30–$80/month for a $10,000 policy, simplified vs. guaranteed issue, and the traps that make it a bad deal.',
+      'Burial insurance rates for a $10,000 policy by age, smoker differences, simplified vs. guaranteed issue, and the traps that make it a bad deal.',
     group: 'Rights & terms',
     image: '/images/guides/final-expense-burial-insurance.jpg',
   },

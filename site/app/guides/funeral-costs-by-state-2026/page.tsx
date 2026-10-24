@@ -169,9 +169,8 @@ export default function FuneralCostsByStateGuide() {
 
         <h2>All 51 jurisdictions, ranked</h2>
         <p>
-          Sorted from most to least expensive by traditional burial. The five states we have covered
-          in depth — California, Texas, Florida, New York, and Mississippi — link to their full
-          state pages with line-item breakdowns, add-ons, and official resources.
+          Sorted from most to least expensive by traditional burial. Every jurisdiction links to its
+          full state page with service-by-service estimates, local caveats, and official resources.
         </p>
         <div className="table-scroll">
           <table className="data">
@@ -222,9 +221,8 @@ export default function FuneralCostsByStateGuide() {
         </p>
         <p>
           <strong>Figures need no inflation adjustment</strong> — they are already in August 2026
-          dollars. Cemetery fees (plot, opening/closing) are included in the traditional burial
-          figure as modeled from the NFDA median; actual cemetery charges vary separately, so
-          compare cemeteries on their own price list too.
+          dollars. Cemetery fees (plot, opening/closing) are not included in the traditional burial
+          figure, so compare cemeteries on their own price list too.
         </p>
 
         <p>

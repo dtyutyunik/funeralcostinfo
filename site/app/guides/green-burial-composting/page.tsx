@@ -251,7 +251,10 @@ export default function GreenBurialCompostingGuide() {
 
         <h2>Alternatives worth considering</h2>
         <p>
-          Green burial and composting aren&apos;t for everyone. Body donation to science through a
+          Green burial and composting aren&apos;t for everyone. Aquamation is another lower-impact
+          option where it is legal: it uses water and alkali instead of flame, and published prices
+          range from $1,897 to $4,395. See our <Link href="/guides/aquamation-guide/">aquamation cost
+          and legality guide</Link> for the state list and the comparison with cremation. Body donation to science through a
           willed-body program typically costs the family nothing — programs usually cover transport and
           cremation — though acceptance is decided at the time of death and an open-casket funeral
           isn&apos;t possible. And the conventional options remain: see{' '}

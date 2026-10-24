@@ -9,20 +9,36 @@ import RelatedGuides from '../../../components/RelatedGuides';
 const A = dataset.anchors;
 
 export const metadata: Metadata = {
-  title: "Aquamation: Costs & Where It's Legal",
+  title: 'Aquamation Cost: Alkaline Hydrolysis Prices, Definition & Where It Is Legal',
   description:
-    "What aquamation (alkaline hydrolysis) is, how much it costs, the states where it's legal as of 2026, and how it compares with cremation.",
+    'Aquamation cost and alkaline hydrolysis prices in 2026: published provider prices from $1,900 to $4,400, what water cremation means, how it compares with cremation, and where it is legal.',
   alternates: { canonical: SITE_URL + '/guides/aquamation-guide/' },
   openGraph: {
-    title: "Aquamation: Costs & Where It's Legal",
+    title: 'Aquamation Cost: Alkaline Hydrolysis Prices, Definition & Where It Is Legal',
     description:
-      'Plain-English guide to aquamation (water cremation): the process, sourced provider prices, where it is legal, and how it compares with cremation.',
+      'Water cremation costs, published provider prices, the alkaline hydrolysis process, and a state legality guide with a direct comparison to cremation costs.',
     url: SITE_URL + '/guides/aquamation-guide/',
   },
 };
 
 export default function AquamationGuide() {
   const faqs = [
+    {
+      q: 'How much does aquamation cost?',
+      a: 'There is no reliable national average. Published provider prices reviewed for this guide range from $1,897 for a Chicago provider to $3,500 to $4,395 in a July 2026 sample of aquamation packages. Transport, permits, an urn, and out-of-state arrangements can add to the quoted price, so compare the provider\u2019s itemized General Price List.',
+    },
+    {
+      q: 'Aquamation vs. cremation cost: which is cheaper?',
+      a: 'It depends on the cremation type. Our modeled national estimate for direct cremation is $3,030, while published aquamation packages often run $3,500 to $4,395, although one Chicago provider advertises $1,897. Aquamation is usually less expensive than cremation with a viewing and service, modeled at $6,920, but it is not reliably cheaper than direct cremation.',
+    },
+    {
+      q: 'Is aquamation legal in California?',
+      a: 'Yes. California appears on both the Cremation Association of North America March 2026 status list and the May 2026 Mueller Memorial / Interra list of states where alkaline hydrolysis is explicitly legal. Legal status does not guarantee a nearby provider, so confirm availability and transport costs before planning.',
+    },
+    {
+      q: 'Is aquamation legal in Illinois?',
+      a: 'Yes. Illinois appears on both 2026 legality lists reviewed for this guide. Caring Cremations in Chicago advertises aquamation starting at $1,897, including transportation, paperwork, and return of the remains, but families should confirm the current price and service area directly with the provider.',
+    },
     {
       q: 'Is aquamation the same as cremation?',
       a: 'The word is used both ways. Legally, several states define alkaline hydrolysis as a form of cremation or final disposition; technically, it uses warm water and alkali instead of flame. In practice, if a state statute says "cremation," read the definition — some states mean only flame-based cremation, while others explicitly include alkaline hydrolysis.',
@@ -55,19 +71,19 @@ export default function AquamationGuide() {
       <JsonLd data={breadcrumbJsonLd([
         { name: 'Home', url: SITE_URL + '/' },
         { name: 'Guides', url: SITE_URL + '/guides/' },
-        { name: "Aquamation: costs & where it's legal", url: SITE_URL + '/guides/aquamation-guide/' },
+        { name: 'Aquamation cost and alkaline hydrolysis', url: SITE_URL + '/guides/aquamation-guide/' },
       ])} />
       <div className="wrap prose">
-        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Aquamation: costs &amp; where it&rsquo;s legal</nav>
+        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Aquamation cost and alkaline hydrolysis</nav>
       <JsonLd data={articleJsonLd({
-        title: "Aquamation: Costs & Where It's Legal",
-        description: "What aquamation (alkaline hydrolysis) is, how much it costs, the states where it's legal as of 2026, and how it compares with cremation.",
+        title: 'Aquamation Cost: Alkaline Hydrolysis Prices, Definition & Where It Is Legal',
+        description: 'Aquamation cost and alkaline hydrolysis prices in 2026: published provider prices from $1,900 to $4,400, what water cremation means, how it compares with cremation, and where it is legal.',
         url: SITE_URL + '/guides/aquamation-guide/',
         datePublished: '2026-09-24',
         dateModified: LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <GuideHero slug="aquamation-guide" imageAlt="Aquamation: Costs & Where It's Legal"><h1>Aquamation: what it is, what it costs, and where it&rsquo;s legal</h1></GuideHero>
+        <GuideHero slug="aquamation-guide" imageAlt="Aquamation cost: alkaline hydrolysis prices, definition, and where water cremation is legal"><h1>Aquamation cost: alkaline hydrolysis prices, definition and where it is legal</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -137,6 +153,17 @@ export default function AquamationGuide() {
           differ by state, so confirm before you plan.
         </p>
 
+        <h2>Aquamation in California and Illinois</h2>
+        <p>
+          California and Illinois are both on the 2026 lists of states where alkaline hydrolysis is
+          explicitly legal. That answers the legal question, not the availability question. California
+          families may still need to use a provider outside their county, and Illinois families should
+          confirm whether a quoted price includes transfer from the place of death. In Chicago, Caring
+          Cremations advertises aquamation starting at <strong>$1,897</strong>, including transportation,
+          paperwork, and return of the remains. Treat that as one provider's current advertised starting
+          price, not an Illinois average.
+        </p>
+
         <h2>What aquamation costs</h2>
         <p>
           There is no reliable national average — we did not find one from any neutral source, and
@@ -167,6 +194,23 @@ export default function AquamationGuide() {
           still few — though at least one Minnesota provider, Interra Green Burial, deliberately
           prices aquamation close to flame cremation to encourage the option (May 2026). As always,
           get an itemized quote from the actual provider you would use.
+        </p>
+
+        <h2>Aquamation vs. cremation cost</h2>
+        <table>
+          <thead>
+            <tr><th>Option</th><th>Price basis</th><th>Process</th><th>Availability</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Aquamation</strong></td><td>Published provider prices from $1,897 to $4,395</td><td>Warm water and alkali</td><td>Limited, even in many legal states</td></tr>
+            <tr><td><strong>Direct cremation</strong></td><td>Modeled national estimate of {fmt(A.direct_cremation.value)}</td><td>Flame cremation with no service</td><td>Widely available</td></tr>
+            <tr><td><strong>Cremation with service</strong></td><td>Modeled national estimate of {fmt(A.cremation_with_service.value)}</td><td>Viewing or ceremony plus flame cremation</td><td>Widely available</td></tr>
+          </tbody>
+        </table>
+        <p>
+          The short answer to "aquamation vs. cremation cost" is that aquamation often costs more than
+          direct cremation and less than cremation with a full service. The provider's location matters
+          more than the national comparison because transport can erase any savings.
         </p>
 
         <h2>Why most families will need to travel or ship</h2>

@@ -26,6 +26,10 @@ export default function InternationalRepatriationRemains() {
       a: 'There is no single national price, but published estimates cluster at $5,000–$15,000 on average (per the International Travel & Health Insurance Journal), with travel insurers reporting $3,250–$26,010 and some routes running $10,000–$30,000+ depending on distance, destination regulations, and logistics. The bill combines the shipping funeral home\u2019s charges, embalming, the shipping container, airline cargo fees, consular and document fees, and the receiving funeral home\u2019s charges abroad.',
     },
     {
+      q: 'How long does it take to repatriate a body?',
+      a: 'Plan for about 10 to 15 days in routine international cases, according to travel-protection guides. Missing documents, coroner involvement, certified translations, remote locations, and destination-country requirements can stretch the process into months. Do not book non-refundable funeral services until the shipment is confirmed on a cargo manifest.',
+    },
+    {
       q: 'Does the body have to be embalmed to be repatriated?',
       a: 'Almost always, yes. Embalming is a regulatory requirement for air and sea transport of human remains under international shipping standards, and the US requires remains to be properly embalmed and placed in a hermetically sealed casket (or cremated, or shipped under a CDC Director permit) to clear customs under 42 CFR 71.55. The receiving country may impose its own preservation requirements as well.',
     },
@@ -75,6 +79,20 @@ export default function InternationalRepatriationRemains() {
           the family bears the cost.
         </p>
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+
+        <h2>Body repatriation cost at a glance</h2>
+        <table>
+          <thead>
+            <tr><th>Question</th><th>Short answer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Typical international cost</strong></td><td>$5,000 to $15,000+, with insurer-reported cases from $3,250 to $26,010</td></tr>
+            <tr><td><strong>Typical timeline</strong></td><td>About 10 to 15 days in routine cases; complex cases can take months</td></tr>
+            <tr><td><strong>Who pays?</strong></td><td>The family or estate, unless travel insurance or a repatriation plan covers it. The US government does not pay.</td></tr>
+            <tr><td><strong>Biggest cost drivers</strong></td><td>Distance, airline cargo, embalming, sealed container, documents and translations, and funeral homes at both ends</td></tr>
+            <tr><td><strong>Cheaper alternative</strong></td><td>Cremate in the country of death and carry or ship the ashes home</td></tr>
+          </tbody>
+        </table>
 
         <h2>How much does it cost to repatriate a body internationally?</h2>
         <p>

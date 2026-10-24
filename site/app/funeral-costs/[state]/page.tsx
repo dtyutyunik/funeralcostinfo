@@ -743,9 +743,9 @@ export async function generateMetadata({ params }: { params: Promise<{ state: st
   if (!st) return {};
   const trad = st.estimates.traditional_burial;
   const crem = st.estimates.direct_cremation;
-  const title = `Funeral Costs in ${st.name} (2026): Modeled Estimates by Service Type`;
+  const title = `How Much Does a Funeral Cost in ${st.name}? 2026 Burial and Cremation Estimates`;
   const description =
-    `How much does a funeral cost in ${st.name}? Modeled estimate in August 2026 dollars: ${fmt(trad.point)} for a traditional burial with viewing (NFDA 2023 median $${dataset.anchors.traditional_burial.value_2023.toLocaleString()} inflated via the BLS funeral-expenses CPI, adjusted for ${st.name} prices), ${fmt(crem.point)} for direct cremation. Independent — no funeral-home money.`;
+    `Average funeral cost in ${st.name}: modeled 2026 estimates are ${fmt(trad.point)} for a traditional burial, ${fmt(st.estimates.cremation_with_service.point)} for cremation with a service, and ${fmt(crem.point)} for direct cremation. Compare ranges, inclusions, local rules, and official resources.`;
   const url = `${SITE_URL}/funeral-costs/${state}/`;
   return {
     title, description,
@@ -763,6 +763,10 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   const maxPoint = Math.max(...SERVICE_ORDER.map((k) => st.estimates[k].point));
 
   const faqs = [
+    {
+      q: `What is the average cost of cremation in ${st.name}?`,
+      a: `Our modeled 2026 estimate for direct cremation in ${st.name} is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). Cremation with a viewing and service is modeled at ${fmt(st.estimates.cremation_with_service.point)} (range ${fmtRange(st.estimates.cremation_with_service)}). These figures exclude a cemetery niche or plot, an upgraded urn, and most cash-advance items.`,
+    },
     {
       q: `Are these real prices from ${st.name} funeral homes?`,
       a: `No. These are modeled estimates: the NFDA 2023 national median, adjusted to August 2026 dollars with the BLS funeral-expenses CPI and scaled by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). No state-level funeral price survey exists. Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
@@ -852,6 +856,19 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           </div>
         </div>
 
+        <h2>Cremation costs in {st.name}</h2>
+        <p>
+          The average cost of cremation in {st.name} depends on whether a service is held. Direct
+          cremation, with no viewing or ceremony, is modeled at{' '}
+          <strong>{fmt(st.estimates.direct_cremation.point)}</strong> (range{' '}
+          {fmtRange(st.estimates.direct_cremation)}). Cremation with a viewing and service is modeled
+          at <strong>{fmt(st.estimates.cremation_with_service.point)}</strong> (range{' '}
+          {fmtRange(st.estimates.cremation_with_service)}). Use the{' '}
+          <Link href="/calculator/">funeral cost calculator and estimator</Link> to add an urn, cemetery
+          niche, death certificates, and other items, or read the national{' '}
+          <Link href="/guides/cremation-cost-2026/">cremation cost guide</Link> for what each option includes.
+        </p>
+
         <h2>What&apos;s included — and what isn&apos;t</h2>
         <p><strong>Included</strong> (per the NFDA median definition): basic services fee, removal/transfer,
         embalming and preparation, viewing and ceremony facilities/staff, hearse, service car, memorial
@@ -865,7 +882,9 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           <p style={{ margin: '8px 0' }}>
             <strong>Planning ahead?</strong> Final-expense insurance is one way families fund funeral costs.
             We have no insurance partnerships yet, so there is nothing to click — when we add vetted,
-            clearly-labeled options, they will appear here. <Link href="/affiliate-disclosure/">Read our disclosure</Link>.
+            clearly-labeled options, they will appear here. Before buying, read our{' '}
+            <Link href="/guides/final-expense-burial-insurance/">burial insurance and final expense cost guide</Link>{' '}
+            for rates by age and the waiting-period traps. <Link href="/affiliate-disclosure/">Read our disclosure</Link>.
           </p>
         </div>
 
@@ -882,6 +901,14 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           )}
           <li><a href="https://consumer.ftc.gov/articles/ftc-funeral-rule">FTC Funeral Rule — your federal rights</a></li>
           <li><Link href="/guides/funeral-rule-rights/">Our plain-English guide to the Funeral Rule</Link></li>
+        </ul>
+
+        <h2>Compare {st.name} with the national picture</h2>
+        <ul>
+          <li><Link href="/guides/funeral-costs-by-state-2026/">Funeral costs by state</Link> compares all 51 jurisdictions side by side.</li>
+          <li><Link href="/guides/funeral-cost-2026-breakdown/">The 2026 funeral cost breakdown</Link> explains the national service types and what moves a quote.</li>
+          <li><Link href="/guides/how-to-plan-a-funeral/">How to plan a funeral</Link> walks through the decisions in order.</li>
+          <li><Link href="/guides/burial-vault-cost/">Burial vault costs</Link> explains the cemetery charge that is not in the traditional-burial estimate.</li>
         </ul>
 
         <h2>Frequently asked questions</h2>

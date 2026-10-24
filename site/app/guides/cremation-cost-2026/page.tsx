@@ -136,6 +136,15 @@ export default function CremationCostGuide() {
           need them for banks, insurers, and property transfer.
         </p>
 
+        <h2>Considering aquamation instead of flame cremation?</h2>
+        <p>
+          Aquamation, also called alkaline hydrolysis or water cremation, uses warm water and alkali
+          instead of flame. Published provider prices range from $1,897 to $4,395, so it may cost more
+          or less than direct cremation depending on the provider and transport distance. It is legal
+          in about half the states and unavailable in many local markets. Compare the process, price,
+          and legal status in our <Link href="/guides/aquamation-guide/">aquamation cost guide</Link>.
+        </p>
+
         <h2>Why direct cremation quotes vary so much</h2>
         <p>
           Direct cremation is the funeral price with the widest spread — you might see advertised

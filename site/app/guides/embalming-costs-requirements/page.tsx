@@ -30,6 +30,10 @@ export default function EmbalmingCostsRequirements() {
       a: 'The national median embalming charge was $845 in the NFDA’s 2023 General Price List study (up 9% from $775 in 2021). Most funeral homes charge $500–$1,100. "Other preparation of the body" adds a median $295. Refrigeration, the alternative, typically runs $40–$125 per day on published price lists.',
     },
     {
+      q: 'How much is it to embalm a body?',
+      a: 'The NFDA\u2019s 2023 median embalming charge was $845, and most funeral homes charge about $500 to $1,100. If the funeral home also charges the separate median $295 for other preparation of the body, the combined preparation total is $1,140 before any viewing, ceremony, casket, or cemetery costs.',
+    },
+    {
       q: 'Do I have to embalm before cremation?',
       a: 'No. Embalming is never legally required for cremation — the FTC Funeral Rule’s mandatory disclosure says so outright, and Indiana law even prohibits crematories from refusing unembalmed bodies. If a provider says embalming is needed for cremation, ask them to cite the specific statute.',
     },
@@ -84,6 +88,18 @@ export default function EmbalmingCostsRequirements() {
           <li><strong>"Other preparation of the body":</strong> a separate line item with an NFDA median of $295 (2023).</li>
           <li><strong>Refrigeration (the alternative):</strong> no national median is published; real GPL examples run $40–$125/day — effective for weeks, at a fraction of embalming's cost.</li>
         </ul>
+        <h2>Embalming cost breakdown: the cost to embalm a body</h2>
+        <table>
+          <thead>
+            <tr><th>Charge</th><th>Published figure</th><th>What it means</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Embalming</strong></td><td>$845 median; typically $500 to $1,100</td><td>The preservation procedure itself (NFDA 2023)</td></tr>
+            <tr><td><strong>Other preparation of the body</strong></td><td>$295 median</td><td>A separate General Price List line that may be charged in addition to embalming</td></tr>
+            <tr><td><strong>Embalming plus other preparation</strong></td><td>$1,140 using both medians</td><td>A useful comparison total when both lines appear on a quote</td></tr>
+            <tr><td><strong>Refrigeration</strong></td><td>About $40 to $125 per day</td><td>The usual alternative when embalming is declined</td></tr>
+          </tbody>
+        </table>
         <p>
           Embalming is also the classic upsell pressure point: it is presented as standard and necessary, so
           families agree without asking the price. Ask for the embalming line item on the General Price List
@@ -150,8 +166,7 @@ export default function EmbalmingCostsRequirements() {
         </ul>
         <p>
           If a provider misrepresents the law or charges without consent, that is a Funeral Rule violation —
-          file a complaint with the FTC (see our <Link href="/guides/filing-funeral-home-complaint/">guide to
-          filing a complaint</Link> once published; for now, start at consumer.ftc.gov).
+          see our <Link href="/guides/file-complaint-funeral-home/">guide to filing a complaint against a funeral home</Link>.
         </p>
 
         <h2>Funeral home policy is not the law</h2>

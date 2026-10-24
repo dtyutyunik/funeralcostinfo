@@ -7,20 +7,32 @@ import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
-  title: "How Much Does Final Expense Insurance Cost? (2026) — and When It's a Bad Deal",
+  title: 'Burial Insurance and Final Expense Insurance Cost: 2026 Rates by Age',
   description:
-    'How much does final expense insurance cost in 2026: typical premiums of $30–$80/month for a $10,000 policy, what drives the price (age, health tier, tobacco), simplified-issue vs. guaranteed-issue and its 2–3 year graded waiting period, and the traps that make it a bad deal.',
+    'Burial insurance cost and final expense insurance rates in 2026: what a $10,000 policy costs by age, smoker vs. non-smoker differences, simplified-issue vs. guaranteed-issue, the 2 to 3 year waiting period, and when the policy is a bad deal.',
   alternates: { canonical: SITE_URL + '/guides/final-expense-burial-insurance/' },
   openGraph: {
-    title: "How Much Does Final Expense Insurance Cost? (2026) — and When It's a Bad Deal",
+    title: 'Burial Insurance and Final Expense Insurance Cost: 2026 Rates by Age',
     description:
-      'A $10,000 final expense policy typically runs $30–$80 a month for a healthy non-smoker. What drives the price, the graded waiting period on guaranteed-issue policies, and the traps to avoid.',
+      'A $10,000 burial or final expense policy typically runs $30 to $80 a month for a healthy non-smoker. See rates by age, the guaranteed-issue waiting period, and the traps to avoid.',
     url: SITE_URL + '/guides/final-expense-burial-insurance/',
   },
 };
 
 export default function FinalExpenseBurialInsurance() {
   const faqs = [
+    {
+      q: 'How much does burial insurance cost?',
+      a: 'Burial insurance is another name for final expense insurance. For a $10,000 simplified-issue policy for a non-smoker, 2026 carrier rate compilations put typical monthly premiums at about $25 to $35 for a 50-year-old man, $55 to $75 at age 65, and $75 to $100 at age 70. Women usually pay less. Guaranteed-issue policies cost more and usually have a 2 to 3 year graded waiting period.',
+    },
+    {
+      q: 'How much does final expense insurance cost for a man in his mid-60s?',
+      a: 'For a healthy non-smoker in his mid-60s, the rate table below puts a $10,000 simplified-issue policy at about $55 to $75 a month. Tobacco users often pay about 30% to 50% more than non-tobacco users, according to Asurgo, which works out to roughly $72 to $113 a month on the same range. The exact quote depends on the carrier, health answers, and policy type.',
+    },
+    {
+      q: 'How do I calculate whether a final expense policy is worth it?',
+      a: 'Use this worksheet: choose the funeral cost you want to cover, subtract savings and any existing coverage or benefits, and buy only the remaining gap. Then divide the policy face amount by the annual premium. At $75 a month, a $10,000 policy takes about 11.1 years of premiums to equal the benefit; at $100 a month, about 8.3 years. That break-even check does not capture the value of being covered immediately, but it shows when long-term premiums can outgrow the payout.',
+    },
     {
       q: 'How much does final expense insurance cost per month?',
       a: 'MoneyGeek\u2019s 2026 rate analysis puts the average at about $30 a month for a healthy 50-year-old woman and $38 for a man, for $10,000 of coverage. Premiums rise steeply with age: roughly $40–$55/month for men in their early 60s and $75–$100/month by age 70, per 2026 carrier rate compilations from ClearPath. Tobacco use, poorer health, and guaranteed-issue underwriting all push premiums higher.',
@@ -57,19 +69,19 @@ export default function FinalExpenseBurialInsurance() {
       <JsonLd data={breadcrumbJsonLd([
         { name: 'Home', url: SITE_URL + '/' },
         { name: 'Guides', url: SITE_URL + '/guides/' },
-        { name: 'Final expense & burial insurance cost', url: SITE_URL + '/guides/final-expense-burial-insurance/' },
+        { name: 'Burial insurance and final expense insurance cost', url: SITE_URL + '/guides/final-expense-burial-insurance/' },
       ])} />
       <div className="wrap prose">
-        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Final expense & burial insurance cost</nav>
+        <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Burial insurance and final expense insurance cost</nav>
         <JsonLd data={articleJsonLd({
-          title: "How Much Does Final Expense Insurance Cost? (2026) — and When It's a Bad Deal",
-          description: 'How much does final expense insurance cost in 2026: typical premiums of $30–$80/month for a $10,000 policy, what drives the price (age, health tier, tobacco), simplified-issue vs. guaranteed-issue and its 2–3 year graded waiting period, and the traps that make it a bad deal.',
+          title: 'Burial Insurance and Final Expense Insurance Cost: 2026 Rates by Age',
+          description: 'Burial insurance cost and final expense insurance rates in 2026: what a $10,000 policy costs by age, smoker vs. non-smoker differences, simplified-issue vs. guaranteed-issue, the 2 to 3 year waiting period, and when the policy is a bad deal.',
           url: SITE_URL + '/guides/final-expense-burial-insurance/',
           datePublished: '2026-10-01',
           dateModified: LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
-        <GuideHero slug="final-expense-burial-insurance" imageAlt="How much does final expense insurance cost? A stack of policy papers and coins on a desk, no people"><h1>How much does final expense insurance cost? (2026) — and when it's a bad deal</h1></GuideHero>
+        <GuideHero slug="final-expense-burial-insurance" imageAlt="Burial insurance and final expense insurance cost: policy papers and coins on a desk, no people"><h1>Burial insurance and final expense insurance cost: 2026 rates by age</h1></GuideHero>
         <Byline />
 
         <p className="answer-first">
@@ -82,6 +94,15 @@ export default function FinalExpenseBurialInsurance() {
           your family gets back.
         </p>
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+
+        <h2>Burial insurance cost at a glance</h2>
+        <ul>
+          <li><strong>Typical cost:</strong> about $30 to $80 a month for a $10,000 policy for a healthy non-smoker in the 50s to mid-60s.</li>
+          <li><strong>At age 65:</strong> about $45 to $60 a month for women and $55 to $75 for men in the simplified-issue rate table below.</li>
+          <li><strong>Smokers:</strong> tobacco use can add roughly 30% to 50% to the premium, depending on the carrier and lookback period.</li>
+          <li><strong>Guaranteed issue:</strong> usually 30% to 50% more than simplified issue, with a 2 to 3 year graded benefit period.</li>
+          <li><strong>First check:</strong> divide the face amount by the annual premium to see how many years of payments equal the benefit.</li>
+        </ul>
 
         <h2>How much does final expense insurance cost by age</h2>
         <p>
@@ -116,6 +137,21 @@ export default function FinalExpenseBurialInsurance() {
           The LIMRA–Life Insurers Council 2025 Final Expense Survey (30 carriers) found average policies were
           $15,344 of coverage for simplified-issue and $11,299 for guaranteed-issue, with an average annual
           premium of $1,064 — about $89 a month — per policy issued (reported by BestMoney, September 2026).
+        </p>
+
+        <h2>A two-minute final expense insurance worksheet</h2>
+        <p>
+          This is the calculation a final expense insurance calculator should make before showing a quote:
+        </p>
+        <ol>
+          <li><strong>Pick the funeral target.</strong> Our modeled national estimates are $3,030 for direct cremation, $6,920 for cremation with a service, and $9,140 for a traditional burial.</li>
+          <li><strong>Subtract what is already covered.</strong> Remove savings set aside for the funeral, existing life insurance, VA benefits, and any prepaid plan.</li>
+          <li><strong>Buy only the gap.</strong> If the target is $9,140 and $4,000 is already covered, a policy near $5,000 may fit better than a $10,000 policy.</li>
+          <li><strong>Run the break-even check.</strong> Face amount divided by annual premium gives the number of years for premiums to equal the benefit. A $10,000 policy at $75 a month reaches $10,000 in about 11.1 years; at $100 a month, about 8.3 years.</li>
+        </ol>
+        <p>
+          The worksheet cannot price health underwriting. Use it to choose a sensible face amount, then compare
+          written quotes for that same amount and policy type.
         </p>
 
         <h2>What final expense insurance actually is (and isn't)</h2>

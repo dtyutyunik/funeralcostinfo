@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
-import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
+import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt, stateSlug } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
@@ -30,13 +30,9 @@ const ROWS = [
   { key: 'green', name: 'Green (natural) burial', blurb: 'No embalming, biodegradable materials, no vault.', anchor: 'green_burial', assumption: true },
 ];
 
-const STATES = [
-  { slug: 'california', name: 'California' },
-  { slug: 'texas', name: 'Texas' },
-  { slug: 'florida', name: 'Florida' },
-  { slug: 'new-york', name: 'New York' },
-  { slug: 'mississippi', name: 'Mississippi' },
-];
+const STATES = [...dataset.states]
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map((s) => ({ slug: stateSlug(s.name), name: s.name }));
 
 export default function FuneralCost2026Breakdown() {
   const faqs = [
@@ -172,7 +168,10 @@ export default function FuneralCost2026Breakdown() {
           Independent local price surveys — such as the <a href="https://www.fingerlakesfunerals.org/price-survey" rel="noopener noreferrer">Funeral Consumers Alliance Finger Lakes 2025 price survey</a> — are the best reality check for your area.
         </p>
         <p>
-          Comparison shopping is your strongest tool, and it is getting easier. The Funeral
+          Comparison shopping is your strongest tool, and it is getting easier. Ownership can matter
+          too: our <Link href="/guides/corporate-vs-independent-funeral-homes/">corporate vs. independent
+          funeral homes guide</Link> explains the published price gap and how to check who owns a home.
+          The Funeral
           Consumers Alliance&rsquo;s Maryland/DC chapter published a comparative cost survey in
           July 2026 covering Washington-area funeral homes and cemeteries &mdash; independent
           surveys like these are the closest thing to a real price list the industry has. Your own
@@ -220,15 +219,18 @@ export default function FuneralCost2026Breakdown() {
           or children. FEMA funeral assistance exists only for federally declared disasters — its
           COVID-19 program has closed. Some localities help with indigent burials: New York City,
           for example, pays up to $1,700 toward qualifying funerals. Crowdfunding, pre-need savings,
-          and final-expense insurance round out the picture — but know the limits of each before
+          and <Link href="/guides/final-expense-burial-insurance/">final-expense insurance</Link> round out the picture, but know the limits of each before
           you need them.
         </p>
 
         <h2>Get your number</h2>
         <p>
           National estimates are a starting point; your bill depends on your choices and your zip
-          code. Build a line-item estimate with our <Link href="/calculator/">funeral cost calculator</Link>,
-          or drill into the states we cover in depth:
+          code. If a death has just happened, start with the{' '}
+          <Link href="/guides/when-someone-dies-checklist/">first 48 hours checklist</Link> or the{' '}
+          <Link href="/guides/how-to-plan-a-funeral/">step-by-step funeral planning guide</Link>. Build
+          a line-item estimate with our <Link href="/calculator/">funeral cost calculator</Link>,
+          or drill into your state:
         </p>
         <ul>
           {STATES.map((s) => (
