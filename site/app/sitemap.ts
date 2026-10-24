@@ -48,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/indigent-burial-assistance/',
     '/guides/burial-vault-cost/',
     '/guides/how-to-plan-a-funeral/',
+    '/guides/cremation-diamonds-cost/',
+    '/guides/funeral-loans/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

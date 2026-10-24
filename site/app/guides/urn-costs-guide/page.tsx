@@ -185,6 +185,8 @@ export default function UrnCostsGuide() {
           ashes ultimately rest — a niche, a burial plot, a scattering at a meaningful place —
           has its own rules and costs. Our companion guide walks through them:{' '}
           <Link href="/guides/scattering-ashes-laws-costs/">scattering ashes: laws and costs →</Link>
+          {' '}If instead you want the carbon in the ashes turned into a gemstone, see{' '}
+          <Link href="/guides/cremation-diamonds-cost/">how much a cremation diamond costs</Link>.
         </p>
 
         <h2>Frequently asked questions</h2>

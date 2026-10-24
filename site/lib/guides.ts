@@ -315,6 +315,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/how-to-plan-a-funeral.jpg',
   },
+  {
+    slug: 'cremation-diamonds-cost',
+    title: 'How Much Does a Cremation Diamond Cost? Prices, Process & Timeline',
+    blurb:
+      'Turning ashes into a diamond costs from about $995 for a small stone to $25,000 or more for a large one: the lab process, timelines, and what to check before ordering.',
+    group: 'Costs & data',
+    image: '/images/guides/cremation-diamonds-cost.jpg',
+  },
+  {
+    slug: 'funeral-loans',
+    title: 'Funeral Loans: How to Borrow for a Funeral, Rates & Alternatives',
+    blurb:
+      'No special funeral loan exists: personal loans at 6 to 36 percent APR, funeral home financing, or a credit card, plus the cheaper alternatives to check first.',
+    group: 'Planning',
+    image: '/images/guides/funeral-loans.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
