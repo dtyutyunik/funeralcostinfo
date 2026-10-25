@@ -254,6 +254,8 @@ export default function ServiceTypesGuide() {
         <p>
           <Link href="/calculator/">Build your line-item estimate →</Link>
           {' · '}
+          <Link href="/guides/memorial-service-cost/">How much a memorial service costs →</Link>
+          {' · '}
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
           {' · '}
           <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>

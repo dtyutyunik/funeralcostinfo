@@ -331,6 +331,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/funeral-loans.jpg',
   },
+  {
+    slug: 'memorial-service-cost',
+    title: 'How Much Does a Memorial Service Cost? 2026 Price Breakdown',
+    blurb:
+      'A standalone memorial service typically costs $1,500 to $4,000: venue, officiant, catering, and funeral home fees line by line, plus the under-$1,000 version.',
+    group: 'Costs & data',
+    image: '/images/guides/memorial-service-cost.jpg',
+  },
+  {
+    slug: 'what-to-do-with-ashes',
+    title: 'What to Do With Ashes After Cremation: All Your Options, With Costs',
+    blurb:
+      'Keep, bury, niche, scatter, share, or turn ashes into glass, a diamond, a tree, or a reef: every option with typical costs, and no law requires burial.',
+    group: 'Planning',
+    image: '/images/guides/what-to-do-with-ashes.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

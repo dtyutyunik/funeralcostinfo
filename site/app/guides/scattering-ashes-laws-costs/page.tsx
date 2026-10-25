@@ -211,6 +211,8 @@ export default function ScatteringAshesGuide() {
           {' · '}
           <Link href="/guides/cremation-cost-2026/">How much cremation costs →</Link>
           {' · '}
+          <Link href="/guides/what-to-do-with-ashes/">What to do with ashes →</Link>
+          {' · '}
           <Link href="/guides/funeral-glossary/">Funeral glossary →</Link>
         </p>
       <RelatedGuides currentSlug="scattering-ashes-laws-costs" />

@@ -50,6 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/how-to-plan-a-funeral/',
     '/guides/cremation-diamonds-cost/',
     '/guides/funeral-loans/',
+    '/guides/memorial-service-cost/',
+    '/guides/what-to-do-with-ashes/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
