@@ -230,10 +230,11 @@ const STATE_NOTES: Record<string, StateNote> = {
   idaho: {
     boardName: 'Idaho Board of Morticians (Idaho Division of Occupational and Professional Licenses)',
     boardUrl: 'http://dopl.idaho.gov/mor/',
-    fcaSurveyName: 'Funeral Consumers Alliance of Utah — Spring 2025 southeastern Idaho price comparisons (southeastern Idaho only)',
-    fcaSurveyUrl: 'https://www.utahfunerals.org/_files/ugd/f25c49_9683a1ce9f9d43478f23c6ded88bba02.pdf',
+    fcaSurveyName: 'Funeral Consumers Alliance of Idaho — statewide price survey built from Idaho mortuaries\u2019 General Price Lists (direct cremation and immediate burial)',
+    fcaSurveyUrl: 'https://idahofunerals.org/resources/',
     context: [
       'Idaho sits modestly below the national average price level (RPP 95.5).',
+      'The Funeral Consumers Alliance of Idaho publishes a statewide price survey built from responding mortuaries\u2019 General Price Lists, covering direct cremation and immediate burial with no services or viewing.',
       'The Funeral Consumers Alliance of Utah\u2019s Spring 2025 survey covers Twin Falls, Idaho Falls, Chubbuck/Pocatello, Burley, Blackfoot, Rexburg, and Montpelier — southeastern Idaho only — as an independent local comparison.',
     ],
     caveats: [
@@ -686,7 +687,7 @@ const STATE_NOTES: Record<string, StateNote> = {
       'Washington was the first state to legalize natural organic reduction (human composting), in 2019, with implementation beginning in 2020.',
     ],
     caveats: [
-      'The People\u2019s Memorial Association\u2019s 2024 survey covers 250 Washington funeral homes — the largest it has surveyed — and is an independent benchmark, but confirm any figure against the provider\u2019s current GPL.',
+      'The People\u2019s Memorial Association\u2019s 2024 survey covers 250 Washington funeral homes, the largest it has surveyed, and found a statewide average direct cremation price of $1,685 (range $485 to $3,435), an average direct burial of $2,439, and an average full-service burial of $6,584. It is an independent benchmark, but confirm any figure against the provider\u2019s current GPL.',
       'The Funeral and Cemetery Board licenses funeral directors, embalmers, and cemetery operators and investigates regulatory violations — verify licenses before engaging a provider.',
     ],
   },
@@ -770,7 +771,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
     },
     {
       q: `Are these real prices from ${st.name} funeral homes?`,
-      a: `No. These are modeled estimates: the NFDA 2023 national median, adjusted to August 2026 dollars with the BLS funeral-expenses CPI and scaled by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). No state-level funeral price survey exists. Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
+      a: `No. These are modeled estimates: the NFDA 2023 national median, adjusted to August 2026 dollars with the BLS funeral-expenses CPI and scaled by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). ${notes?.fcaSurveyUrl ? `A consumer-organization price survey covering ${st.name} does exist and is linked under Official resources below; treat it as an independent local benchmark alongside these modeled figures.` : `The figures here are modeled rather than taken from a survey of ${st.name} funeral homes.`} Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
     },
     {
       q: `What does the ${fmt(trad.point)} traditional-burial estimate include?`,

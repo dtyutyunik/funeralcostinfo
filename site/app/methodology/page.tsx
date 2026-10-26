@@ -94,8 +94,10 @@ export default function MethodologyPage() {
           computed as <em>(NFDA 2023 national median × 1.1016 BLS funeral-expenses CPI adjustment
           to August 2026 dollars) × (state BEA 2024 regional price parity ÷ 100)</em>,
           rounded to the nearest $10, with an illustrative ±15% range. The NFDA publishes national
-          medians only — no state-level funeral price survey exists — so modeling from official
-          sources is the most transparent way to answer &ldquo;what does it cost near me?&rdquo;
+          medians only, and no official state-level funeral price survey series exists, so modeling
+          from official sources is the most transparent way to answer &ldquo;what does it cost near
+          me?&rdquo; Consumer nonprofits do publish surveys for a handful of states, and where one
+          exists the state page links it as an independent benchmark.
         </div>
 
         <h2>The model at a glance</h2>
