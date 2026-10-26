@@ -347,6 +347,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/what-to-do-with-ashes.jpg',
   },
+  {
+    slug: 'funeral-officiant-cost',
+    title: 'How Much Does a Funeral Officiant Cost? Honorariums and Celebrant Fees',
+    blurb:
+      'Clergy honorariums run $150 to $500 and professional celebrants $300 to $800: what each covers, how to pay, and how to choose.',
+    group: 'Costs & data',
+    image: '/images/guides/funeral-officiant-cost.jpg',
+  },
+  {
+    slug: 'social-security-survivor-benefits',
+    title: 'Social Security Survivor Benefits: How Much, Who Qualifies & How to Apply',
+    blurb:
+      'A surviving spouse receives 71.5% to 100% of the deceased worker benefit and children 75%: eligibility, the switching strategy, and how to apply.',
+    group: 'Planning',
+    image: '/images/guides/social-security-survivor-benefits.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

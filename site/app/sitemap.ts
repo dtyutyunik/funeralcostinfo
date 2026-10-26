@@ -52,6 +52,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/funeral-loans/',
     '/guides/memorial-service-cost/',
     '/guides/what-to-do-with-ashes/',
+    '/guides/funeral-officiant-cost/',
+    '/guides/social-security-survivor-benefits/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

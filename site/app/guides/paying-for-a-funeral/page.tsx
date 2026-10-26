@@ -110,6 +110,13 @@ export default function PayingForAFuneralGuide() {
           office; many funeral homes will report the death for you, but the payment itself is
           claimed separately.
         </p>
+        <p>
+          The $255 payment is separate from the ongoing monthly payments a family may
+          receive afterward. If you are a surviving spouse, child, or dependent parent,
+          see our{' '}
+          <Link href="/guides/social-security-survivor-benefits/">Social Security survivor benefits guide</Link>{' '}
+          for who qualifies, how much the monthly benefit pays, and how to apply.
+        </p>
 
         <h2>FEMA funeral assistance: narrow, not a general program</h2>
         <p>
