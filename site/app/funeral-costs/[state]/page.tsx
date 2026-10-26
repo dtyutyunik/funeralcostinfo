@@ -444,6 +444,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     fcaSurveyUrl: null,
     context: [
       'Nevada sits essentially at the national average price level (RPP 100.0), so its modeled figures track the national anchor closely.',
+      'The NFDA projects 83.1% of Nevada dispositions will be cremations by 2035, among the highest projected cremation shares in the country, so cremation pricing is the comparison most Nevada families end up making.',
       'No crematory, funeral home, cemetery, or other place accepting human remains for disposition may require the remains to be embalmed before cremation, interment, or other disposition, unless the State Board of Health orders it.',
     ],
     caveats: [
@@ -787,6 +788,18 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
       q: `How do I get an exact price in ${st.name}?`,
       a: `Under the FTC Funeral Rule you have the right to an itemized General Price List from any funeral home, price information by phone without giving your name, and to buy only the goods and services you want. Call or visit two to three providers, compare their GPLs line by line, and never sign under time pressure. See our guide to your rights under the FTC Funeral Rule.`,
     },
+    ...(state === 'nevada'
+      ? [
+          {
+            q: `Is embalming required before cremation in Nevada?`,
+            a: `No. Nevada rules bar any crematory, funeral home, or cemetery from requiring embalming before cremation, interment, or other disposition, unless the State Board of Health orders it. Providers instead refrigerate the body (Nevada facilities must keep remains at 42°F or less within 24 hours of receiving them), and refrigeration normally costs far less than embalming.`,
+          },
+          {
+            q: `What is the cheapest cremation option in Nevada?`,
+            a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). Most Nevada providers cluster around Las Vegas, Henderson, and Reno, so families in those metros usually have several General Price Lists to compare, and that comparison is where most of the savings are.`,
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -868,6 +881,47 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           niche, death certificates, and other items, or read the national{' '}
           <Link href="/guides/cremation-cost-2026/">cremation cost guide</Link> for what each option includes.
         </p>
+
+        {state === 'nevada' && (
+          <>
+            <h3>Average cost for cremation in Nevada, broken down</h3>
+            <p>
+              Most people searching for the average cost for cremation in Nevada are comparing two very
+              different products, and the state average only makes sense split that way.{' '}
+              <strong>Direct cremation</strong>, with no viewing or ceremony, is modeled at{' '}
+              <strong>{fmt(st.estimates.direct_cremation.point)}</strong> (range{' '}
+              {fmtRange(st.estimates.direct_cremation)}). <strong>Cremation with a viewing and
+              service</strong> is modeled at <strong>{fmt(st.estimates.cremation_with_service.point)}</strong>{' '}
+              (range {fmtRange(st.estimates.cremation_with_service)}). Cremation is also where Nevada is
+              heading: the NFDA projects 83.1% of Nevada dispositions will be cremations by 2035.
+            </p>
+            <ul>
+              <li>
+                <strong>What direct cremation covers:</strong> transfer of the body, the funeral
+                home&apos;s basic services fee, a cremation container, and the cremation itself. It does
+                not include a ceremony or viewing, an upgraded urn, a cemetery niche, or certified copies
+                of the death certificate.
+              </li>
+              <li>
+                <strong>Why Nevada quotes spread out:</strong> the state sits at the national price level
+                (RPP 100.0), but provider-to-provider variation inside Nevada is typically larger than the
+                difference between Nevada and its neighboring states. The same direct cremation can be
+                priced hundreds of dollars apart across town.
+              </li>
+              <li>
+                <strong>Where families save:</strong> Nevada law does not require embalming before
+                cremation, and you may buy the urn or container from an outside seller. Declining
+                embalming you do not need and comparing at least three General Price Lists is where most
+                of the savings are.
+              </li>
+            </ul>
+            <p>
+              Once the cremation is done, the{' '}
+              <Link href="/guides/what-to-do-with-ashes/">guide to what to do with ashes</Link> covers the
+              options and their costs, from keeping an urn at home to scattering.
+            </p>
+          </>
+        )}
 
         <h2>What&apos;s included — and what isn&apos;t</h2>
         <p><strong>Included</strong> (per the NFDA median definition): basic services fee, removal/transfer,
