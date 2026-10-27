@@ -363,6 +363,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/social-security-survivor-benefits.jpg',
   },
+  {
+    slug: 'graveside-service-cost',
+    title: 'How Much Does a Graveside Service Cost? 2026 Price Breakdown',
+    blurb:
+      'The funeral home graveside line runs $200 to $820, plus separate cemetery fees: what the service includes, what moves the price, and how it compares with a full funeral.',
+    group: 'Costs & data',
+    image: '/images/guides/graveside-service-cost.jpg',
+  },
+  {
+    slug: 'how-to-write-a-eulogy',
+    title: 'How to Write a Eulogy: A Step-by-Step Guide With a Template',
+    blurb:
+      'A 3 to 7 minute eulogy in five parts, with a fill-in template, delivery checklist, and answers to the questions speakers ask most.',
+    group: 'Planning',
+    image: '/images/guides/how-to-write-a-eulogy.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

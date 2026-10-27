@@ -167,7 +167,7 @@ export default function MemorialServiceCost() {
         <ol>
           <li><strong>Choose a free venue.</strong> A home, a place of worship, or a park pavilion removes the largest fixed cost. Confirm any permit and the rules on amplified sound and food.</li>
           <li><strong>Skip the funeral home ceremony fee.</strong> If no body is present and no licensed service is needed, you do not need a funeral home for the ceremony at all. Use one only for the services you actually want, such as printing or transport.</li>
-          <li><strong>Ask a friend or family member to officiate.</strong> A personal eulogy and a simple program cost nothing and are often more meaningful than a hired celebrant.</li>
+          <li><strong>Ask a friend or family member to officiate.</strong> A personal <Link href="/guides/how-to-write-a-eulogy/">eulogy</Link> and a simple program cost nothing and are often more meaningful than a hired celebrant.</li>
           <li><strong>Keep food simple.</strong> Coffee, cake, and finger food, or a potluck, replace a catered reception. For 30 guests, that is often under $300.</li>
           <li><strong>Print at home or go digital.</strong> A one-page program printed at home and a shared photo slideshow replace a $500 print and production order.</li>
           <li><strong>Demand an itemized statement.</strong> Under the FTC Funeral Rule, you have the right to buy services item by item and to receive an itemized statement of the goods and services you selected. Never accept a package without seeing what each line costs.</li>

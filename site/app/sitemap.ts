@@ -54,6 +54,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/what-to-do-with-ashes/',
     '/guides/funeral-officiant-cost/',
     '/guides/social-security-survivor-benefits/',
+    '/guides/graveside-service-cost/',
+    '/guides/how-to-write-a-eulogy/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
