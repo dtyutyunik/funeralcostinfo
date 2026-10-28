@@ -146,7 +146,7 @@ export default function GravesideServiceCost() {
         </p>
         <ul>
           <li><strong>Basic services fee.</strong> The funeral home non-declinable fee for arrangement, permits, and coordination. This applies whether or not there is a ceremony.</li>
-          <li><strong>Transfer and hearse.</strong> Transport of the deceased to the funeral home and then to the cemetery. Published lists put a hearse at roughly $300 to $500 in many markets.</li>
+          <li><strong>Transfer and hearse.</strong> Transport of the deceased to the funeral home and then to the cemetery. Published lists put a hearse at roughly $300 to $500 in many markets. See <Link href="/guides/funeral-transportation-cost/">funeral transportation costs</Link> for the full procession breakdown.</li>
           <li><strong>Officiant.</strong> A clergy honorarium for a graveside-only service typically runs $50 to $200, lower than a full service because the time commitment is shorter. See our <Link href="/guides/funeral-officiant-cost/">funeral officiant costs guide</Link> for the full ranges.</li>
           <li><strong>Flowers and programs.</strong> A graveside spray and a simple printed order of service are optional and priced separately.</li>
           <li><strong>Weekend and holiday surcharges.</strong> Some price lists add a Saturday surcharge, a Sunday surcharge, or a holiday surcharge for staff and facilities. One published list adds $800 for Saturday and $2,000 for Sunday, so a weekday graveside service can be materially cheaper than a Sunday one.</li>

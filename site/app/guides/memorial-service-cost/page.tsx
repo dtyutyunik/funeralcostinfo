@@ -117,7 +117,7 @@ export default function MemorialServiceCost() {
             <tr><td>Funeral home staff and facilities for the ceremony</td><td>$550 to $690</td><td>Published GPL examples: $550 at one Michigan funeral home, $690 for a public ceremony at a Minnesota funeral home</td></tr>
             <tr><td>Venue rental (if not at the funeral home)</td><td>$0 to $1,500</td><td>Places of worship often charge members little or nothing; community halls and parks usually need only a small permit fee</td></tr>
             <tr><td>Officiant or celebrant</td><td>$150 to $500</td><td>Clergy honorarium at the low end; professional celebrants and musicians higher. See <Link href="/guides/funeral-officiant-cost/">funeral officiant costs</Link> for the full ranges by type</td></tr>
-            <tr><td>Catering and reception</td><td>$300 to $2,000</td><td>Roughly $15 to $50 per guest for food and service staff</td></tr>
+            <tr><td>Catering and reception</td><td>$300 to $2,000</td><td>Roughly $15 to $50 per guest for food and service staff. See <Link href="/guides/funeral-reception-cost/">funeral reception costs</Link> for the full per-guest breakdown</td></tr>
             <tr><td>Printed programs and media</td><td>$100 to $500</td><td>Programs, prayer cards, guest book, slideshow or livestream production</td></tr>
             <tr><td>Audiovisual equipment</td><td>$200 to $600</td><td>Microphones, speakers, and screens; often included at a funeral home chapel</td></tr>
             <tr><td>Flowers and decor</td><td>$300 to $800</td><td>Our model uses $500 as a mid-range flower allowance</td></tr>

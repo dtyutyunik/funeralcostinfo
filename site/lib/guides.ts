@@ -379,6 +379,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/how-to-write-a-eulogy.jpg',
   },
+  {
+    slug: 'funeral-transportation-cost',
+    title: 'How Much Does Funeral Transportation Cost? Hearse, Limousine & Procession Prices',
+    blurb:
+      'A hearse typically costs $175 to $550 and a family limousine $50 to $450, plus mileage and overtime: every procession vehicle priced line by line.',
+    group: 'Costs & data',
+    image: '/images/guides/funeral-transportation-cost.jpg',
+  },
+  {
+    slug: 'funeral-reception-cost',
+    title: 'How Much Does a Funeral Reception Cost? Catering, Venue & Per Guest Prices',
+    blurb:
+      'A small reception typically costs $300 to $2,000, with food at $25 to $50 per guest: catering formats, venue options, and per-guest math.',
+    group: 'Costs & data',
+    image: '/images/guides/funeral-reception-cost.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

@@ -56,6 +56,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/social-security-survivor-benefits/',
     '/guides/graveside-service-cost/',
     '/guides/how-to-write-a-eulogy/',
+    '/guides/funeral-transportation-cost/',
+    '/guides/funeral-reception-cost/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
