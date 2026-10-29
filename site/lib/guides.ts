@@ -395,6 +395,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/funeral-reception-cost.jpg',
   },
+  {
+    slug: 'cheapest-funeral-options',
+    title: 'What Are the Cheapest Funeral Options? Ranked by Cost (2026)',
+    blurb:
+      'Body donation, direct cremation, memorial society rates, direct burial, and green burial ranked by total cost, plus the free help most families miss.',
+    group: 'Planning',
+    image: '/images/guides/cheapest-funeral-options.jpg',
+  },
+  {
+    slug: 'how-cremation-works',
+    title: 'How Does Cremation Work? The Step-by-Step Process Explained',
+    blurb:
+      'Authorization, the waiting period, the retort at 1,400 to 1,800 degrees, processing, and return of the ashes in 7 to 10 days.',
+    group: 'Planning',
+    image: '/images/guides/how-cremation-works.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

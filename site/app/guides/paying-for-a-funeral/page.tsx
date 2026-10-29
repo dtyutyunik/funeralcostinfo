@@ -214,7 +214,10 @@ export default function PayingForAFuneralGuide() {
         <p>
           None of these sources covers a typical funeral on its own. Stacked together — a VA
           allowance, an insurance assignment, and the estate — they usually do. Start with the
-          calls above before you commit to a price.
+          calls above before you commit to a price. If the question is which arrangement to
+          pick in the first place, our{' '}
+          <Link href="/guides/cheapest-funeral-options/">cheapest funeral options guide</Link>{' '}
+          ranks every low-cost route by total cost.
         </p>
 
         <h2>Frequently asked questions</h2>

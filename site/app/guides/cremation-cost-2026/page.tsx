@@ -159,6 +159,11 @@ export default function CremationCostGuide() {
         <p>
           <Link href="/guides/why-funeral-cost-figures-disagree/">Why published funeral-cost figures disagree →</Link>
         </p>
+        <p>
+          Price is only half the question. For what actually happens to the body at the
+          crematory, step by step, see{' '}
+          <Link href="/guides/how-cremation-works/">how cremation works</Link>.
+        </p>
 
         <h2>Urns and memorials: what to budget beyond the cremation</h2>
         <p>

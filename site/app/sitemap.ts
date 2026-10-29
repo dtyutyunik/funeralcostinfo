@@ -58,6 +58,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/how-to-write-a-eulogy/',
     '/guides/funeral-transportation-cost/',
     '/guides/funeral-reception-cost/',
+    '/guides/cheapest-funeral-options/',
+    '/guides/how-cremation-works/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
