@@ -176,6 +176,8 @@ export default function MemorialServiceCost() {
           If you are planning the whole funeral, not just the ceremony, start with our{' '}
           <Link href="/guides/how-to-plan-a-funeral/">step-by-step funeral planning guide</Link>,
           which puts each decision in order with modeled costs at each step.
+          Flowers for the service are a separate line, priced in our{' '}
+          <Link href="/guides/funeral-flowers-cost/">funeral flowers cost guide</Link>.
         </p>
 
         <h2>Frequently asked questions</h2>

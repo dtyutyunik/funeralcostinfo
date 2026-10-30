@@ -129,8 +129,10 @@ export default function VeteransBurialBenefitsGuide() {
           What the VA does <em>not</em> cover at the cemetery gate: transportation of the body
           to the cemetery, preparation for burial or cremation, the casket or urn, and any
           ceremony the family holds. For a service-connected death with burial in a national
-          cemetery, the VA does reimburse some or all transportation costs — claim it with the
-          burial allowance.
+          cemetery, the VA does reimburse some or all transportation costs, claim it with the
+          burial allowance. The ceremony itself is a separate, free benefit: see our{' '}
+          <Link href="/guides/military-funeral-honors/">military funeral honors guide</Link>{' '}
+          for eligibility, the flag and Taps, and how to request the detail.
         </p>
 
         <h2>Headstone, marker, or medallion — free, anywhere in the world</h2>

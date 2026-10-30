@@ -60,6 +60,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/funeral-reception-cost/',
     '/guides/cheapest-funeral-options/',
     '/guides/how-cremation-works/',
+    '/guides/funeral-flowers-cost/',
+    '/guides/military-funeral-honors/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

@@ -411,6 +411,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/how-cremation-works.jpg',
   },
+  {
+    slug: 'funeral-flowers-cost',
+    title: 'How Much Do Funeral Flowers Cost? Arrangement Prices & What to Send',
+    blurb:
+      'Most people spend $75 to $150: baskets from $60, standing sprays $135 to $350, casket sprays $250 to $700 or more, by arrangement and relationship.',
+    group: 'Costs & data',
+    image: '/images/guides/funeral-flowers-cost.jpg',
+  },
+  {
+    slug: 'military-funeral-honors',
+    title: 'Military Funeral Honors: Eligibility, Flag, Taps & How to Request Them',
+    blurb:
+      'Free for eligible veterans: at least two uniformed members, the folding and presentation of the flag, and Taps, plus how to request them.',
+    group: 'Planning',
+    image: '/images/guides/military-funeral-honors.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
