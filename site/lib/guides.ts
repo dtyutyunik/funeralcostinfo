@@ -427,6 +427,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/military-funeral-honors.jpg',
   },
+  {
+    slug: 'infant-funeral-costs',
+    title: 'How Much Does a Baby Funeral Cost? Infant Burial & Cremation Prices',
+    blurb:
+      'Infant cremation is often under $1,000 and infant burial far below adult prices, with hospital options that are sometimes free.',
+    group: 'Costs & data',
+    image: '/images/guides/infant-funeral-costs.jpg',
+  },
+  {
+    slug: 'crowdfunding-a-funeral',
+    title: 'How to Crowdfund a Funeral: GoFundMe Costs, Goals & What to Write',
+    blurb:
+      'Set the goal from the real bill, expect GoFundMe fees of 2.9% plus $0.30 per donation, and write a short, specific story.',
+    group: 'Planning',
+    image: '/images/guides/crowdfunding-a-funeral.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

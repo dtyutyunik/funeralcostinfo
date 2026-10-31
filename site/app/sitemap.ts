@@ -62,6 +62,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/how-cremation-works/',
     '/guides/funeral-flowers-cost/',
     '/guides/military-funeral-honors/',
+    '/guides/infant-funeral-costs/',
+    '/guides/crowdfunding-a-funeral/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

@@ -177,6 +177,17 @@ export default function PayingForAFuneralGuide() {
           legal advice.
         </p>
 
+        <h2>Asking the community to help</h2>
+        <p>
+          When savings, insurance, and benefits still leave a gap, many families ask
+          friends and the wider community to contribute. Our{' '}
+          <Link href="/guides/crowdfunding-a-funeral/">guide to crowdfunding a funeral</Link>{' '}
+          explains how to set the goal from the real itemized bill, what GoFundMe fees
+          take from each donation, and what to write on the page. Treat it as one funding
+          source among the others on this page, not a replacement for checking benefits
+          first.
+        </p>
+
         <h2>Preneed insurance and prepaid contracts: proceed carefully</h2>
         <p>
           Two products are sold to people planning ahead, and they are easy to confuse.
