@@ -6,6 +6,7 @@ import {
   SERVICE_ORDER, ALL_STATE_SLUGS, VINTAGE_LABEL, type ServiceKey,
 } from '../../../lib/data';
 import Link from 'next/link';
+import { citiesForState } from '../../../lib/cities';
 
 interface StateNote {
   boardName: string;
@@ -965,6 +966,28 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           <li><Link href="/guides/how-to-plan-a-funeral/">How to plan a funeral</Link> walks through the decisions in order.</li>
           <li><Link href="/guides/burial-vault-cost/">Burial vault costs</Link> explains the cemetery charge that is not in the traditional-burial estimate.</li>
         </ul>
+
+        {citiesForState(state).length > 0 && (
+          <>
+            <h2>Funeral costs by city in {st.name}</h2>
+            <p>
+              Metro prices differ from the statewide figures above. We publish individual city
+              pages for the largest {st.name} metros, modeled from the BEA metro price parity for
+              each area:
+            </p>
+            <ul>
+              {citiesForState(state).map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/funeral-costs/${state}/${c.slug}/`}>
+                    Funeral costs in {c.name}
+                  </Link>{' '}
+                  : traditional burial modeled at {fmt(c.estimates.traditional_burial.point)},
+                  direct cremation at {fmt(c.estimates.direct_cremation.point)}.
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
 
         <h2>Frequently asked questions</h2>
         <div className="faq">

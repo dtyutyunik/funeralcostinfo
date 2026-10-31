@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL, ALL_STATE_SLUGS, LAST_UPDATED } from '../lib/data';
+import { ALL_CITY_ROUTES } from '../lib/cities';
 
 export const dynamic = 'force-static';
 
@@ -71,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact/',
     '/press/',
     ...ALL_STATE_SLUGS.map((s) => `/funeral-costs/${s}/`),
+    ...ALL_CITY_ROUTES,
   ];
   return routes.map((r) => ({
     url: SITE_URL + (r || '/'),

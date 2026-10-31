@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
+import { CITIES } from '../../../lib/cities';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
@@ -256,6 +257,24 @@ export default function FuneralCostsByCity() {
             is where most independents compete.
           </li>
         </ol>
+
+        <h2>City cost pages: full modeled estimates for 15 metros</h2>
+        <p>
+          This guide stays the overview. For a full set of modeled estimates for one metro
+          (traditional burial, cremation with a service, direct cremation and more, adjusted by
+          that metro's BEA regional price parity), we now publish individual city pages:
+        </p>
+        <ul>
+          {CITIES.map((c) => (
+            <li key={c.slug}>
+              <Link href={`/funeral-costs/${c.stateSlug}/${c.slug}/`}>
+                Funeral costs in {c.name}
+              </Link>{' '}
+              : traditional burial modeled at {fmt(c.estimates.traditional_burial.point)},
+              direct cremation at {fmt(c.estimates.direct_cremation.point)}.
+            </li>
+          ))}
+        </ul>
 
         <h2>Frequently asked questions</h2>
         <div className="faq">
