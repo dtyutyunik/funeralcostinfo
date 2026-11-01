@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import {
   dataset, getState, stateSlug, fmt, fmtRange, SITE_URL, LAST_UPDATED,
-  SERVICE_ORDER, ALL_STATE_SLUGS, VINTAGE_LABEL, type ServiceKey,
+  SERVICE_ORDER, ALL_STATE_SLUGS, VINTAGE_LABEL, type ServiceKey, type StateData,
 } from '../../../lib/data';
 import Link from 'next/link';
 import { citiesForState } from '../../../lib/cities';
@@ -736,6 +736,199 @@ const STATE_NOTES: Record<string, StateNote> = {
   },
 };
 
+interface StateSpotlight {
+  rate: string;
+  spread: string;
+  rule: string;
+  help: string | null;
+  benchmark: string | null;
+  save: string;
+  faqs: (st: StateData) => { q: string; a: string }[];
+}
+
+const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
+  indiana: {
+    rate: `Cremation is also where Indiana is heading: the NFDA projects 67.4% of Indiana dispositions will be cremations by 2035.`,
+    spread: `Indiana sits below the national price level (RPP 93.3), but provider-to-provider variation inside the state is typically larger than the difference between Indiana and its neighboring states. The same direct cremation can be priced hundreds of dollars apart across town, especially in metro areas with several competing providers.`,
+    rule: `Indiana requires a 48-hour waiting period after death before a cremation can occur (IC 23-14-31-36), unless the local health officer waives it in writing. The body is refrigerated while the clock runs; embalming is not required.`,
+    help: `Two programs can help. Indiana Medicaid burial assistance, run by the Family and Social Services Administration, pays up to $1,200 toward funeral costs and $800 toward cemetery costs for eligible recipients, and the funeral home files the claim within 90 days of death (IC 12-14-17). Separately, your township trustee must arrange and pay for the burial or cremation of a resident who dies leaving no resources to pay for it (IC 12-20-16-12).`,
+    benchmark: null,
+    save: `Skip embalming you do not need, buy the urn or container from an outside seller if you prefer, and compare at least three General Price Lists. That comparison is where most of the savings are.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Indiana?`,
+        a: `At least 48 hours after death. Indiana law (IC 23-14-31-36) sets a 48-hour waiting period before cremation, which the city or county health officer can waive in writing. The body is refrigerated in the meantime, and embalming is not required.`,
+      },
+      {
+        q: `What help is available to pay for a funeral or cremation in Indiana?`,
+        a: `If the deceased was an eligible Medicaid recipient, Indiana burial assistance pays up to $1,200 toward funeral costs and $800 toward cemetery costs, claimed by the provider through the Family and Social Services Administration within 90 days of death. If the deceased left no resources at all, the township trustee must arrange and pay for a burial or cremation. Either program can cover a large share of a simple direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}).`,
+      },
+    ],
+  },
+  kentucky: {
+    rate: `Cremation is also where Kentucky is heading: the NFDA projects 63.8% of Kentucky dispositions will be cremations by 2035.`,
+    spread: `Kentucky sits well below the national price level (RPP 90.2), but provider-to-provider variation inside the state is typically larger than the state average suggests. Louisville and Lexington metro quotes and rural quotes can sit far apart for the same service.`,
+    rule: `Kentucky has no fixed waiting period, but no cremation can happen until the death certificate is filed and the county coroner issues a cremation permit (KRS 213.081). If the coroner opens an investigation, the permit waits until it closes.`,
+    help: `Kentucky has no statewide funeral assistance program. When a body goes unclaimed, the coroner may have it buried or cremated at the expense of the county fiscal court (KRS 72.450). Families with a limited budget should also check whether the deceased qualified for Social Security's $255 lump-sum death payment or VA burial benefits.`,
+    benchmark: null,
+    save: `Decline embalming you do not need, since cremation never requires it, and compare General Price Lists from at least three providers. Kentucky also lets you sign a declaration in advance authorizing your own cremation, which removes any doubt later about who can authorize it.`,
+    faqs: (st) => [
+      {
+        q: `Does Kentucky require a waiting period before cremation?`,
+        a: `No fixed waiting period, but the paperwork sets the pace: the death certificate must be filed and the county coroner must issue a cremation permit before any cremation (KRS 213.081). If the coroner opens an investigation, the permit waits until the investigation closes.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Kentucky?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). If a body goes unclaimed, the county fiscal court may pay for burial or cremation under KRS 72.450, but families arranging their own service should expect to pay the provider's price, so comparing General Price Lists matters.`,
+      },
+    ],
+  },
+  florida: {
+    rate: `Cremation is also where Florida is heading: the NFDA projects 79.8% of Florida dispositions will be cremations by 2035, reflecting the state's large retiree population and transient communities.`,
+    spread: `Florida runs modestly above the national price level (RPP 103.4), and the spread inside the state is wide: South Florida metro prices run well above the state modeled figure, while the Panhandle and rural counties run below it. Provider-to-provider variation inside a single metro can be larger than the state-to-state difference.`,
+    rule: `Florida law requires a body held more than 24 hours to be refrigerated at 40 degrees Fahrenheit or below, or embalmed (Florida Statutes §497.386), so refrigeration, not embalming, is the default while arrangements are made. Cremation itself waits at least 48 hours after death and needs written authorization from the legally authorized person.`,
+    help: `Each Florida county is responsible for the final disposition of indigent and unclaimed residents: boards of county commissioners set the policies for, and pay for, the burial or cremation of unclaimed remains of indigent persons (Florida Statutes §406.52). Most counties default to a direct cremation.`,
+    benchmark: null,
+    save: `Florida's retiree market is full of advertised package prices; always ask for the itemized General Price List instead. Decline embalming when refrigeration is offered, and compare at least three providers, including an independent funeral home or cremation society alongside the large chains.`,
+    faqs: (st) => [
+      {
+        q: `Is embalming required before cremation in Florida?`,
+        a: `No. Florida requires a body held over 24 hours to be refrigerated at 40 degrees Fahrenheit or below, or embalmed (Florida Statutes §497.386), and refrigeration satisfies the rule. A funeral home may not require embalming before cremation.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Florida?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). For an indigent person whose remains go unclaimed, the county pays for disposition under Florida Statutes §406.52, usually as a direct cremation.`,
+      },
+    ],
+  },
+  alabama: {
+    rate: `Alabama's 2023 cremation rate was 42.8%, among the lowest in the country (Cremation Association of North America, 2023), though the NFDA projects the share will reach 59.3% by 2035. Burial is still the majority choice, which is why burial goods and services weigh more heavily in typical Alabama totals.`,
+    spread: `Alabama has one of the lowest regional price levels in our dataset (RPP 88.8), so its modeled estimates sit well below the national anchor. Within the state, metro quotes in places like Birmingham and Huntsville typically run above rural quotes, and provider-to-provider variation is typically larger than the difference between Alabama and its neighboring states.`,
+    rule: `Alabama requires the death certificate to be filed and a burial-transit permit issued before burial or cremation can take place. A separate transport rule matters for families moving a body: it is unlawful to transport a body out of Alabama unless it has been embalmed or cremated (Ala. Code §22-19-2).`,
+    help: `Alabama has no state funeral assistance program, but counties are responsible for the necessary burial or cremation expenses of residents whose families cannot afford to pay (Ala. Code §38-8-2). Larger counties run formal programs; Mobile County's Indigent Burial Program is one example. Apply through your county commission.`,
+    benchmark: null,
+    save: `Because burial remains the majority choice in Alabama, the savings on a burial are usually in merchandise: the funeral home must accept a casket bought from an outside seller without charging a handling fee under the FTC Funeral Rule. For cremation, choosing direct cremation skips embalming and viewing charges entirely.`,
+    faqs: (st) => [
+      {
+        q: `What percentage of deaths in Alabama are cremations?`,
+        a: `42.8% in 2023, among the lowest rates in the country (Cremation Association of North America, 2023). The NFDA projects Alabama's cremation share will climb to 59.3% by 2035 as more families weigh cost in the decision.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Alabama?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). If the family cannot afford any arrangement, Alabama counties cover the necessary burial or cremation expenses under Ala. Code §38-8-2; ask your county commission how to apply.`,
+      },
+    ],
+  },
+  california: {
+    rate: `Cremation is also where California is heading: the NFDA projects 81.5% of California dispositions will be cremations by 2035, among the highest cremation shares in the country.`,
+    spread: `California has the highest regional price level of any state in our dataset (RPP 110.7), and the within-state spread is the widest in the country: Los Angeles, San Francisco, and San Diego metro prices typically run well above the state modeled figure, while rural counties run below it. We publish separate city pages for those three metros, linked below.`,
+    rule: `A California crematory may cremate only on the written authorization of the person who holds the right to control disposition under Health and Safety Code §7100, and the person who signs warrants that they actually hold that authority (§§7110 and 7111). When family members with equal rights disagree, cremation generally waits for agreement or a court order.`,
+    help: `When no one is able to pay, California counties bear the cost of disposition for indigent decedents (Health and Safety Code §7104). Counties run the process through the coroner or public administrator, and the standard disposition is a basic cremation.`,
+    benchmark: null,
+    save: `California law requires funeral establishments to hand you a written General Price List before discussing arrangements; use it. Direct cremation providers in the big metros compete on price, so compare at least three GPLs, and remember you may buy the urn or casket from any seller.`,
+    faqs: (st) => [
+      {
+        q: `Who can authorize a cremation in California?`,
+        a: `The person holding the right to control disposition under Health and Safety Code §7100: first an agent the deceased named under a power of attorney for health care, then the competent surviving spouse or domestic partner, then adult children, parents, and siblings, in that order. The crematory needs that person's written authorization (§7111), and the signer legally warrants their authority (§7110).`,
+      },
+      {
+        q: `What is the cheapest cremation option in California?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), and competition among direct cremation providers in the Los Angeles, San Francisco, and San Diego metros means real quotes there are worth comparing across at least three General Price Lists.`,
+      },
+    ],
+  },
+  wisconsin: {
+    rate: `Cremation is also where Wisconsin is heading: the NFDA projects 72.7% of Wisconsin dispositions will be cremations by 2035.`,
+    spread: `Wisconsin sits modestly below the national price level (RPP 94.1), but provider-to-provider variation inside the state is typically larger than the difference between Wisconsin and its neighboring states. Milwaukee metro quotes and rural northern Wisconsin quotes can sit far apart for the same service.`,
+    rule: `Wisconsin bars cremation within 48 hours of death, except when death was caused by a contagious or infectious disease, and every cremation needs a permit from the county coroner or medical examiner, who must first view the body and inquire into the cause and manner of death (Wis. Stat. §979.10).`,
+    help: `The Wisconsin Funeral and Cemetery Aids Program (WFCAP) pays up to $1,500 toward funeral and burial expenses and up to $1,000 toward cemetery or crematory expenses when a person who was receiving benefits such as BadgerCare Plus, Medicaid, Family Care, or SSI dies without sufficient resources (Wis. Stat. §49.785). The funeral home or crematory applies through the county or tribal agency, and the program caps the total bill, so raise it before you sign a contract.`,
+    benchmark: null,
+    save: `If WFCAP might apply, keep the arrangement simple and confirm eligibility first, because the program stops paying when the total bill passes its caps. Everyone else saves the same way: decline embalming you do not need and compare at least three General Price Lists.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Wisconsin?`,
+        a: `At least 48 hours after death, unless the death was caused by a contagious or infectious disease. A cremation permit from the county coroner or medical examiner is also required; the coroner or medical examiner must view the body and certify that no further examination is necessary (Wis. Stat. §979.10).`,
+      },
+      {
+        q: `Does Wisconsin help pay for funerals or cremations?`,
+        a: `Yes, for eligible decedents. The Wisconsin Funeral and Cemetery Aids Program pays up to $1,500 toward funeral and burial costs and up to $1,000 toward cemetery or crematory costs when someone receiving programs like BadgerCare Plus, Medicaid, Family Care, or SSI dies without enough resources. The provider files the application with the county or tribal agency; ask before signing, because total bill caps apply. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), fits comfortably inside those caps.`,
+      },
+    ],
+  },
+  massachusetts: {
+    rate: `Cremation is also where Massachusetts is heading: the NFDA projects 70.9% of Massachusetts dispositions will be cremations by 2035.`,
+    spread: `Massachusetts sits moderately above the national price level (RPP 105.8), driven by the Boston metro, where prices run above the state modeled figure; western Massachusetts providers generally run below it. We publish a separate Boston city page, linked below.`,
+    rule: `A body may not be cremated within 48 hours after death in Massachusetts, except when death was caused by a contagious or infectious disease, and the medical examiner must view the body and certify in writing that no further examination is necessary before the cremation proceeds.`,
+    help: `The Department of Transitional Assistance (DTA) can pay up to $1,100 of the outstanding funeral and burial balance, paid directly to the funeral home, when a Massachusetts resident dies without sufficient resources. One condition matters: the total funeral, cremation, and burial bill cannot exceed $3,500 for the payment to be available, so tell the funeral home up front if you plan to apply.`,
+    benchmark: null,
+    save: `Keep the DTA cap in mind: a simple direct cremation fits under it, while add-ons can disqualify the whole bill. Separately, Massachusetts requires the funeral director to give you a written price disclosure before any price agreement is made, so compare that document across two or three providers.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Massachusetts?`,
+        a: `At least 48 hours after death, unless the death was caused by a contagious or infectious disease. The medical examiner must also view the body and certify in writing that no further examination is necessary before the cremation can proceed.`,
+      },
+      {
+        q: `Does Massachusetts help pay for a funeral or cremation?`,
+        a: `Yes. The Department of Transitional Assistance can pay up to $1,100 of the outstanding balance directly to the funeral home when a Massachusetts resident dies without enough resources, but the total funeral, cremation, and burial cost must be $3,500 or less. Our modeled direct cremation estimate for Massachusetts is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), which fits under that cap before add-ons.`,
+      },
+    ],
+  },
+  arizona: {
+    rate: `Arizona's 2023 cremation rate was 71.3% (Cremation Association of North America, 2023), and the NFDA projects 79.1% by 2035. Cremation is the mainstream choice in Arizona, and direct cremation is priced competitively in the Phoenix and Tucson metros.`,
+    spread: `Arizona sits essentially at the national average price level (RPP 100.7), so its modeled figures track the national anchor closely. Within the state, Phoenix metro competition keeps direct cremation quotes competitive, while smaller markets have fewer providers to compare.`,
+    rule: `Arizona crematories must hold unembalmed remains in a refrigerated holding facility at or below 38 degrees Fahrenheit (A.R.S. §32-1399). State rules also treat it as a deceptive practice to claim embalming is legally required when disposition will occur within 24 hours or the body is refrigerated.`,
+    help: `Arizona counties cover the disposition of indigent residents: the board of supervisors pays the reasonable burial expenses of deceased indigent persons (A.R.S. §§11-251(27) and 36-831), administered through the county public fiduciary. The standard county disposition is cremation.`,
+    benchmark: `An independent benchmark exists: the Funeral Consumers Alliance of Arizona's 2023 price comparison report for Southern Arizona is linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    save: `Get the General Price List from at least three providers, including one direct cremation specialist, decline embalming you do not need, and use the FCA of Arizona comparison as a sanity check on the quotes you receive.`,
+    faqs: (st) => [
+      {
+        q: `Is embalming required before cremation in Arizona?`,
+        a: `No. Arizona law requires crematories to hold unembalmed remains in refrigeration at or below 38 degrees Fahrenheit (A.R.S. §32-1399); embalming is a choice, not a legal requirement, and state rules treat it as a deceptive practice to claim otherwise when the body is refrigerated or disposition happens within 24 hours.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Arizona?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). Phoenix metro competition makes comparing General Price Lists especially worthwhile, and the Funeral Consumers Alliance of Arizona's 2023 comparison, linked under Official resources below, gives an independent check on local pricing.`,
+      },
+    ],
+  },
+  colorado: {
+    rate: `Colorado's 2023 cremation rate was 70.8% (Cremation Association of North America, 2023), and the NFDA projects 79.6% by 2035.`,
+    spread: `Colorado sits modestly above the national price level (RPP 103.1). Denver metro quotes run above the state modeled figure and mountain and rural communities generally run below it; we publish a separate Denver city page, linked below. Provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Colorado lets a person direct their own disposition in a written declaration, and that declaration controls over conflicting directions from family members (C.R.S. §§15-19-104 and 15-19-105). Without a declaration, the priority list in C.R.S. §15-19-106 decides who may authorize cremation, and no cremation can proceed until the authorization for final disposition has been issued (C.R.S. §25-2-111).`,
+    help: `Colorado's Burial Assistance Program, run by the Department of Human Services through county offices, pays up to $1,500 toward burial or cremation for a person who was receiving public or medical assistance, such as Medicaid, Colorado Works, or Old Age Pension, at the time of death. The total cost of services cannot exceed $2,500, and payment goes directly to the provider.`,
+    benchmark: `An independent benchmark exists: the Funeral Consumer Society of Colorado's price comparison directory is linked under Official resources below. The society gathers data over several years, so confirm any figure against the provider's current General Price List.`,
+    save: `Keep the Burial Assistance Program's $2,500 total cost cap in mind if it might apply. Everyone else saves by comparing at least three General Price Lists; the Denver metro's competitive direct cremation market makes the comparison worthwhile.`,
+    faqs: (st) => [
+      {
+        q: `Who can authorize a cremation in Colorado?`,
+        a: `If the deceased left a written declaration of disposition, it controls, including who directs the arrangements (C.R.S. §§15-19-104 and 15-19-105). Otherwise the priority list in C.R.S. §15-19-106 applies, starting with the surviving spouse. Cremation also requires the authorization for final disposition under C.R.S. §25-2-111.`,
+      },
+      {
+        q: `Does Colorado help pay for cremation or burial?`,
+        a: `Yes, through the Burial Assistance Program: up to $1,500 paid directly to the provider when the deceased was receiving public or medical assistance, such as Medicaid, Colorado Works, or Old Age Pension, at death and the estate cannot cover the cost, with total service costs capped at $2,500. Apply through your county human services office. A basic direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement the cap is designed around.`,
+      },
+    ],
+  },
+  hawaii: {
+    rate: `Cremation is also where Hawaii is heading, further than anywhere else: the NFDA projects 86.7% of Hawaii dispositions will be cremations by 2035, the highest projected share of any state. Cremation is already the default choice in Hawaii, which shapes everything from pricing to cemetery availability.`,
+    spread: `Hawaii has one of the highest regional price levels in the nation (RPP 110.0), and island logistics add cost on top of it: most providers and crematories are on Oahu, so neighbor island families may also face inter-island transport charges. We publish a separate Honolulu city page, linked below.`,
+    rule: `Hawaii's clock is the tightest in the country: a body generally must be embalmed, cremated, or buried within 30 hours after death, or placed in approved refrigerated storage, and the same 30-hour clock applies after release by a coroner or medical examiner (Hawaii Administrative Rules ch. 11-22). In practice, refrigeration is what buys families time to arrange a service.`,
+    help: `The Hawaii Department of Human Services may pay toward mortuary, crematory, and cemetery services for deceased medical or financial assistance recipients under its funeral payment program (HRS §346-15), and the state covers the cremation of unclaimed bodies. Relatives who prefer to arrange things themselves may always do so.`,
+    benchmark: null,
+    save: `Because the 30-hour rule pushes quick decisions, decide between direct cremation and a service before the body is released if you can, and ask for refrigeration charges to be itemized by the day. Compare General Price Lists from at least two providers, and if you are on a neighbor island, ask whether transport to Oahu for cremation beats the local options.`,
+    faqs: (st) => [
+      {
+        q: `How soon must a body be cremated or buried in Hawaii?`,
+        a: `Hawaii generally requires a body to be embalmed, cremated, or buried within 30 hours after death, or moved into approved refrigerated storage; the same clock applies after release by a coroner or medical examiner (Hawaii Administrative Rules ch. 11-22). Refrigeration is the usual way families gain time to plan.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Hawaii?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). If the deceased was a medical or financial assistance recipient, the Department of Human Services funeral payment program (HRS §346-15) may pay toward mortuary and crematory services; ask the funeral home to check eligibility before you sign.`,
+      },
+    ],
+  },
+};
+
 export function generateStaticParams() {
   return ALL_STATE_SLUGS.map((slug) => ({ state: slug }));
 }
@@ -762,6 +955,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   const st = getState(state);
   if (!st) notFound();
   const notes = STATE_NOTES[state];
+  const spot = STATE_SPOTLIGHT[state];
   const trad = st.estimates.traditional_burial;
   const maxPoint = Math.max(...SERVICE_ORDER.map((k) => st.estimates[k].point));
 
@@ -802,6 +996,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           },
         ]
       : []),
+    ...(spot ? spot.faqs(st) : []),
   ];
 
   return (
@@ -915,6 +1110,53 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
                 cremation, and you may buy the urn or container from an outside seller. Declining
                 embalming you do not need and comparing at least three General Price Lists is where most
                 of the savings are.
+              </li>
+            </ul>
+            <p>
+              Once the cremation is done, the{' '}
+              <Link href="/guides/what-to-do-with-ashes/">guide to what to do with ashes</Link> covers the
+              options and their costs, from keeping an urn at home to scattering.
+            </p>
+          </>
+        )}
+
+        {spot && (
+          <>
+            <h3>Average cost for cremation in {st.name}, broken down</h3>
+            <p>
+              Most people searching for the average cost for cremation in {st.name} are comparing two very
+              different products, and the state average only makes sense split that way.{' '}
+              <strong>Direct cremation</strong>, with no viewing or ceremony, is modeled at{' '}
+              <strong>{fmt(st.estimates.direct_cremation.point)}</strong> (range{' '}
+              {fmtRange(st.estimates.direct_cremation)}). <strong>Cremation with a viewing and
+              service</strong> is modeled at <strong>{fmt(st.estimates.cremation_with_service.point)}</strong>{' '}
+              (range {fmtRange(st.estimates.cremation_with_service)}). {spot.rate}
+            </p>
+            <ul>
+              <li>
+                <strong>What direct cremation covers:</strong> transfer of the body, the funeral
+                home&apos;s basic services fee, a cremation container, and the cremation itself. It does
+                not include a ceremony or viewing, an upgraded urn, a cemetery niche, or certified copies
+                of the death certificate.
+              </li>
+              <li>
+                <strong>Why {st.name} quotes spread out:</strong> {spot.spread}
+              </li>
+              <li>
+                <strong>A {st.name} rule to know:</strong> {spot.rule}
+              </li>
+              {spot.help && (
+                <li>
+                  <strong>Help paying in {st.name}:</strong> {spot.help}
+                </li>
+              )}
+              {spot.benchmark && (
+                <li>
+                  <strong>A local benchmark:</strong> {spot.benchmark}
+                </li>
+              )}
+              <li>
+                <strong>Where families save:</strong> {spot.save}
               </li>
             </ul>
             <p>

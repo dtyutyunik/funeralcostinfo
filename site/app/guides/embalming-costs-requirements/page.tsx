@@ -139,9 +139,9 @@ export default function EmbalmingCostsRequirements() {
           state-specific exceptions:
         </p>
         <ul>
-          <li><strong>Alabama:</strong> unlawful to transport a body out of state unless it has been embalmed or cremated (Ala. Code § 22-19-2); disposition must occur within 48 hours of death unless the body is embalmed or refrigerated (§ 34-13-117).</li>
-          <li><strong>Colorado:</strong> embalming not required if burial or cremation happens within 24 hours; beyond 24 hours, "embalming or refrigeration" is required (state Mortuary Science FAQ).</li>
-          <li><strong>California:</strong> if not buried or cremated within 24 hours, the decedent must be embalmed or refrigerated (per funeral-industry legal summaries).</li>
+          <li><strong><Link href="/funeral-costs/alabama/">Alabama</Link>:</strong> unlawful to transport a body out of state unless it has been embalmed or cremated (Ala. Code § 22-19-2); disposition must occur within 48 hours of death unless the body is embalmed or refrigerated (§ 34-13-117).</li>
+          <li><strong><Link href="/funeral-costs/colorado/">Colorado</Link>:</strong> embalming not required if burial or cremation happens within 24 hours; beyond 24 hours, "embalming or refrigeration" is required (state Mortuary Science FAQ).</li>
+          <li><strong><Link href="/funeral-costs/california/">California</Link>:</strong> if not buried or cremated within 24 hours, the decedent must be embalmed or refrigerated (per funeral-industry legal summaries).</li>
           <li><strong>Michigan / Ohio:</strong> reported 48-hour windows — burial or cremation within 48 hours needs no embalming (per legal summaries and Court News Ohio's mortuary-law reporting).</li>
           <li><strong>Minnesota, Nebraska, New Jersey:</strong> reported to require embalming for common-carrier (airline/train/bus) interstate shipment — frame as reported by consumer-law summaries; ask the funeral home to cite the specific statute.</li>
           <li><strong>International shipment:</strong> often requires embalming, but the requirement comes from the <em>receiving country</em>, not US law (the CDC requires no special permit to import embalmed or cremated remains).</li>
@@ -149,7 +149,7 @@ export default function EmbalmingCostsRequirements() {
         <p>
           <strong>Cremation never requires embalming.</strong> A 1964 Washington State attorney general opinion
           confirmed "there is no statutory mandate requiring the embalming of a body prior to cremation," and
-          Indiana law explicitly prohibits crematories from refusing unembalmed bodies (IC 23-14-31-35(c)).
+          <Link href="/funeral-costs/indiana/">Indiana law</Link> explicitly prohibits crematories from refusing unembalmed bodies (IC 23-14-31-35(c)).
         </p>
 
         <h2>Your right to refuse</h2>

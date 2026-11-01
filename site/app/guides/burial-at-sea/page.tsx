@@ -7,14 +7,14 @@ import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
-  title: 'How Much Does Burial at Sea Cost? (2026) — Navy Program, EPA Rules & Charter Prices',
+  title: 'Burial at Sea Cost: $100 Ash Scattering to $17,000 Full-Body Burial (2026)',
   description:
-    'How much does burial at sea cost in 2026: unattended ash scattering ($100–$500), attended charters ($350–$2,900), full-body sea burials ($7,000–$17,000), and the free Navy program. EPA rules and eligibility explained.',
+    'Burial at sea costs $100 to $500 for unattended ash scattering, $350 to $2,900 for an attended charter, and $7,000 to $17,000 for a full-body burial. The Navy burial at sea program is free for eligible veterans. EPA rules, the 3 nautical mile rule, and how to arrange each option.',
   alternates: { canonical: SITE_URL + '/guides/burial-at-sea/' },
   openGraph: {
-    title: 'How Much Does Burial at Sea Cost? (2026)',
+    title: 'Burial at Sea Cost: $100 Ash Scattering to $17,000 Full-Body Burial (2026)',
     description:
-      'Ash scattering at sea runs $100–$500 unattended and $350–$2,900 attended; a full-body sea burial typically costs $7,000–$17,000. The Navy program is free for eligible veterans and families.',
+      'Burial at sea costs $100 to $500 for unattended ash scattering and $7,000 to $17,000 for a full-body burial; the Navy program is free for eligible veterans. EPA rules and charter prices explained.',
     url: SITE_URL + '/guides/burial-at-sea/',
   },
 };
@@ -66,8 +66,8 @@ export default function BurialAtSea() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Burial at sea costs &amp; rules</nav>
         <JsonLd data={articleJsonLd({
-          title: 'How Much Does Burial at Sea Cost? (2026) — Navy Program, EPA Rules & Charter Prices',
-          description: 'How much does burial at sea cost in 2026: unattended ash scattering ($100–$500), attended charters ($350–$2,900), full-body sea burials ($7,000–$17,000), and the free Navy program. EPA rules and eligibility explained.',
+          title: 'Burial at Sea Cost: $100 Ash Scattering to $17,000 Full-Body Burial (2026)',
+          description: 'Burial at sea costs $100 to $500 for unattended ash scattering, $350 to $2,900 for an attended charter, and $7,000 to $17,000 for a full-body burial. The Navy burial at sea program is free for eligible veterans. EPA rules, the 3 nautical mile rule, and how to arrange each option.',
           url: SITE_URL + '/guides/burial-at-sea/',
           datePublished: '2026-10-01',
           dateModified: LAST_UPDATED,

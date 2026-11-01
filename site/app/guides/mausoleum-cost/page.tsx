@@ -125,7 +125,7 @@ export default function MausoleumCost() {
         </p>
         <ul>
           <li>Ivy Lawn (2025 price list): single lawn crypt $1,600 + $300 delivery + $900 setting; double $2,800 + $400 + $1,000.</li>
-          <li>Highland Cemetery, Fort Mitchell KY: single $1,850, double $2,550.</li>
+          <li>Highland Cemetery, <Link href="/funeral-costs/kentucky/">Fort Mitchell KY</Link>: single $1,850, double $2,550.</li>
           <li>Suisun-Fairfield CA public cemetery district: single-layer crypt $504, companion $886 (crypt only — plot extra).</li>
           <li>Oak Ridge IL war-memorial veteran package: single $2,000 / double $3,000 all-inclusive (crypt + opening/closing + endowed care).</li>
         </ul>
@@ -145,7 +145,7 @@ export default function MausoleumCost() {
           fee schedule in writing before you commit:
         </p>
         <ul>
-          <li><strong>Entombment (opening/closing a crypt):</strong> Gate of Heaven (2026) — $1,550 weekdays, $2,050 Saturday/holiday. Trinity Church Cemetery, Manhattan (2025) — $1,622 / $1,970.</li>
+          <li><strong>Entombment (opening/closing a crypt):</strong> Gate of Heaven (2026) — $1,550 weekdays, $2,050 Saturday/holiday. Trinity Church Cemetery, <Link href="/funeral-costs/new-york/new-york-city/">Manhattan</Link> (2025) — $1,622 / $1,970.</li>
           <li><strong>Inurnment (opening/closing a niche):</strong> Gate of Heaven — $850 / $1,300; Trinity NYC — $648 / $877; Elmwood Memphis — $800–$1,000.</li>
           <li><strong>Inscription/nameplate:</strong> $18 per character at Madonna and Gate of Heaven (2026); $533 flat at Trinity NYC.</li>
           <li><strong>Endowment/perpetual care:</strong> sometimes baked in, sometimes a line item — $800–$950 per tandem crypt at a Texas chapel mausoleum; state law varies on what percentage must fund the care trust.</li>
@@ -158,7 +158,7 @@ export default function MausoleumCost() {
           not the land. Resale rules are strict and state-specific:
         </p>
         <ul>
-          <li><strong>New York:</strong> you must first offer the space back to the cemetery in writing; if the cemetery offers at least the original price plus 4% simple annual interest, you cannot sell to anyone else. No broker sales, no sales to funeral directors.</li>
+          <li><strong><Link href="/funeral-costs/new-york/">New York</Link>:</strong> you must first offer the space back to the cemetery in writing; if the cemetery offers at least the original price plus 4% simple annual interest, you cannot sell to anyone else. No broker sales, no sales to funeral directors.</li>
           <li><strong>Virginia:</strong> resale heavily restricted — generally max four resale transactions per year per seller, with cemetery approval and a transfer fee required (Va. Code § 54.1-2312.1).</li>
           <li><strong>New Jersey:</strong> buying 17+ spaces triggers an affidavit that the purchase is not for resale; resale of interment spaces is prohibited (N.J.S.A. 45:27-32).</li>
         </ul>

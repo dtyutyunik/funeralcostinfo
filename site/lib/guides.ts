@@ -253,9 +253,9 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'international-repatriation-remains',
-    title: 'How Much Does It Cost to Repatriate a Body? International Rules, Paperwork & Prices (2026)',
+    title: 'How Much Does It Cost to Repatriate a Body? Typical Cost $5,000 to $15,000 (2026)',
     blurb:
-      'Repatriating a body internationally costs $5,000–$15,000+: the paperwork chain and CDC rules for bringing remains into the US.',
+      'Repatriating a body internationally typically costs $5,000 to $15,000 or more: what drives the price, the paperwork chain, and CDC rules for bringing remains into the US.',
     group: 'Planning',
     image: '/images/guides/international-repatriation-remains.jpg',
   },
@@ -269,9 +269,9 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'burial-at-sea',
-    title: 'How Much Does Burial at Sea Cost? (2026) — Navy Program, EPA Rules & Charter Prices',
+    title: 'Burial at Sea Cost: $100 Ash Scattering to $17,000 Full-Body Burial (2026)',
     blurb:
-      'Ash scattering ($100–$500 unattended) vs. full-body sea burial ($7,000–$17,000): EPA rules, Navy eligibility, and charter pricing.',
+      'Burial at sea costs $100 to $500 for unattended ash scattering and $7,000 to $17,000 for a full-body burial: EPA rules, Navy eligibility, and charter pricing.',
     group: 'Planning',
     image: '/images/guides/burial-at-sea.jpg',
   },

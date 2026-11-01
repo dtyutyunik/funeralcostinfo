@@ -113,13 +113,13 @@ export default function FileComplaintFuneralHome() {
           violations of state funeral law and discipline licensees.
         </p>
         <p>
-          Real examples so you know what to search for in your state: the <strong>Texas Funeral Service
-          Commission</strong> (per its published rules, it accepts written complaints, generally within two
+          Real examples so you know what to search for in your state: the <strong><Link href="/funeral-costs/texas/">Texas Funeral Service
+          Commission</Link></strong> (per its published rules, it accepts written complaints, generally within two
           years of the event, and can impose administrative penalties or suspend and revoke licenses); the
-          <strong> Florida Division of Funeral, Cemetery and Consumer Services</strong> (run by the Department
+          <strong><Link href="/funeral-costs/florida/"> Florida Division of Funeral, Cemetery and Consumer Services</Link></strong> (run by the Department
           of Financial Services — the Florida attorney general's consumer page lists its toll-free complaint
-          line at (800) 323-2627); and the <strong>New York State Department of Health's Bureau of Funeral
-          Directing</strong> ((518) 402-0785 per NYC's 311 service), which a 2025 New York State Comptroller
+          line at (800) 323-2627); and the <strong><Link href="/funeral-costs/new-york/">New York State Department of Health's Bureau of Funeral
+          Directing</Link></strong> ((518) 402-0785 per NYC's 311 service), which a 2025 New York State Comptroller
           audit confirms investigates consumer complaints about the practice of funeral directing.
         </p>
         <p>

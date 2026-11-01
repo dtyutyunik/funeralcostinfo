@@ -7,14 +7,14 @@ import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
-  title: 'How Much Does It Cost to Repatriate a Body? International Rules, Paperwork & Prices (2026)',
+  title: 'How Much Does It Cost to Repatriate a Body? Typical Cost $5,000 to $15,000 (2026)',
   description:
-    'How much it costs to repatriate a body internationally ($5,000–$15,000+ typical), the paperwork required — death certificate, embalming certificate, consular mortuary certificate — and CDC rules for bringing remains into the US.',
+    'Repatriating a body internationally typically costs $5,000 to $15,000 or more. What drives the price, the paperwork you need (death certificate, embalming certificate, consular mortuary certificate), CDC rules for bringing remains into the US, and the cheaper cremation alternative.',
   alternates: { canonical: SITE_URL + '/guides/international-repatriation-remains/' },
   openGraph: {
-    title: 'How Much Does It Cost to Repatriate a Body? (2026)',
+    title: 'How Much Does It Cost to Repatriate a Body? Typical Cost $5,000 to $15,000 (2026)',
     description:
-      'International repatriation of remains: real cost ranges, consular paperwork, embalming and casket requirements, and CDC import rules — plain English.',
+      'Repatriation of remains runs $5,000 to $15,000 on typical routes, and real cases range from about $3,000 to over $25,000. Cost drivers, consular paperwork, embalming and casket requirements, and CDC import rules in plain English.',
     url: SITE_URL + '/guides/international-repatriation-remains/',
   },
 };
@@ -58,8 +58,8 @@ export default function InternationalRepatriationRemains() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › International repatriation of remains</nav>
         <JsonLd data={articleJsonLd({
-          title: 'How Much Does It Cost to Repatriate a Body? International Rules, Paperwork & Prices (2026)',
-          description: 'How much it costs to repatriate a body internationally ($5,000\u2013$15,000+ typical), the paperwork required \u2014 death certificate, embalming certificate, consular mortuary certificate \u2014 and CDC rules for bringing remains into the US.',
+          title: 'How Much Does It Cost to Repatriate a Body? Typical Cost $5,000 to $15,000 (2026)',
+          description: 'Repatriating a body internationally typically costs $5,000 to $15,000 or more. What drives the price, the paperwork you need (death certificate, embalming certificate, consular mortuary certificate), CDC rules for bringing remains into the US, and the cheaper cremation alternative.',
           url: SITE_URL + '/guides/international-repatriation-remains/',
           datePublished: '2026-09-30',
           dateModified: LAST_UPDATED,
