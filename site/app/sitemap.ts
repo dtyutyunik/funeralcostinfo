@@ -65,6 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/military-funeral-honors/',
     '/guides/infant-funeral-costs/',
     '/guides/crowdfunding-a-funeral/',
+    '/guides/direct-cremation-vs-traditional-funeral/',
+    '/guides/funeral-live-streaming-cost/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

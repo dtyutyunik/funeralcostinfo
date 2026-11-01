@@ -178,6 +178,9 @@ export default function MemorialServiceCost() {
           which puts each decision in order with modeled costs at each step.
           Flowers for the service are a separate line, priced in our{' '}
           <Link href="/guides/funeral-flowers-cost/">funeral flowers cost guide</Link>.
+          If family cannot attend in person, our{' '}
+          <Link href="/guides/funeral-live-streaming-cost/">funeral live streaming cost guide</Link>{' '}
+          prices the free and professional options for bringing them in remotely.
         </p>
 
         <h2>Frequently asked questions</h2>

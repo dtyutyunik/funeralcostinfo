@@ -195,6 +195,8 @@ export default function CremationCostGuide() {
           {' · '}
           <Link href="/guides/funeral-service-types/">Funeral service types explained →</Link>
           {' · '}
+          <Link href="/guides/direct-cremation-vs-traditional-funeral/">Direct cremation vs traditional funeral →</Link>
+          {' · '}
           <Link href="/guides/funeral-rule-rights/">Your rights under the FTC Funeral Rule →</Link>
         </p>
       <RelatedGuides currentSlug="cremation-cost-2026" />

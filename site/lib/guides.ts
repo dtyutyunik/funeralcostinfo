@@ -443,6 +443,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Planning',
     image: '/images/guides/crowdfunding-a-funeral.jpg',
   },
+  {
+    slug: 'direct-cremation-vs-traditional-funeral',
+    title: 'Direct Cremation vs Traditional Funeral: Cost, Process & Which to Choose',
+    blurb:
+      'Direct cremation at $3,030 modeled vs $9,140 for a traditional funeral with viewing and burial: side-by-side costs, timelines, and the middle options.',
+    group: 'Costs & data',
+    image: '/images/guides/direct-cremation-vs-traditional-funeral.jpg',
+  },
+  {
+    slug: 'funeral-live-streaming-cost',
+    title: 'How Much Does Funeral Live Streaming Cost? Prices, DIY & What to Ask',
+    blurb:
+      'Free DIY streaming vs $389 to $799 published professional packages: what each includes, what drives the price, and a private-stream setup checklist.',
+    group: 'Costs & data',
+    image: '/images/guides/funeral-live-streaming-cost.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
