@@ -459,6 +459,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/funeral-live-streaming-cost.jpg',
   },
+  {
+    slug: 'after-a-death-checklist-first-month',
+    title: 'After a Death: A Week-by-Week Checklist for the First Month',
+    blurb:
+      'Picks up where the first 48 hours end: week 1 notifications and benefits, week 2 banks and bills, weeks 3 to 4 claims, probate consult, and records.',
+    group: 'Planning',
+    image: '/images/guides/after-a-death-checklist-first-month.jpg',
+  },
+  {
+    slug: 'cremation-container-cost',
+    title: 'How Much Does a Cremation Container Cost? Alternative Containers, Rental Caskets & Cremation Caskets',
+    blurb:
+      'Basic alternative container about $50 to $300 (NFDA median $160), cremation casket $500 to $2,000, rental shell $725 to $1,250: what each is and your Funeral Rule rights.',
+    group: 'Costs & data',
+    image: '/images/guides/cremation-container-cost.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

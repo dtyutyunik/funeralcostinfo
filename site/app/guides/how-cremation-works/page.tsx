@@ -214,6 +214,8 @@ export default function HowCremationWorks() {
           <Link href="/guides/what-to-do-with-ashes/">What to do with ashes →</Link>
           {' · '}
           <Link href="/guides/urn-costs-guide/">Urn types and costs →</Link>
+          {' · '}
+          <Link href="/guides/cremation-container-cost/">Cremation container costs →</Link>
         </p>
       <RelatedGuides currentSlug="how-cremation-works" />
       </div>

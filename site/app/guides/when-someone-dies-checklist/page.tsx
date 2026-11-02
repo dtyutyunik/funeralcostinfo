@@ -226,6 +226,8 @@ export default function WhenSomeoneDiesChecklist() {
           <Link href="/guides/compare-funeral-homes/">Compare funeral homes →</Link>
           {' · '}
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
+          {' · '}
+          <Link href="/guides/after-a-death-checklist-first-month/">After the first 48 hours: the first month checklist →</Link>
         </p>
         <p className="updated">Data vintage: {VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
       <RelatedGuides currentSlug="when-someone-dies-checklist" />

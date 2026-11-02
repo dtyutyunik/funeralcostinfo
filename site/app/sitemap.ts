@@ -67,6 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/crowdfunding-a-funeral/',
     '/guides/direct-cremation-vs-traditional-funeral/',
     '/guides/funeral-live-streaming-cost/',
+    '/guides/after-a-death-checklist-first-month/',
+    '/guides/cremation-container-cost/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
