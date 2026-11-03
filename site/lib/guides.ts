@@ -475,6 +475,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/cremation-container-cost.jpg',
   },
+  {
+    slug: 'funeral-etiquette',
+    title: 'Funeral Etiquette: What to Wear, What to Say & How to Behave',
+    blurb:
+      'What to wear to a funeral, visitation, or graveside service, what to say to a grieving family, what not to say, and how to behave at the service.',
+    group: 'Planning',
+    image: '/images/guides/funeral-etiquette.jpg',
+  },
+  {
+    slug: 'cremation-jewelry-cost',
+    title: 'How Much Does Cremation Jewelry Cost? Pendants, Glass, Fingerprint & More',
+    blurb:
+      'Chamber pendants from about $20, ash-infused glass $69 to $400, fingerprint jewelry $295 to $1,495: types, prices, and what to check before ordering.',
+    group: 'Costs & data',
+    image: '/images/guides/cremation-jewelry-cost.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

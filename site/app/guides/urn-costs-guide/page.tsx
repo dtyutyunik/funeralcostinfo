@@ -98,7 +98,7 @@ export default function UrnCostsGuide() {
           <li><strong>Ceramic and stone urns</strong> (porcelain, marble, slate). Heavier and more decorative; well suited to display at home. Ceramic tends to be more affordable than stone, though both vary widely by design.</li>
           <li><strong>Biodegradable urns</strong> (paper, salt, cornstarch, untreated wood, sand-and-gelatin blends). Made to break down naturally in soil or water. These are the right choice for ground burial or water burial — and usually among the least expensive options, which makes them a good fit for a ceremony whose whole point is returning to nature.</li>
           <li><strong>Keepsake and mini urns.</strong> Small urns that hold a portion of the ashes, so several family members can each keep some. Typically the least expensive full-urn category.</li>
-          <li><strong>Cremation jewelry.</strong> Pendants, bracelets, and similar pieces that hold a tiny amount of ashes. A complement to a full-size urn rather than a replacement for one.</li>
+          <li><strong>Cremation jewelry.</strong> Pendants, bracelets, and similar pieces that hold a tiny amount of ashes. A complement to a full-size urn rather than a replacement for one; see <Link href="/guides/cremation-jewelry-cost/">how much cremation jewelry costs</Link>.</li>
         </ul>
         <p>
           One design detail matters more than price: the <strong>seal</strong>. A threaded or

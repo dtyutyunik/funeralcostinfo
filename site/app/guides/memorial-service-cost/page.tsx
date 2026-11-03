@@ -181,6 +181,9 @@ export default function MemorialServiceCost() {
           If family cannot attend in person, our{' '}
           <Link href="/guides/funeral-live-streaming-cost/">funeral live streaming cost guide</Link>{' '}
           prices the free and professional options for bringing them in remotely.
+          If you are attending rather than planning, our{' '}
+          <Link href="/guides/funeral-etiquette/">funeral etiquette guide</Link> covers
+          what to wear, what to say, and how to behave at the service.
         </p>
 
         <h2>Frequently asked questions</h2>

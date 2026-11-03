@@ -69,6 +69,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/funeral-live-streaming-cost/',
     '/guides/after-a-death-checklist-first-month/',
     '/guides/cremation-container-cost/',
+    '/guides/funeral-etiquette/',
+    '/guides/cremation-jewelry-cost/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',
