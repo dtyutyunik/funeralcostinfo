@@ -927,6 +927,24 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       },
     ],
   },
+  missouri: {
+    rate: `Cremation is also where Missouri is heading: the NFDA projects 69.7% of Missouri dispositions will be cremations by 2035.`,
+    spread: `Missouri sits well below the national price level (RPP 90.8), but provider-to-provider variation inside the state is typically larger than the difference between Missouri and its neighboring states. The same direct cremation can be priced hundreds of dollars apart across town, especially between the Kansas City and St. Louis metros and smaller markets.`,
+    rule: `Missouri has no fixed waiting period in hours before cremation. Instead, a completed death certificate must be filed with the local registrar prior to cremation and authorizes it (RSMo 193.175), and the person with the right of sepulcher must authorize the cremation (RSMo 194.119). If the cause of death cannot be established within 72 hours, cremation waits for written authorization from the medical examiner, coroner, or physician certifying the cause of death (19 CSR 10-10.100).`,
+    help: `Missouri has no statewide funeral assistance program, but the county commission of the county where a person dies without means to pay shall allow a reasonable sum for funeral expenses (RSMo 205.630). Apply through the county commission, and expect a basic disposition rather than a full service. Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: `An independent benchmark exists: the Funeral Consumers Alliance of Greater Kansas City 2025 area survey of funeral home prices, covering providers in Missouri and Kansas, is linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    save: `Decline embalming you do not need, buy the urn or container from an outside seller if you prefer, and compare at least three General Price Lists. That comparison is where most of the savings are.`,
+    faqs: (st) => [
+      {
+        q: `Does Missouri require a waiting period before cremation?`,
+        a: `No fixed waiting period in hours. Missouri requires a completed death certificate to be filed with the local registrar before cremation (RSMo 193.175), plus authorization from the person holding the right of sepulcher (RSMo 194.119). If the cause of death cannot be established within 72 hours, cremation must wait for written authorization from the medical examiner, coroner, or physician (19 CSR 10-10.100). In practice the paperwork, not a clock, sets the pace.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Missouri?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). If the deceased died without means to pay, the county commission may allow a reasonable sum for funeral expenses under RSMo 205.630, but that is a county decision for a basic disposition, not a statewide benefit, so families arranging their own service should expect to pay the provider's price.`,
+      },
+    ],
+  },
 };
 
 export function generateStaticParams() {
