@@ -491,6 +491,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/cremation-jewelry-cost.jpg',
   },
+  {
+    slug: 'are-funeral-expenses-tax-deductible',
+    title: 'Are Funeral Expenses Tax Deductible? IRS Rules for Families and Estates',
+    blurb:
+      'No deduction on Form 1040 or Form 1041; the only federal deduction is on Form 706, for estates large enough to owe federal estate tax.',
+    group: 'Rights & terms',
+    image: '/images/guides/are-funeral-expenses-tax-deductible.jpg',
+  },
+  {
+    slug: 'how-much-does-pet-cremation-cost',
+    title: 'How Much Does Pet Cremation Cost? Private, Partitioned & Communal Prices',
+    blurb:
+      'Communal median $110, partitioned $200, private $240 for a dog: types, weight tiers, provider examples, and what is usually extra.',
+    group: 'Costs & data',
+    image: '/images/guides/how-much-does-pet-cremation-cost.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {

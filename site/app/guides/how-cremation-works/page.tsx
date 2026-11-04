@@ -216,6 +216,8 @@ export default function HowCremationWorks() {
           <Link href="/guides/urn-costs-guide/">Urn types and costs →</Link>
           {' · '}
           <Link href="/guides/cremation-container-cost/">Cremation container costs →</Link>
+          {' · '}
+          <Link href="/guides/how-much-does-pet-cremation-cost/">Pet cremation costs →</Link>
         </p>
       <RelatedGuides currentSlug="how-cremation-works" />
       </div>

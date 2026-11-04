@@ -71,6 +71,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/cremation-container-cost/',
     '/guides/funeral-etiquette/',
     '/guides/cremation-jewelry-cost/',
+    '/guides/are-funeral-expenses-tax-deductible/',
+    '/guides/how-much-does-pet-cremation-cost/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

@@ -244,6 +244,8 @@ export default function PayingForAFuneralGuide() {
         <p>
           <Link href="/calculator/">Build your line-item estimate →</Link>
           {' · '}
+          <Link href="/guides/are-funeral-expenses-tax-deductible/">Are funeral expenses tax deductible? →</Link>
+          {' · '}
           <Link href="/guides/funeral-service-types/">Funeral service types explained →</Link>
           {' · '}
           <Link href="/guides/funeral-glossary/">Funeral terms glossary →</Link>
