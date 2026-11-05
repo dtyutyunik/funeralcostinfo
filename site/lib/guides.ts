@@ -501,11 +501,67 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'how-much-does-pet-cremation-cost',
-    title: 'How Much Does Pet Cremation Cost? Private, Partitioned & Communal Prices',
+    title: 'How Much Does Pet Cremation Cost by Weight? Private, Partitioned & Communal Prices',
     blurb:
-      'Communal median $110, partitioned $200, private $240 for a dog: types, weight tiers, provider examples, and what is usually extra.',
+      'Priced by weight: communal $45 to $200 and private $100 to $450 in CareCredit national figures, with published provider ladders and the add-ons that move the total.',
     group: 'Costs & data',
     image: '/images/guides/how-much-does-pet-cremation-cost.jpg',
+  },
+  {
+    slug: 'dog-cremation-cost',
+    title: 'How Much Does Dog Cremation Cost? Prices by Size and Weight',
+    blurb:
+      'Private cremation averages $260 for a dog (CareCredit 2025) and runs $100 to $450 by weight band, with published ladders from Chicago, California, and rural providers.',
+    group: 'Costs & data',
+    image: '/images/guides/dog-cremation-cost.jpg',
+  },
+  {
+    slug: 'cat-cremation-cost',
+    title: 'How Much Does Cat Cremation Cost? Prices by Type',
+    blurb:
+      'Cats sit in the smallest weight band: $45 to $75 communal and $100 to $175 private in CareCredit national figures, with a private average of $180.',
+    group: 'Costs & data',
+    image: '/images/guides/cat-cremation-cost.jpg',
+  },
+  {
+    slug: 'in-home-pet-euthanasia-cost',
+    title: 'In-Home Pet Euthanasia Cost: The Visit, the Fees & the Total Bill',
+    blurb:
+      'A home visit averages $410 against $139 in a clinic for a dog (CareCredit 2025); with private cremation the total runs about $670 to $1,085.',
+    group: 'Costs & data',
+    image: '/images/guides/in-home-pet-euthanasia-cost.jpg',
+  },
+  {
+    slug: 'what-to-do-when-a-pet-dies',
+    title: 'What to Do When a Pet Dies at Home: Steps and Costs',
+    blurb:
+      'Confirm the passing, position and cool the body, who to call, and how to choose aftercare: vet-sourced steps in order, with the cost of each decision attached.',
+    group: 'Planning',
+    image: '/images/guides/what-to-do-when-a-pet-dies.jpg',
+  },
+  {
+    slug: 'pet-burial-cost',
+    title: 'Pet Burial Cost: Pet Cemetery Prices, Plots, Caskets & Care Fees',
+    blurb:
+      'Cemetery burial averages $831 for a dog; the real bill is lot plus container plus opening plus care fees, from $290 in Iowa to $1,100 lots in California.',
+    group: 'Costs & data',
+    image: '/images/guides/pet-burial-cost.jpg',
+  },
+  {
+    slug: 'pet-aquamation-cost',
+    title: 'Pet Aquamation Cost: Water Cremation Prices by Weight',
+    blurb:
+      'About the same as private cremation at most providers, but the premium varies: plus $100 a band in Chicago, about $20 in Tacoma, $140 starting in North Carolina.',
+    group: 'Costs & data',
+    image: '/images/guides/pet-aquamation-cost.jpg',
+  },
+  {
+    slug: 'pet-home-burial-laws',
+    title: 'Is It Legal to Bury a Pet in Your Yard? State Rules Explained',
+    blurb:
+      'No federal law governs pet home burial; state rules, city ordinances, and HOA rules decide. Primary texts for Washington, Michigan, Texas, Illinois, and New York.',
+    group: 'Rights & terms',
+    image: '/images/guides/pet-home-burial-laws.jpg',
   },
   {
     slug: 'cemetery-fees-explained',
