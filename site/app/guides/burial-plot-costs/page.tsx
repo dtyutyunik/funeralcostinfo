@@ -99,7 +99,9 @@ export default function BurialPlotCostsGuide() {
           <li>
             <strong>Opening and closing.</strong> The physical work of digging the grave, setting up
             equipment, placing the vault or liner, lowering the casket, and refilling the grave. Priced
-            per burial: $1,500–$3,000 (FCA Maryland/DC, July 2026).
+            per burial: $1,500–$3,000 (FCA Maryland/DC, July 2026). The full fee-by-fee picture,
+            including weekend surcharges and marker setting, is in our{' '}
+            <Link href="/guides/cemetery-fees-explained/">cemetery fees explained guide</Link>.
           </li>
           <li>
             <strong>Outer burial container or liner, if required.</strong> Most cemeteries require at

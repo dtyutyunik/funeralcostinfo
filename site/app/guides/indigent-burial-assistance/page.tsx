@@ -23,7 +23,7 @@ export default function IndigentBurialAssistance() {
   const faqs = [
     {
       q: 'Is there a federal program that pays for an indigent burial?',
-      a: 'No. There is no federal indigent burial program \u2014 the safety net is run locally: counties pay for the disposition of unclaimed or indigent dead under state law, and a handful of states run their own burial-assistance programs. Medicaid does not pay for funerals or burials at the federal level, though it does let people set aside a small burial fund (often around $1,500) without losing eligibility.',
+      a: 'No. There is no federal indigent burial program \u2014 the safety net is run locally: counties pay for the disposition of unclaimed or indigent dead under state law, and a handful of states run their own burial-assistance programs. Medicaid does not pay for funerals or burials at the federal level, though it does let people set aside a small burial fund (often around $1,500) without losing eligibility. Four states do offer limited Medicaid-linked burial assistance; see our <a href="/guides/does-medicaid-pay-for-funeral-costs/">does Medicaid pay for funeral costs guide</a> for the states, amounts, and the burial fund and funeral trust rules.',
     },
     {
       q: 'What does a county indigent burial program actually cover?',

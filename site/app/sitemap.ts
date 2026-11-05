@@ -73,6 +73,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/cremation-jewelry-cost/',
     '/guides/are-funeral-expenses-tax-deductible/',
     '/guides/how-much-does-pet-cremation-cost/',
+    '/guides/cemetery-fees-explained/',
+    '/guides/does-medicaid-pay-for-funeral-costs/',
     '/about/',
     '/editorial-policy/',
     '/affiliate-disclosure/',

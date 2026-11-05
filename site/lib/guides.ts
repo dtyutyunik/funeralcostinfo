@@ -507,6 +507,22 @@ export const GUIDES: GuideMeta[] = [
     group: 'Costs & data',
     image: '/images/guides/how-much-does-pet-cremation-cost.jpg',
   },
+  {
+    slug: 'cemetery-fees-explained',
+    title: 'Cemetery Fees Explained: Opening and Closing, Weekend Surcharges, Marker Setting & More',
+    blurb:
+      'Opening and closing typically $1,500-$2,300 on a weekday, roughly double on weekends: real 2026 fee schedules, urn interment, marker setting, and vault placement rules.',
+    group: 'Costs & data',
+    image: '/images/guides/cemetery-fees-explained.jpg',
+  },
+  {
+    slug: 'does-medicaid-pay-for-funeral-costs',
+    title: 'Does Medicaid Pay for Funeral Costs? The Four States That Help, and What to Do Instead',
+    blurb:
+      'No, in most states. Only Colorado, Indiana, Wisconsin, and Wyoming offer burial assistance ($500-$2,000); the $1,500 burial fund exclusion and irrevocable funeral trusts are the real planning tools.',
+    group: 'Planning',
+    image: '/images/guides/does-medicaid-pay-for-funeral-costs.jpg',
+  },
 ];
 
 export function getGuide(slug: string): GuideMeta | undefined {
