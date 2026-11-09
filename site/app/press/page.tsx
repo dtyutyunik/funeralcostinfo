@@ -3,14 +3,14 @@ import JsonLd, { breadcrumbJsonLd } from '../../components/JsonLd';
 import { dataset, fmt, SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../lib/data';
 
 export const metadata: Metadata = {
-  title: 'Press — Funeral Cost Data for Journalists | FuneralCostInfo',
+  title: 'Press: Funeral Cost Data for Journalists | FuneralCostInfo',
   description:
-    'Copy-paste funeral cost figures for journalists: 51-jurisdiction table in August 2026 dollars, CSV download, one-paragraph methodology, and a contact. The only funeral-cost figures expressed in current dollars with a fully published, reproducible formula.',
+    'Copy-paste funeral cost figures for journalists: 51-jurisdiction table in August 2026 dollars, one-paragraph methodology, and a contact. The only funeral-cost figures expressed in current dollars with a fully published, reproducible formula.',
   alternates: { canonical: SITE_URL + '/press/' },
   openGraph: {
-    title: 'Press — Funeral Cost Data for Journalists',
+    title: 'Press: Funeral Cost Data for Journalists',
     description:
-      'State-by-state funeral costs in August 2026 dollars. Copy-paste table, CSV download, one-paragraph methodology. Independent: we take no money from funeral homes.',
+      'State-by-state funeral costs in August 2026 dollars. Copy-paste table, one-paragraph methodology. Independent: we take no money from funeral homes.',
     url: SITE_URL + '/press/',
   },
 };
@@ -36,12 +36,12 @@ export default function PressPage() {
         <p>
           The figures below are the only widely published U.S. funeral-cost estimates expressed in{' '}
           <strong>current (August 2026) dollars</strong> with a fully published, reproducible formula.
-          Every number on this site is a <strong>modeled estimate</strong> — never a surveyed price
-          or a quote — built from 2023 NFDA national medians, adjusted for funeral-price inflation
+          Every number on this site is a <strong>modeled estimate</strong>, never a surveyed price
+          or a quote, built from 2023 NFDA national medians, adjusted for funeral-price inflation
           via the BLS CPI (×1.1016), and scaled to each state with 2024 BEA regional price parities.
         </p>
         <p>
-          <strong>Independence:</strong> FuneralCostInfo takes no money from funeral homes —
+          <strong>Independence:</strong> FuneralCostInfo takes no money from funeral homes:
           no referral fees, no paid placements, no lead sales. Many price-comparison sites in this
           space are paid by the industry they compare.
         </p>
@@ -62,14 +62,11 @@ export default function PressPage() {
         Arkansas and Mississippi are the least expensive ({fmt(STATES.find(s => s.name === 'Arkansas')!.estimates.traditional_burial.point)}).
       </p>
 
-      <h2>All 50 states + D.C. — copy-paste table</h2>
+      <h2>All 50 states + D.C.: copy-paste table</h2>
       <p>
         Traditional funeral with viewing and burial (vault not included), in August 2026 dollars.
-        Prefer a spreadsheet?{' '}
-        <a href="/press/funeral-costs-by-state-2026.csv" download>
-          Download the full CSV
-        </a>{' '}
-        (51 jurisdictions × 5 services, plus BEA 2024 RPP indexes).
+        The full six-service tables for every jurisdiction are on the{' '}
+        <a href="/guides/funeral-costs-by-state-2026/">Funeral Cost Index 2026</a> page.
       </p>
       <table className="data">
         <thead>
@@ -110,7 +107,7 @@ export default function PressPage() {
         </p>
         <p>
           Free to cite and republish figures with attribution and a link. Please include the data
-          vintage ("August 2026 dollars") — it's the part most other sources omit.
+          vintage ("August 2026 dollars"). It's the part most other sources omit.
         </p>
       </div>
 
@@ -126,7 +123,7 @@ export default function PressPage() {
         />
         For custom cuts of the data, methodology questions, or interviews:{' '}
         <a href="mailto:press@funeralcostinfo.com">press@funeralcostinfo.com</a>
-        {' '}— Dmitriy Tyutyunik, founder.
+        {' '}Dmitriy Tyutyunik, founder.
       </p>
       <p className="updated">{VINTAGE_LABEL} · Built {LAST_UPDATED} · Model v3 · Refresh cadence: monthly CPI, annual BEA.</p>
     </div>
