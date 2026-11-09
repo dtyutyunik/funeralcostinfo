@@ -958,6 +958,22 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
     description:
       `Average funeral cost in Missouri in 2026: traditional burial $8,300, cremation with a service $6,280, direct cremation $2,750. Cheapest options, state rules, and county help explained.`,
   },
+  // Indiana, Florida, Kentucky: 250-300 impressions each with zero clicks (positions 57-68) in the same GSC window; same numbers-first treatment, applied 2026-11-09 at Dima's request.
+  indiana: {
+    title: `Funeral Costs in Indiana 2026: Burial $8,530, Cremation $2,830`,
+    description:
+      `Average funeral cost in Indiana in 2026: traditional burial $8,530, cremation with a service $6,460, direct cremation $2,830. Cheapest options, state rules, and township assistance explained.`,
+  },
+  florida: {
+    title: `Funeral Costs in Florida 2026: Burial $9,450, Cremation $3,130`,
+    description:
+      `Average funeral cost in Florida in 2026: traditional burial $9,450, cremation with a service $7,160, direct cremation $3,130. Cheapest options, state rules, and assistance programs explained.`,
+  },
+  kentucky: {
+    title: `Funeral Costs in Kentucky 2026: Burial $8,240, Cremation $2,730`,
+    description:
+      `Average funeral cost in Kentucky in 2026: traditional burial $8,240, cremation with a service $6,240, direct cremation $2,730. Cheapest options, state rules, and assistance programs explained.`,
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ state: string }> }): Promise<Metadata> {
