@@ -951,14 +951,25 @@ export function generateStaticParams() {
   return ALL_STATE_SLUGS.map((slug) => ({ state: slug }));
 }
 
+const META_OVERRIDES: Record<string, { title: string; description: string }> = {
+  // Missouri: page 1 position (9.6) with 173 impressions and zero clicks in the Oct 10-Nov 6 GSC window; numbers-first title and description to win the click.
+  missouri: {
+    title: `Funeral Costs in Missouri 2026: Burial $8,300, Cremation $2,750`,
+    description:
+      `Average funeral cost in Missouri in 2026: traditional burial $8,300, cremation with a service $6,280, direct cremation $2,750. Cheapest options, state rules, and county help explained.`,
+  },
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ state: string }> }): Promise<Metadata> {
   const { state } = await params;
   const st = getState(state);
   if (!st) return {};
   const trad = st.estimates.traditional_burial;
   const crem = st.estimates.direct_cremation;
-  const title = `How Much Does a Funeral Cost in ${st.name}? 2026 Burial and Cremation Estimates`;
+  const override = META_OVERRIDES[state];
+  const title = override?.title ?? `How Much Does a Funeral Cost in ${st.name}? 2026 Burial and Cremation Estimates`;
   const description =
+    override?.description ??
     `Average funeral cost in ${st.name}: modeled 2026 estimates are ${fmt(trad.point)} for a traditional burial, ${fmt(st.estimates.cremation_with_service.point)} for cremation with a service, and ${fmt(crem.point)} for direct cremation. Compare ranges, inclusions, local rules, and official resources.`;
   const url = `${SITE_URL}/funeral-costs/${state}/`;
   return {
