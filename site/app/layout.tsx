@@ -36,6 +36,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-US" className={`${fraunces.variable} ${inter.variable}`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2964515793362390"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <JsonLd data={organizationJsonLd(SITE_URL)} />
         <header className="site-header no-print">

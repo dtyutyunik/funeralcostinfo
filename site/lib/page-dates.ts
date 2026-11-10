@@ -3,287 +3,287 @@
 export const PAGE_DATES: Record<string, { published: string; updated: string }> = {
   "/guides/after-a-death-checklist-first-month/": {
     "published": "2026-11-02",
-    "updated": "2026-11-02"
+    "updated": "2026-11-10"
   },
   "/guides/aquamation-guide/": {
     "published": "2026-09-24",
-    "updated": "2026-10-23"
+    "updated": "2026-11-10"
   },
   "/guides/are-funeral-expenses-tax-deductible/": {
     "published": "2026-11-04",
-    "updated": "2026-11-04"
+    "updated": "2026-11-10"
   },
   "/guides/body-organ-donation-guide/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/burial-at-sea/": {
     "published": "2026-10-01",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/burial-plot-costs/": {
     "published": "2026-09-24",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/burial-vault-cost/": {
     "published": "2026-10-23",
-    "updated": "2026-10-23"
+    "updated": "2026-11-10"
   },
   "/guides/casket-buying-guide/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/cat-cremation-cost/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/cemetery-fees-explained/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/cheapest-funeral-options/": {
     "published": "2026-10-29",
-    "updated": "2026-10-29"
+    "updated": "2026-11-10"
   },
   "/guides/compare-funeral-homes/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/corporate-vs-independent-funeral-homes/": {
     "published": "2026-09-29",
-    "updated": "2026-09-29"
+    "updated": "2026-11-10"
   },
   "/guides/cremation-container-cost/": {
     "published": "2026-11-02",
-    "updated": "2026-11-02"
+    "updated": "2026-11-10"
   },
   "/guides/cremation-cost-2026/": {
     "published": "2026-09-24",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/cremation-diamonds-cost/": {
     "published": "2026-10-24",
-    "updated": "2026-10-24"
+    "updated": "2026-11-10"
   },
   "/guides/cremation-jewelry-cost/": {
     "published": "2026-11-03",
-    "updated": "2026-11-03"
+    "updated": "2026-11-10"
   },
   "/guides/crowdfunding-a-funeral/": {
     "published": "2026-10-31",
-    "updated": "2026-10-31"
+    "updated": "2026-11-10"
   },
   "/guides/death-certificates-cost/": {
     "published": "2026-09-30",
-    "updated": "2026-09-30"
+    "updated": "2026-11-10"
   },
   "/guides/direct-cremation-vs-traditional-funeral/": {
     "published": "2026-11-01",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/does-medicaid-pay-for-funeral-costs/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/dog-cremation-cost/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/embalming-costs-requirements/": {
     "published": "2026-09-29",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/file-complaint-funeral-home/": {
     "published": "2026-10-01",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/final-expense-burial-insurance/": {
     "published": "2026-10-01",
-    "updated": "2026-10-23"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-cost-2026-breakdown/": {
     "published": "2026-09-24",
-    "updated": "2026-10-23"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-costs-by-city/": {
     "published": "2026-09-29",
-    "updated": "2026-10-31"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-costs-by-state-2026/": {
     "published": "2026-09-24",
-    "updated": "2026-11-09"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-etiquette/": {
     "published": "2026-11-03",
-    "updated": "2026-11-03"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-flowers-cost/": {
     "published": "2026-10-30",
-    "updated": "2026-10-30"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-glossary/": {
     "published": "2026-09-23",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-live-streaming-cost/": {
     "published": "2026-11-01",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-loans/": {
     "published": "2026-10-24",
-    "updated": "2026-10-24"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-memorial-society/": {
     "published": "2026-09-30",
-    "updated": "2026-09-30"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-officiant-cost/": {
     "published": "2026-10-26",
-    "updated": "2026-10-26"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-reception-cost/": {
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-rule-rights/": {
     "published": "2026-09-23",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-service-types/": {
     "published": "2026-09-23",
-    "updated": "2026-10-25"
+    "updated": "2026-11-10"
   },
   "/guides/funeral-transportation-cost/": {
     "published": "2026-10-28",
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
   "/guides/graveside-service-cost/": {
     "published": "2026-10-27",
-    "updated": "2026-10-28"
+    "updated": "2026-11-10"
   },
   "/guides/green-burial-composting/": {
     "published": "2026-09-24",
-    "updated": "2026-10-23"
+    "updated": "2026-11-10"
   },
   "/guides/headstone-costs/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/home-funeral-cost/": {
     "published": "2026-09-30",
-    "updated": "2026-09-30"
+    "updated": "2026-11-10"
   },
   "/guides/how-cremation-works/": {
     "published": "2026-10-29",
-    "updated": "2026-11-04"
+    "updated": "2026-11-10"
   },
   "/guides/how-much-does-pet-cremation-cost/": {
     "published": "2026-11-04",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/how-to-plan-a-funeral/": {
     "published": "2026-10-23",
-    "updated": "2026-10-27"
+    "updated": "2026-11-10"
   },
   "/guides/how-to-write-a-eulogy/": {
     "published": "2026-10-27",
-    "updated": "2026-10-27"
+    "updated": "2026-11-10"
   },
   "/guides/in-home-pet-euthanasia-cost/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/indigent-burial-assistance/": {
     "published": "2026-10-01",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/infant-funeral-costs/": {
     "published": "2026-10-31",
-    "updated": "2026-10-31"
+    "updated": "2026-11-10"
   },
   "/guides/international-repatriation-remains/": {
     "published": "2026-09-30",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/mausoleum-cost/": {
     "published": "2026-09-29",
-    "updated": "2026-11-01"
+    "updated": "2026-11-10"
   },
   "/guides/memorial-service-cost/": {
     "published": "2026-10-25",
-    "updated": "2026-11-03"
+    "updated": "2026-11-10"
   },
   "/guides/military-funeral-honors/": {
     "published": "2026-10-30",
-    "updated": "2026-10-30"
+    "updated": "2026-11-10"
   },
   "/guides/obituary-costs/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/paying-for-a-funeral/": {
     "published": "2026-09-24",
-    "updated": "2026-11-04"
+    "updated": "2026-11-10"
   },
   "/guides/pet-aquamation-cost/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/pet-burial-cost/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/pet-home-burial-laws/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/prepaid-funeral-plans/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/religious-funeral-costs/": {
     "published": "2026-09-29",
-    "updated": "2026-09-29"
+    "updated": "2026-11-10"
   },
   "/guides/scattering-ashes-laws-costs/": {
     "published": "2026-09-24",
-    "updated": "2026-10-25"
+    "updated": "2026-11-10"
   },
   "/guides/shipping-remains/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/social-security-survivor-benefits/": {
     "published": "2026-10-26",
-    "updated": "2026-10-26"
+    "updated": "2026-11-10"
   },
   "/guides/urn-costs-guide/": {
     "published": "2026-09-24",
-    "updated": "2026-11-03"
+    "updated": "2026-11-10"
   },
   "/guides/veterans-burial-benefits/": {
     "published": "2026-09-24",
-    "updated": "2026-10-30"
+    "updated": "2026-11-10"
   },
   "/guides/what-to-do-when-a-pet-dies/": {
     "published": "2026-11-05",
-    "updated": "2026-11-05"
+    "updated": "2026-11-10"
   },
   "/guides/what-to-do-with-ashes/": {
     "published": "2026-10-25",
-    "updated": "2026-10-25"
+    "updated": "2026-11-10"
   },
   "/guides/when-someone-dies-checklist/": {
     "published": "2026-09-24",
-    "updated": "2026-11-02"
+    "updated": "2026-11-10"
   },
   "/guides/who-can-arrange-funeral/": {
     "published": "2026-09-24",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/guides/why-funeral-cost-figures-disagree/": {
     "published": "2026-09-23",
-    "updated": "2026-09-24"
+    "updated": "2026-11-10"
   },
   "/": {
     "published": "2026-09-23",

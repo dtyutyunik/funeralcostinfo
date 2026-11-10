@@ -533,7 +533,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     fcaSurveyUrl: null,
     context: [
       'Ohio sits well below the national average price level (RPP 92.8).',
-      'Ohio\u2019s board collects a small fee when funeral homes sell preneed contracts — a safety net that reimburses families that can prove they paid but were refused services due to lost paperwork or misuse of funds.',
+      'Ohio charges a $10 fee on each preneed funeral contract sold (Ohio Revised Code 4717.07(A)(14)), which funds the state Preneed Recovery Fund (ORC 4717.41) — a safety net that reimburses families who paid for preneed services and suffered loss through a seller\u2019s malfeasance, default, or insolvency.',
     ],
     caveats: [
       'The board restored an Indigent Burial and Cremation Support Program for state fiscal year 2025 (board minutes, February 2025) — a rare state-level safety net for families who cannot afford burial or cremation; check current program details with the board.',
@@ -1006,6 +1006,24 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   const trad = st.estimates.traditional_burial;
   const maxPoint = Math.max(...SERVICE_ORDER.map((k) => st.estimates[k].point));
 
+  const byTradDesc = [...dataset.states].sort(
+    (x, y) => y.estimates.traditional_burial.point - x.estimates.traditional_burial.point
+  );
+  const tradRank = byTradDesc.findIndex((s) => s.abbr === st.abbr) + 1;
+  const cheapestState = byTradDesc[byTradDesc.length - 1];
+  const priciestState = byTradDesc[0];
+  const byDcDesc = [...dataset.states].sort(
+    (x, y) => y.estimates.direct_cremation.point - x.estimates.direct_cremation.point
+  );
+  const dcRank = byDcDesc.findIndex((s) => s.abbr === st.abbr) + 1;
+  const tradVsNational = Math.round(
+    (trad.point / dataset.anchors.traditional_burial.value - 1) * 100
+  );
+  const dcVsNational = Math.round(
+    (st.estimates.direct_cremation.point / dataset.anchors.direct_cremation.value - 1) * 100
+  );
+  const stateCities = citiesForState(state);
+
   const faqs = [
     {
       q: `What is the average cost of cremation in ${st.name}?`,
@@ -1113,6 +1131,47 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             </ul>
           </div>
         </div>
+
+        <h2>How {st.name} compares with the rest of the country</h2>
+        <p>
+          {st.name} ranks <strong>#{tradRank} of {byTradDesc.length}</strong> for the modeled cost
+          of a traditional funeral with viewing and burial, at {fmt(trad.point)} —{' '}
+          {tradVsNational === 0
+            ? 'in line with'
+            : `${Math.abs(tradVsNational)} percent ${tradVsNational > 0 ? 'above' : 'below'}`}{' '}
+          the national anchor of {fmt(dataset.anchors.traditional_burial.value)}. For direct
+          cremation, {st.name} ranks <strong>#{dcRank} of {byDcDesc.length}</strong> at{' '}
+          {fmt(st.estimates.direct_cremation.point)},{' '}
+          {dcVsNational === 0
+            ? 'in line with'
+            : `${Math.abs(dcVsNational)} percent ${dcVsNational > 0 ? 'above' : 'below'}`}{' '}
+          the national anchor of {fmt(dataset.anchors.direct_cremation.value)}. The spread across
+          the country is wide: the least expensive state in the model,{' '}
+          <Link href={`/funeral-costs/${stateSlug(cheapestState.name)}/`}>{cheapestState.name}</Link>,
+          models a traditional burial at {fmt(cheapestState.estimates.traditional_burial.point)},
+          while the most expensive,{' '}
+          <Link href={`/funeral-costs/${stateSlug(priciestState.name)}/`}>{priciestState.name}</Link>,
+          models {fmt(priciestState.estimates.traditional_burial.point)} — a gap of{' '}
+          {fmt(priciestState.estimates.traditional_burial.point - cheapestState.estimates.traditional_burial.point)}{' '}
+          for the same service definition. {st.name}&apos;s position in that spread comes from its
+          overall price level: the BEA puts {st.name}&apos;s regional price parity at{' '}
+          {st.rpp_all_items.toFixed(1)}, where 100 is the national average, and the model scales
+          the national medians by that figure.
+        </p>
+        {stateCities.length > 0 && (
+          <p>
+            Within {st.name}, prices are not uniform either. Our city-level pages model{' '}
+            {stateCities.map((c, i) => (
+              <span key={c.slug}>
+                {i > 0 && (i === stateCities.length - 1 ? ' and ' : ', ')}
+                <Link href={`/funeral-costs/${state}/${c.slug}/`}>{c.name}</Link> at{' '}
+                {fmt(c.estimates.traditional_burial.point)}
+              </span>
+            ))}{' '}
+            for a traditional burial, using each metro&apos;s own BEA price parity rather than the
+            statewide figure.
+          </p>
+        )}
 
         <h2>Cremation costs in {st.name}</h2>
         <p>

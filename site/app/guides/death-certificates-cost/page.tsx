@@ -85,7 +85,7 @@ export default function DeathCertificatesCost() {
           state vital-records offices and funeral-industry surveys:
         </p>
         <table className="data">
-          <caption>Certified death certificate fees, selected states (verify current fees with your state's vital-records office — fees change).</caption>
+          <caption>Certified death certificate fees, selected states, as published by state vital-records offices in January 2026 (verify current fees with your state's office — fees change).</caption>
           <thead>
             <tr>
               <th>State</th>

@@ -94,9 +94,10 @@ export default function AquamationGuide() {
           average price; published 2026 provider prices run roughly <strong>$1,900–$4,400</strong>
           depending on the provider and package, which sits at or above our modeled direct-cremation
           figure of <strong>{fmt(A.direct_cremation.value)}</strong> (a modeled estimate in August
-          2026 dollars, not a quote). It is explicitly legal in about half the states, the list is
-          still changing, and availability is limited even where it is legal — most families will
-          need to travel or arrange transport.
+          2026 dollars, not a quote). It is explicitly legal in 26 to 28 states as of 2026,
+          per the Cremation Association of North America and industry status trackers, the list
+          is still changing, and availability is limited even where it is legal — most families
+          will need to travel or arrange transport.
         </p>
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
 
