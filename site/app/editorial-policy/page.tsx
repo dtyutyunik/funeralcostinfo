@@ -17,9 +17,8 @@ export default function EditorialPolicyPage() {
       <p className="updated">Effective 2026-11-10.</p>
       <p>
         FuneralCostInfo is written and edited by <Link href="/about/">Dmitriy Tyutyunik</Link>,
-        its founder. Research and drafting use AI tools as assistants; every figure is checked
-        against its named source before publication, and the standards below govern what appears
-        on the site.
+        its founder. Every figure is checked against its named source before publication, and
+        the standards below govern what appears on the site.
       </p>
       <ol>
         <li><strong>Official sources only.</strong> Cost inputs come from the NFDA, the Bureau of Economic Analysis, the Bureau of Labor Statistics, and the FTC. Third-party price aggregators are never treated as authoritative.</li>
