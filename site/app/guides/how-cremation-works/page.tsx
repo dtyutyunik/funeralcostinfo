@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function HowCremationWorks() {
         description: 'How cremation works, step by step: authorization and the waiting period, identification, preparation, the retort at 1,400 to 1,800 degrees, cooling and processing, and return of the ashes in 7 to 10 days.',
         url: SITE_URL + '/guides/how-cremation-works/',
         datePublished: '2026-10-29',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/how-cremation-works/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="how-cremation-works" imageAlt="How does cremation work?"><h1>How does cremation work?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/how-cremation-works/']?.published} updated={PAGE_DATES['/guides/how-cremation-works/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> cremation reduces the body to bone fragments with

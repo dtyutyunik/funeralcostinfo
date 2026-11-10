@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function FuneralEtiquette() {
         description: 'Funeral etiquette in plain English: what to wear to a funeral, visitation, or graveside service, what to say to a grieving family, what not to say, and how to behave at the service.',
         url: SITE_URL + '/guides/funeral-etiquette/',
         datePublished: '2026-11-03',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-etiquette/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-etiquette" imageAlt="Funeral etiquette"><h1>Funeral etiquette: what to wear, what to say, and how to behave</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-etiquette/']?.published} updated={PAGE_DATES['/guides/funeral-etiquette/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> funeral etiquette comes down to three things: show up,

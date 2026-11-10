@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function WhatToDoWhenAPetDies() {
         description: 'Step by step for the first minutes, hours, and days after a pet dies at home or at the vet, with the cost of each step, from veterinarian guidance.',
         url: SITE_URL + '/guides/what-to-do-when-a-pet-dies/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/what-to-do-when-a-pet-dies/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="what-to-do-when-a-pet-dies" imageAlt="What to do when a pet dies"><h1>What to do when a pet dies</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/what-to-do-when-a-pet-dies/']?.published} updated={PAGE_DATES['/guides/what-to-do-when-a-pet-dies/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> in the first minutes, confirm the passing. In

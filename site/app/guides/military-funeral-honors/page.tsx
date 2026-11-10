@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function MilitaryFuneralHonors() {
         description: 'Military funeral honors are free for eligible veterans: at least two uniformed service members, the folding and presentation of the American flag, and the playing of Taps. Who qualifies, what full honors add, and how to request them.',
         url: SITE_URL + '/guides/military-funeral-honors/',
         datePublished: '2026-10-30',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/military-funeral-honors/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="military-funeral-honors" imageAlt="Military funeral honors"><h1>Military funeral honors</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/military-funeral-honors/']?.published} updated={PAGE_DATES['/guides/military-funeral-honors/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> military funeral honors are{' '}

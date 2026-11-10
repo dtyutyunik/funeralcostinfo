@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function DoesMedicaidPayForFuneralCosts() {
         description: 'Medicaid does not pay for funeral costs in most states. Four states offer limited burial assistance (Colorado, Indiana, Wisconsin, Wyoming), and federal rules let you set aside a $1,500 burial fund without losing eligibility.',
         url: SITE_URL + '/guides/does-medicaid-pay-for-funeral-costs/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/does-medicaid-pay-for-funeral-costs/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="does-medicaid-pay-for-funeral-costs" imageAlt="Does Medicaid pay for funeral costs"><h1>Does Medicaid pay for funeral costs?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/does-medicaid-pay-for-funeral-costs/']?.published} updated={PAGE_DATES['/guides/does-medicaid-pay-for-funeral-costs/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> no, not in most states. Medicaid is a health

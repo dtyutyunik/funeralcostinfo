@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function HowToWriteAEulogy() {
         description: 'How to write a eulogy in five parts: a short introduction, who they were, two stories, what they taught you, and a farewell. Aim for 3 to 7 minutes, about 400 to 900 words, with a fill-in template and delivery tips.',
         url: SITE_URL + '/guides/how-to-write-a-eulogy/',
         datePublished: '2026-10-27',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/how-to-write-a-eulogy/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="how-to-write-a-eulogy" imageAlt="How to write a eulogy"><h1>How to write a eulogy</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/how-to-write-a-eulogy/']?.published} updated={PAGE_DATES['/guides/how-to-write-a-eulogy/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a good eulogy is 3 to 7 minutes long, about{' '}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -58,11 +59,11 @@ export default function DeathCertificatesCost() {
           description: 'How much a death certificate costs by state ($5\u2013$30+ per certified copy), how many copies a family needs (typically 5\u201310), who can order them, and how long they take.',
           url: SITE_URL + '/guides/death-certificates-cost/',
           datePublished: '2026-09-30',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/death-certificates-cost/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="death-certificates-cost" imageAlt="How much does a death certificate cost? State fees and how many copies you need"><h1>How much does a death certificate cost? (2026) state fees + how many copies you need</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/death-certificates-cost/']?.published} updated={PAGE_DATES['/guides/death-certificates-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a certified death certificate costs about

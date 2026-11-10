@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function HowToPlanAFuneral() {
         description: 'The ten steps of planning a funeral in order, from the first phone calls to the paperwork after the service, with modeled 2026 costs at each decision point.',
         url: SITE_URL + '/guides/how-to-plan-a-funeral/',
         datePublished: '2026-10-23',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/how-to-plan-a-funeral/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="how-to-plan-a-funeral" imageAlt="How to Plan a Funeral: A Step-by-Step Guide"><h1>How to plan a funeral, step by step</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/how-to-plan-a-funeral/']?.published} updated={PAGE_DATES['/guides/how-to-plan-a-funeral/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> planning a funeral comes down to ten steps, in order:

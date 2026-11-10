@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function AreFuneralExpensesTaxDeductible() {
         description: 'Funeral expenses are not deductible on a personal income tax return. The only federal tax deduction runs through the estate tax return, Form 706, and only for estates large enough to owe federal estate tax.',
         url: SITE_URL + '/guides/are-funeral-expenses-tax-deductible/',
         datePublished: '2026-11-04',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/are-funeral-expenses-tax-deductible/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="are-funeral-expenses-tax-deductible" imageAlt="Are funeral expenses tax deductible"><h1>Are funeral expenses tax deductible?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/are-funeral-expenses-tax-deductible/']?.published} updated={PAGE_DATES['/guides/are-funeral-expenses-tax-deductible/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> no, not on your personal tax return. Funeral

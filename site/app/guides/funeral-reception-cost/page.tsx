@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function FuneralReceptionCost() {
         description: 'A funeral reception typically costs $300 to $2,000 for a small gathering and $1,250 to $2,500 in food alone for 50 guests at $25 to $50 a head. Catering formats, venue costs, and per-guest math, line by line.',
         url: SITE_URL + '/guides/funeral-reception-cost/',
         datePublished: '2026-10-28',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-reception-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-reception-cost" imageAlt="How much does a funeral reception cost?"><h1>How much does a funeral reception cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-reception-cost/']?.published} updated={PAGE_DATES['/guides/funeral-reception-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a funeral reception typically costs{' '}

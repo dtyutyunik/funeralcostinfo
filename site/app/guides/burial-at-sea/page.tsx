@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -70,11 +71,11 @@ export default function BurialAtSea() {
           description: 'Burial at sea costs $100 to $500 for unattended ash scattering, $350 to $2,900 for an attended charter, and $7,000 to $17,000 for a full-body burial. The Navy burial at sea program is free for eligible veterans. EPA rules, the 3 nautical mile rule, and how to arrange each option.',
           url: SITE_URL + '/guides/burial-at-sea/',
           datePublished: '2026-10-01',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/burial-at-sea/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="burial-at-sea" imageAlt="How much does burial at sea cost? A small charter boat on a calm, muted ocean under an overcast sky"><h1>How much does burial at sea cost? (2026 prices)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/burial-at-sea/']?.published} updated={PAGE_DATES['/guides/burial-at-sea/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> <strong>how much does burial at sea cost?</strong> Unattended ash

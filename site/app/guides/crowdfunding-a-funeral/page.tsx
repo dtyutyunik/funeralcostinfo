@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CrowdfundingAFuneral() {
         description: 'Crowdfunding a funeral starts with an itemized bill, not a guess: set the goal from the real total, expect GoFundMe transaction fees of 2.9% plus $0.30 per donation, and write a short, specific story. Steps, fee math, and scam safety.',
         url: SITE_URL + '/guides/crowdfunding-a-funeral/',
         datePublished: '2026-10-31',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/crowdfunding-a-funeral/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="crowdfunding-a-funeral" imageAlt="Crowdfunding a funeral"><h1>How to crowdfund a funeral</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/crowdfunding-a-funeral/']?.published} updated={PAGE_DATES['/guides/crowdfunding-a-funeral/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> crowdfunding a funeral works best when the goal

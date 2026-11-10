@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function GravesideServiceCost() {
         description: 'A graveside service typically adds $200 to $820 in funeral home staff and equipment charges, on top of separate cemetery fees. What the service includes, what moves the price, and how it compares with a full funeral.',
         url: SITE_URL + '/guides/graveside-service-cost/',
         datePublished: '2026-10-27',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/graveside-service-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="graveside-service-cost" imageAlt="How much does a graveside service cost?"><h1>How much does a graveside service cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/graveside-service-cost/']?.published} updated={PAGE_DATES['/guides/graveside-service-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the funeral home line for a graveside service

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import { CITIES } from '../../../lib/cities';
 import Link from 'next/link';
@@ -99,11 +100,11 @@ export default function FuneralCostsByCity() {
           description: 'Funeral costs by city: published direct-cremation prices in the 25 largest US metros (2026), why metro prices differ, and where to find real local figures.',
           url: SITE_URL + '/guides/funeral-costs-by-city/',
           datePublished: '2026-09-29',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/funeral-costs-by-city/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="funeral-costs-by-city" imageAlt="Funeral costs by city: average prices in the 25 largest US metros"><h1>Funeral costs by city: average prices in the 25 largest US metros (2026)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-costs-by-city/']?.published} updated={PAGE_DATES['/guides/funeral-costs-by-city/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> no government agency publishes funeral prices by city, so there is no

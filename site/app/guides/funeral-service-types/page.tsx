@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -173,11 +174,11 @@ export default function ServiceTypesGuide() {
         description: 'What actually happens in a traditional burial, burial with vault, cremation with service, direct cremation, direct burial, and green burial — with modeled national cost estimates for each.',
         url: SITE_URL + '/guides/funeral-service-types/',
         datePublished: '2026-09-23',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-service-types/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-service-types" imageAlt="Funeral service types, explained"><h1>Funeral service types, explained</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-service-types/']?.published} updated={PAGE_DATES['/guides/funeral-service-types/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> there are six main ways a funeral can be arranged —

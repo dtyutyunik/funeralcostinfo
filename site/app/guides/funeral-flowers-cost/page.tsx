@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function FuneralFlowersCost() {
         description: 'Most people spend $75 to $150 on funeral flowers. A simple basket starts around $60 to $85, a standing spray runs about $135 to $350, and a casket spray usually costs $250 to $700 or more, by arrangement type and relationship.',
         url: SITE_URL + '/guides/funeral-flowers-cost/',
         datePublished: '2026-10-30',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-flowers-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-flowers-cost" imageAlt="How much do funeral flowers cost?"><h1>How much do funeral flowers cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-flowers-cost/']?.published} updated={PAGE_DATES['/guides/funeral-flowers-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> most people spend{' '}

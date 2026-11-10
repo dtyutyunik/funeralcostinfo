@@ -4,6 +4,7 @@ import StateTable from '../components/StateTable';
 import UsMap from '../components/UsMap';
 import JsonLd, { breadcrumbJsonLd } from '../components/JsonLd';
 import Byline from '../components/Byline';
+import { PAGE_DATES } from '../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, dataset, fmt, VINTAGE_LABEL } from '../lib/data';
 import Link from 'next/link';
 
@@ -77,7 +78,7 @@ export default function Home() {
                 <strong>{fmt(ar.estimates.traditional_burial.point)}</strong>. Build a line-item
                 estimate, explore the map, or browse every state below.
               </p>
-              <Byline />
+              <Byline updated={PAGE_DATES['/']?.updated} />
               <div className="hero-facts">
                 <div className="hero-fact">
                   <div className="num">{fmt(a.traditional_burial.value)}</div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CremationDiamondsCost() {
         description: 'Turning ashes into a diamond costs from about $995 for a small stone to $25,000 or more for a large one. How the lab process works, how long it takes, how much ash you need, and what to check before you order.',
         url: SITE_URL + '/guides/cremation-diamonds-cost/',
         datePublished: '2026-10-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cremation-diamonds-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cremation-diamonds-cost" imageAlt="How Much Does a Cremation Diamond Cost? Prices, Process & Timeline"><h1>How much does a cremation diamond cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cremation-diamonds-cost/']?.published} updated={PAGE_DATES['/guides/cremation-diamonds-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> turning ashes into a diamond costs from about{' '}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function PetBurialCost() {
         description: 'Pet cemetery burial cost broken into lot, container, opening, and care fees, with published Cedar Bend and Pet Rest lists and national averages.',
         url: SITE_URL + '/guides/pet-burial-cost/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/pet-burial-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="pet-burial-cost" imageAlt="How much does pet burial cost"><h1>How much does pet burial cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/pet-burial-cost/']?.published} updated={PAGE_DATES['/guides/pet-burial-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a pet cemetery burial averages <strong>$831 for

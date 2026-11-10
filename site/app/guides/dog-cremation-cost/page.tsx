@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function DogCremationCost() {
         description: 'Dog cremation cost by weight band: CareCredit national table, published provider ladders, and size examples from Chihuahua to Great Dane.',
         url: SITE_URL + '/guides/dog-cremation-cost/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/dog-cremation-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="dog-cremation-cost" imageAlt="How much does dog cremation cost"><h1>How much does dog cremation cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/dog-cremation-cost/']?.published} updated={PAGE_DATES['/guides/dog-cremation-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> dog cremation costs <strong>$45 to $200 for

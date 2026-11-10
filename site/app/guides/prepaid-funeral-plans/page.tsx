@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function PrepaidFuneralPlansGuide() {
         description: 'How prepaid funeral plans work: price-guaranteed vs. non-guaranteed contracts, trust vs. insurance funding, revocable vs. irrevocable — plus the traps to avoid.',
         url: SITE_URL + '/guides/prepaid-funeral-plans/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/prepaid-funeral-plans/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="prepaid-funeral-plans" imageAlt="Prepaid funeral plans: pros, cons & traps"><h1>Prepaid funeral plans: pros, cons &amp; traps</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/prepaid-funeral-plans/']?.published} updated={PAGE_DATES['/guides/prepaid-funeral-plans/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a prepaid funeral plan locks in your arrangements —

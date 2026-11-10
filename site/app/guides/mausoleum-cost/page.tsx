@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function MausoleumCost() {
           description: 'How much does a mausoleum cost in 2026? Community crypts, columbarium niches, lawn crypts, and private mausoleums — real 2025–2026 cemetery price lists, fee by fee.',
           url: SITE_URL + '/guides/mausoleum-cost/',
           datePublished: '2026-09-29',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/mausoleum-cost/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="mausoleum-cost" imageAlt="How much does a mausoleum cost? 2026 price guide"><h1>How much does a mausoleum cost? 2026 price guide (crypts, niches & lawn crypts)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/mausoleum-cost/']?.published} updated={PAGE_DATES['/guides/mausoleum-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a single crypt in a community mausoleum typically costs{' '}

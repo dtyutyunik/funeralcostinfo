@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CremationCostGuide() {
         description: 'Cremation costs in 2026: what cremation with a service and direct cremation typically include, why quotes vary so much, and modeled national estimates with sources.',
         url: SITE_URL + '/guides/cremation-cost-2026/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cremation-cost-2026/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cremation-cost-2026" imageAlt="How much does cremation cost in 2026?"><h1>How much does cremation cost in 2026?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cremation-cost-2026/']?.published} updated={PAGE_DATES['/guides/cremation-cost-2026/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a funeral with viewing followed by cremation costs about

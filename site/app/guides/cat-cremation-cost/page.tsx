@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function CatCremationCost() {
         description: 'Cat cremation cost in the smallest weight band: CareCredit national figures, provider examples, and the extras that apply to cats.',
         url: SITE_URL + '/guides/cat-cremation-cost/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cat-cremation-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cat-cremation-cost" imageAlt="How much does cat cremation cost"><h1>How much does cat cremation cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cat-cremation-cost/']?.published} updated={PAGE_DATES['/guides/cat-cremation-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> cats sit in the smallest weight band, so cat

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import {
   dataset, getState, stateSlug, fmt, fmtRange, SITE_URL, LAST_UPDATED,
   SERVICE_ORDER, ALL_STATE_SLUGS, VINTAGE_LABEL, type ServiceKey, type StateData,
@@ -1059,7 +1060,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         <h1>
           Funeral Costs in {st.name} <span className="modeled-tag">Modeled estimate</span>
         </h1>
-        <Byline />
+        <Byline updated={PAGE_DATES['state-template']?.updated} />
         <div className="answer-first">
           <strong>Quick answer:</strong> a traditional funeral with viewing and burial in {st.name}{' '}
           is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), versus the

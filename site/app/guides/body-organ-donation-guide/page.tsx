@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function BodyOrganDonationGuide() {
         description: 'How organ, tissue, and whole-body donation work: costs (or lack of them), funeral arrangements afterward, and modeled national funeral-cost estimates.',
         url: SITE_URL + '/guides/body-organ-donation-guide/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/body-organ-donation-guide/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="body-organ-donation-guide" imageAlt="Body & Organ Donation: How It Works"><h1>Body &amp; organ donation: how it works</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/body-organ-donation-guide/']?.published} updated={PAGE_DATES['/guides/body-organ-donation-guide/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> organ and tissue donation is free to the donor&rsquo;s

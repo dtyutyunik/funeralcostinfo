@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function ReligiousFuneralCosts() {
           description: 'How much does a religious funeral cost? Jewish, Muslim, Catholic, and Hindu funeral rites in the US: distinct practices and real 2025–2026 price tags, side by side.',
           url: SITE_URL + '/guides/religious-funeral-costs/',
           datePublished: '2026-09-29',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/religious-funeral-costs/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="religious-funeral-costs" imageAlt="How much do religious funerals cost? Jewish, Muslim, Catholic and Hindu funeral costs in the US"><h1>How much do religious funerals cost? Jewish, Muslim, Catholic & Hindu funeral costs in the US (2026)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/religious-funeral-costs/']?.published} updated={PAGE_DATES['/guides/religious-funeral-costs/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> in the US, a Jewish funeral-home package runs roughly{' '}

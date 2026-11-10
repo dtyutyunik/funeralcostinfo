@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -30,11 +31,11 @@ export default function DisagreePage() {
         description: 'One site says $8,300, another says $8,600, a third says $7,360. Funeral cost figures disagree for three honest reasons: data vintage, the basket being priced, and whether anyone shows their math. Here is how to compare them fairly.',
         url: SITE_URL + '/guides/why-funeral-cost-figures-disagree/',
         datePublished: '2026-09-23',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/why-funeral-cost-figures-disagree/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
       <GuideHero slug="why-funeral-cost-figures-disagree" imageAlt="Why funeral cost figures disagree"><h1>Why funeral cost figures disagree</h1></GuideHero>
-      <Byline />
+      <Byline published={PAGE_DATES['/guides/why-funeral-cost-figures-disagree/']?.published} updated={PAGE_DATES['/guides/why-funeral-cost-figures-disagree/']?.updated} />
 
 
       <div className="answer-first">

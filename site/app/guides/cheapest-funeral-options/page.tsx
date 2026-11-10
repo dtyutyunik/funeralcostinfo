@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CheapestFuneralOptions() {
         description: 'The cheapest funeral options ranked by total cost: body donation, direct cremation at a modeled $3,030, direct burial, green burial, and memorial society rates, plus the free and low-cost help most families miss.',
         url: SITE_URL + '/guides/cheapest-funeral-options/',
         datePublished: '2026-10-29',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cheapest-funeral-options/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cheapest-funeral-options" imageAlt="What are the cheapest funeral options?"><h1>What are the cheapest funeral options?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cheapest-funeral-options/']?.published} updated={PAGE_DATES['/guides/cheapest-funeral-options/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the cheapest funeral option overall is body donation,

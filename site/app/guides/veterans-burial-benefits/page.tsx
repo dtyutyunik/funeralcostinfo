@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function VeteransBurialBenefitsGuide() {
         description: 'VA burial benefits in 2026: burial and plot allowances, free national cemetery burial, headstones and markers, how to claim on VA Form 21P-530, and what the VA does not pay.',
         url: SITE_URL + '/guides/veterans-burial-benefits/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/veterans-burial-benefits/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="veterans-burial-benefits" imageAlt="Veterans burial benefits: full 2026 guide"><h1>Veterans burial benefits: the full 2026 guide</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/veterans-burial-benefits/']?.published} updated={PAGE_DATES['/guides/veterans-burial-benefits/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> if the person who died was an eligible veteran, the VA can

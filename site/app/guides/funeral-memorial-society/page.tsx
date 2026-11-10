@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -58,11 +59,11 @@ export default function FuneralMemorialSociety() {
           description: 'How funeral memorial societies and co-ops work: a one-time $25–$50 membership that unlocks contracted funeral rates — member direct cremation around $995 vs. $2,695 for the public.',
           url: SITE_URL + '/guides/funeral-memorial-society/',
           datePublished: '2026-09-30',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/funeral-memorial-society/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="funeral-memorial-society" imageAlt="Funeral memorial societies: a family reviewing funeral planning documents together to save on costs"><h1>Funeral memorial societies: how a $25–$50 membership cuts funeral costs by thousands</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-memorial-society/']?.published} updated={PAGE_DATES['/guides/funeral-memorial-society/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a funeral memorial society is a nonprofit consumer organization that

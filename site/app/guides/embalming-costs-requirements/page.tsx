@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function EmbalmingCostsRequirements() {
           description: 'How much does embalming cost in 2026 (NFDA median $845), when any state actually requires it, and your FTC Funeral Rule right to refuse — with refrigeration as the cheaper alternative.',
           url: SITE_URL + '/guides/embalming-costs-requirements/',
           datePublished: '2026-09-29',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/embalming-costs-requirements/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="embalming-costs-requirements" imageAlt="How much does embalming cost? Prices, legal requirements, and your right to refuse"><h1>How much does embalming cost? (2026 prices) plus when it's required by law — and your right to refuse</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/embalming-costs-requirements/']?.published} updated={PAGE_DATES['/guides/embalming-costs-requirements/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> embalming has a national median price of <strong>$845</strong> (NFDA

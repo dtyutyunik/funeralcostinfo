@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function FileComplaintFuneralHome() {
           description: 'How to file a complaint against a funeral home: the three doors — the funeral home itself, your state funeral licensing board, and the FTC (1-877-FTC-HELP, ReportFraud.ftc.gov) — what each can and cannot do, what to document, and realistic timelines.',
           url: SITE_URL + '/guides/file-complaint-funeral-home/',
           datePublished: '2026-10-01',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/file-complaint-funeral-home/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="file-complaint-funeral-home" imageAlt="How to file a complaint against a funeral home: a fountain pen resting on formal documents and a manila envelope on a dark desk"><h1>How to file a complaint against a funeral home: state boards, the FTC & what happens next (2026)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/file-complaint-funeral-home/']?.published} updated={PAGE_DATES['/guides/file-complaint-funeral-home/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> learning how to file a complaint against a funeral home means knowing

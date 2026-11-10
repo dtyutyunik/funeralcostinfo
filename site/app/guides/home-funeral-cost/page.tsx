@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -58,11 +59,11 @@ export default function HomeFuneralCost() {
           description: 'How much does a home funeral cost in 2026 (usually under $500 vs. a $9,140 professional funeral), which states allow families to handle everything themselves, and the permits and paperwork you need.',
           url: SITE_URL + '/guides/home-funeral-cost/',
           datePublished: '2026-09-30',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/home-funeral-cost/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="home-funeral-cost" imageAlt="How much does a home funeral cost? A simple wooden casket in a home setting with family-prepared care"><h1>How much does a home funeral cost? (2026 prices) + where it's legal state by state</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/home-funeral-cost/']?.published} updated={PAGE_DATES['/guides/home-funeral-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a home funeral typically costs <strong>under $500</strong>, per the

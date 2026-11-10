@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -80,11 +81,11 @@ export default function AquamationGuide() {
         description: 'Aquamation cost and alkaline hydrolysis prices in 2026: published provider prices from $1,900 to $4,400, what water cremation means, how it compares with cremation, and where it is legal.',
         url: SITE_URL + '/guides/aquamation-guide/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/aquamation-guide/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="aquamation-guide" imageAlt="Aquamation cost: alkaline hydrolysis prices, definition, and where water cremation is legal"><h1>Aquamation cost: alkaline hydrolysis prices, definition and where it is legal</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/aquamation-guide/']?.published} updated={PAGE_DATES['/guides/aquamation-guide/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> Aquamation — alkaline hydrolysis, sometimes called water

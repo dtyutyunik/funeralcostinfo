@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function FuneralOfficiantCost() {
         description: 'A funeral officiant typically costs $150 to $500 for clergy and $300 to $800 for a professional celebrant. Honorarium ranges by type, what the fee covers, and how to pay.',
         url: SITE_URL + '/guides/funeral-officiant-cost/',
         datePublished: '2026-10-26',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-officiant-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-officiant-cost" imageAlt="How much does a funeral officiant cost? Honorariums and celebrant fees"><h1>How much does a funeral officiant cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-officiant-cost/']?.published} updated={PAGE_DATES['/guides/funeral-officiant-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a funeral officiant typically costs{' '}

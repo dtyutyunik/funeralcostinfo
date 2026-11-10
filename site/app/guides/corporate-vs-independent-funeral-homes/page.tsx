@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -58,11 +59,11 @@ export default function CorporateVsIndependentFuneralHomes() {
           description: 'Are corporate funeral homes more expensive than independents? The 2017 head-to-head study, current price ranges, and how to check who owns your funeral home.',
           url: SITE_URL + '/guides/corporate-vs-independent-funeral-homes/',
           datePublished: '2026-09-29',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/corporate-vs-independent-funeral-homes/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="corporate-vs-independent-funeral-homes" imageAlt="Are corporate funeral homes more expensive? Comparing SCI/Dignity Memorial vs. independent prices"><h1>Are corporate funeral homes more expensive? SCI/Dignity Memorial vs. independent prices (2026 data)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/corporate-vs-independent-funeral-homes/']?.published} updated={PAGE_DATES['/guides/corporate-vs-independent-funeral-homes/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> yes — corporate funeral homes are usually more expensive than

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function FuneralLiveStreamingCost() {
         description: 'Funeral live streaming costs nothing DIY via a phone, or about $389 to $799 for published professional packages: what each option includes, what drives the price, and how to set up a private, reliable stream.',
         url: SITE_URL + '/guides/funeral-live-streaming-cost/',
         datePublished: '2026-11-01',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-live-streaming-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-live-streaming-cost" imageAlt="Funeral live streaming cost"><h1>How much does funeral live streaming cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-live-streaming-cost/']?.published} updated={PAGE_DATES['/guides/funeral-live-streaming-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> funeral live streaming costs nothing if you do it

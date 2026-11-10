@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -81,11 +82,11 @@ export default function GreenBurialCompostingGuide() {
         description: 'What green burial and human composting (natural organic reduction) cost, the 14 states where human composting is legal as of 2026, and how to shop for both.',
         url: SITE_URL + '/guides/green-burial-composting/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/green-burial-composting/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="green-burial-composting" imageAlt="Green Burial & Human Composting: Costs and Where They're Legal"><h1>Green Burial &amp; Human Composting: Costs and Where They&apos;re Legal</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/green-burial-composting/']?.published} updated={PAGE_DATES['/guides/green-burial-composting/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> Green burial means burying a body without embalming, in a

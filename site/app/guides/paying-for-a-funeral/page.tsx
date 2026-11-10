@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -58,11 +59,11 @@ export default function PayingForAFuneralGuide() {
         description: 'No single program covers a typical funeral. Where the money actually comes from: VA burial benefits, the $255 Social Security payment, county aid, life insurance, and the estate — with what each covers and how to claim it.',
         url: SITE_URL + '/guides/paying-for-a-funeral/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/paying-for-a-funeral/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="paying-for-a-funeral" imageAlt="How to pay for a funeral"><h1>How to pay for a funeral</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/paying-for-a-funeral/']?.published} updated={PAGE_DATES['/guides/paying-for-a-funeral/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> no single government program pays for a typical funeral. The money

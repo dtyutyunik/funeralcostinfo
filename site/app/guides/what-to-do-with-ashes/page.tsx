@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function WhatToDoWithAshes() {
         description: 'Keep them, bury them, place them in a niche, scatter them, share them, or turn them into glass, a diamond, a tree, or a reef. No law requires burial, and most options cost far less than a funeral.',
         url: SITE_URL + '/guides/what-to-do-with-ashes/',
         datePublished: '2026-10-25',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/what-to-do-with-ashes/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="what-to-do-with-ashes" imageAlt="What to do with ashes after cremation: all your options, with costs"><h1>What to do with ashes after cremation?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/what-to-do-with-ashes/']?.published} updated={PAGE_DATES['/guides/what-to-do-with-ashes/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> you do not have to bury ashes, and you do not have

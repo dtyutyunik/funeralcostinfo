@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function HeadstoneCostsGuide() {
         description: 'Flat markers, bevel markers, upright monuments, and ledgers — what each type is, what moves the price, cemetery rules that constrain your choice, and what veterans get free.',
         url: SITE_URL + '/guides/headstone-costs/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/headstone-costs/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="headstone-costs" imageAlt="How much does a headstone cost?"><h1>How much does a headstone cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/headstone-costs/']?.published} updated={PAGE_DATES['/guides/headstone-costs/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the only independently sourced range we can cite is

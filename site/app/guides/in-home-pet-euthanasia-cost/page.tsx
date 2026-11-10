@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function InHomePetEuthanasiaCost() {
         description: 'In-home pet euthanasia cost with the total bill worked out: CareCredit 2025 averages, Lap of Love and CodaPet city prices, and the fee stack.',
         url: SITE_URL + '/guides/in-home-pet-euthanasia-cost/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/in-home-pet-euthanasia-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="in-home-pet-euthanasia-cost" imageAlt="How much does in-home pet euthanasia cost"><h1>How much does in-home pet euthanasia cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/in-home-pet-euthanasia-cost/']?.published} updated={PAGE_DATES['/guides/in-home-pet-euthanasia-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the visit itself averages <strong>$410 for a dog

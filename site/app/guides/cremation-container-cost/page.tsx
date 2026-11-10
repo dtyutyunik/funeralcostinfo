@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CremationContainerCost() {
         description: 'A cremation container costs about $50 to $300 for a basic alternative container, $500 to $2,000 for a viewing-ready cremation casket, or $725 to $1,250 to rent a casket shell: what each option is, what the law requires, and when each makes sense.',
         url: SITE_URL + '/guides/cremation-container-cost/',
         datePublished: '2026-11-02',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cremation-container-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cremation-container-cost" imageAlt="Cremation container cost"><h1>How much does a cremation container cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cremation-container-cost/']?.published} updated={PAGE_DATES['/guides/cremation-container-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a basic cremation container, called an alternative

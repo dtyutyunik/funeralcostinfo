@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function ScatteringAshesGuide() {
         description: 'Scattering ashes legally: EPA sea-burial rules, national park permits, private land, airline rules, and what scattering services cost — sourced and plain-English.',
         url: SITE_URL + '/guides/scattering-ashes-laws-costs/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/scattering-ashes-laws-costs/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="scattering-ashes-laws-costs" imageAlt="Scattering ashes: laws, costs & how to do it"><h1>Scattering ashes: laws, costs &amp; how to do it</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/scattering-ashes-laws-costs/']?.published} updated={PAGE_DATES['/guides/scattering-ashes-laws-costs/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> scattering ashes is legal in most places — but the rules

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function PetHomeBurialLaws() {
         description: 'Pet home burial legality from primary texts: Washington, Michigan, and Texas burial rules, Illinois cremation disclosure law, and New York pet cemetery licensing.',
         url: SITE_URL + '/guides/pet-home-burial-laws/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/pet-home-burial-laws/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="pet-home-burial-laws" imageAlt="Is it legal to bury a pet in your yard"><h1>Is it legal to bury a pet in your yard?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/pet-home-burial-laws/']?.published} updated={PAGE_DATES['/guides/pet-home-burial-laws/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> there is <strong>no federal law</strong> on

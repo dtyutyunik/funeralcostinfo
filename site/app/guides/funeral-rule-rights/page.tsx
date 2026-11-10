@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -85,11 +86,11 @@ export default function FuneralRuleGuide() {
         description: 'The FTC Funeral Rule in plain English: price lists by phone, itemized GPLs, no forced packages, your own casket or urn, and more. Educational guide — not legal advice.',
         url: SITE_URL + '/guides/funeral-rule-rights/',
         datePublished: '2026-09-23',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-rule-rights/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-rule-rights" imageAlt="Your rights under the FTC Funeral Rule"><h1>Your rights under the FTC Funeral Rule</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-rule-rights/']?.published} updated={PAGE_DATES['/guides/funeral-rule-rights/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the FTC Funeral Rule gives you the right to price

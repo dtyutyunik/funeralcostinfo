@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function InternationalRepatriationRemains() {
           description: 'Repatriating a body internationally typically costs $5,000 to $15,000 or more. What drives the price, the paperwork you need (death certificate, embalming certificate, consular mortuary certificate), CDC rules for bringing remains into the US, and the cheaper cremation alternative.',
           url: SITE_URL + '/guides/international-repatriation-remains/',
           datePublished: '2026-09-30',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/international-repatriation-remains/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="international-repatriation-remains" imageAlt="International repatriation of remains: costs, paperwork, and airline rules"><h1>How much does it cost to repatriate a body? International rules, paperwork &amp; prices (2026)</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/international-repatriation-remains/']?.published} updated={PAGE_DATES['/guides/international-repatriation-remains/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> repatriating a body across an international border

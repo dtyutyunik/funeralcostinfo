@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CremationJewelryCost() {
         description: 'Cremation jewelry costs about $20 to $100 for a stainless steel chamber pendant, $100 to $500+ in silver or gold, $69 to $400 for ash-infused glass, and $295 to $1,495 for fingerprint jewelry: types, prices, and what to check before ordering.',
         url: SITE_URL + '/guides/cremation-jewelry-cost/',
         datePublished: '2026-11-03',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cremation-jewelry-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cremation-jewelry-cost" imageAlt="Cremation jewelry cost"><h1>How much does cremation jewelry cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cremation-jewelry-cost/']?.published} updated={PAGE_DATES['/guides/cremation-jewelry-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> most cremation jewelry costs about{' '}

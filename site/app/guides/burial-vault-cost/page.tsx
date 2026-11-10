@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function BurialVaultCost() {
         description: 'A plain-English guide to burial vault and grave liner prices, the difference between them, why cemeteries require an outer burial container, and your Funeral Rule rights.',
         url: SITE_URL + '/guides/burial-vault-cost/',
         datePublished: '2026-10-23',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/burial-vault-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="burial-vault-cost" imageAlt="How Much Does a Burial Vault Cost? Liners, Vaults & Your Rights"><h1>How much does a burial vault cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/burial-vault-cost/']?.published} updated={PAGE_DATES['/guides/burial-vault-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a grave liner typically costs{' '}

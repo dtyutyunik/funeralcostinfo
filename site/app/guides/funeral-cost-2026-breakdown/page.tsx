@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt, stateSlug } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -77,11 +78,11 @@ export default function FuneralCost2026Breakdown() {
         description: 'The full 2026 funeral cost breakdown: modeled national prices for all six service types, what the figures include and exclude, and what actually moves your total.',
         url: SITE_URL + '/guides/funeral-cost-2026-breakdown/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-cost-2026-breakdown/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-cost-2026-breakdown" imageAlt="How much does a funeral cost in 2026?"><h1>How much does a funeral cost in 2026?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-cost-2026-breakdown/']?.published} updated={PAGE_DATES['/guides/funeral-cost-2026-breakdown/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a traditional funeral with burial costs about{' '}

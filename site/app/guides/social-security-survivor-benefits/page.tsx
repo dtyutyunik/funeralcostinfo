@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function SocialSecuritySurvivorBenefits() {
         description: 'Social Security survivor benefits pay a surviving spouse 71.5% to 100% of the deceased worker’s benefit, and children 75%. Who qualifies, how the amount is set, and how to apply.',
         url: SITE_URL + '/guides/social-security-survivor-benefits/',
         datePublished: '2026-10-26',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/social-security-survivor-benefits/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="social-security-survivor-benefits" imageAlt="Social Security survivor benefits: how much, who qualifies and how to apply"><h1>Social Security survivor benefits: how much, who qualifies, and how to apply</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/social-security-survivor-benefits/']?.published} updated={PAGE_DATES['/guides/social-security-survivor-benefits/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> Social Security survivor benefits are monthly

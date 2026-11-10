@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function UrnCostsGuide() {
         description: 'A plain-English guide to cremation urns: the main types, how to size one, your right to buy it anywhere, and what it means for the total cremation cost.',
         url: SITE_URL + '/guides/urn-costs-guide/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/urn-costs-guide/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="urn-costs-guide" imageAlt="Urns: Types, Costs & Where to Buy"><h1>Urns: types, costs & where to buy</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/urn-costs-guide/']?.published} updated={PAGE_DATES['/guides/urn-costs-guide/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> an urn is a separate purchase from the cremation itself.

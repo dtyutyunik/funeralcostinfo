@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -58,11 +59,11 @@ export default function WhenSomeoneDiesChecklist() {
         description: 'A calm, step-by-step checklist for the first 48 hours after a death: pronouncement, notifying family, choosing a funeral provider, death certificates, and what can wait.',
         url: SITE_URL + '/guides/when-someone-dies-checklist/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/when-someone-dies-checklist/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="when-someone-dies-checklist" imageAlt="What to do when someone dies: the first 48 hours"><h1>What to do when someone dies: the first 48 hours</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/when-someone-dies-checklist/']?.published} updated={PAGE_DATES['/guides/when-someone-dies-checklist/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the first 48 hours are about logistics, not decisions.

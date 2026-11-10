@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -63,11 +64,11 @@ export default function WhoCanArrangeFuneral() {
           'Most states follow a priority order for who decides funeral arrangements: a person the deceased designated in writing, then spouse, adult children, parents, and siblings. Learn how it works and why a written designation matters.',
         url: SITE_URL + '/guides/who-can-arrange-funeral/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/who-can-arrange-funeral/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="who-can-arrange-funeral" imageAlt="Who has the legal right to make funeral arrangements?"><h1>Who has the legal right to make funeral arrangements?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/who-can-arrange-funeral/']?.published} updated={PAGE_DATES['/guides/who-can-arrange-funeral/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> in most states, funeral decisions follow a priority order.

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function PetAquamationCost() {
         description: 'Pet aquamation prices compared provider by provider against flame cremation at the same business, with weight ladders from Chicago, Tacoma, North Carolina, and San Diego.',
         url: SITE_URL + '/guides/pet-aquamation-cost/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/pet-aquamation-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="pet-aquamation-cost" imageAlt="How much does pet aquamation cost"><h1>How much does pet aquamation cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/pet-aquamation-cost/']?.published} updated={PAGE_DATES['/guides/pet-aquamation-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> pet aquamation costs <strong>about the same as

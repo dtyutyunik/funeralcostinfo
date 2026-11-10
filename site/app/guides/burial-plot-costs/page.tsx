@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function BurialPlotCostsGuide() {
         description: 'Burial plots typically cost $1,000–$5,000+, and that is only the start of the cemetery bill. What a plot buys, opening/closing fees, markers, and why cemetery charges are separate from the funeral home.',
         url: SITE_URL + '/guides/burial-plot-costs/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/burial-plot-costs/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="burial-plot-costs" imageAlt="How much does a burial plot cost?"><h1>How much does a burial plot cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/burial-plot-costs/']?.published} updated={PAGE_DATES['/guides/burial-plot-costs/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a burial plot typically costs <strong>$1,000–$5,000+</strong>, and

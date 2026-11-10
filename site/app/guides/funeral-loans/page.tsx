@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function FuneralLoans() {
         description: 'There is no special funeral loan: it is usually a personal loan at 6 to 36 percent APR, funeral home financing, or a credit card. How each option works, what it costs on a typical funeral bill, and the cheaper alternatives to check first.',
         url: SITE_URL + '/guides/funeral-loans/',
         datePublished: '2026-10-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-loans/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-loans" imageAlt="Funeral Loans: How to Borrow for a Funeral, Rates & Alternatives"><h1>Funeral loans: how to borrow for a funeral</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-loans/']?.published} updated={PAGE_DATES['/guides/funeral-loans/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> there is no special government funeral loan. A funeral

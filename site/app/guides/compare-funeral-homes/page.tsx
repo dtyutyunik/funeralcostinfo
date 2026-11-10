@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -69,11 +70,11 @@ export default function CompareFuneralHomesGuide() {
           description: DESCRIPTION,
           url: URL,
           datePublished: '2026-09-24',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/compare-funeral-homes/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="compare-funeral-homes" imageAlt="How to compare funeral homes & read the price list"><h1>How to compare funeral homes & read the price list</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/compare-funeral-homes/']?.published} updated={PAGE_DATES['/guides/compare-funeral-homes/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> call at least three providers, get each one's

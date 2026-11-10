@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function IndigentBurialAssistance() {
           description: 'How county indigent burial programs work: who qualifies, what they cover (usually direct cremation or a simple burial), what they do not, plus the VA\u2019s free national-cemetery burial for veterans and Social Security\u2019s one-time $255 lump-sum death payment.',
           url: SITE_URL + '/guides/indigent-burial-assistance/',
           datePublished: '2026-10-01',
-          dateModified: LAST_UPDATED,
+          dateModified: PAGE_DATES['/guides/indigent-burial-assistance/']?.updated ?? LAST_UPDATED,
           siteUrl: SITE_URL,
         })} />
         <GuideHero slug="indigent-burial-assistance" imageAlt="Indigent burial assistance: a simple granite grave marker in a quiet, muted cemetery"><h1>Indigent burial assistance (2026): county programs and what to do when there's no money for a funeral</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/indigent-burial-assistance/']?.published} updated={PAGE_DATES['/guides/indigent-burial-assistance/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> if there is no money for a funeral, start with the <strong>county coroner,

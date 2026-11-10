@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function FuneralTransportationCost() {
         description: 'A hearse typically costs $175 to $550 and a family limousine $50 to $450, plus mileage beyond the local radius. Every vehicle in a funeral procession, priced line by line, and how to cut the bill.',
         url: SITE_URL + '/guides/funeral-transportation-cost/',
         datePublished: '2026-10-28',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-transportation-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-transportation-cost" imageAlt="How much does funeral transportation cost?"><h1>How much does funeral transportation cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-transportation-cost/']?.published} updated={PAGE_DATES['/guides/funeral-transportation-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> a hearse typically costs{' '}

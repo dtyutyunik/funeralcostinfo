@@ -1,11 +1,19 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL, ALL_STATE_SLUGS, LAST_UPDATED } from '../lib/data';
 import { ALL_CITY_ROUTES } from '../lib/cities';
+import { PAGE_DATES } from '../lib/page-dates';
 
 export const dynamic = 'force-static';
 
+function lastModFor(route: string): Date {
+  let key = route === '' ? '/' : route;
+  if (/^\/funeral-costs\/[a-z-]+\/$/.test(route)) key = 'state-template';
+  else if (route.startsWith('/funeral-costs/')) key = 'city-template';
+  const d = PAGE_DATES[key]?.updated ?? LAST_UPDATED;
+  return new Date(d + 'T00:00:00Z');
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date(LAST_UPDATED + 'T00:00:00Z');
   const routes = [
     '',
     '/calculator/',
@@ -94,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   return routes.map((r) => ({
     url: SITE_URL + (r || '/'),
-    lastModified,
+    lastModified: lastModFor(r),
     changeFrequency: r === '' ? 'weekly' : 'monthly',
     priority: r === '' ? 1 : r.startsWith('/funeral-costs/') ? 0.8 : 0.6,
   }));

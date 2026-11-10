@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function DirectCremationVsTraditionalFuneral() {
         description: 'Direct cremation costs about $3,030 modeled nationally vs $9,140 for a traditional funeral with viewing and burial: side-by-side costs, what each includes, timelines, and the middle options that keep a service without the full price.',
         url: SITE_URL + '/guides/direct-cremation-vs-traditional-funeral/',
         datePublished: '2026-11-01',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/direct-cremation-vs-traditional-funeral/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="direct-cremation-vs-traditional-funeral" imageAlt="Direct cremation vs traditional funeral"><h1>Direct cremation vs traditional funeral</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/direct-cremation-vs-traditional-funeral/']?.published} updated={PAGE_DATES['/guides/direct-cremation-vs-traditional-funeral/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> direct cremation costs far less because it removes

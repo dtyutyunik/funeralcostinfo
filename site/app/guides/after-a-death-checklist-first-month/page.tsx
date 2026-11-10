@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function AfterADeathChecklistFirstMonth() {
         description: 'What to do in the first month after a death, week by week: notifications, benefits claims, banks and bills, probate first steps, and what can safely wait.',
         url: SITE_URL + '/guides/after-a-death-checklist-first-month/',
         datePublished: '2026-11-02',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/after-a-death-checklist-first-month/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="after-a-death-checklist-first-month" imageAlt="After a death: checklist for the first month"><h1>After a death: a week-by-week checklist for the first month</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/after-a-death-checklist-first-month/']?.published} updated={PAGE_DATES['/guides/after-a-death-checklist-first-month/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> the first month after a death is for notifications,

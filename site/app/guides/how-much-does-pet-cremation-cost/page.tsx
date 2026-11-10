@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -62,11 +63,11 @@ export default function HowMuchDoesPetCremationCost() {
         description: 'Pet cremation priced by weight: CareCredit national weight table, published provider ladders, the three types, and the add-ons that move the total.',
         url: SITE_URL + '/guides/how-much-does-pet-cremation-cost/',
         datePublished: '2026-11-04',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/how-much-does-pet-cremation-cost/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="how-much-does-pet-cremation-cost" imageAlt="How much does pet cremation cost"><h1>How much does pet cremation cost?</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/how-much-does-pet-cremation-cost/']?.published} updated={PAGE_DATES['/guides/how-much-does-pet-cremation-cost/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> pet cremation is priced by <strong>weight</strong>,

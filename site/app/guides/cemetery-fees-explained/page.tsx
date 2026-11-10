@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -64,11 +65,11 @@ export default function CemeteryFeesExplained() {
         description: 'Cemetery fees explained: what opening and closing costs, weekend and holiday surcharges, urn interment, marker setting, and vault placement rules, with real 2026 fee schedules from public cemeteries.',
         url: SITE_URL + '/guides/cemetery-fees-explained/',
         datePublished: '2026-11-05',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/cemetery-fees-explained/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="cemetery-fees-explained" imageAlt="Cemetery fees explained"><h1>Cemetery fees explained</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/cemetery-fees-explained/']?.published} updated={PAGE_DATES['/guides/cemetery-fees-explained/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> cemetery fees are the charges a cemetery bills

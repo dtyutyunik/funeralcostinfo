@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt, stateSlug, ALL_STATE_SLUGS, SERVICE_ORDER } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -70,11 +71,11 @@ export default function FuneralCostsByStateGuide() {
         description: 'National funeral cost averages for all six service types, and every state ranked most to least expensive, in August 2026 dollars.',
         url: SITE_URL + '/guides/funeral-costs-by-state-2026/',
         datePublished: '2026-09-24',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-costs-by-state-2026/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-costs-by-state-2026" imageAlt="Funeral Cost Index 2026"><h1>Funeral Cost Index 2026</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-costs-by-state-2026/']?.published} updated={PAGE_DATES['/guides/funeral-costs-by-state-2026/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> funeral costs vary enormously by state. For a traditional

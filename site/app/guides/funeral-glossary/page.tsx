@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd, { articleJsonLd, faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
 import Byline from '../../../components/Byline';
+import { PAGE_DATES } from '../../../lib/page-dates';
 import { SITE_URL, LAST_UPDATED } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
@@ -232,11 +233,11 @@ export default function GlossaryGuide() {
         description: 'What does embalming actually involve? What is a burial vault, a grave liner, a columbarium? Plain-English definitions of the funeral terms you will see on price lists.',
         url: SITE_URL + '/guides/funeral-glossary/',
         datePublished: '2026-09-23',
-        dateModified: LAST_UPDATED,
+        dateModified: PAGE_DATES['/guides/funeral-glossary/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
         <GuideHero slug="funeral-glossary" imageAlt="Funeral terms, in plain English"><h1>Funeral terms, in plain English</h1></GuideHero>
-        <Byline />
+        <Byline published={PAGE_DATES['/guides/funeral-glossary/']?.published} updated={PAGE_DATES['/guides/funeral-glossary/']?.updated} />
 
         <p className="answer-first">
           <strong>Quick answer:</strong> funeral price lists are full of jargon — embalming, vaults,
