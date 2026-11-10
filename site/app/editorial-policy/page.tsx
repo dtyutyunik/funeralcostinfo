@@ -14,7 +14,13 @@ export default function EditorialPolicyPage() {
     <div className="wrap prose">
       <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Editorial policy</nav>
       <h1>Editorial policy</h1>
-      <p className="updated">Effective 2026-09-23.</p>
+      <p className="updated">Effective 2026-11-10.</p>
+      <p>
+        FuneralCostInfo is written and edited by <Link href="/about/">Dmitriy Tyutyunik</Link>,
+        its founder. Research and drafting use AI tools as assistants; every figure is checked
+        against its named source before publication, and the standards below govern what appears
+        on the site.
+      </p>
       <ol>
         <li><strong>Official sources only.</strong> Cost inputs come from the NFDA, the Bureau of Economic Analysis, the Bureau of Labor Statistics, and the FTC. Third-party price aggregators are never treated as authoritative.</li>
         <li><strong>Every input is dated.</strong> Source vintage and retrieval dates appear on the methodology page and in the dataset itself.</li>

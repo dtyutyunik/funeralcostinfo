@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../../components/JsonLd';
+import Byline from '../../../../components/Byline';
 import {
   dataset, getState, fmt, fmtRange, SITE_URL, LAST_UPDATED,
   SERVICE_ORDER, VINTAGE_LABEL, type ServiceKey,
@@ -83,6 +84,7 @@ export default async function CityPage({
         <h1>
           Funeral Costs in {c.name} <span className="modeled-tag">Modeled estimate</span>
         </h1>
+        <Byline />
         <div className="answer-first">
           <strong>Quick answer:</strong> a traditional funeral with viewing and burial in {c.name}{' '}
           is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), about{' '}

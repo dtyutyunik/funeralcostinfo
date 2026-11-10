@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Calculator from '../../components/Calculator';
+import Byline from '../../components/Byline';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '../../components/JsonLd';
 import { SITE_URL, dataset, fmt, SERVICE_ORDER } from '../../lib/data';
 import Link from 'next/link';
@@ -55,6 +56,7 @@ export default function CalculatorPage() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Calculator</nav>
         <h1>Funeral cost calculator and estimator</h1>
+        <Byline />
         <p className="answer-first">
           <strong>Quick answer:</strong> choose your state and service type below, add typical
           cemetery and cash-advance costs, and get a transparent modeled estimate — every number

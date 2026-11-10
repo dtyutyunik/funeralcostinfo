@@ -74,9 +74,11 @@ export default function AboutPage() {
       </p>
       <h2>How we are funded</h2>
       <p>
-        This site currently has <strong>no revenue and no commercial relationships</strong>. There are
-        no ads, no affiliate links, and no funeral-home partnerships. If that ever changes, changes will
-        be disclosed prominently — see our <Link href="/affiliate-disclosure/">affiliate disclosure</Link>.
+        This site is funded by <strong>display advertising served through Google AdSense</strong>.
+        There are no affiliate links and no funeral-home partnerships, and no advertiser can
+        influence an estimate or buy placement in our content. See our{' '}
+        <Link href="/affiliate-disclosure/">affiliate disclosure</Link> and{' '}
+        <Link href="/privacy/">privacy policy</Link>.
       </p>
       <h2>What we will never do</h2>
       <ul>

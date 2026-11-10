@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import JsonLd, { faqJsonLd, breadcrumbJsonLd } from '../../../components/JsonLd';
+import Byline from '../../../components/Byline';
 import {
   dataset, getState, stateSlug, fmt, fmtRange, SITE_URL, LAST_UPDATED,
   SERVICE_ORDER, ALL_STATE_SLUGS, VINTAGE_LABEL, type ServiceKey, type StateData,
@@ -1058,6 +1059,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         <h1>
           Funeral Costs in {st.name} <span className="modeled-tag">Modeled estimate</span>
         </h1>
+        <Byline />
         <div className="answer-first">
           <strong>Quick answer:</strong> a traditional funeral with viewing and burial in {st.name}{' '}
           is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), versus the
@@ -1219,17 +1221,6 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         <p><strong>Not included:</strong> cemetery plot, opening and closing, headstone or marker, burial
         vault (except the burial-with-vault row), flowers, obituary notices, and cash-advance items such as
         clergy honoraria or death certificates.</p>
-
-        <div className="affiliate-cta no-print">
-          <div className="placeholder-note">Affiliate placement — not active</div>
-          <p style={{ margin: '8px 0' }}>
-            <strong>Planning ahead?</strong> Final-expense insurance is one way families fund funeral costs.
-            We have no insurance partnerships yet, so there is nothing to click — when we add vetted,
-            clearly-labeled options, they will appear here. Before buying, read our{' '}
-            <Link href="/guides/final-expense-burial-insurance/">burial insurance and final expense cost guide</Link>{' '}
-            for rates by age and the waiting-period traps. <Link href="/affiliate-disclosure/">Read our disclosure</Link>.
-          </p>
-        </div>
 
         <h2>Official {st.name} resources</h2>
         <ul>

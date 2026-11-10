@@ -86,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/editorial-policy/',
     '/affiliate-disclosure/',
     '/privacy/',
+    '/terms/',
     '/contact/',
     '/press/',
     ...ALL_STATE_SLUGS.map((s) => `/funeral-costs/${s}/`),
