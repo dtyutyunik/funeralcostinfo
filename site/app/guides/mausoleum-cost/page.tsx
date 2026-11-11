@@ -6,6 +6,7 @@ import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL } from '../../../lib/data';
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
+import NationalStats from '../../../components/NationalStats';
 
 export const metadata: Metadata = {
   title: 'How Much Does a Mausoleum Cost? 2026 Price Guide (Crypts, Niches & Lawn Crypts)',
@@ -78,6 +79,15 @@ export default function MausoleumCost() {
           guide is built on actual 2025–2026 cemetery price lists, not vague national averages.
         </p>
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+
+        <h2>The national numbers</h2>
+        <p>
+          These are the six national anchors behind every figure on this site: NFDA 2023 medians
+          restated in August 2026 dollars. State and city pages scale them to local price levels.
+          A mausoleum is the cemetery side of the bill; the funeral itself is priced against
+          these anchors.
+        </p>
+        <NationalStats />
 
         <h2>Community mausoleum crypts: $4,000–$8,000+</h2>
         <p>

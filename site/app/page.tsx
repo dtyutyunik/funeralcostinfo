@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Calculator from '../components/Calculator';
+import NationalStats from '../components/NationalStats';
 import StateTable from '../components/StateTable';
 import UsMap from '../components/UsMap';
 import JsonLd, { breadcrumbJsonLd } from '../components/JsonLd';
@@ -112,6 +113,21 @@ export default function Home() {
             </p>
           </div>
           <UsMap />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="national-heading" style={{ paddingTop: 8 }}>
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">The national anchors</p>
+            <h2 id="national-heading">The national numbers</h2>
+            <p>
+              Every state figure on this site starts from the same six national anchors: NFDA 2023
+              medians restated in August 2026 dollars. A traditional funeral with viewing and burial
+              is <strong>{fmt(a.traditional_burial.value)}</strong> nationally.
+            </p>
+          </div>
+          <NationalStats />
         </div>
       </section>
 

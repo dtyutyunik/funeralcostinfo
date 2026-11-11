@@ -3,7 +3,8 @@ import Calculator from '../../components/Calculator';
 import Byline from '../../components/Byline';
 import { PAGE_DATES } from '../../lib/page-dates';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '../../components/JsonLd';
-import { SITE_URL, dataset, fmt, SERVICE_ORDER } from '../../lib/data';
+import { SITE_URL } from '../../lib/data';
+import NationalStats from '../../components/NationalStats';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -73,22 +74,7 @@ export default function CalculatorPage() {
           These national starting points are modeled estimates in August 2026 dollars. Select a state
           in the calculator to scale them to local price levels.
         </p>
-        <table>
-          <thead>
-            <tr><th>Service type</th><th>Modeled national estimate</th><th>State estimate</th></tr>
-          </thead>
-          <tbody>
-            {SERVICE_ORDER.map((key) => {
-              return (
-                <tr key={key}>
-                  <td>{dataset.anchors[key].label}</td>
-                  <td><strong>{fmt(dataset.anchors[key].value)}</strong></td>
-                  <td><Link href="/guides/funeral-costs-by-state-2026/">Compare all states</Link></td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <NationalStats />
         <p>
           For a state-specific breakdown before using the estimator, start with our{' '}
           <Link href="/guides/funeral-costs-by-state-2026/">funeral costs by state guide</Link> or open a

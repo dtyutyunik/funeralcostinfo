@@ -6,6 +6,7 @@ import { SITE_URL, LAST_UPDATED, VINTAGE_LABEL, dataset, fmt } from '../../../li
 import Link from 'next/link';
 import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
+import NationalStats from '../../../components/NationalStats';
 
 const A = dataset.anchors;
 
@@ -86,6 +87,14 @@ export default function FuneralReceptionCost() {
           estimate in your state, use our <Link href="/calculator/">cost calculator</Link>.
         </p>
         <p className="updated">{VINTAGE_LABEL}. Last updated {LAST_UPDATED}.</p>
+
+        <h2>The national numbers</h2>
+        <p>
+          These are the six national anchors behind every figure on this site: NFDA 2023 medians
+          restated in August 2026 dollars. State and city pages scale them to local price levels.
+          A reception is an add-on to one of these services, not a service type itself.
+        </p>
+        <NationalStats />
 
         <h2>What a funeral reception is</h2>
         <p>

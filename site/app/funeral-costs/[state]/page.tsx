@@ -8,6 +8,7 @@ import {
   SERVICE_ORDER, ALL_STATE_SLUGS, VINTAGE_LABEL, type ServiceKey, type StateData,
 } from '../../../lib/data';
 import Link from 'next/link';
+import NationalStats from '../../../components/NationalStats';
 import { citiesForState } from '../../../lib/cities';
 
 interface StateNote {
@@ -1172,6 +1173,14 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             statewide figure.
           </p>
         )}
+
+        <h2>The national numbers behind {st.name}&apos;s figures</h2>
+        <p>
+          Every {st.name} figure above starts from the same six national anchors: NFDA 2023
+          medians restated in August 2026 dollars, scaled by {st.name}&apos;s BEA 2024 regional
+          price parity ({st.rpp_all_items.toFixed(1)}, where 100 is the national average).
+        </p>
+        <NationalStats />
 
         <h2>Cremation costs in {st.name}</h2>
         <p>
