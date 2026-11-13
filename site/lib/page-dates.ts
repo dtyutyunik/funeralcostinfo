@@ -59,7 +59,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/cremation-cost-2026/": {
     "published": "2026-09-24",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/guides/cremation-diamonds-cost/": {
     "published": "2026-10-24",
@@ -79,7 +79,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/direct-cremation-vs-traditional-funeral/": {
     "published": "2026-11-01",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/guides/does-medicaid-pay-for-funeral-costs/": {
     "published": "2026-11-05",
@@ -143,7 +143,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/funeral-reception-cost/": {
     "published": "2026-10-28",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/guides/funeral-rule-rights/": {
     "published": "2026-09-23",
@@ -199,7 +199,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/infant-funeral-costs/": {
     "published": "2026-10-31",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/guides/international-repatriation-remains/": {
     "published": "2026-09-30",
@@ -207,7 +207,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/mausoleum-cost/": {
     "published": "2026-09-29",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/guides/memorial-service-cost/": {
     "published": "2026-10-25",
@@ -287,11 +287,11 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/": {
     "published": "2026-09-23",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/calculator/": {
     "published": "2026-09-23",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "/methodology/": {
     "published": "2026-09-23",
@@ -331,7 +331,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "state-template": {
     "published": "2026-09-23",
-    "updated": "2026-11-10"
+    "updated": "2026-11-11"
   },
   "city-template": {
     "published": "2026-10-31",

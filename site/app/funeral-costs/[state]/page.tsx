@@ -24,8 +24,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   california: {
     boardName: 'California Cemetery and Funeral Bureau',
     boardUrl: 'https://www.cfb.ca.gov/',
-    fcaSurveyName: null,
-    fcaSurveyUrl: null,
+    fcaSurveyName: 'Funeral Consumers Alliance of Los Angeles, February 2026 direct cremation and direct burial survey (Los Angeles County)',
+    fcaSurveyUrl: 'https://www.fcalosangeles.org/price-survey',
     context: [
       'California has the highest regional price level of any state in our dataset (RPP 110.7), so its modeled estimates are the highest in the nation.',
       'The NFDA projects 81.5% of California dispositions will be cremations by 2035 — among the highest cremation rates in the country.',
@@ -827,7 +827,7 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
     spread: `California has the highest regional price level of any state in our dataset (RPP 110.7), and the within-state spread is the widest in the country: Los Angeles, San Francisco, and San Diego metro prices typically run well above the state modeled figure, while rural counties run below it. We publish separate city pages for those three metros, linked below.`,
     rule: `A California crematory may cremate only on the written authorization of the person who holds the right to control disposition under Health and Safety Code §7100, and the person who signs warrants that they actually hold that authority (§§7110 and 7111). When family members with equal rights disagree, cremation generally waits for agreement or a court order.`,
     help: `When no one is able to pay, California counties bear the cost of disposition for indigent decedents (Health and Safety Code §7104). Counties run the process through the coroner or public administrator, and the standard disposition is a basic cremation.`,
-    benchmark: null,
+    benchmark: `Two independent benchmarks exist. The Funeral Consumers Alliance of Los Angeles February 2026 survey of Los Angeles County providers lists direct cremation from $995 at Clarity Funerals and Cremation in Los Angeles (also listed at $995 on the provider's own site) to $5,420 at Forest Lawn locations, with most surveyed providers between $1,095 and $3,900. Statewide, a February 2020 Funeral Consumers Alliance and Consumer Federation of America study of 120 funeral homes in six metro areas found direct cremation ranging from $525 to $4,115, with a $1,295 median at homes that post prices online and $1,695 at homes that do not. Survey prices exclude death certificates and the disposition permit, so confirm any figure against the provider's current General Price List.`,
     save: `California law requires funeral establishments to hand you a written General Price List before discussing arrangements; use it. Direct cremation providers in the big metros compete on price, so compare at least three GPLs, and remember you may buy the urn or casket from any seller.`,
     faqs: (st) => [
       {
@@ -837,6 +837,14 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       {
         q: `What is the cheapest cremation option in California?`,
         a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), and competition among direct cremation providers in the Los Angeles, San Francisco, and San Diego metros means real quotes there are worth comparing across at least three General Price Lists.`,
+      },
+      {
+        q: `Is there a waiting period before cremation in California?`,
+        a: `No fixed waiting period in hours. California law does not set a 48-hour clock the way some states do; instead, no cremation can proceed until the death certificate is filed with the local registrar and a Permit for Disposition of Human Remains is issued (Health and Safety Code §103050). In practice the paperwork sets the pace, usually a few days, and longer if the coroner or medical examiner must clear the case first.`,
+      },
+      {
+        q: `Can I scatter ashes in California?`,
+        a: `Yes, with rules. On land, scattering needs written permission from the property owner or the agency that manages the land, and the remains must be removed from their container and scattered so they are not distinguishable to the public (Health and Safety Code §7116). At sea, scattering must be from a boat or aircraft, never from a bridge or pier, and never in a lake or stream; state law requires at least 500 yards from shore (§7117), and federal rules require at least 3 nautical miles from land in ocean waters with a report to the EPA within 30 days.`,
       },
     ],
   },
