@@ -55,6 +55,18 @@ export default async function CityPage({
       q: `What is the average cost of cremation in ${c.name}?`,
       a: `Our modeled 2026 estimate for direct cremation in the ${c.metroName} metro is ${fmt(c.estimates.direct_cremation.point)} (illustrative range ${fmtRange(c.estimates.direct_cremation)}). Cremation with a viewing and service is modeled at ${fmt(c.estimates.cremation_with_service.point)} (range ${fmtRange(c.estimates.cremation_with_service)}). These figures exclude a cemetery niche or plot, an upgraded urn, and most cash-advance items.`,
     },
+    {
+      q: `How much does a funeral cost in ${c.name}?`,
+      a: `Our modeled 2026 estimate for a traditional funeral with viewing and burial in the ${c.metroName} metro is ${fmt(trad.point)} (illustrative range ${fmtRange(trad)}), which is ${Math.abs(Math.round(diffPct))}% ${diffWord} the ${st.name} state figure of ${fmt(stTrad.point)}. With a burial vault included it is ${fmt(c.estimates.burial_with_vault.point)}. Cemetery plot, opening and closing, and a headstone are extra and commonly add several thousand dollars.`,
+    },
+    {
+      q: `How much is direct cremation in ${c.name}?`,
+      a: `Direct cremation (no viewing or ceremony) is modeled at ${fmt(c.estimates.direct_cremation.point)} in the ${c.metroName} metro (illustrative range ${fmtRange(c.estimates.direct_cremation)}). It is normally the cheapest disposition a funeral home offers and covers transfer, basic services, refrigeration, the cremation itself, and a basic container. An urn upgrade, permits, and certified death certificates are typically extra.`,
+    },
+    {
+      q: `What is the cheapest funeral option in ${c.name}?`,
+      a: `Direct cremation, modeled at ${fmt(c.estimates.direct_cremation.point)} in the ${c.metroName} metro. Direct burial is the lowest-cost burial option at ${fmt(c.estimates.direct_burial.point)} before cemetery charges. Whole-body donation can cost nothing when a program accepts the donation, and the county must arrange disposition for people whose families genuinely cannot pay. Comparing itemized General Price Lists from two to three ${c.name} providers, which the FTC Funeral Rule entitles you to, is where most of the savings are.`,
+    },
     ...c.cityFaqs,
     {
       q: `Are these real prices from ${c.name} funeral homes?`,

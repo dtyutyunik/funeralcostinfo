@@ -35,6 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/prepaid-funeral-plans/',
     '/guides/casket-buying-guide/',
     '/guides/who-can-arrange-funeral/',
+    '/guides/who-gets-the-ashes/',
+    '/guides/can-funeral-home-hold-ashes/',
     '/guides/scattering-ashes-laws-costs/',
     '/guides/body-organ-donation-guide/',
     '/guides/urn-costs-guide/',

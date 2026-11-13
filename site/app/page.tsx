@@ -3,7 +3,7 @@ import Calculator from '../components/Calculator';
 import NationalStats from '../components/NationalStats';
 import StateTable from '../components/StateTable';
 import UsMap from '../components/UsMap';
-import JsonLd, { breadcrumbJsonLd } from '../components/JsonLd';
+import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '../components/JsonLd';
 import Byline from '../components/Byline';
 import { PAGE_DATES } from '../lib/page-dates';
 import { SITE_URL, LAST_UPDATED, dataset, fmt, VINTAGE_LABEL } from '../lib/data';
@@ -47,11 +47,38 @@ const WHY = [
 
 export default function Home() {
   const a = dataset.anchors;
+  const homeFaqs = [
+    {
+      q: 'How much does a funeral cost in 2026?',
+      a: `The national median for a funeral with viewing and burial is ${fmt(a.traditional_burial.value)} (NFDA 2023 median restated in August 2026 dollars), or ${fmt(a.burial_with_vault.value)} with a burial vault. That covers funeral-home services and a metal casket; the cemetery plot, opening and closing, and a headstone are extra. State medians in our model run from about ${fmt(dataset.states.reduce((m, s) => Math.min(m, s.estimates.traditional_burial.point), Infinity))} to ${fmt(dataset.states.reduce((m, s) => Math.max(m, s.estimates.traditional_burial.point), 0))}. Pick your state above for its figure.`,
+    },
+    {
+      q: 'How much does cremation cost?',
+      a: `A funeral with viewing and cremation is ${fmt(a.cremation_with_service.value)} nationally. Direct cremation, with no viewing or ceremony, is ${fmt(a.direct_cremation.value)} and is normally the cheapest disposition a funeral home offers. Cemetery or niche costs, an upgraded urn, permits, and certified death certificates are extra.`,
+    },
+    {
+      q: 'What is the cheapest way to handle a funeral?',
+      a: `Direct cremation (${fmt(a.direct_cremation.value)} national median) is the cheapest funeral-home route, followed by direct burial at ${fmt(a.direct_burial.value)} before cemetery charges. Whole-body donation to a medical program is free when accepted, and every county must arrange disposition for people whose families genuinely cannot pay. Our guide to the cheapest funeral options compares each route honestly, including the trade-offs.`,
+    },
+    {
+      q: 'Who legally gets the ashes after a cremation?',
+      a: `The person who holds the legal right to control disposition under state law: usually a designated agent the deceased named in writing, then a spouse, then adult children, though the order and the details differ by state, and the funeral home releases the remains to that person or their designee. When family members disagree, the funeral home will typically wait until the dispute is resolved. Our guide to who gets the ashes explains how the priority order works, and every state page on this site carries that state's order and statute. This is general information, not legal advice.`,
+    },
+    {
+      q: 'Can a funeral home hold ashes or a body until the bill is paid?',
+      a: `It depends on the state and the contract, and it is one of the most stressful questions families ask. Some states restrict withholding human remains over a debt; elsewhere the signed contract governs, and the person who signed is usually personally liable for the bill. Our guide on funeral homes holding ashes or a body explains what the law and the FTC Funeral Rule do and do not say, and the practical steps to take first if it happens to you.`,
+    },
+    {
+      q: 'What if I cannot afford a funeral at all?',
+      a: `Start with direct cremation and an itemized price comparison, then ask the county coroner or social-services office about indigent burial or cremation programs, check the Social Security $255 lump-sum death payment and VA burial benefits for veterans, and consider whole-body donation. Our guide to indigent burial assistance walks through each option. Avoid signing a contract you cannot pay under time pressure: the signer is usually personally liable.`,
+    },
+  ];
   const ca = dataset.states.find((s) => s.abbr === 'CA')!;
   const ar = dataset.states.find((s) => s.abbr === 'AR')!;
   return (
     <>
       <JsonLd data={breadcrumbJsonLd([{ name: 'Home', url: SITE_URL + '/' }])} />
+      <JsonLd data={faqJsonLd(homeFaqs)} />
       <JsonLd
         data={{
           '@context': 'https://schema.org',
@@ -142,6 +169,30 @@ export default function Home() {
             </p>
           </div>
           <StateTable />
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="faq-heading" style={{ paddingTop: 8 }}>
+        <div className="wrap">
+          <div className="section-head">
+            <p className="eyebrow">Answers first</p>
+            <h2 id="faq-heading">The questions families actually ask</h2>
+          </div>
+          <div className="faq">
+            {homeFaqs.map((f) => (
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+          <p>
+            <Link href="/guides/who-gets-the-ashes/">Who gets the ashes: the full guide →</Link>
+            {' · '}
+            <Link href="/guides/indigent-burial-assistance/">If you cannot afford a funeral →</Link>
+            {' · '}
+            <Link href="/guides/cheapest-funeral-options/">Cheapest funeral options →</Link>
+          </p>
         </div>
       </section>
 

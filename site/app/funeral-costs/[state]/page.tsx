@@ -10,6 +10,7 @@ import {
 import Link from 'next/link';
 import NationalStats from '../../../components/NationalStats';
 import { citiesForState } from '../../../lib/cities';
+import { getRights } from '../../../lib/rights';
 
 interface StateNote {
   boardName: string;
@@ -1033,11 +1034,50 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   );
   const stateCities = citiesForState(state);
 
+  const rights = getRights(state);
+  const spotFaqs = spot ? spot.faqs(st) : [];
+  const spotCovers = (kw: string) =>
+    spotFaqs.some((f) => f.q.toLowerCase().includes(kw));
+  // Searcher-language questions generated from this state's own data
+  // (2026-11-13 question research). Bespoke spotlight FAQs take precedence:
+  // a generated question is skipped when a spotlight FAQ already covers it.
+  const genFaqs: { q: string; a: string }[] = [
+    {
+      q: `How much does a funeral cost in ${st.name}?`,
+      a: `Our modeled 2026 estimate for a traditional funeral with viewing and burial in ${st.name} is ${fmt(st.estimates.traditional_burial.point)} (illustrative range ${fmtRange(st.estimates.traditional_burial)}). With a burial vault included it is ${fmt(st.estimates.burial_with_vault.point)}. These figures cover funeral-home services and a metal casket; the cemetery plot, opening and closing, and a headstone are extra and commonly add several thousand dollars.`,
+    },
+    {
+      q: `How much is direct cremation in ${st.name}?`,
+      a: `Direct cremation (no viewing or ceremony) is modeled at ${fmt(st.estimates.direct_cremation.point)} in ${st.name} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). That is usually the lowest-cost disposition a funeral home offers: it covers transfer, basic services, refrigeration, the cremation itself, and a basic container. An urn upgrade, cremation permit or medical-examiner fees, and certified death certificates are typically extra.`,
+    },
+    ...(state === 'nevada' || spotCovers('cheapest')
+      ? []
+      : [
+          {
+            q: `What is the cheapest funeral option in ${st.name}?`,
+            a: `Direct cremation is normally the cheapest route: modeled at ${fmt(st.estimates.direct_cremation.point)} in ${st.name}. Direct burial is the lowest-cost burial option at ${fmt(st.estimates.direct_burial.point)} before cemetery charges. Whole-body donation to a medical program can cost nothing when a program accepts the donation, and every county must arrange disposition for people whose families genuinely cannot pay (see our guide to indigent burial assistance). The biggest savings come from comparing itemized General Price Lists from two to three providers, which the FTC Funeral Rule entitles you to.`,
+          },
+        ]),
+    {
+      q: `What if I cannot afford a funeral in ${st.name}?`,
+      a: `You have options before taking on debt: ask the funeral home about direct cremation (modeled at ${fmt(st.estimates.direct_cremation.point)} in ${st.name}) and whether it offers payment plans; ask the ${st.name} county coroner or social-services office about indigent burial or cremation programs; check eligibility for the Social Security $255 lump-sum death payment and, for veterans, VA burial benefits; and consider whole-body donation, which is free when accepted. Do not let anyone rush you into signing a contract you cannot pay: the person who signs is usually personally liable for the bill. Our guides to indigent burial assistance and the cheapest funeral options walk through each route.`,
+    },
+    ...(rights
+      ? [
+          {
+            q: `Who can authorize a cremation in ${st.name}?`,
+            a: `${rights.cremationAuthorizer} Under ${st.name} law (${rights.statuteCite}), the right to control disposition generally follows this order: ${rights.priorityOrder.slice(0, 5).join('; ')}. The disposition-rights section on this page explains the full order, how a written designation can override it, and what happens when family members disagree. This is general information, not legal advice.`,
+          },
+        ]
+      : []),
+  ];
+
   const faqs = [
     {
       q: `What is the average cost of cremation in ${st.name}?`,
       a: `Our modeled 2026 estimate for direct cremation in ${st.name} is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). Cremation with a viewing and service is modeled at ${fmt(st.estimates.cremation_with_service.point)} (range ${fmtRange(st.estimates.cremation_with_service)}). These figures exclude a cemetery niche or plot, an upgraded urn, and most cash-advance items.`,
     },
+    ...genFaqs,
     {
       q: `Are these real prices from ${st.name} funeral homes?`,
       a: `No. These are modeled estimates: the NFDA 2023 national median, adjusted to August 2026 dollars with the BLS funeral-expenses CPI and scaled by the BEA 2024 regional price parity for ${st.name} (RPP ${st.rpp_all_items.toFixed(1)}). ${notes?.fcaSurveyUrl ? `A consumer-organization price survey covering ${st.name} does exist and is linked under Official resources below; treat it as an independent local benchmark alongside these modeled figures.` : `The figures here are modeled rather than taken from a survey of ${st.name} funeral homes.`} Treat the point figure as a planning midpoint and the range as the plausible spread — then request itemized General Price Lists from local funeral homes for real quotes.`,
@@ -1070,7 +1110,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           },
         ]
       : []),
-    ...(spot ? spot.faqs(st) : []),
+    ...spotFaqs,
   ];
 
   return (
@@ -1341,6 +1381,46 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
                 </li>
               ))}
             </ul>
+          </>
+        )}
+
+        {rights && (
+          <>
+            <h2>Who controls the funeral and the ashes in {st.name}?</h2>
+            <p>
+              When family members disagree, {st.name} law, not the funeral home and not whoever is
+              paying, decides who controls the disposition. Under {rights.statuteCite}, the right
+              generally follows this order:
+            </p>
+            <ol>
+              {rights.priorityOrder.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ol>
+            <p>
+              <strong>Designating someone in writing:</strong> {rights.designatedAgent}
+            </p>
+            {rights.majorityRule && (
+              <p>
+                <strong>When several people share the top spot:</strong> {rights.majorityRule}
+              </p>
+            )}
+            <p>
+              <strong>Cremated remains and unpaid bills:</strong> {rights.holdRemains}
+            </p>
+            {rights.note && (
+              <p>
+                <strong>Good to know:</strong> {rights.note}
+              </p>
+            )}
+            <p>
+              Source: <a href={rights.statuteUrl} target="_blank" rel="noreferrer">{rights.statuteCite}</a>.
+              Our guides explain the national picture: <Link href="/guides/who-gets-the-ashes/">who
+              gets the ashes</Link> and <Link href="/guides/can-funeral-home-hold-ashes/">whether a
+              funeral home can hold ashes or a body over an unpaid bill</Link>. This section is
+              general information about how the law is structured, not legal advice for a specific
+              dispute.
+            </p>
           </>
         )}
 

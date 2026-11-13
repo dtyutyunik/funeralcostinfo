@@ -116,6 +116,22 @@ export const GUIDES: GuideMeta[] = [
     image: '/images/guides/who-can-arrange-funeral.jpg',
   },
   {
+    slug: 'who-gets-the-ashes',
+    title: 'Who Gets the Ashes? Who Legally Owns Cremated Remains',
+    blurb:
+      'Remains go to whoever holds the state-law right of disposition, not whoever paid. The priority order, splitting ashes, disputes, and unclaimed remains.',
+    group: 'Rights & terms',
+    image: '/images/guides/who-gets-the-ashes.jpg',
+  },
+  {
+    slug: 'can-funeral-home-hold-ashes',
+    title: 'Can a Funeral Home Hold Ashes or a Body Until You Pay?',
+    blurb:
+      'State law, the signed contract, storage fees, and signer liability, plus the steps that actually resolve a remains hold.',
+    group: 'Rights & terms',
+    image: '/images/guides/can-funeral-home-hold-ashes.jpg',
+  },
+  {
     slug: 'funeral-service-types',
     title: 'Funeral Service Types Explained',
     blurb:
