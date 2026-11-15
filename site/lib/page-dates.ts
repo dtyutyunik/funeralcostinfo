@@ -29,6 +29,10 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
     "published": "2026-10-23",
     "updated": "2026-11-10"
   },
+  "/guides/can-funeral-home-hold-ashes/": {
+    "published": "2026-11-13",
+    "updated": "2026-11-13"
+  },
   "/guides/casket-buying-guide/": {
     "published": "2026-09-24",
     "updated": "2026-11-10"
@@ -281,13 +285,17 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
     "published": "2026-09-24",
     "updated": "2026-11-10"
   },
+  "/guides/who-gets-the-ashes/": {
+    "published": "2026-11-13",
+    "updated": "2026-11-13"
+  },
   "/guides/why-funeral-cost-figures-disagree/": {
     "published": "2026-09-23",
     "updated": "2026-11-10"
   },
   "/": {
     "published": "2026-09-23",
-    "updated": "2026-11-11"
+    "updated": "2026-11-13"
   },
   "/calculator/": {
     "published": "2026-09-23",
@@ -331,10 +339,10 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "state-template": {
     "published": "2026-09-23",
-    "updated": "2026-11-11"
+    "updated": "2026-11-13"
   },
   "city-template": {
     "published": "2026-10-31",
-    "updated": "2026-11-10"
+    "updated": "2026-11-13"
   }
 };
