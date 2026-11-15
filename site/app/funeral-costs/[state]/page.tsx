@@ -1068,6 +1068,117 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       },
     ],
   },
+  // Sun Nov 15 D3 batch (Muse track): bespoke spotlights for TX, OH, GA, IL, VA.
+  texas: {
+    rate: `Cremation is also where Texas is heading: the NFDA projects 70.2% of Texas dispositions will be cremations by 2035.`,
+    spread: `Texas sits just below the national average price level (RPP 97.1), so modeled costs run slightly under the national medians. Houston, Dallas-Fort Worth, Austin and San Antonio metro quotes typically run above the state modeled figure, while rural counties run below it, so the state figure is a midpoint, not a local quote.`,
+    rule: `Texas bars cremation within 48 hours of the time of death shown on the death certificate (Tex. Health & Safety Code 716.004). The wait can be waived in writing by a justice of the peace or medical examiner of the county where the death occurred, or by court order. Cremation also needs a cremation authorization form signed by the authorizing agent (716.051 and 716.052) and a death certificate or other death record indicating the remains may be cremated.`,
+    help: `Texas has no statewide fixed-dollar burial benefit. Under Tex. Health & Safety Code 694.002, each county's commissioners court must provide for the disposition of deceased indigent persons, and counties run their own programs with their own rules: Travis County's Indigent Burial Program covers burial at no charge for eligible individuals, and Tarrant County's Burial Assistance program arranges disposition (usually cremation) when the estate and next of kin cannot pay. Ask the county where the death occurred what it covers before signing anything, and check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: null,
+    save: `Get the General Price List from at least three providers, including one direct-cremation specialist, and compare metro against rural quotes if the family has a choice of location. Texas does not require embalming; a body held more than 24 hours must be refrigerated, embalmed, or encased in a suitable container. You may buy the urn or casket from any seller, and anyone providing funeral services for compensation in Texas must be licensed by the Texas Funeral Service Commission.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Texas?`,
+        a: `At least 48 hours after the time of death shown on the death certificate (Tex. Health & Safety Code 716.004). The wait can be waived in writing by a justice of the peace or medical examiner of the county where the death occurred, or by court order. The authorization form and death record must also be in place before cremation.`,
+      },
+      {
+        q: `Who can authorize a cremation in Texas?`,
+        a: `The authorizing agent under Tex. Health & Safety Code 711.002, in this seven-class order: a person the deceased designated in a written instrument, the surviving spouse, any one of the surviving adult children, either one of the surviving parents, any one of the surviving adult siblings, the duly qualified executors or administrators of the estate, then any adult in the next degree of kinship. No majority vote is required within a class, but the right lapses if arrangements are not made by the earlier of the sixth day after notice of death or the tenth day after death.`,
+      },
+      {
+        q: `Does Texas help pay for a funeral or cremation?`,
+        a: `There is no statewide program or fixed amount. Each county must provide for the disposition of deceased indigent persons (Tex. Health & Safety Code 694.002), so the county where the death occurred is the contact: Travis County, for example, covers burial at no charge for eligible individuals, and Tarrant County arranges disposition when the estate and next of kin cannot pay. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement that fits most county programs.`,
+      },
+    ],
+  },
+  ohio: {
+    rate: `Cremation is also where Ohio is heading: the NFDA projects 68.9% of Ohio dispositions will be cremations by 2035.`,
+    spread: `Ohio sits well below the national average price level (RPP 92.8). Columbus, Cleveland and Cincinnati metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Ohio bars cremation until 24 hours have passed since the time of death shown on the completed death certificate (Ohio Rev. Code 4717.23). The only exception is when a local board of health orders earlier cremation because the person died of a virulent communicable disease. Cremation also needs a burial permit authorizing cremation and a cremation authorization form signed by the authorizing agent (ORC 4717.24), who is the person holding the right of disposition under ORC 2108.70 or 2108.81.`,
+    help: `Ohio law requires the township or municipal corporation where a person resided or died to bury or cremate an indigent person (ORC 9.15), and the State Board of Embalmers and Funeral Directors reimburses local governments up to $1,000 for an adult and $750 for a child through its Indigent Burial and Cremation Support Program ($250,000 appropriated for each of fiscal years 2026 and 2027, first come first served). Start with the township or municipality where the death occurred; the funeral director must handle the arrangements. Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: null,
+    save: `Compare General Price Lists from at least three providers, including a direct-cremation specialist. Ohio does not require embalming, and the board's preneed recovery fund (ORC 4717.41, funded by a $10 fee on each preneed contract) is a safety net if a preneed seller defaults, but it does not pay for a new arrangement, so compare prices before signing anything.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Ohio?`,
+        a: `At least 24 hours after the time of death shown on the completed, non-provisional death certificate (Ohio Rev. Code 4717.23). The only exception is an order from the local board of health for a virulent communicable disease. A burial permit authorizing cremation and the signed cremation authorization form must also be in place.`,
+      },
+      {
+        q: `Who can authorize a cremation in Ohio?`,
+        a: `The person holding the right of disposition under Ohio Rev. Code 2108.70 or 2108.81: first a representative the deceased named in a written declaration (signed before a notary or two unrelated adult witnesses), then the surviving spouse, then surviving children, parents, siblings, grandparents and grandchildren in that order. A majority of a class decides when several people share it, and a holder who fails to act within 48 hours of notice (72 hours without notice) can lose the right.`,
+      },
+      {
+        q: `Does Ohio help pay for a funeral or cremation?`,
+        a: `Yes, through the township or municipality where the person resided or died, which must bury or cremate an indigent person (ORC 9.15). The state reimburses the local government up to $1,000 for an adult and $750 for a child through the Board of Embalmers and Funeral Directors' Indigent Burial and Cremation Support Program, funded at $250,000 a year for fiscal 2026 and 2027 on a first-come, first-served basis. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), fits inside that reimbursement.`,
+      },
+    ],
+  },
+  georgia: {
+    rate: `Cremation is also where Georgia is heading: the NFDA projects 69.0% of Georgia dispositions will be cremations by 2035.`,
+    spread: `Georgia sits modestly below the national average price level (RPP 96.3). Atlanta metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Georgia sets no waiting period in hours before cremation. Instead, cremation cannot proceed until the funeral director obtains a disposition permit from the local registrar (O.C.G.A. 31-10-20; registrars must make permits available 24/7 and issue them immediately on request), the cause of death has been certified, and the person holding the right of disposition has authorized it (O.C.G.A. 31-21-7). The death certificate must be filed within 72 hours (O.C.G.A. 31-10-15). Note the urgency rule: a holder forfeits the right of disposition if they do not exercise it within two days of notification of death or within three days of death, whichever is earlier.`,
+    help: `Georgia has no statewide funeral assistance program. Under O.C.G.A. 36-12-5, the county where the death occurred must make county funds available for a decent interment or cremation when the decedent, family and immediate kindred are indigent and unable to pay, with the amount set by the county and capped at the actual cost. Fulton County runs its program through the Department of Family and Children Services; smaller counties set their own caps (Whitfield County, for example, reimburses up to $800 for cremation and $2,100 for burial under its 2023 policy). Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: `An independent benchmark exists: the Funeral Consumers Alliance of Georgia publishes a pricing comparison with provider-level direct-cremation and immediate-burial figures, linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    save: `Compare General Price Lists from at least three providers and check the FCA of Georgia pricing table before signing. Embalming is not required for cremation, and you may buy the urn or casket from any seller. If the family cannot pay, contact the county where the death occurred, not where the deceased lived, before signing a contract, because that county is the one the statute charges.`,
+    faqs: (st) => [
+      {
+        q: `Is there a waiting period before cremation in Georgia?`,
+        a: `No waiting period in hours. Georgia requires a disposition permit from the local registrar (O.C.G.A. 31-10-20), certification of the cause of death, and authorization from the person holding the right of disposition (O.C.G.A. 31-21-7). In practice the death certificate, which must be filed within 72 hours, and the permit set the pace.`,
+      },
+      {
+        q: `Who can authorize a cremation in Georgia?`,
+        a: `The person holding the right of disposition under O.C.G.A. 31-21-7, in this order: the health care agent under an advance directive (who outranks even a written designee), a DD Form 93 designee for deaths while serving, a person the deceased designated in a notarized affidavit, the surviving spouse, a majority of adult children, surviving parents, a majority of adult siblings, then adult grandparents, a guardian, and the personal representative. A holder who does not act within two days of notification or three days of death, whichever is earlier, forfeits the right.`,
+      },
+      {
+        q: `What help is available if a family cannot pay for a funeral in Georgia?`,
+        a: `There is no statewide program, so the county where the death occurred is the contact: under O.C.G.A. 36-12-5 it must make county funds available for a decent interment or cremation when the decedent, family and immediate kindred are indigent, with the amount set by the county up to the actual cost. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the lowest-cost arrangement, and whole-body donation is a no-cost disposition where it is an option.`,
+      },
+    ],
+  },
+  illinois: {
+    rate: `Cremation is also where Illinois is heading: the NFDA projects 70.5% of Illinois dispositions will be cremations by 2035.`,
+    spread: `Illinois sits essentially at the national average price level (RPP 100.0), so its modeled figures track the national anchor closely. Chicago metro quotes typically run above the state modeled figure, while downstate and rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Illinois bars cremation within 24 hours of the time of death shown on the death certificate (410 ILCS 18/35, Crematory Regulation Act). The wait can be waived in writing by the coroner or medical examiner for an infectious or dangerous disease, or for a religious requirement. No cremation can proceed until the crematory has a cremation permit from the coroner or medical examiner of the county where the death occurred and a cremation authorization form signed by the authorizing agent (410 ILCS 18/20).`,
+    help: `The Illinois Department of Human Services reimburses funeral and burial expenses when the deceased was receiving TANF, Aid to the Aged, Blind or Disabled, Medicaid or similar assistance at death (89 Ill. Adm. Code 117.50): up to $1,370 for a funeral and $686 for a cremation or burial. Apply through the local DHS Family Community Resource Center; reimbursement comes after the costs are paid. Older guides still circulating show $1,103 and $552; those are the pre-2025 schedule, not the current amounts. If DHS cannot help, ask the township's General Assistance program. Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: `An independent benchmark exists: the Funeral Consumers Alliance of Champaign County publishes a 2026 annual survey of funeral home and cemetery prices for the Champaign County area, linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    save: `Compare General Price Lists from at least three providers, including a direct-cremation specialist, since Chicago-area direct cremation is a competitive market. Decline embalming you do not need (refrigeration satisfies the holding rule), and remember you may buy the urn or casket from any seller. If DHS reimbursement might apply, keep receipts and confirm eligibility before signing, because the program reimburses after payment.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Illinois?`,
+        a: `At least 24 hours after the time of death shown on the death certificate (410 ILCS 18/35). The wait can be waived in writing by the coroner or medical examiner for an infectious or dangerous disease, or for a religious requirement. The coroner's or medical examiner's cremation permit and the signed authorization form must also be in place, and in practice those set the real pace.`,
+      },
+      {
+        q: `Who can authorize a cremation in Illinois?`,
+        a: `The person holding the right of disposition under the Disposition of Remains Act (755 ILCS 65/5): first a person the deceased designated in a written instrument, then an executor acting under the deceased's written instructions in the will, then the surviving spouse, a majority of adult children, surviving parents, then the next degrees of kindred by majority, a recognized religious, civic, community or fraternal organization willing to assume responsibility, and finally a public administrator, medical examiner or coroner. That person signs the cremation authorization form.`,
+      },
+      {
+        q: `Does Illinois help pay for a funeral or cremation?`,
+        a: `Yes, for eligible decedents. The Department of Human Services reimburses up to $1,370 for a funeral and $686 for a cremation or burial when the deceased was receiving TANF, Aid to the Aged, Blind or Disabled, Medicaid or similar assistance at death (89 Ill. Adm. Code 117.50). Apply through the local DHS office; payment comes after the costs are paid. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), fits inside the reimbursement.`,
+      },
+    ],
+  },
+  virginia: {
+    rate: `Cremation is also where Virginia is heading: the NFDA projects 69.6% of Virginia dispositions will be cremations by 2035.`,
+    spread: `Virginia sits modestly above the national average price level (RPP 101.1). Northern Virginia metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Virginia sets no waiting period in hours before cremation. Instead, no body may be cremated without permission from the Office of the Chief Medical Examiner (Va. Code 54.1-2818.1 and 32.1-284), a cremation authorization form signed by the next of kin or the person designated to arrange disposition (54.1-2825), and visual identification of the deceased by the next of kin or their representative (positive identification methods may substitute where visual identification is not feasible). The death certificate must be filed electronically within three days, with the medical certification filed within 24 hours of death.`,
+    help: `Virginia has no statewide fixed-dollar burial benefit. Help is local: the county or city Department of Social Services administers General Relief burial assistance for indigent decedents, with the amount set locally and funding not guaranteed, and some localities exhaust their budget mid-year, so call the local DSS office to confirm current availability before counting on it. Apply in person at the local DSS office or through the CommonHelp portal, and check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: null,
+    save: `Compare General Price Lists from at least three providers, including a direct-cremation specialist. Virginia's 2026 consumer guide distinguishes guaranteed from nonguaranteed prices in preneed contracts, so check which prices in any preneed contract are actually locked, since nonguaranteed items can require settlement at death. You may buy the urn or casket from any seller.`,
+    faqs: (st) => [
+      {
+        q: `Is there a waiting period before cremation in Virginia?`,
+        a: `No waiting period in hours. Virginia requires permission from the Office of the Chief Medical Examiner for every cremation, a signed cremation authorization form, and visual identification of the deceased (Va. Code 54.1-2818.1). Those three gates, not a clock, set the pace, so allow time for the medical examiner's authorization.`,
+      },
+      {
+        q: `Who can authorize a cremation in Virginia?`,
+        a: `A person the deceased designated in a signed, notarized written designation under Va. Code 54.1-2825 has express priority over everyone else; the designation must reach the funeral establishment within 48 hours of it receiving the remains. Otherwise the next of kin signs, but unlike most states, Virginia does not rank next of kin: Va. Code 54.1-2800 lists spouse, adult children, parents, adult siblings and other relatives with no order of priority among them. If next of kin disagree, any of them may petition the circuit court (54.1-2807.01), and since 2025 a funeral home notified of a dispute may proceed after 30 days with no agreement or court order.`,
+      },
+      {
+        q: `What help is available if a family cannot pay for a funeral in Virginia?`,
+        a: `There is no statewide fixed benefit. The county or city Department of Social Services administers General Relief burial assistance for indigent decedents, with eligibility and amounts set locally and funding not guaranteed, so call the local DSS office first. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the lowest-cost arrangement.`,
+      },
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -1122,6 +1233,32 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
     title: `Funeral Costs in Pennsylvania 2026: Burial $8,920, Cremation $2,960`,
     description:
       `Average funeral cost in Pennsylvania in 2026: traditional burial $8,920, cremation with a service $6,750, direct cremation $2,960. Cheapest options, state rules, and the $750 state burial payment explained.`,
+  },
+  // Sun Nov 15 D3 batch (Muse track): TX, OH, GA, IL, VA numbers-first title/meta.
+  texas: {
+    title: `Funeral Costs in Texas 2026: Burial $8,870, Cremation $2,940`,
+    description:
+      `Average funeral cost in Texas in 2026: traditional burial $8,870, cremation with a service $6,720, direct cremation $2,940. Cheapest options, state rules, and county help explained.`,
+  },
+  ohio: {
+    title: `Funeral Costs in Ohio 2026: Burial $8,480, Cremation $2,810`,
+    description:
+      `Average funeral cost in Ohio in 2026: traditional burial $8,480, cremation with a service $6,420, direct cremation $2,810. Cheapest options, state rules, and indigent burial help explained.`,
+  },
+  georgia: {
+    title: `Funeral Costs in Georgia 2026: Burial $8,800, Cremation $2,920`,
+    description:
+      `Average funeral cost in Georgia in 2026: traditional burial $8,800, cremation with a service $6,660, direct cremation $2,920. Cheapest options, state rules, and county help explained.`,
+  },
+  illinois: {
+    title: `Funeral Costs in Illinois 2026: Burial $9,140, Cremation $3,030`,
+    description:
+      `Average funeral cost in Illinois in 2026: traditional burial $9,140, cremation with a service $6,920, direct cremation $3,030. Cheapest options, state rules, and DHS burial help explained.`,
+  },
+  virginia: {
+    title: `Funeral Costs in Virginia 2026: Burial $9,240, Cremation $3,060`,
+    description:
+      `Average funeral cost in Virginia in 2026: traditional burial $9,240, cremation with a service $7,000, direct cremation $3,060. Cheapest options, state rules, and local help explained.`,
   },
 };
 
