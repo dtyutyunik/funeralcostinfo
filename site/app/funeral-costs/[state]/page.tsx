@@ -957,6 +957,117 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       },
     ],
   },
+  // Sat Nov 14 D3 batch (Muse track): bespoke spotlights for NY, NJ, NC, SC, PA.
+  'new-york': {
+    rate: `Cremation is also where New York is heading: the NFDA projects 70.7% of New York dispositions will be cremations by 2035.`,
+    spread: `New York has one of the highest price levels in the nation (RPP 107.9), driven largely by the New York City metro area. NYC metro quotes typically run well above the state modeled figure, while upstate and rural counties typically run below it, so the state figure is a midpoint, not a local quote.`,
+    rule: `New York has no statutory waiting period before cremation. Cremation still needs a burial or removal permit annotated for cremation, issued by the local registrar once a satisfactory death certificate is filed (Public Health Law 4144 and 4145), plus a cremation authorization signed by the person in control of disposition under Public Health Law 4201. Every body delivered for cremation must also be accompanied by a physician, coroner or medical examiner statement certifying it contains no battery or power cell (Public Health Law 4202). In New York City, a separate health-code rule requires burial, cremation or transport out of the city within four days of death (24 RCNY Health Code 205.13).`,
+    help: `New York has no statewide fixed-dollar burial benefit. Under Social Services Law 141, the social services district, town or city that would have furnished public assistance to the deceased must provide for the care, removal and burial of a public-assistance recipient, or of a person found dead in the district, with the amount set locally. Apply through the county Department of Social Services, and check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: `An independent benchmark exists for one region: the Funeral Consumers Alliance of the Finger Lakes 2025 funeral home price survey (Tompkins County area), linked under Official resources below. There is no statewide FCA survey for New York, so confirm any figure against the provider's current General Price List.`,
+    save: `Get the General Price List from at least three providers, including one direct-cremation specialist, and compare the NYC metro against upstate quotes if the family has a choice of location. Embalming is not required for cremation; refrigeration and the permit paperwork set the pace. You may buy the urn or casket from any seller.`,
+    faqs: (st) => [
+      {
+        q: `Is there a waiting period before cremation in New York?`,
+        a: `No statutory waiting period. Cremation can proceed once the death certificate is filed, the registrar issues a disposition permit annotated for cremation, and the person in control of disposition signs the cremation authorization (Public Health Law 4144, 4145 and 4201). In practice the paperwork, not a clock, sets the pace, and New York City requires disposition within four days of death.`,
+      },
+      {
+        q: `Who can authorize a cremation in New York?`,
+        a: `The person in control of disposition under Public Health Law 4201, following its ten-level priority order, starting with a person the deceased designated in writing. That person signs the cremation authorization form; a funeral director witnesses the signature.`,
+      },
+      {
+        q: `Does New York help pay for a funeral or cremation?`,
+        a: `There is no statewide fixed amount. Under Social Services Law 141 the local social services district must arrange burial for a public-assistance recipient who dies without funds to pay for it, with the amount set locally, so apply through the county Department of Social Services. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement that fits most assistance budgets.`,
+      },
+    ],
+  },
+  'new-jersey': {
+    rate: `Cremation is also where New Jersey is heading: the NFDA projects 69.5% of New Jersey dispositions will be cremations by 2035.`,
+    spread: `New Jersey has one of the highest regional price levels in the nation (RPP 108.8), roughly 9% above the national average. Northern New Jersey and the New York City suburbs typically price above the state modeled figure, while South Jersey generally runs below it.`,
+    rule: `New Jersey bars cremation until at least 24 hours have elapsed from the time of death as recorded on the death certificate (N.J.S.A. 26:7-18.1). Cremation also needs a burial or removal (disposition) permit from the local registrar and written authorization from the person with the right to control disposition under N.J.S.A. 45:27-22, starting with a designated agent, then the surviving spouse, civil union partner or domestic partner, then a majority of adult children. A body held more than 48 hours must be embalmed or refrigerated (N.J.A.C. 8:9-1.1).`,
+    help: `New Jersey runs a Public Assistance Funeral program through the Department of Human Services, administered by the county Board of Social Services in the county where the deceased lived. Tell the funeral home the deceased may be eligible; the funeral director contacts the board for conditional approval. For an adult, the state funeral allowance is $3,056 and the cemetery allowance is $714, a combined maximum of $3,770; crematory charges and burial of the urn are charged to the cemetery allowance, and the urn itself to the funeral allowance (N.J. Admin. Code 10:90-8.5). Family and friends may contribute up to $1,570 toward an adult's funeral without reducing the state payment. Veterans may also qualify for VA burial benefits, and Social Security pays a $255 lump-sum death payment.`,
+    benchmark: `An independent benchmark exists: the Funeral Consumers Alliance of Princeton 2024 publication "How to Shop for Cremation and Prices" names funeral homes and lists actual direct-cremation prices, linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    save: `Compare General Price Lists from at least three providers, including a direct-cremation specialist, and use the FCA of Princeton survey as a sanity check. Decline embalming you do not need, since refrigeration satisfies the holding rule, and remember you may buy the urn or casket from any seller.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in New Jersey?`,
+        a: `At least 24 hours after the time of death recorded on the death certificate (N.J.S.A. 26:7-18.1). The disposition permit and the written authorization from the person with the right to control disposition must also be in place before cremation.`,
+      },
+      {
+        q: `Who can authorize a cremation in New Jersey?`,
+        a: `The person with the right to control disposition under N.J.S.A. 45:27-22: first an agent the deceased designated in writing, then the surviving spouse, civil union partner or domestic partner, then a majority of adult children, then parents, then a majority of siblings.`,
+      },
+      {
+        q: `Does New Jersey help pay for a cremation?`,
+        a: `Yes, through a Public Assistance Funeral: the Department of Human Services program, administered by the county Board of Social Services, pays toward a funeral and cremation for eligible low-income residents. Tell the funeral home the deceased may be eligible and it will seek conditional approval from the board. Our modeled direct cremation estimate for New Jersey is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}).`,
+      },
+    ],
+  },
+  'north-carolina': {
+    rate: `Cremation is also where North Carolina is heading: the NFDA projects 71.2% of North Carolina dispositions will be cremations by 2035.`,
+    spread: `North Carolina sits modestly below the national average price level (RPP 94.3). Charlotte, Raleigh-Durham and Greensboro metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `North Carolina bars cremation within 24 hours after the time of death (G.S. 90-210.129). The waiting period can be waived in writing only by the medical examiner, the county health director or the attending physician, for an infectious, contagious or communicable and dangerous disease. Cremation also needs a signed death certificate, a cremation authorization form signed by the authorizing agent (G.S. 90-210.125), and, where required, medical examiner authorization (G.S. 130A-388). A crematory must refrigerate remains at 40 degrees Fahrenheit or below unless cremation begins within 24 hours of taking custody.`,
+    help: `North Carolina has no statewide funeral assistance program and no statewide dollar cap; indigent disposition is delegated to the counties (Chapter 130A). Start with the county Department of Social Services where the deceased lived: Wake and Guilford counties run DSS programs, while Mecklenburg County stopped funding burials in 1994 and Catholic Charities of the Diocese of Charlotte now fills that gap across western North Carolina. Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: `An independent benchmark exists, and it is genuinely statewide: the Funeral Consumers Alliance of North Carolina 2025-2026 price survey contacted more than 750 licensed funeral homes statewide, linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    save: `Compare General Price Lists from at least three providers and check the FCA North Carolina survey before signing. Embalming is not required in North Carolina; refrigeration is what holds a body while the 24-hour clock and paperwork run. You may buy the urn or casket from any seller.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in North Carolina?`,
+        a: `At least 24 hours after the time of death (G.S. 90-210.129). The only waiver is in writing by the medical examiner, county health director or attending physician, for an infectious, contagious or communicable and dangerous disease. In practice the death certificate and medical examiner clearance usually take at least this long anyway.`,
+      },
+      {
+        q: `Who can authorize a cremation in North Carolina?`,
+        a: `The authorizing agent under G.S. 90-210.124: first a person the deceased authorized in writing, then the surviving spouse, then a majority of adult children who can be located, then parents, then a majority of adult siblings, then the next degrees of kinship. That person signs the cremation authorization form (G.S. 90-210.125).`,
+      },
+      {
+        q: `What help is available if a family cannot pay for a funeral in North Carolina?`,
+        a: `There is no statewide program, so the county Department of Social Services where the deceased lived is the first call; county programs differ, and some counties have none. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the lowest-cost arrangement, and whole-body donation is a no-cost disposition where it is an option.`,
+      },
+    ],
+  },
+  'south-carolina': {
+    rate: `Cremation is also where South Carolina is heading: the NFDA projects 68.3% of South Carolina dispositions will be cremations by 2035.`,
+    spread: `South Carolina sits well below the national average price level (RPP 93.7). Charleston, Columbia and Greenville metro quotes typically run above the state modeled figure, while rural counties run below it.`,
+    rule: `South Carolina bars cremation until 24 hours have elapsed from the time of death shown on the death certificate (S.C. Code 32-8-340). The wait can be waived in writing by the attending physician, medical examiner or coroner only if the deceased had an infectious or dangerous disease. Every cremation also needs a cremation permit from the county coroner or medical examiner (S.C. Code 32-8-325) and authorization from the decedent's agent under S.C. Code 32-8-320.`,
+    help: `South Carolina has no statewide fixed-dollar burial benefit. Counties may appropriate public funds for the disposition of indigent residents as a public purpose (S.C. Code 4-9-30; Attorney General opinions 1995 and 2009), and a coroner may authorize cremation for an indigent decedent (S.C. Code 32-8-320). In practice the county coroner is the contact: Greenville County cremates qualifying pauper burials, and Aiken County holds an annual pauper burial for unclaimed residents. Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
+    benchmark: `An independent benchmark exists for one metro: the Funeral Consumers Alliance of Greater Columbia 2022 price survey (Greater Columbia area), linked under Official resources below. It is dated and covers one area only, so confirm any listed figure against the provider's current General Price List.`,
+    save: `Compare General Price Lists from at least three providers, including a direct-cremation specialist. Decline embalming you do not need, and remember you may buy the urn or casket from any seller. If the family cannot pay, ask the county coroner what the county will cover before signing anything.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in South Carolina?`,
+        a: `At least 24 hours after the time of death shown on the death certificate (S.C. Code 32-8-340). The only exception is a written waiver by the attending physician, medical examiner or coroner when the deceased had an infectious or dangerous disease. The coroner's cremation permit usually takes at least this long anyway.`,
+      },
+      {
+        q: `Who can authorize a cremation in South Carolina?`,
+        a: `The decedent's agent under S.C. Code 32-8-320: first a person the deceased designated, then the priority order in the statute, and, for an indigent decedent, a public administrator, medical examiner, coroner or other public official charged with final disposition. The coroner must also issue a cremation permit (S.C. Code 32-8-325).`,
+      },
+      {
+        q: `What is the cheapest cremation option in South Carolina?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). If the family cannot pay, the county coroner is the contact for indigent disposition; do not sign a contract before asking what the county covers.`,
+      },
+    ],
+  },
+  pennsylvania: {
+    rate: `Cremation is also where Pennsylvania is heading: the NFDA projects 71.3% of Pennsylvania dispositions will be cremations by 2035.`,
+    spread: `Pennsylvania sits modestly below the national average price level (RPP 97.6). Philadelphia and Pittsburgh metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Pennsylvania bars cremation until 24 hours beyond the time of death (49 Pa. Code 13.212). The body may be taken to the crematory sooner, but only with written instructions that cremation cannot occur before the 24 hours have elapsed. Cremation also needs written authorization from the family (49 Pa. Code 13.201) and a permit to cremate, with every cremation referred to the county coroner. The right to control disposition sits with the surviving spouse under 20 Pa.C.S. 305, absent a legal challenge.`,
+    help: `Pennsylvania's Department of Human Services pays up to $750 toward burial or cremation for a deceased person who was eligible for or receiving cash assistance (including TANF or SSI) at the time of death, paid directly to the funeral director (55 Pa. Code 283.21). The total bill cannot exceed $1,500, and no payment is made if countable resources reach $1,500. Apply through the County Assistance Office; the funeral director files the request.`,
+    benchmark: null,
+    save: `If the $750 state payment might apply, keep the total bill under the $1,500 cap and raise it before signing, because add-ons can disqualify the whole payment. Everyone else saves the same way: decline embalming you do not need, since a body must be embalmed, refrigerated or sealed only if disposition will not occur within 24 hours, and compare at least three General Price Lists.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in Pennsylvania?`,
+        a: `At least 24 hours beyond the time of death (49 Pa. Code 13.212). The body can be moved to the crematory sooner, but only with written instructions that cremation cannot happen before the 24 hours have elapsed. The coroner's review and the death certificate, which must be filed within 96 hours, usually set the real pace.`,
+      },
+      {
+        q: `Who can authorize a cremation in Pennsylvania?`,
+        a: `The family member with the right to control disposition under 20 Pa.C.S. 305, since the surviving spouse has sole authority absent a legal challenge, who signs the written cremation authorization the funeral director must obtain (49 Pa. Code 13.201). Every cremation is also referred to the county coroner.`,
+      },
+      {
+        q: `Does Pennsylvania help pay for a funeral or cremation?`,
+        a: `Yes, up to $750 from the Department of Human Services toward burial or cremation, paid directly to the funeral director, when the deceased was eligible for cash assistance such as TANF or SSI at death (55 Pa. Code 283.21). The total bill cannot exceed $1,500 and no payment is made if countable resources reach $1,500. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), fits under that cap.`,
+      },
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -985,6 +1096,32 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
     title: `Funeral Costs in Kentucky 2026: Burial $8,240, Cremation $2,730`,
     description:
       `Average funeral cost in Kentucky in 2026: traditional burial $8,240, cremation with a service $6,240, direct cremation $2,730. Cheapest options, state rules, and assistance programs explained.`,
+  },
+  // Sat Nov 14 D3 batch (Muse track): NY, NJ, NC, SC, PA numbers-first title/meta, same pattern as MO/IN/FL/KY.
+  'new-york': {
+    title: `Funeral Costs in New York 2026: Burial $9,860, Cremation $3,270`,
+    description:
+      `Average funeral cost in New York in 2026: traditional burial $9,860, cremation with a service $7,470, direct cremation $3,270. Cheapest options, state rules, and county help explained.`,
+  },
+  'new-jersey': {
+    title: `Funeral Costs in New Jersey 2026: Burial $9,940, Cremation $3,300`,
+    description:
+      `Average funeral cost in New Jersey in 2026: traditional burial $9,940, cremation with a service $7,530, direct cremation $3,300. Cheapest options, state rules, and public-assistance funerals explained.`,
+  },
+  'north-carolina': {
+    title: `Funeral Costs in North Carolina 2026: Burial $8,620, Cremation $2,860`,
+    description:
+      `Average funeral cost in North Carolina in 2026: traditional burial $8,620, cremation with a service $6,530, direct cremation $2,860. Cheapest options, state rules, and county help explained.`,
+  },
+  'south-carolina': {
+    title: `Funeral Costs in South Carolina 2026: Burial $8,570, Cremation $2,840`,
+    description:
+      `Average funeral cost in South Carolina in 2026: traditional burial $8,570, cremation with a service $6,490, direct cremation $2,840. Cheapest options, state rules, and county help explained.`,
+  },
+  pennsylvania: {
+    title: `Funeral Costs in Pennsylvania 2026: Burial $8,920, Cremation $2,960`,
+    description:
+      `Average funeral cost in Pennsylvania in 2026: traditional burial $8,920, cremation with a service $6,750, direct cremation $2,960. Cheapest options, state rules, and the $750 state burial payment explained.`,
   },
 };
 
@@ -1062,7 +1199,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
       q: `What if I cannot afford a funeral in ${st.name}?`,
       a: `You have options before taking on debt: ask the funeral home about direct cremation (modeled at ${fmt(st.estimates.direct_cremation.point)} in ${st.name}) and whether it offers payment plans; ask the ${st.name} county coroner or social-services office about indigent burial or cremation programs; check eligibility for the Social Security $255 lump-sum death payment and, for veterans, VA burial benefits; and consider whole-body donation, which is free when accepted. Do not let anyone rush you into signing a contract you cannot pay: the person who signs is usually personally liable for the bill. Our guides to indigent burial assistance and the cheapest funeral options walk through each route.`,
     },
-    ...(rights
+    ...(rights && !spotCovers('authorize a cremation')
       ? [
           {
             q: `Who can authorize a cremation in ${st.name}?`,
