@@ -10,12 +10,12 @@ import RelatedGuides from '../../../components/RelatedGuides';
 const A = dataset.anchors;
 
 export const metadata: Metadata = {
-  title: 'How Much Does Funeral Live Streaming Cost? Prices, DIY & What to Ask',
+  title: 'Funeral Live Streaming Cost (2026): Free DIY or $389 to $799 Professional',
   description:
     'Funeral live streaming costs nothing DIY via a phone, or about $389 to $799 for published professional packages: what each option includes, what drives the price, and how to set up a private, reliable stream.',
   alternates: { canonical: SITE_URL + '/guides/funeral-live-streaming-cost/' },
   openGraph: {
-    title: 'How Much Does Funeral Live Streaming Cost? Prices, DIY & What to Ask',
+    title: 'Funeral Live Streaming Cost (2026): Free DIY or $389 to $799 Professional',
     description:
       'Free DIY streaming vs professional funeral live streaming packages: prices, setup checklist, and privacy tips.',
     url: SITE_URL + '/guides/funeral-live-streaming-cost/',
@@ -61,7 +61,7 @@ export default function FuneralLiveStreamingCost() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Funeral live streaming cost</nav>
       <JsonLd data={articleJsonLd({
-        title: 'How Much Does Funeral Live Streaming Cost? Prices, DIY & What to Ask',
+        title: 'Funeral Live Streaming Cost (2026): Free DIY or $389 to $799 Professional',
         description: 'Funeral live streaming costs nothing DIY via a phone, or about $389 to $799 for published professional packages: what each option includes, what drives the price, and how to set up a private, reliable stream.',
         url: SITE_URL + '/guides/funeral-live-streaming-cost/',
         datePublished: '2026-11-01',

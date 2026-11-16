@@ -1297,11 +1297,11 @@ export function generateStaticParams() {
 }
 
 const META_OVERRIDES: Record<string, { title: string; description: string }> = {
-  // Missouri: page 1 position (9.6) with 173 impressions and zero clicks in the Oct 10-Nov 6 GSC window; numbers-first title and description to win the click.
+  // Missouri: second pass 2026-11-16. The Nov 9 numbers-first title still drew zero clicks at position 9.5 (205 impressions, Oct 17-Nov 13 window). Query data shows the impressions come mostly from the generic query "average cost of funeral" (133 impressions, position 9.8), so the title now leads with that exact phrasing.
   missouri: {
-    title: `Funeral Costs in Missouri 2026: Burial $8,300, Cremation $2,750`,
+    title: `Average Funeral Cost in Missouri (2026): Burial $8,300, Cremation $2,750`,
     description:
-      `Average funeral cost in Missouri in 2026: traditional burial $8,300, cremation with a service $6,280, direct cremation $2,750. Cheapest options, state rules, and county help explained.`,
+      `The average cost of a funeral in Missouri in 2026 is $8,300 for a traditional burial, $6,280 for cremation with a service, and $2,750 for direct cremation. Cheapest options, state rules, and county help explained.`,
   },
   // Indiana, Florida, Kentucky: 250-300 impressions each with zero clicks (positions 57-68) in the same GSC window; same numbers-first treatment, applied 2026-11-09 at Dima's request.
   indiana: {

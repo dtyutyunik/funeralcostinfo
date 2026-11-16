@@ -14,6 +14,40 @@ export function generateStaticParams() {
   return CITIES.map((c) => ({ state: c.stateSlug, city: c.slug }));
 }
 
+// Numbers-first title/meta for the city pages with page-1/2 positions but zero clicks in the Oct 17-Nov 13, 2026 GSC window (Phoenix 431 impressions at 14.4, San Diego 12.6, Chicago 14.0, Houston 14.9, New York City 15.9, Denver 16.7). Same treatment that lifted the state pages; added 2026-11-16.
+const CITY_META_OVERRIDES: Record<string, { title: string; description: string }> = {
+  'arizona/phoenix': {
+    title: `Funeral Costs in Phoenix 2026: Burial $9,440, Cremation $3,130`,
+    description:
+      `Average funeral cost in Phoenix in 2026: traditional burial $9,440, cremation with a service $7,150, direct cremation $3,130. Published local prices, cheapest options, and how Phoenix compares with the Arizona average.`,
+  },
+  'california/san-diego': {
+    title: `Funeral Costs in San Diego 2026: Burial $10,230, Cremation $3,390`,
+    description:
+      `Average funeral cost in San Diego in 2026: traditional burial $10,230, cremation with a service $7,740, direct cremation $3,390. Published local prices, cheapest options, and how San Diego compares with the California average.`,
+  },
+  'illinois/chicago': {
+    title: `Funeral Costs in Chicago 2026: Burial $9,470, Cremation $3,140`,
+    description:
+      `Average funeral cost in Chicago in 2026: traditional burial $9,470, cremation with a service $7,170, direct cremation $3,140. Published local prices, cheapest options, and how Chicago compares with the Illinois average.`,
+  },
+  'texas/houston': {
+    title: `Funeral Costs in Houston 2026: Burial $9,010, Cremation $2,990`,
+    description:
+      `Average funeral cost in Houston in 2026: traditional burial $9,010, cremation with a service $6,830, direct cremation $2,990. Published local prices, cheapest options, and how Houston compares with the Texas average.`,
+  },
+  'new-york/new-york-city': {
+    title: `Funeral Costs in New York City 2026: Burial $10,290, Cremation $3,410`,
+    description:
+      `Average funeral cost in New York City in 2026: traditional burial $10,290, cremation with a service $7,790, direct cremation $3,410. Published local prices, cheapest options, and how the city compares with the New York state average.`,
+  },
+  'colorado/denver': {
+    title: `Funeral Costs in Denver 2026: Burial $9,670, Cremation $3,210`,
+    description:
+      `Average funeral cost in Denver in 2026: traditional burial $9,670, cremation with a service $7,320, direct cremation $3,210. Published local prices, cheapest options, and how Denver compares with the Colorado average.`,
+  },
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -24,8 +58,10 @@ export async function generateMetadata({
   if (!c) return {};
   const trad = c.estimates.traditional_burial;
   const crem = c.estimates.direct_cremation;
-  const title = `How Much Does a Funeral Cost in ${c.name}? 2026 Burial and Cremation Estimates`;
+  const override = CITY_META_OVERRIDES[`${state}/${city}`];
+  const title = override?.title ?? `How Much Does a Funeral Cost in ${c.name}? 2026 Burial and Cremation Estimates`;
   const description =
+    override?.description ??
     `Average funeral cost in ${c.name}: modeled 2026 estimates are ${fmt(trad.point)} for a traditional burial, ${fmt(c.estimates.cremation_with_service.point)} for cremation with a service, and ${fmt(crem.point)} for direct cremation. Compare ranges, published local prices, and how ${c.name} compares with its state average.`;
   const url = `${SITE_URL}/funeral-costs/${state}/${city}/`;
   return {
