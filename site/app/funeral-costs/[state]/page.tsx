@@ -39,8 +39,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   texas: {
     boardName: 'Texas Funeral Service Commission',
     boardUrl: 'https://tfsc.texas.gov/',
-    fcaSurveyName: null,
-    fcaSurveyUrl: null,
+    fcaSurveyName: 'Funeral Consumers Alliance of Central Texas, 2026 survey of Austin area funeral homes (Bastrop, Caldwell, Hays, Travis, and Williamson counties)',
+    fcaSurveyUrl: 'https://www.fcactx.org/uploads/8/1/6/9/81698996/2026_fcactx_survey_of_austin_area_funeral_homes_04-06-26.pdf',
     context: [
       'Texas sits just below the national average price level (RPP 97.1), so modeled costs run slightly under the national medians.',
       'The NFDA projects 70.2% of Texas dispositions will be cremations by 2035.',
@@ -1074,7 +1074,7 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
     spread: `Texas sits just below the national average price level (RPP 97.1), so modeled costs run slightly under the national medians. Houston, Dallas-Fort Worth, Austin and San Antonio metro quotes typically run above the state modeled figure, while rural counties run below it, so the state figure is a midpoint, not a local quote.`,
     rule: `Texas bars cremation within 48 hours of the time of death shown on the death certificate (Tex. Health & Safety Code 716.004). The wait can be waived in writing by a justice of the peace or medical examiner of the county where the death occurred, or by court order. Cremation also needs a cremation authorization form signed by the authorizing agent (716.051 and 716.052) and a death certificate or other death record indicating the remains may be cremated.`,
     help: `Texas has no statewide fixed-dollar burial benefit. Under Tex. Health & Safety Code 694.002, each county's commissioners court must provide for the disposition of deceased indigent persons, and counties run their own programs with their own rules: Travis County's Indigent Burial Program covers burial at no charge for eligible individuals, and Tarrant County's Burial Assistance program arranges disposition (usually cremation) when the estate and next of kin cannot pay. Ask the county where the death occurred what it covers before signing anything, and check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
-    benchmark: null,
+    benchmark: `An independent benchmark exists for one region. The Funeral Consumers Alliance of Central Texas 2026 survey of Austin-area funeral homes (General Price Lists collected January 2 to March 10, 2026, from providers in Bastrop, Caldwell, Hays, Travis, and Williamson counties) lists direct cremation from $695 at Heart of Texas Cremation in Austin (online arrangements; its price list is effective May 19, 2025, and it serves Hays, Travis, and Williamson counties only) to $4,210 at Mission Funeral Home locations (price list effective December 1, 2021, so that high end is dated). Most surveyed providers fall between $995 and $3,755. The survey also lists immediate burial with a minimum casket from $2,300 to $7,640. There is no comparable published survey for Houston, Dallas, or San Antonio. Survey prices exclude death certificates and other third-party charges, so confirm any figure against the provider's current General Price List.`,
     save: `Get the General Price List from at least three providers, including one direct-cremation specialist, and compare metro against rural quotes if the family has a choice of location. Texas does not require embalming; a body held more than 24 hours must be refrigerated, embalmed, or encased in a suitable container. You may buy the urn or casket from any seller, and anyone providing funeral services for compensation in Texas must be licensed by the Texas Funeral Service Commission.`,
     faqs: (st) => [
       {
@@ -1088,6 +1088,14 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       {
         q: `Does Texas help pay for a funeral or cremation?`,
         a: `There is no statewide program or fixed amount. Each county must provide for the disposition of deceased indigent persons (Tex. Health & Safety Code 694.002), so the county where the death occurred is the contact: Travis County, for example, covers burial at no charge for eligible individuals, and Tarrant County arranges disposition when the estate and next of kin cannot pay. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement that fits most county programs.`,
+      },
+      {
+        q: `What is the cheapest cremation option in Texas?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), and the Funeral Consumers Alliance of Central Texas 2026 Austin-area survey lists real direct cremation prices from $695 to $4,210, so comparing at least three General Price Lists is where the savings are.`,
+      },
+      {
+        q: `Can I scatter ashes in Texas?`,
+        a: `Yes. Texas law allows cremated remains to be scattered over uninhabited public land, over a public waterway or sea, or on the private property of a consenting owner, with the remains reduced to a particle size of one-eighth inch or less (Tex. Health & Safety Code §716.304). Remove the remains from the container first unless the container is biodegradable. At sea, federal rules require scattering at least 3 nautical miles from land, with a report to the EPA within 30 days.`,
       },
     ],
   },
