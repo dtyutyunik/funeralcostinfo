@@ -42,6 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2964515793362390"
           crossOrigin="anonymous"
         />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-65P9DD4M74" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-65P9DD4M74');",
+          }}
+        />
       </head>
       <body>
         <JsonLd data={organizationJsonLd(SITE_URL)} />

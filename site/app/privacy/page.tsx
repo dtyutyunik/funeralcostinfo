@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'FuneralCostInfo privacy policy: no accounts and no personal data collection. We use Cloudflare Web Analytics for anonymous, cookieless visitor statistics. Advertising is served by Google AdSense, which uses cookies. Calculator inputs never leave your browser.',
+    'FuneralCostInfo privacy policy: no accounts and no personal data collection. We use Cloudflare Web Analytics and Google Analytics 4 for visitor statistics. Advertising is served by Google AdSense, which uses cookies. Calculator inputs never leave your browser.',
   alternates: { canonical: SITE_URL + '/privacy/' },
 };
 
@@ -17,11 +17,12 @@ export default function PrivacyPage() {
       <p className="updated">Effective 2026-11-16.</p>
       <p className="answer-first">
         <strong>Quick answer:</strong> FuneralCostInfo itself collects no personal data. There are no
-        accounts, and the only measurement we run is Cloudflare Web Analytics, which gives us
-        anonymous, aggregate visitor statistics and never identifies individual visitors. Calculator
-        inputs are processed entirely in your browser and never sent anywhere. The site is supported
-        by advertising served through Google AdSense, and Google and its partners use cookies to
-        serve those ads, as described below.
+        accounts. Our visitor measurement comes from Cloudflare Web Analytics and Google Analytics 4,
+        which give us aggregate statistics about visits. Cloudflare&apos;s tool is cookieless and
+        anonymous; Google Analytics sets cookies, as described below. Calculator inputs are processed
+        entirely in your browser and never sent anywhere. The site is supported by advertising
+        served through Google AdSense, and Google and its partners use cookies to serve those ads,
+        as described below.
       </p>
       <h2>What we collect</h2>
       <p>
@@ -30,6 +31,13 @@ export default function PrivacyPage() {
         deliver the site and protect it from abuse, and its Web Analytics service gives us
         anonymous, aggregate statistics about visits (pages viewed, referrers, countries, devices).
         Web Analytics sets no cookies and does not identify or profile individual visitors.
+      </p>
+      <p>
+        Google Analytics 4 measures how visitors use the site (pages viewed, referrers, countries,
+        devices, and time on page) so we can see which pages help people and which do not. It sets
+        cookies, including one named _ga, to tell visitors apart, and reports statistics to us in
+        aggregate. We do not receive names, email addresses, or anything that identifies you
+        personally from it.
       </p>
       <h2>Advertising and cookies</h2>
       <p>
@@ -48,8 +56,9 @@ export default function PrivacyPage() {
         message before personalized ads are served.
       </p>
       <p>
-        We set no first-party cookies ourselves. Cookies on this site come from the advertising
-        service described above.
+        The only first-party cookies set through this site are the Google Analytics cookies
+        described above. Advertising cookies come from the AdSense service described in this
+        section.
       </p>
       <h2>Contact</h2>
       <p>
@@ -63,7 +72,8 @@ export default function PrivacyPage() {
         effective 2026-09-23, stated that the site ran no advertising; that changed when the site
         began carrying AdSense advertising. On 2026-11-16 the site began using Cloudflare Web
         Analytics for anonymous, aggregate visitor statistics; the earlier statement that the site
-        ran no analytics no longer applies.
+        ran no analytics no longer applies. Later on 2026-11-16 the site added Google Analytics 4
+        for visitor statistics; its cookies are described above.
       </p>
     </div>
   );
