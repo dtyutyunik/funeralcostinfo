@@ -1179,6 +1179,117 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       },
     ],
   },
+  // Mon Nov 16 D3 batch (Muse track): bespoke spotlights for WA, TN, MI, DC, NH.
+  washington: {
+    rate: `Cremation is also where Washington is heading: the NFDA projects 82.9% of Washington dispositions will be cremations by 2035, one of the highest shares in the country.`,
+    spread: `Washington has one of the highest price levels in the nation (RPP 107.0), so modeled costs run well above the national medians. Seattle metro quotes typically run above the state modeled figure, while eastern Washington and rural counties run below it, so the state figure is a midpoint, not a local quote.`,
+    rule: `Washington sets no fixed waiting period before cremation. The pace is set by paperwork: the death must be registered and a burial-transit permit authorizing final disposition obtained (RCW 70.58A.210), and the crematory may not proceed until it has the permit and the authorization for the reduction method (WAC 308-47-040). If the death falls under coroner or medical examiner jurisdiction, no final disposition may happen without the coroner's consent (RCW 68.50.108). Unembalmed remains must be refrigerated at 48 degrees Fahrenheit or below (WAC 308-47-030).`,
+    help: `Washington has no statewide fixed-dollar burial benefit. Under RCW 36.39.030, the board of county commissioners of the county where the person died must provide for the disposition of the remains of an indigent person whose body is unclaimed by relatives or a church organization, so the county is the contact, and each county sets its own arrangement. For a deceased indigent veteran or the family member of one, RCW 73.08.070 requires the county to pay for disposition, at least $300 and up to the limit the county sets, from the veterans' assistance fund. Check Social Security's $255 lump-sum death payment and any VA burial benefits as well.`,
+    benchmark: `The People's Memorial Association 2024 price survey of 250 Washington funeral homes found a statewide average direct cremation price of $1,685 (range $485 to $3,435), an average direct burial of $2,439, and an average full-service burial of $6,584, well below our modeled figures, which use national medians adjusted for price level. Use the survey as the local benchmark and confirm any figure against the provider's current General Price List.`,
+    save: `Get the General Price List from at least three providers, including one direct-cremation specialist, and compare against the People's Memorial survey before signing. Washington was the first state to legalize natural organic reduction (human composting) in 2019, so that is a real alternative to burial or cremation here; ask providers for its price alongside cremation. A body held more than 24 hours must be refrigerated or embalmed, and cremation never requires embalming.`,
+    faqs: (st) => [
+      {
+        q: `Does Washington require a waiting period before cremation?`,
+        a: `No fixed waiting period. Cremation cannot happen until the death is registered and a burial-transit permit authorizing final disposition is obtained (RCW 70.58A.210), and the crematory must also have the authorization for the reduction method (WAC 308-47-040). If the coroner or medical examiner has jurisdiction over the death, their consent is required first (RCW 68.50.108).`,
+      },
+      {
+        q: `Who can authorize a cremation in Washington?`,
+        a: `The person with the right to control disposition under RCW 68.50.160, in this order: the decedent's own witnessed written wishes or prepaid/filed prearrangement, a DD Form 93 designee for qualifying military deaths, a designated agent named in a written document signed and dated in the presence of a witness, the surviving spouse or state registered domestic partner, a majority of the surviving adult children, the surviving parents, a majority of the surviving siblings, then a court-appointed guardian at time of death. A majority vote is expressly required within the children and siblings classes.`,
+      },
+      {
+        q: `Does Washington help pay for a funeral or cremation?`,
+        a: `There is no statewide program or fixed amount. Under RCW 36.39.030, the county where the person died must provide for the disposition of an indigent person whose body is unclaimed by relatives or a church organization, so the county commissioners' office is the contact. For an indigent veteran or their family member, the county must pay at least $300 toward disposition under RCW 73.08.070. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement that fits most county programs, and the People's Memorial survey found Washington direct cremations averaging $1,685.`,
+      },
+    ],
+  },
+  tennessee: {
+    rate: `Cremation is also where Tennessee is heading: the NFDA projects 66.9% of Tennessee dispositions will be cremations by 2035.`,
+    spread: `Tennessee sits well below the national average price level (RPP 91.9). Nashville, Memphis and Knoxville metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Tennessee sets no fixed waiting period before cremation; the 48-hour figure on many secondary sites is not in the statute. What the law does require is a cremation permit authorized by the county medical examiner (Tenn. Code Ann. 62-5-504), plus a cremation authorization form signed by the person holding the right of disposition (62-5-703). An unembalmed body held at the crematory for eight hours or longer before cremation must be refrigerated (62-5-507).`,
+    help: `Tennessee has no statewide funeral assistance fund, and TennCare does not pay for funeral services. Under Tenn. Code Ann. 5-9-101(4), each county's legislative body may appropriate money for the burial or cremation of a poor person who dies in the county leaving no means to pay, so counties set their own policies and the county where the death occurred is the contact. Davidson County (Nashville) runs a formal program through Metro Social Services covering direct cremation or burial for residents at or below 100% of the federal poverty guidelines with no assets or life insurance to cover costs; apply within 24 to 48 hours of the death. Shelby and Knox counties run similar programs. Check Social Security's $255 lump-sum death payment and any VA burial benefits as well.`,
+    benchmark: null,
+    save: `Get the General Price List from at least three providers, including one direct-cremation specialist. Tennessee lets you put binding disposition directions in a written instrument signed and notarized or witnessed by two adults, or in a pre-need funeral contract, and a health-care power of attorney designee outranks the spouse on disposition decisions, so put your wishes in writing rather than assuming the family order will apply. Compare direct cremation quotes first: it is the cheapest option and the one county programs cover.`,
+    faqs: (st) => [
+      {
+        q: `Does Tennessee require a waiting period before cremation?`,
+        a: `No fixed waiting period. Tennessee law requires a cremation permit authorized by the county medical examiner before cremation (Tenn. Code Ann. 62-5-504), plus a cremation authorization form signed by the person holding the right of disposition. The 48-hour figure that appears on many secondary sites is not in the statute.`,
+      },
+      {
+        q: `Who can authorize a cremation in Tennessee?`,
+        a: `The person holding the right of disposition under Tenn. Code Ann. 62-5-703, in this order: an attorney in fact designated in a durable power of attorney for health care, the surviving spouse, the sole surviving child or a majority of the surviving children, the surviving parent, a surviving sibling or a majority of the surviving siblings, then surviving grandchildren, grandparents, a guardian, the personal representative, and the next degree of kinship. A majority vote is required within the children, siblings, grandchildren and grandparents classes.`,
+      },
+      {
+        q: `Does Tennessee help pay for a funeral or cremation?`,
+        a: `There is no statewide fund. Under Tenn. Code Ann. 5-9-101(4), a county may pay for the burial or cremation of a poor person who dies in the county with no means to pay, so the county social services department where the death occurred is the contact. Davidson County's Metro Social Services program, for example, covers direct cremation for Nashville residents with no ability to pay, and applications usually must be made within 24 to 48 hours. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement county programs cover.`,
+      },
+    ],
+  },
+  michigan: {
+    rate: `Cremation is also where Michigan is heading: the NFDA projects 69.8% of Michigan dispositions will be cremations by 2035.`,
+    spread: `Michigan sits modestly below the national average price level (RPP 96.2). Detroit, Grand Rapids and Ann Arbor metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
+    rule: `Michigan sets no fixed waiting period before cremation. The timing is set by authorization: the funeral director who first takes custody must obtain authorization for final disposition within 72 hours of death (MCL 333.2848(1)), and if disposition is by cremation, the medical examiner of the county where the death occurred must sign the authorization (MCL 333.2848(3)). A licensed funeral director must supervise every final disposition in Michigan, whether burial, cremation or body donation.`,
+    help: `Michigan's State Emergency Relief (SER) Burial Services program, run by the Department of Health and Human Services, pays part of the cost for eligible low-income residents. Under the current schedule (ERM 306, effective October 1, 2025): burial with a memorial service, up to $875; burial without a memorial service, up to $610; cremation with a memorial service, up to $640; cremation without a memorial service, up to $390. The estate and the responsible relatives' assets count toward eligibility, with exclusions, and the remains must already be in Michigan. Apply at your local MDHHS office within 20 business days after the burial, cremation or donation. Check Social Security's $255 lump-sum death payment and any VA burial benefits as well.`,
+    benchmark: null,
+    save: `Get the General Price List from at least three providers, including one direct-cremation specialist, and ask each one whether they handle SER burial applications, since the payment goes to the funeral director, not to the family, and it covers only part of the bill. A licensed funeral director must supervise every disposition here, so a fully do-it-yourself funeral is not an option in Michigan; the savings come from comparing providers and declining embalming and extras you do not need.`,
+    faqs: (st) => [
+      {
+        q: `Does Michigan require a waiting period before cremation?`,
+        a: `No fixed waiting period. The funeral director must obtain authorization for final disposition within 72 hours of death, and for cremation the medical examiner of the county where the death occurred must sign that authorization (MCL 333.2848). In practice cremation usually does not happen until at least 48 hours after death while the paperwork and the medical examiner's certification are completed, but that is practical timing, not a statutory wait.`,
+      },
+      {
+        q: `Who can authorize a cremation in Michigan?`,
+        a: `The person holding the rights under MCL 700.3206, in this order: a person designated under federal law for a service member, a designated funeral representative named in a written, dated designation, the surviving spouse, adult children, adult grandchildren, surviving parents, grandparents, siblings, then descendants of the decedent's parents or grandparents who first notify the funeral establishment, the personal representative, and a guardian. A majority of the class members who can be located after reasonable efforts must agree.`,
+      },
+      {
+        q: `Does Michigan help pay for a funeral or cremation?`,
+        a: `Yes, in part. The Department of Health and Human Services' State Emergency Relief Burial Services program pays up to $875 for a burial with a memorial service, $610 without one, $640 for a cremation with a memorial service, and $390 for a cremation without one (ERM 306, effective October 1, 2025). Apply at your local MDHHS office within 20 business days after the burial or cremation. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), costs far more than the SER payment, so the program is a partial offset, not full coverage.`,
+      },
+    ],
+  },
+  'district-of-columbia': {
+    rate: `Cremation is also where the District is heading: the NFDA projects 66.0% of District dispositions will be cremations by 2035.`,
+    spread: `The District has one of the highest price levels in the nation (RPP 109.9), so modeled costs run well above the national medians. Prices vary sharply by provider inside the District, and Maryland and Virginia providers just across the line are often cheaper, so compare quotes on both sides of the boundary before signing.`,
+    rule: `The District sets no fixed waiting period before cremation. The timeline is controlled by clearances: the funeral director who first takes custody must obtain authorization from the person with the right to control disposition (D.C. Code 3-413), a filed death certificate, and a permit from the Registrar authorizing final disposition, and for cremation, additional authorization from the Office of the Chief Medical Examiner is required for every cremation (D.C. Code 7-231.17). The medical certification is generally completed within 48 hours, and the Chief Medical Examiner's cremation clearance typically takes about 24 hours once requested.`,
+    help: `The District's own Burial Assistance program is gone: as of September 30, 2025, the Department of Human Services no longer provides Burial Assistance funds, so the old $800/$450 and $1,000/$650 figures no longer apply and should not be relied on. For other support, contact DHS's Economic Security Administration (202-727-5355) about what services remain, and check Social Security's $255 lump-sum death payment and any VA burial benefits. A direct cremation is the lowest-cost arrangement available in the District.`,
+    benchmark: `The Funeral Consumers Alliance of Maryland & Environs 2023 mortuary price survey is regional: it contains actual provider-level prices from DC, Maryland and Delaware, and is the independent local comparison alongside current General Price Lists.`,
+    save: `Get the General Price List from at least three providers, including Maryland and Virginia providers near the District line, and compare against the FCA regional survey. The Chief Medical Examiner clearance is the step that surprises families, so build it into the timeline rather than expecting same-day cremation. DC funeral homes may not charge consumers more than they themselves paid for third-party goods or services, and must provide receipts for them, so ask for the receipts.`,
+    faqs: (st) => [
+      {
+        q: `Does Washington DC require a waiting period before cremation?`,
+        a: `No fixed waiting period. Cremation requires authorization from the person with the right to control disposition (D.C. Code 3-413), a filed death certificate, a permit from the Registrar authorizing final disposition, and additional clearance from the Office of the Chief Medical Examiner for every cremation (D.C. Code 7-231.17). The medical examiner clearance typically takes about 24 hours once requested, which is what usually sets the pace.`,
+      },
+      {
+        q: `Who can authorize a cremation in Washington DC?`,
+        a: `The person authorized under D.C. Code 3-413, in this order: a representative designated in a signed written document (or the decedent's own written directions), a competent surviving spouse or domestic partner, a majority of the adult children, the surviving parent or parents, the next degrees of kindred by majority within the same degree, then an adult friend or volunteer. A written designation supersedes the priority list.`,
+      },
+      {
+        q: `Does Washington DC help pay for a funeral or cremation?`,
+        a: `Not anymore through the District's program: the Department of Human Services Burial Assistance program ended on September 30, 2025, and no longer provides funds, so the $800/$450 and $1,000/$650 figures in older guides are out of date. Contact DHS's Economic Security Administration (202-727-5355) about other services, and check Social Security's $255 lump-sum death payment and any VA burial benefits. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the lowest-cost arrangement.`,
+      },
+    ],
+  },
+  'new-hampshire': {
+    rate: `Cremation is also where New Hampshire is heading: the NFDA projects 80.2% of New Hampshire dispositions will be cremations by 2035, one of the highest shares in the country.`,
+    spread: `New Hampshire sits moderately above the national average price level (RPP 104.2). Manchester, Nashua and Portsmouth metro quotes typically run above the state modeled figure, while the North Country and rural towns run below it; provider-to-provider variation inside the state is typically larger than the state-to-state difference.`,
+    rule: `New Hampshire requires a 48-hour waiting period: a body shall not be cremated within 48 hours after death, unless the person died of a contagious or infectious disease (RSA 325-A:18, amended effective August 9, 2025). Before cremation, the crematory must also have the burial permit and a certificate from a medical examiner confirming a personal inquiry into the cause and manner of death and that no further examination is necessary. The death record must be filed electronically within 36 hours of death and before final disposition.`,
+    help: `New Hampshire has no statewide fixed-dollar burial benefit. Under RSA 165:3, if an assisted person dies in any town or city, the overseers of public welfare must cause that person to be decently buried or cremated at the expense of the town or city, so the town welfare office where the person lived is the contact. Under RSA 165:27-a, liquid assets at death up to $2,000 are automatically assigned to the funeral director or the person who paid for the funeral. Immediate family members can be asked about their ability to help, and assistance can be repayable (RSA 165:19, 165:20-b), so ask the town office what applies before signing anything. Check Social Security's $255 lump-sum death payment and any VA burial benefits as well.`,
+    benchmark: null,
+    save: `Get the General Price List from at least three providers, including one direct-cremation specialist. New Hampshire families may handle all after-death care without hiring a funeral professional, except for details they choose to have a funeral home perform, so compare the cost of a funeral-home package against arranging the pieces yourself. There is no FCA affiliate in New Hampshire, so current General Price Lists are the only local comparison available.`,
+    faqs: (st) => [
+      {
+        q: `How long do you have to wait before cremation in New Hampshire?`,
+        a: `At least 48 hours after death (RSA 325-A:18), unless the person died of a contagious or infectious disease. The crematory must also have the burial permit and a medical examiner's certificate confirming a personal inquiry into the cause and manner of death and that no further examination is necessary.`,
+      },
+      {
+        q: `Who can authorize a cremation in New Hampshire?`,
+        a: `The person with custody and control under RSA 290, in this order: a person designated in a written and signed document, the spouse, an adult son or daughter, a parent, an adult brother or sister, an adult grandchild, an adult niece or nephew who is the child of a brother or sister, a maternal grandparent, a paternal grandparent, an adult aunt or uncle, an adult first cousin, then any other adult relative in descending order of blood relationship. A majority of the next of kin of the same relationship must agree; if they cannot, the court decides (RSA 290:17, III; RSA 290:19, IV).`,
+      },
+      {
+        q: `Does New Hampshire help pay for a funeral or cremation?`,
+        a: `There is no statewide program or fixed amount. Under RSA 165:3, the town or city where an assisted person dies must decently bury or cremate them at the town's expense, so the town welfare office is the contact. Liquid assets at death up to $2,000 are automatically assigned toward the funeral under RSA 165:27-a. A direct cremation, which we model at ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), is the arrangement that fits most town programs.`,
+      },
+    ],
+  },
 };
 
 export function generateStaticParams() {
@@ -1259,6 +1370,32 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
     title: `Funeral Costs in Virginia 2026: Burial $9,240, Cremation $3,060`,
     description:
       `Average funeral cost in Virginia in 2026: traditional burial $9,240, cremation with a service $7,000, direct cremation $3,060. Cheapest options, state rules, and local help explained.`,
+  },
+  // Mon Nov 16 D3 batch (Muse track): WA, TN, MI, DC, NH numbers-first title/meta.
+  washington: {
+    title: `Funeral Costs in Washington 2026: Burial $9,780, Cremation $3,240`,
+    description:
+      `Average funeral cost in Washington in 2026: traditional burial $9,780, cremation with a service $7,410, direct cremation $3,240. Cheapest options, state rules, and county help explained.`,
+  },
+  tennessee: {
+    title: `Funeral Costs in Tennessee 2026: Burial $8,400, Cremation $2,780`,
+    description:
+      `Average funeral cost in Tennessee in 2026: traditional burial $8,400, cremation with a service $6,360, direct cremation $2,780. Cheapest options, state rules, and county help explained.`,
+  },
+  michigan: {
+    title: `Funeral Costs in Michigan 2026: Burial $8,790, Cremation $2,920`,
+    description:
+      `Average funeral cost in Michigan in 2026: traditional burial $8,790, cremation with a service $6,660, direct cremation $2,920. Cheapest options, state rules, and state emergency relief explained.`,
+  },
+  'district-of-columbia': {
+    title: `Funeral Costs in Washington DC 2026: Burial $10,040, Cremation $3,330`,
+    description:
+      `Average funeral cost in Washington DC in 2026: traditional burial $10,040, cremation with a service $7,610, direct cremation $3,330. Cheapest options, state rules, and help explained; DC burial assistance ended in 2025.`,
+  },
+  'new-hampshire': {
+    title: `Funeral Costs in New Hampshire 2026: Burial $9,520, Cremation $3,160`,
+    description:
+      `Average funeral cost in New Hampshire in 2026: traditional burial $9,520, cremation with a service $7,210, direct cremation $3,160. Cheapest options, state rules, and town help explained.`,
   },
 };
 
