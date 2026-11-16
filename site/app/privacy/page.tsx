@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'FuneralCostInfo privacy policy: no accounts and no data collection by the site itself. Advertising is served by Google AdSense, which uses cookies. Calculator inputs never leave your browser.',
+    'FuneralCostInfo privacy policy: no accounts and no personal data collection. We use Cloudflare Web Analytics for anonymous, cookieless visitor statistics. Advertising is served by Google AdSense, which uses cookies. Calculator inputs never leave your browser.',
   alternates: { canonical: SITE_URL + '/privacy/' },
 };
 
@@ -14,19 +14,22 @@ export default function PrivacyPage() {
     <div className="wrap prose">
       <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Privacy</nav>
       <h1>Privacy policy</h1>
-      <p className="updated">Effective 2026-11-10.</p>
+      <p className="updated">Effective 2026-11-16.</p>
       <p className="answer-first">
         <strong>Quick answer:</strong> FuneralCostInfo itself collects no personal data. There are no
-        accounts, and we run no analytics or tracking of our own. Calculator inputs are processed
-        entirely in your browser and never sent anywhere. The site is supported by advertising
-        served through Google AdSense, and Google and its partners use cookies to serve those ads,
-        as described below.
+        accounts, and the only measurement we run is Cloudflare Web Analytics, which gives us
+        anonymous, aggregate visitor statistics and never identifies individual visitors. Calculator
+        inputs are processed entirely in your browser and never sent anywhere. The site is supported
+        by advertising served through Google AdSense, and Google and its partners use cookies to
+        serve those ads, as described below.
       </p>
       <h2>What we collect</h2>
       <p>
-        Nothing directly. We do not operate user accounts, store contact-form submissions, or run
-        first-party analytics or trackers. Our hosting provider (Cloudflare) processes standard
-        server logs, including IP addresses, to deliver the site and protect it from abuse.
+        Nothing directly. We do not operate user accounts or store contact-form submissions. Our
+        hosting provider (Cloudflare) processes standard server logs, including IP addresses, to
+        deliver the site and protect it from abuse, and its Web Analytics service gives us
+        anonymous, aggregate statistics about visits (pages viewed, referrers, countries, devices).
+        Web Analytics sets no cookies and does not identify or profile individual visitors.
       </p>
       <h2>Advertising and cookies</h2>
       <p>
@@ -58,7 +61,9 @@ export default function PrivacyPage() {
         If our data or advertising practices change, this policy will be updated first, with the
         effective date changed and the change described here. The previous version of this policy,
         effective 2026-09-23, stated that the site ran no advertising; that changed when the site
-        began carrying AdSense advertising.
+        began carrying AdSense advertising. On 2026-11-16 the site began using Cloudflare Web
+        Analytics for anonymous, aggregate visitor statistics; the earlier statement that the site
+        ran no analytics no longer applies.
       </p>
     </div>
   );

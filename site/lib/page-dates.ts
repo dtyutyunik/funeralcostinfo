@@ -131,7 +131,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/funeral-live-streaming-cost/": {
     "published": "2026-11-01",
-    "updated": "2026-11-10"
+    "updated": "2026-11-16"
   },
   "/guides/funeral-loans/": {
     "published": "2026-10-24",
@@ -343,6 +343,6 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "city-template": {
     "published": "2026-10-31",
-    "updated": "2026-11-13"
+    "updated": "2026-11-16"
   }
 };
