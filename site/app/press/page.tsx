@@ -111,7 +111,7 @@ export default function PressPage() {
         </p>
       </div>
 
-      <h2>Contact</h2>
+      <h2>About the founder</h2>
       <p>
         <img
           src="/images/founder.jpg"
@@ -121,9 +121,21 @@ export default function PressPage() {
           height={112}
           loading="lazy"
         />
-        For custom cuts of the data, methodology questions, or interviews:{' '}
-        <a href="mailto:press@funeralcostinfo.com">press@funeralcostinfo.com</a>
-        {' '}Dmitriy Tyutyunik, founder.
+        Dmitriy Tyutyunik is the founder and editor of FuneralCostInfo. A software engineer by
+        trade, he built the site to publish the thing he could not find as a consumer: funeral
+        price estimates stated in current dollars, built from published national data, with the
+        formula shown in full. FuneralCostInfo takes no money from funeral homes and sells no
+        leads, and Dmitriy is available for interviews and data questions.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Media contact: for custom cuts of the data, methodology questions, or interviews, email{' '}
+        <a href="mailto:hello@funeralcostinfo.com">hello@funeralcostinfo.com</a>. The Funeral Cost
+        Index 2026 is at{' '}
+        <a href="/guides/funeral-costs-by-state-2026/">funeralcostinfo.com/guides/funeral-costs-by-state-2026/</a>{' '}
+        and the full methodology is at{' '}
+        <a href="/methodology/">funeralcostinfo.com/methodology/</a>.
       </p>
       <p className="updated">{VINTAGE_LABEL} · Built {LAST_UPDATED} · Model v3 · Refresh cadence: monthly CPI, annual BEA.</p>
     </div>
