@@ -331,7 +331,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/press/": {
     "published": "2026-09-23",
-    "updated": "2026-11-09"
+    "updated": "2026-11-17"
   },
   "/guides/": {
     "published": "2026-09-24",
