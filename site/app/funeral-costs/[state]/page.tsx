@@ -123,8 +123,8 @@ const STATE_NOTES: Record<string, StateNote> = {
   arizona: {
     boardName: 'Arizona Department of Health Services — Funeral Services Licensing',
     boardUrl: 'https://directorsblog.health.azdhs.gov/funeral-industry-licensing-regulation-now-falls-under-adhs/',
-    fcaSurveyName: 'Funeral Consumers Alliance of Arizona — 2023 funeral provider price comparison report (Southern Arizona)',
-    fcaSurveyUrl: 'https://www.fcaaz.org/_files/ugd/4a9646_731877e39d4444d4bb12045ac9d35f8f.pdf',
+    fcaSurveyName: 'Funeral Consumers Alliance of Arizona, 2025 funeral provider price comparison reports (Central, Southern, and Northern Arizona)',
+    fcaSurveyUrl: 'https://www.fcaaz.org/price-comparison-report',
     context: [
       'Arizona sits essentially at the national average price level (RPP 100.7), so its modeled figures track the national anchor closely.',
       'Arizona\u2019s 2023 cremation rate was 71.3% (Cremation Association of North America, 2023) — direct cremation is widely used and worth pricing separately from full-service funerals.',
@@ -132,6 +132,7 @@ const STATE_NOTES: Record<string, StateNote> = {
     caveats: [
       'Oversight of Arizona\u2019s roughly 1,800 funeral-industry licenses moved from the former State Board of Funeral Directors and Embalmers to the Arizona Department of Health Services in 2023 — search licenses and file complaints through ADHS Funeral Services Licensing.',
       'FCA of Arizona also publishes a Spanish-language 2023 Central Arizona price-comparison report as a separate independent public resource; listed prices change, so confirm any figure against the provider\u2019s current GPL.',
+      'FCA of Arizona began proceedings to close the organization and dissolve on May 8, 2026; its 2025 price comparison reports remain published on its site until further notice, and the national Funeral Consumers Alliance may be able to help with funeral questions.',
     ],
   },
   arkansas: {
@@ -894,7 +895,7 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
     spread: `Arizona sits essentially at the national average price level (RPP 100.7), so its modeled figures track the national anchor closely. Within the state, Phoenix metro competition keeps direct cremation quotes competitive, while smaller markets have fewer providers to compare.`,
     rule: `Arizona crematories must hold unembalmed remains in a refrigerated holding facility at or below 38 degrees Fahrenheit (A.R.S. §32-1399). State rules also treat it as a deceptive practice to claim embalming is legally required when disposition will occur within 24 hours or the body is refrigerated.`,
     help: `Arizona counties cover the disposition of indigent residents: the board of supervisors pays the reasonable burial expenses of deceased indigent persons (A.R.S. §§11-251(27) and 36-831), administered through the county public fiduciary. The standard county disposition is cremation.`,
-    benchmark: `An independent benchmark exists: the Funeral Consumers Alliance of Arizona's 2023 price comparison report for Southern Arizona is linked under Official resources below. Prices change, so confirm any figure against the provider's current General Price List.`,
+    benchmark: `Two independent benchmarks exist, both from the Funeral Consumers Alliance of Arizona's October 2025 price comparison reports, built from providers' General Price Lists and covering the state by region. In the Phoenix metro valleys, direct cremation runs $860 at Avenidas Funeral Chapel in Avondale to $3,435 at Desert Hills Mortuary in Scottsdale, with most Valley providers between $1,030 and $3,105. Around Tucson, direct cremation runs $730 at Avenidas Cremation and Burial to $2,755 at East Lawn Palms Mortuary, with most Tucson providers between $1,186 and $2,525. Current provider price lists agree with the low end: Meadow Memorials in Phoenix lists direct cremation at $995 on its General Price List effective March 30, 2026, while Phoenix Memorial Park and Mortuary lists direct cremation from $3,045 on its October 22, 2026 General Price List. Our modeled $3,050 sits near the chain price and far above the specialist providers. The Alliance began proceedings to close and dissolve on May 8, 2026, so the 2025 reports are its last; confirm any figure against the provider's current General Price List.`,
     save: `Get the General Price List from at least three providers, including one direct cremation specialist, decline embalming you do not need, and use the FCA of Arizona comparison as a sanity check on the quotes you receive.`,
     faqs: (st) => [
       {
@@ -903,7 +904,15 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
       },
       {
         q: `What is the cheapest cremation option in Arizona?`,
-        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}). Phoenix metro competition makes comparing General Price Lists especially worthwhile, and the Funeral Consumers Alliance of Arizona's 2023 comparison, linked under Official resources below, gives an independent check on local pricing.`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), but published prices run much lower: the Funeral Consumers Alliance of Arizona's October 2025 reports list direct cremation from $730 in Tucson and $860 in the Phoenix metro valleys, and Meadow Memorials in Phoenix lists direct cremation at $995 on its March 30, 2026 General Price List. At the other end, Phoenix Memorial Park and Mortuary lists direct cremation from $3,045 on its October 22, 2026 General Price List. The gap is mostly the provider: specialists and independent homes price far below the large chains. If the deceased was indigent, the county board of supervisors pays reasonable burial expenses under A.R.S. §§11-251(27) and 36-831, usually as a direct cremation.`,
+      },
+      {
+        q: `How long do you have to wait before cremation in Arizona?`,
+        a: `There is no fixed waiting period in hours. Arizona law requires prior written consent from the authorizing agent before cremation (A.R.S. §32-1365.02), and a disposition-transit permit listing cremation, reviewed by the county medical examiner (A.R.S. §36-326). In practice the paperwork, not a clock, sets the pace, usually a few days.`,
+      },
+      {
+        q: `Can I scatter ashes in Arizona?`,
+        a: `Yes. Arizona has no state law limiting where cremated remains may be kept or scattered. Scatter on your own private property freely, or get the landowner's permission on someone else's land, and check local ordinances and the managing agency's rules on public land. Grand Canyon National Park prohibits scattering entirely and issues no permits, under its June 2026 Superintendent's Compendium. Saguaro National Park allows scattering with a free Special Use Permit, at least 100 yards from trails, roads, facilities, cultural sites, and water. Coconino National Forest allows personal scattering without a permit. At sea, federal rules require scattering at least 3 nautical miles from shore and a report to the EPA within 30 days.`,
       },
     ],
   },
@@ -1408,6 +1417,12 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
     title: `Funeral Costs in New Hampshire 2026: Burial $9,520, Cremation $3,160`,
     description:
       `Average funeral cost in New Hampshire in 2026: traditional burial $9,520, cremation with a service $7,210, direct cremation $3,160. Cheapest options, state rules, and town help explained.`,
+  },
+  // Fri Nov 20 Sprint 2: Arizona cremation rebuild; numbers-first title, same pattern.
+  arizona: {
+    title: `Funeral Costs in Arizona 2026: Burial $9,200, Cremation $3,050`,
+    description:
+      `Average funeral cost in Arizona in 2026: traditional burial $9,200, cremation with a service $6,970, direct cremation $3,050. Cheapest options, state rules, and county help explained.`,
   },
 };
 
