@@ -90,6 +90,10 @@ export default function CalculatorPage() {
           <li>Buy only the goods and services you want. You can supply your own casket or urn.</li>
         </ol>
         <p><Link href="/guides/funeral-rule-rights/">Know your rights under the FTC Funeral Rule →</Link></p>
+        <p>
+          Run a funeral home, nonprofit, library, or media site? This calculator is free to{' '}
+          <Link href="/embed/">embed on your own website</Link> with one script tag.
+        </p>
         <h2>How the estimate is built</h2>
         <p>
           Every number on this page comes from the same published model, so you can trace any

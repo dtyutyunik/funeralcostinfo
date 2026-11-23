@@ -128,6 +128,13 @@ export default function PressPage() {
         leads, and Dmitriy is available for interviews and data questions.
       </p>
 
+      <h2>Embed the calculator</h2>
+      <p>
+        Media and nonprofit sites can also run our state-by-state funeral cost calculator directly
+        on their own pages. It is free, carries the same modeled figures as the table above, and
+        needs one script tag. See the <a href="/embed/">embed page</a> for the code and terms.
+      </p>
+
       <h2>Contact</h2>
       <p>
         Media contact: for custom cuts of the data, methodology questions, or interviews, email{' '}

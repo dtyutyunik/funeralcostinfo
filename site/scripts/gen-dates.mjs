@@ -49,6 +49,7 @@ const singles = {
   '/terms/': 'site/app/terms/page.tsx',
   '/contact/': 'site/app/contact/page.tsx',
   '/press/': 'site/app/press/page.tsx',
+  '/embed/': 'site/app/embed/page.tsx',
   '/guides/': 'site/app/guides/page.tsx',
 };
 for (const [route, rel] of Object.entries(singles)) {

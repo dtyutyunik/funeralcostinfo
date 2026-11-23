@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funeral Cost Calculator - FuneralCostInfo</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #ffffff; color: #1c2733; font-size: 16px; line-height: 1.45;
+  }
+  .fci { max-width: 640px; margin: 0 auto; padding: 16px; border: 1px solid #d8dee4; border-radius: 10px; }
+  .partner { font-size: 13px; color: #5a6a78; margin: 0 0 8px; }
+  h1 { font-size: 19px; margin: 0 0 12px; font-weight: 700; }
+  label { display: block; font-size: 13px; font-weight: 600; color: #40536a; margin: 12px 0 4px; }
+  select {
+    width: 100%; padding: 9px 10px; font-size: 16px; color: #1c2733;
+    background: #fff; border: 1px solid #b9c4cf; border-radius: 6px;
+  }
+  .result { margin-top: 18px; padding: 14px; background: #f2f6fa; border-radius: 8px; text-align: center; }
+  .point { font-size: 34px; font-weight: 800; color: #14508c; line-height: 1.1; }
+  .range { font-size: 15px; color: #40536a; margin-top: 4px; }
+  .national { font-size: 13px; color: #5a6a78; margin-top: 6px; }
+  .detail { display: inline-block; margin-top: 14px; font-size: 15px; font-weight: 600; color: #14508c; }
+  footer { margin-top: 16px; border-top: 1px solid #e3e8ed; padding-top: 10px; font-size: 12px; color: #5a6a78; }
+  footer a { color: #14508c; }
+  footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="fci" id="fci-root">
+  <p class="partner" id="fci-partner" hidden></p>
+  <h1>Funeral cost calculator</h1>
+  <label for="fci-state">State</label>
+  <select id="fci-state"></select>
+  <label for="fci-service">Service type</label>
+  <select id="fci-service"></select>
+  <div class="result" aria-live="polite">
+    <div class="point" id="fci-point"></div>
+    <div class="range" id="fci-range"></div>
+    <div class="national" id="fci-national"></div>
+  </div>
+  <a class="detail" id="fci-detail" href="https://funeralcostinfo.com/" target="_blank" rel="noopener"></a>
+  <footer>
+    <p>Cost estimates by <a href="https://funeralcostinfo.com/" target="_blank" rel="noopener">FuneralCostInfo</a></p>
+    <p id="fci-vintage"></p>
+    <p>Figures are modeled estimates for planning, not quotes. Actual funeral home prices vary.</p>
+  </footer>
+</div>
+<script>
+var DATA = {"services":["traditional_burial","burial_with_vault","cremation_with_service","direct_cremation","direct_burial","green_burial"],"anchors":{"traditional_burial":{"label":"Funeral with viewing + burial","value":9140},"burial_with_vault":{"label":"Funeral with viewing + burial + vault","value":11010},"cremation_with_service":{"label":"Funeral with viewing + cremation","value":6920},"direct_cremation":{"label":"Direct cremation","value":3030},"direct_burial":{"label":"Immediate burial","value":4100},"green_burial":{"label":"Green burial (assumption-based)","value":5480}},"states":[{"abbr":"AL","name":"Alabama","slug":"alabama","e":{"traditional_burial":[8120,6900,9340],"burial_with_vault":[9780,8310,11250],"cremation_with_service":[6150,5230,7070],"direct_cremation":[2690,2290,3090],"direct_burial":[3640,3090,4190],"green_burial":[4870,4140,5600]}},{"abbr":"AK","name":"Alaska","slug":"alaska","e":{"traditional_burial":[9360,7960,10760],"burial_with_vault":[11270,9580,12960],"cremation_with_service":[7080,6020,8140],"direct_cremation":[3100,2640,3560],"direct_burial":[4200,3570,4830],"green_burial":[5610,4770,6450]}},{"abbr":"AZ","name":"Arizona","slug":"arizona","e":{"traditional_burial":[9200,7820,10580],"burial_with_vault":[11080,9420,12740],"cremation_with_service":[6970,5920,8020],"direct_cremation":[3050,2590,3510],"direct_burial":[4130,3510,4750],"green_burial":[5520,4690,6350]}},{"abbr":"AR","name":"Arkansas","slug":"arkansas","e":{"traditional_burial":[7950,6760,9140],"burial_with_vault":[9570,8130,11010],"cremation_with_service":[6020,5120,6920],"direct_cremation":[2630,2240,3020],"direct_burial":[3560,3030,4090],"green_burial":[4760,4050,5470]}},{"abbr":"CA","name":"California","slug":"california","e":{"traditional_burial":[10120,8600,11640],"burial_with_vault":[12190,10360,14020],"cremation_with_service":[7660,6510,8810],"direct_cremation":[3350,2850,3850],"direct_burial":[4540,3860,5220],"green_burial":[6070,5160,6980]}},{"abbr":"CO","name":"Colorado","slug":"colorado","e":{"traditional_burial":[9420,8010,10830],"burial_with_vault":[11350,9650,13050],"cremation_with_service":[7130,6060,8200],"direct_cremation":[3120,2650,3590],"direct_burial":[4230,3600,4860],"green_burial":[5650,4800,6500]}},{"abbr":"CT","name":"Connecticut","slug":"connecticut","e":{"traditional_burial":[9470,8050,10890],"burial_with_vault":[11410,9700,13120],"cremation_with_service":[7170,6090,8250],"direct_cremation":[3140,2670,3610],"direct_burial":[4250,3610,4890],"green_burial":[5680,4830,6530]}},{"abbr":"DE","name":"Delaware","slug":"delaware","e":{"traditional_burial":[9120,7750,10490],"burial_with_vault":[10990,9340,12640],"cremation_with_service":[6910,5870,7950],"direct_cremation":[3020,2570,3470],"direct_burial":[4090,3480,4700],"green_burial":[5470,4650,6290]}},{"abbr":"DC","name":"District of Columbia","slug":"district-of-columbia","e":{"traditional_burial":[10040,8530,11550],"burial_with_vault":[12100,10280,13910],"cremation_with_service":[7610,6470,8750],"direct_cremation":[3330,2830,3830],"direct_burial":[4510,3830,5190],"green_burial":[6020,5120,6920]}},{"abbr":"FL","name":"Florida","slug":"florida","e":{"traditional_burial":[9450,8030,10870],"burial_with_vault":[11390,9680,13100],"cremation_with_service":[7160,6090,8230],"direct_cremation":[3130,2660,3600],"direct_burial":[4240,3600,4880],"green_burial":[5670,4820,6520]}},{"abbr":"GA","name":"Georgia","slug":"georgia","e":{"traditional_burial":[8800,7480,10120],"burial_with_vault":[10600,9010,12190],"cremation_with_service":[6660,5660,7660],"direct_cremation":[2920,2480,3360],"direct_burial":[3950,3360,4540],"green_burial":[5280,4490,6070]}},{"abbr":"HI","name":"Hawaii","slug":"hawaii","e":{"traditional_burial":[10050,8540,11560],"burial_with_vault":[12110,10290,13930],"cremation_with_service":[7610,6470,8750],"direct_cremation":[3330,2830,3830],"direct_burial":[4510,3830,5190],"green_burial":[6030,5130,6930]}},{"abbr":"ID","name":"Idaho","slug":"idaho","e":{"traditional_burial":[8730,7420,10040],"burial_with_vault":[10510,8930,12090],"cremation_with_service":[6610,5620,7600],"direct_cremation":[2890,2460,3320],"direct_burial":[3920,3330,4510],"green_burial":[5230,4450,6010]}},{"abbr":"IL","name":"Illinois","slug":"illinois","e":{"traditional_burial":[9140,7770,10510],"burial_with_vault":[11010,9360,12660],"cremation_with_service":[6920,5880,7960],"direct_cremation":[3030,2580,3480],"direct_burial":[4100,3480,4720],"green_burial":[5480,4660,6300]}},{"abbr":"IN","name":"Indiana","slug":"indiana","e":{"traditional_burial":[8530,7250,9810],"burial_with_vault":[10280,8740,11820],"cremation_with_service":[6460,5490,7430],"direct_cremation":[2830,2410,3250],"direct_burial":[3830,3260,4400],"green_burial":[5110,4340,5880]}},{"abbr":"IA","name":"Iowa","slug":"iowa","e":{"traditional_burial":[8020,6820,9220],"burial_with_vault":[9660,8210,11110],"cremation_with_service":[6070,5160,6980],"direct_cremation":[2660,2260,3060],"direct_burial":[3600,3060,4140],"green_burial":[4810,4090,5530]}},{"abbr":"KS","name":"Kansas","slug":"kansas","e":{"traditional_burial":[8230,7000,9460],"burial_with_vault":[9920,8430,11410],"cremation_with_service":[6230,5300,7160],"direct_cremation":[2730,2320,3140],"direct_burial":[3690,3140,4240],"green_burial":[4940,4200,5680]}},{"abbr":"KY","name":"Kentucky","slug":"kentucky","e":{"traditional_burial":[8240,7000,9480],"burial_with_vault":[9930,8440,11420],"cremation_with_service":[6240,5300,7180],"direct_cremation":[2730,2320,3140],"direct_burial":[3700,3140,4260],"green_burial":[4940,4200,5680]}},{"abbr":"LA","name":"Louisiana","slug":"louisiana","e":{"traditional_burial":[8060,6850,9270],"burial_with_vault":[9710,8250,11170],"cremation_with_service":[6100,5180,7010],"direct_cremation":[2670,2270,3070],"direct_burial":[3620,3080,4160],"green_burial":[4830,4110,5550]}},{"abbr":"ME","name":"Maine","slug":"maine","e":{"traditional_burial":[8870,7540,10200],"burial_with_vault":[10690,9090,12290],"cremation_with_service":[6720,5710,7730],"direct_cremation":[2940,2500,3380],"direct_burial":[3980,3380,4580],"green_burial":[5320,4520,6120]}},{"abbr":"MD","name":"Maryland","slug":"maryland","e":{"traditional_burial":[9590,8150,11030],"burial_with_vault":[11560,9830,13290],"cremation_with_service":[7260,6170,8350],"direct_cremation":[3180,2700,3660],"direct_burial":[4300,3660,4940],"green_burial":[5750,4890,6610]}},{"abbr":"MA","name":"Massachusetts","slug":"massachusetts","e":{"traditional_burial":[9670,8220,11120],"burial_with_vault":[11640,9890,13390],"cremation_with_service":[7320,6220,8420],"direct_cremation":[3200,2720,3680],"direct_burial":[4340,3690,4990],"green_burial":[5800,4930,6670]}},{"abbr":"MI","name":"Michigan","slug":"michigan","e":{"traditional_burial":[8790,7470,10110],"burial_with_vault":[10590,9000,12180],"cremation_with_service":[6660,5660,7660],"direct_cremation":[2920,2480,3360],"direct_burial":[3940,3350,4530],"green_burial":[5270,4480,6060]}},{"abbr":"MN","name":"Minnesota","slug":"minnesota","e":{"traditional_burial":[9010,7660,10360],"burial_with_vault":[10860,9230,12490],"cremation_with_service":[6820,5800,7840],"direct_cremation":[2990,2540,3440],"direct_burial":[4040,3430,4650],"green_burial":[5400,4590,6210]}},{"abbr":"MS","name":"Mississippi","slug":"mississippi","e":{"traditional_burial":[7950,6760,9140],"burial_with_vault":[9570,8130,11010],"cremation_with_service":[6020,5120,6920],"direct_cremation":[2630,2240,3020],"direct_burial":[3570,3030,4110],"green_burial":[4770,4050,5490]}},{"abbr":"MO","name":"Missouri","slug":"missouri","e":{"traditional_burial":[8300,7060,9540],"burial_with_vault":[10000,8500,11500],"cremation_with_service":[6280,5340,7220],"direct_cremation":[2750,2340,3160],"direct_burial":[3720,3160,4280],"green_burial":[4980,4230,5730]}},{"abbr":"MT","name":"Montana","slug":"montana","e":{"traditional_burial":[8650,7350,9950],"burial_with_vault":[10420,8860,11980],"cremation_with_service":[6550,5570,7530],"direct_cremation":[2870,2440,3300],"direct_burial":[3880,3300,4460],"green_burial":[5190,4410,5970]}},{"abbr":"NE","name":"Nebraska","slug":"nebraska","e":{"traditional_burial":[8240,7000,9480],"burial_with_vault":[9920,8430,11410],"cremation_with_service":[6240,5300,7180],"direct_cremation":[2730,2320,3140],"direct_burial":[3690,3140,4240],"green_burial":[4940,4200,5680]}},{"abbr":"NV","name":"Nevada","slug":"nevada","e":{"traditional_burial":[9140,7770,10510],"burial_with_vault":[11010,9360,12660],"cremation_with_service":[6920,5880,7960],"direct_cremation":[3030,2580,3480],"direct_burial":[4100,3480,4720],"green_burial":[5480,4660,6300]}},{"abbr":"NH","name":"New Hampshire","slug":"new-hampshire","e":{"traditional_burial":[9520,8090,10950],"burial_with_vault":[11470,9750,13190],"cremation_with_service":[7210,6130,8290],"direct_cremation":[3160,2690,3630],"direct_burial":[4270,3630,4910],"green_burial":[5710,4850,6570]}},{"abbr":"NJ","name":"New Jersey","slug":"new-jersey","e":{"traditional_burial":[9940,8450,11430],"burial_with_vault":[11980,10180,13780],"cremation_with_service":[7530,6400,8660],"direct_cremation":[3300,2800,3790],"direct_burial":[4460,3790,5130],"green_burial":[5960,5070,6850]}},{"abbr":"NM","name":"New Mexico","slug":"new-mexico","e":{"traditional_burial":[8430,7170,9690],"burial_with_vault":[10150,8630,11670],"cremation_with_service":[6380,5420,7340],"direct_cremation":[2790,2370,3210],"direct_burial":[3780,3210,4350],"green_burial":[5050,4290,5810]}},{"abbr":"NY","name":"New York","slug":"new-york","e":{"traditional_burial":[9860,8380,11340],"burial_with_vault":[11880,10100,13660],"cremation_with_service":[7470,6350,8590],"direct_cremation":[3270,2780,3760],"direct_burial":[4420,3760,5080],"green_burial":[5910,5020,6800]}},{"abbr":"NC","name":"North Carolina","slug":"north-carolina","e":{"traditional_burial":[8620,7330,9910],"burial_with_vault":[10390,8830,11950],"cremation_with_service":[6530,5550,7510],"direct_cremation":[2860,2430,3290],"direct_burial":[3870,3290,4450],"green_burial":[5170,4390,5950]}},{"abbr":"ND","name":"North Dakota","slug":"north-dakota","e":{"traditional_burial":[8130,6910,9350],"burial_with_vault":[9790,8320,11260],"cremation_with_service":[6160,5240,7080],"direct_cremation":[2700,2300,3100],"direct_burial":[3650,3100,4200],"green_burial":[4870,4140,5600]}},{"abbr":"OH","name":"Ohio","slug":"ohio","e":{"traditional_burial":[8480,7210,9750],"burial_with_vault":[10210,8680,11740],"cremation_with_service":[6420,5460,7380],"direct_cremation":[2810,2390,3230],"direct_burial":[3800,3230,4370],"green_burial":[5080,4320,5840]}},{"abbr":"OK","name":"Oklahoma","slug":"oklahoma","e":{"traditional_burial":[8030,6830,9230],"burial_with_vault":[9670,8220,11120],"cremation_with_service":[6080,5170,6990],"direct_cremation":[2660,2260,3060],"direct_burial":[3600,3060,4140],"green_burial":[4810,4090,5530]}},{"abbr":"OR","name":"Oregon","slug":"oregon","e":{"traditional_burial":[9450,8030,10870],"burial_with_vault":[11380,9670,13090],"cremation_with_service":[7150,6080,8220],"direct_cremation":[3130,2660,3600],"direct_burial":[4240,3600,4880],"green_burial":[5660,4810,6510]}},{"abbr":"PA","name":"Pennsylvania","slug":"pennsylvania","e":{"traditional_burial":[8920,7580,10260],"burial_with_vault":[10740,9130,12350],"cremation_with_service":[6750,5740,7760],"direct_cremation":[2960,2520,3400],"direct_burial":[4000,3400,4600],"green_burial":[5350,4550,6150]}},{"abbr":"RI","name":"Rhode Island","slug":"rhode-island","e":{"traditional_burial":[9350,7950,10750],"burial_with_vault":[11260,9570,12950],"cremation_with_service":[7080,6020,8140],"direct_cremation":[3100,2640,3560],"direct_burial":[4190,3560,4820],"green_burial":[5600,4760,6440]}},{"abbr":"SC","name":"South Carolina","slug":"south-carolina","e":{"traditional_burial":[8570,7280,9860],"burial_with_vault":[10320,8770,11870],"cremation_with_service":[6490,5520,7460],"direct_cremation":[2840,2410,3270],"direct_burial":[3840,3260,4420],"green_burial":[5140,4370,5910]}},{"abbr":"SD","name":"South Dakota","slug":"south-dakota","e":{"traditional_burial":[8100,6880,9320],"burial_with_vault":[9750,8290,11210],"cremation_with_service":[6130,5210,7050],"direct_cremation":[2680,2280,3080],"direct_burial":[3630,3090,4170],"green_burial":[4850,4120,5580]}},{"abbr":"TN","name":"Tennessee","slug":"tennessee","e":{"traditional_burial":[8400,7140,9660],"burial_with_vault":[10110,8590,11630],"cremation_with_service":[6360,5410,7310],"direct_cremation":[2780,2360,3200],"direct_burial":[3770,3200,4340],"green_burial":[5030,4280,5780]}},{"abbr":"TX","name":"Texas","slug":"texas","e":{"traditional_burial":[8870,7540,10200],"burial_with_vault":[10690,9090,12290],"cremation_with_service":[6720,5710,7730],"direct_cremation":[2940,2500,3380],"direct_burial":[3980,3380,4580],"green_burial":[5320,4520,6120]}},{"abbr":"UT","name":"Utah","slug":"utah","e":{"traditional_burial":[9040,7680,10400],"burial_with_vault":[10880,9250,12510],"cremation_with_service":[6840,5810,7870],"direct_cremation":[3000,2550,3450],"direct_burial":[4050,3440,4660],"green_burial":[5420,4610,6230]}},{"abbr":"VT","name":"Vermont","slug":"vermont","e":{"traditional_burial":[8950,7610,10290],"burial_with_vault":[10790,9170,12410],"cremation_with_service":[6780,5760,7800],"direct_cremation":[2970,2520,3420],"direct_burial":[4020,3420,4620],"green_burial":[5370,4560,6180]}},{"abbr":"VA","name":"Virginia","slug":"virginia","e":{"traditional_burial":[9240,7850,10630],"burial_with_vault":[11130,9460,12800],"cremation_with_service":[7000,5950,8050],"direct_cremation":[3060,2600,3520],"direct_burial":[4150,3530,4770],"green_burial":[5540,4710,6370]}},{"abbr":"WA","name":"Washington","slug":"washington","e":{"traditional_burial":[9780,8310,11250],"burial_with_vault":[11780,10010,13550],"cremation_with_service":[7410,6300,8520],"direct_cremation":[3240,2750,3730],"direct_burial":[4390,3730,5050],"green_burial":[5860,4980,6740]}},{"abbr":"WV","name":"West Virginia","slug":"west-virginia","e":{"traditional_burial":[8180,6950,9410],"burial_with_vault":[9850,8370,11330],"cremation_with_service":[6190,5260,7120],"direct_cremation":[2710,2300,3120],"direct_burial":[3670,3120,4220],"green_burial":[4900,4160,5640]}},{"abbr":"WI","name":"Wisconsin","slug":"wisconsin","e":{"traditional_burial":[8600,7310,9890],"burial_with_vault":[10360,8810,11910],"cremation_with_service":[6510,5530,7490],"direct_cremation":[2850,2420,3280],"direct_burial":[3860,3280,4440],"green_burial":[5160,4390,5930]}},{"abbr":"WY","name":"Wyoming","slug":"wyoming","e":{"traditional_burial":[8470,7200,9740],"burial_with_vault":[10210,8680,11740],"cremation_with_service":[6410,5450,7370],"direct_cremation":[2810,2390,3230],"direct_burial":[3800,3230,4370],"green_burial":[5080,4320,5840]}}],"vintage":"NFDA 2023 medians adjusted to August 2026 dollars via BLS CPI for funeral expenses; 2024 BEA regional price parities"};
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var stateSel = document.getElementById('fci-state');
+  var serviceSel = document.getElementById('fci-service');
+
+  function fmt(n) { return '$' + n.toLocaleString('en-US'); }
+
+  DATA.states.forEach(function (s) {
+    var opt = document.createElement('option');
+    opt.value = s.abbr;
+    opt.textContent = s.name;
+    stateSel.appendChild(opt);
+  });
+  DATA.services.forEach(function (key) {
+    var opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = DATA.anchors[key].label;
+    serviceSel.appendChild(opt);
+  });
+
+  // Default state: ?state= accepts an abbreviation (TX) or a slug (texas).
+  var wanted = (params.get('state') || '').toLowerCase();
+  var initial = DATA.states.filter(function (s) { return s.abbr === 'CA'; })[0];
+  DATA.states.forEach(function (s) {
+    if (s.abbr.toLowerCase() === wanted || s.slug === wanted) initial = s;
+  });
+  stateSel.value = initial.abbr;
+
+  var wantedService = params.get('service') || '';
+  if (DATA.services.indexOf(wantedService) !== -1) serviceSel.value = wantedService;
+
+  var partner = params.get('partner');
+  if (partner) {
+    var p = document.getElementById('fci-partner');
+    p.textContent = 'Provided with ' + partner;
+    p.hidden = false;
+  }
+
+  document.getElementById('fci-vintage').textContent = DATA.vintage;
+
+  function currentState() {
+    return DATA.states.filter(function (s) { return s.abbr === stateSel.value; })[0];
+  }
+
+  function postHeight() {
+    var h = Math.ceil(document.getElementById('fci-root').getBoundingClientRect().height) + 2;
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'fci-embed-height', height: h }, '*');
+    }
+  }
+
+  function render() {
+    var s = currentState();
+    var key = serviceSel.value;
+    var est = s.e[key];
+    document.getElementById('fci-point').textContent = fmt(est[0]);
+    document.getElementById('fci-range').textContent =
+      'Typical range in ' + s.name + ': ' + fmt(est[1]) + ' to ' + fmt(est[2]);
+    document.getElementById('fci-national').textContent =
+      'National average: ' + fmt(DATA.anchors[key].value);
+    var link = document.getElementById('fci-detail');
+    link.href = 'https://funeralcostinfo.com/funeral-costs/' + s.slug + '/';
+    link.textContent = 'See the full ' + s.name + ' funeral cost breakdown';
+    postHeight();
+  }
+
+  stateSel.addEventListener('change', render);
+  serviceSel.addEventListener('change', render);
+  window.addEventListener('resize', postHeight);
+  window.addEventListener('load', postHeight);
+  render();
+})();
+</script>
+</body>
+</html>

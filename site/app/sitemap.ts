@@ -100,6 +100,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/terms/',
     '/contact/',
     '/press/',
+    '/embed/',
     ...ALL_STATE_SLUGS.map((s) => `/funeral-costs/${s}/`),
     ...ALL_CITY_ROUTES,
   ];
