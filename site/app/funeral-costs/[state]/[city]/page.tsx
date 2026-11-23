@@ -15,11 +15,27 @@ export function generateStaticParams() {
 }
 
 // Numbers-first title/meta for the city pages with page-1/2 positions but zero clicks in the Oct 17-Nov 13, 2026 GSC window (Phoenix 431 impressions at 14.4, San Diego 12.6, Chicago 14.0, Houston 14.9, New York City 15.9, Denver 16.7). Same treatment that lifted the state pages; added 2026-11-16.
+// Nov 23, 2026 pass: Phoenix rewritten again in the Missouri style (lead with the exact "average funeral cost" phrasing) after the Nov 16 numbers-first title still drew zero clicks on 915 impressions at position 14.0 in the Oct 24-Nov 20 window; Dallas, Milwaukee and San Francisco added with the numbers-first treatment (checkpoint: all zero clicks at positions 10.7-18.0).
 const CITY_META_OVERRIDES: Record<string, { title: string; description: string }> = {
   'arizona/phoenix': {
-    title: `Funeral Costs in Phoenix 2026: Burial $9,440, Cremation $3,130`,
+    title: `Average Funeral Cost in Phoenix (2026): Burial $9,440, Cremation $3,130`,
     description:
-      `Average funeral cost in Phoenix in 2026: traditional burial $9,440, cremation with a service $7,150, direct cremation $3,130. Published local prices, cheapest options, and how Phoenix compares with the Arizona average.`,
+      `The average cost of a funeral in Phoenix in 2026 is $9,440 for a traditional burial, $7,150 for cremation with a service, and $3,130 for direct cremation. Published Phoenix price lists run from $995 for direct cremation; cheapest options and Arizona rules explained.`,
+  },
+  'texas/dallas': {
+    title: `Funeral Costs in Dallas 2026: Burial $9,420, Cremation $3,120`,
+    description:
+      `Average funeral cost in Dallas in 2026: traditional burial $9,420, cremation with a service $7,130, direct cremation $3,120. Published local prices, cheapest options, and how Dallas compares with the Texas average.`,
+  },
+  'wisconsin/milwaukee': {
+    title: `Funeral Costs in Milwaukee 2026: Burial $8,860, Cremation $2,940`,
+    description:
+      `Average funeral cost in Milwaukee in 2026: traditional burial $8,860, cremation with a service $6,710, direct cremation $2,940. Published local prices, cheapest options, and how Milwaukee compares with the Wisconsin average.`,
+  },
+  'california/san-francisco': {
+    title: `Funeral Costs in San Francisco 2026: Burial $10,570, Cremation $3,500`,
+    description:
+      `Average funeral cost in San Francisco in 2026: traditional burial $10,570, cremation with a service $8,000, direct cremation $3,500. Published local prices, cheapest options, and how San Francisco compares with the California average.`,
   },
   'california/san-diego': {
     title: `Funeral Costs in San Diego 2026: Burial $10,230, Cremation $3,390`,
@@ -236,6 +252,15 @@ export default async function CityPage({
           <Link href="/guides/cremation-cost-2026/">cremation cost guide</Link> for what each
           option includes.
         </p>
+
+        {c.cremationExtra && (
+          <>
+            <h2>{c.cremationExtra.heading}</h2>
+            {c.cremationExtra.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </>
+        )}
 
         <h2>What&apos;s included, and what isn&apos;t</h2>
         <p><strong>Included</strong> (per the NFDA median definition): basic services fee, removal and transfer,

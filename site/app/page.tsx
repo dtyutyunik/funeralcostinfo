@@ -10,12 +10,13 @@ import { SITE_URL, LAST_UPDATED, dataset, fmt, VINTAGE_LABEL } from '../lib/data
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'FuneralCostInfo — What funerals really cost, by state',
+  // Numbers-first title 2026-11-23: the homepage drew 246 impressions at position 6.5 with zero clicks in the Oct 24-Nov 20 GSC window under the brand-only title.
+  title: 'Average Funeral Cost 2026: Burial $9,140, Cremation $3,030, by State | FuneralCostInfo',
   description:
-    'Modeled funeral-cost estimates for all 50 states, built from 2024 BEA regional price parities and 2023 NFDA national medians adjusted to August 2026 dollars via BLS CPI. National median: $9,140 for a funeral with viewing and burial. We take no money from funeral homes.',
+    'The average funeral cost in 2026 is $9,140 for a funeral with viewing and burial and $3,030 for direct cremation. Modeled estimates for all 50 states, built from 2024 BEA regional price parities and 2023 NFDA national medians adjusted to August 2026 dollars via BLS CPI. We take no money from funeral homes.',
   alternates: { canonical: SITE_URL + '/' },
   openGraph: {
-    title: 'FuneralCostInfo — What funerals really cost, by state',
+    title: 'Average Funeral Cost 2026: Burial $9,140, Cremation $3,030, by State | FuneralCostInfo',
     description:
       'Independent, modeled funeral-cost estimates for every U.S. state. National median $9,140 (burial with viewing, NFDA 2023 in Aug 2026 dollars).',
     url: SITE_URL + '/',

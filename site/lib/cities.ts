@@ -37,6 +37,7 @@ export interface CityData {
   context: string[];
   caveats: string[];
   cityFaqs: { q: string; a: string }[];
+  cremationExtra?: { heading: string; paragraphs: string[] };
 }
 
 interface CitySeed {
@@ -50,6 +51,7 @@ interface CitySeed {
   context: string[];
   caveats: string[];
   cityFaqs: { q: string; a: string }[];
+  cremationExtra?: { heading: string; paragraphs: string[] };
 }
 
 const round10 = (x: number) => Math.round(x / 10) * 10;
@@ -317,7 +319,18 @@ const SEEDS: CitySeed[] = [
       'DFS Memorials\' 2026 range for Phoenix direct cremation is $950 to $2,370, one of the tightest spreads of any big metro. When the market is this compressed, the difference between providers is smaller than the difference between service types.',
       'Summer heat shapes logistics in the Valley: providers refrigerate promptly after a death, and families planning graveside services in summer usually schedule morning times.',
     ],
+    cremationExtra: {
+      heading: 'Cremation prices from Phoenix providers',
+      paragraphs: [
+        'Phoenix is one of the few metros where current published price lists bracket the modeled figure from both sides. Meadow Memorials, on East Thomas Road in Phoenix, lists direct cremation at $995 on its General Price List effective March 30, 2026; its basic package at that price includes transfer, permits, death certificate filing, refrigeration, the container, and the cremation itself for remains up to 250 pounds, with a signature package at $1,295. At the full-service end, Phoenix Memorial Park and Mortuary (Dignity Memorial) lists direct cremation from $3,045, with the container provided by the purchaser, on its General Price List effective October 22, 2026, and its packages run far higher.',
+        'The Funeral Consumers Alliance of Arizona\'s October 2025 price comparison reports, built from Valley providers\' own price lists, found the same spread: direct cremation from $860 at Avenidas Funeral Chapel in Avondale to $3,435 at Desert Hills Mortuary in Scottsdale, with most Valley providers between $1,030 and $3,105. In other words, the modeled $3,130 for Phoenix sits near the full-service end of the real market, and a family that compares two or three General Price Lists, including one cremation specialist, usually lands well under it. The Alliance began proceedings to close and dissolve on May 8, 2026, so its 2025 reports are its last; confirm any figure against the provider\'s current General Price List.',
+      ],
+    },
     cityFaqs: [
+      {
+        q: 'How much does direct cremation cost at Phoenix funeral homes?',
+        a: 'On current published price lists, Meadow Memorials in Phoenix lists direct cremation at $995 (General Price List effective March 30, 2026), while Phoenix Memorial Park and Mortuary lists it from $3,045 (General Price List effective October 22, 2026). The Funeral Consumers Alliance of Arizona\'s October 2025 Valley comparison found direct cremation from $860 to $3,435 across providers. Our modeled metro estimate is $3,130, near the full-service end of that range.',
+      },
       {
         q: 'What is the average cost of cremation in Phoenix?',
         a: 'Our modeled 2026 estimate for direct cremation in the Phoenix metro is $3,130, and $7,150 for cremation with a viewing and service. Published prices run lower: DFS Memorials lists Phoenix direct cremation from $950 to $2,370 in 2026. The Valley\'s dense field of cremation providers is the main reason real quotes cluster under the modeled midpoint.',
@@ -549,6 +562,7 @@ export const CITIES: CityData[] = SEEDS.map((s) => ({
   context: s.context,
   caveats: s.caveats,
   cityFaqs: s.cityFaqs,
+  cremationExtra: s.cremationExtra,
 }));
 
 export function getCity(state: string, city: string): CityData | undefined {
