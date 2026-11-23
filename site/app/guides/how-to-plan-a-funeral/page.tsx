@@ -10,12 +10,12 @@ import RelatedGuides from '../../../components/RelatedGuides';
 const A = dataset.anchors;
 
 export const metadata: Metadata = {
-  title: 'How to Plan a Funeral: A Step-by-Step Guide',
+  title: 'How to Plan a Funeral in 2026: A Step-by-Step Guide',
   description:
     'The ten steps of planning a funeral in order, from the first phone calls to the paperwork after the service, with modeled 2026 costs at each decision point.',
   alternates: { canonical: SITE_URL + '/guides/how-to-plan-a-funeral/' },
   openGraph: {
-    title: 'How to Plan a Funeral: A Step-by-Step Guide',
+    title: 'How to Plan a Funeral in 2026: A Step-by-Step Guide',
     description:
       'The ten steps of planning a funeral in order, from the first phone calls to the paperwork after the service, with modeled 2026 costs at each decision point.',
     url: SITE_URL + '/guides/how-to-plan-a-funeral/',
@@ -61,14 +61,14 @@ export default function HowToPlanAFuneral() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › How to plan a funeral, step by step</nav>
       <JsonLd data={articleJsonLd({
-        title: 'How to Plan a Funeral: A Step-by-Step Guide',
+        title: 'How to Plan a Funeral in 2026: A Step-by-Step Guide',
         description: 'The ten steps of planning a funeral in order, from the first phone calls to the paperwork after the service, with modeled 2026 costs at each decision point.',
         url: SITE_URL + '/guides/how-to-plan-a-funeral/',
         datePublished: '2026-10-23',
         dateModified: PAGE_DATES['/guides/how-to-plan-a-funeral/']?.updated ?? LAST_UPDATED,
         siteUrl: SITE_URL,
       })} />
-        <GuideHero slug="how-to-plan-a-funeral" imageAlt="How to Plan a Funeral: A Step-by-Step Guide"><h1>How to plan a funeral, step by step</h1></GuideHero>
+        <GuideHero slug="how-to-plan-a-funeral" imageAlt="How to Plan a Funeral in 2026: A Step-by-Step Guide"><h1>How to plan a funeral, step by step</h1></GuideHero>
         <Byline published={PAGE_DATES['/guides/how-to-plan-a-funeral/']?.published} updated={PAGE_DATES['/guides/how-to-plan-a-funeral/']?.updated} />
 
         <p className="answer-first">

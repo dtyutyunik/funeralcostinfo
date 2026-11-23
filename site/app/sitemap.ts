@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/guides/funeral-cost-2026-breakdown/',
     '/guides/funeral-costs-by-state-2026/',
     '/guides/cremation-cost-2026/',
+    '/guides/nevada-cremation-cost/',
     '/guides/burial-plot-costs/',
     '/guides/headstone-costs/',
     '/guides/paying-for-a-funeral/',

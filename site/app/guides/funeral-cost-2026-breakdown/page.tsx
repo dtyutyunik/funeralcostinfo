@@ -185,7 +185,8 @@ export default function FuneralCost2026Breakdown() {
             <strong>Service type.</strong> The single biggest decision. Moving from a traditional
             funeral with burial ({fmt(A.traditional_burial.value)}) to direct cremation ({fmt(A.direct_cremation.value)})
             cuts the modeled bill by roughly two-thirds — no viewing, no embalming, no ceremony
-            with the body present.
+            with the body present. Our <Link href="/guides/cremation-cost-2026/">cremation cost guide</Link>{' '}
+            breaks down what each cremation option includes and what it should cost.
           </li>
           <li>
             <strong>The casket.</strong> With a median price around $2,500 (NFDA 2023, via our model),
@@ -229,7 +230,10 @@ export default function FuneralCost2026Breakdown() {
           National estimates are a starting point; your bill depends on your choices and your zip
           code. If a death has just happened, start with the{' '}
           <Link href="/guides/when-someone-dies-checklist/">first 48 hours checklist</Link> or the{' '}
-          <Link href="/guides/how-to-plan-a-funeral/">step-by-step funeral planning guide</Link>. Build
+          <Link href="/guides/how-to-plan-a-funeral/">step-by-step funeral planning guide</Link>.
+          Planning ahead instead of arranging now? Read the{' '}
+          <Link href="/guides/prepaid-funeral-plans/">prepaid funeral plans guide</Link> before
+          signing anything. Build
           a line-item estimate with our <Link href="/calculator/">funeral cost calculator</Link>,
           or drill into your state:
         </p>

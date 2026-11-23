@@ -11,14 +11,15 @@ import NationalStats from '../../../components/NationalStats';
 const A = dataset.anchors;
 
 export const metadata: Metadata = {
-  title: 'How Much Does Cremation Cost in 2026?',
+  // Numbers-first title 2026-11-23: this guide had zero impressions in its first two months (published 2026-09-24) despite links from every state and city page; the title now leads with the two modeled figures, the pattern that lifted the state and city pages.
+  title: 'How Much Does Cremation Cost in 2026? Direct $3,030, With a Service $6,920',
   description:
-    'Cremation costs in 2026: what cremation with a service and direct cremation typically include, why quotes vary so much, and modeled national estimates with sources.',
+    'Cremation costs in 2026: direct cremation is modeled at $3,030 nationally and cremation with a service at $6,920. What each includes, why quotes vary so much, and how to compare providers.',
   alternates: { canonical: SITE_URL + '/guides/cremation-cost-2026/' },
   openGraph: {
-    title: 'How Much Does Cremation Cost in 2026?',
+    title: 'How Much Does Cremation Cost in 2026? Direct $3,030, With a Service $6,920',
     description:
-      'Plain-English guide to cremation costs: service vs. direct, what is included, and why prices vary — with sourced, modeled national estimates.',
+      'Plain-English guide to cremation costs: service vs. direct, what is included, and why prices vary, with sourced, modeled national estimates.',
     url: SITE_URL + '/guides/cremation-cost-2026/',
   },
 };
@@ -62,8 +63,8 @@ export default function CremationCostGuide() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Cremation costs in 2026</nav>
       <JsonLd data={articleJsonLd({
-        title: 'How Much Does Cremation Cost in 2026?',
-        description: 'Cremation costs in 2026: what cremation with a service and direct cremation typically include, why quotes vary so much, and modeled national estimates with sources.',
+        title: 'How Much Does Cremation Cost in 2026? Direct $3,030, With a Service $6,920',
+        description: 'Cremation costs in 2026: direct cremation is modeled at $3,030 nationally and cremation with a service at $6,920. What each includes, why quotes vary so much, and how to compare providers.',
         url: SITE_URL + '/guides/cremation-cost-2026/',
         datePublished: '2026-09-24',
         dateModified: PAGE_DATES['/guides/cremation-cost-2026/']?.updated ?? LAST_UPDATED,
@@ -201,6 +202,8 @@ export default function CremationCostGuide() {
 
         <p>
           <Link href="/calculator/">Build your line-item estimate →</Link>
+          {' · '}
+          <Link href="/guides/nevada-cremation-cost/">Average cost of cremation in Nevada →</Link>
           {' · '}
           <Link href="/guides/funeral-service-types/">Funeral service types explained →</Link>
           {' · '}

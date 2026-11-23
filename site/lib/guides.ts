@@ -30,11 +30,19 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'cremation-cost-2026',
-    title: 'How Much Does Cremation Cost in 2026?',
+    title: 'How Much Does Cremation Cost in 2026? Direct $3,030, With a Service $6,920',
     blurb:
       'Cremation with a service vs. direct cremation: what each includes and what drives the price.',
     group: 'Costs & data',
     image: '/images/guides/cremation-cost-2026.jpg',
+  },
+  {
+    slug: 'nevada-cremation-cost',
+    title: 'Average Cost of Cremation in Nevada (2026): Direct Cremation $3,030',
+    blurb:
+      'Direct cremation vs. cremation with a service in Nevada: modeled 2026 costs, the state rules that move the price, and how Las Vegas and Reno quotes compare.',
+    group: 'Costs & data',
+    image: '/images/guides/nevada-cremation-cost.jpg',
   },
   {
     slug: 'burial-plot-costs',
@@ -77,7 +85,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'when-someone-dies-checklist',
-    title: 'What to Do When Someone Dies: The First 48 Hours',
+    title: 'What to Do When Someone Dies: The First 48 Hours Checklist (2026)',
     blurb:
       'A calm, ordered checklist: pronouncement, who to call, choosing a funeral home, and paperwork.',
     group: 'Planning',
@@ -101,7 +109,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'prepaid-funeral-plans',
-    title: 'Prepaid Funeral Plans: Pros, Cons & Traps',
+    title: 'Prepaid Funeral Plans (2026): Pros, Cons, Costs & Traps',
     blurb:
       'What prepaying locks in, where the money sits, and the questions to ask before you sign.',
     group: 'Planning',
@@ -325,7 +333,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'how-to-plan-a-funeral',
-    title: 'How to Plan a Funeral: A Step-by-Step Guide',
+    title: 'How to Plan a Funeral in 2026: A Step-by-Step Guide',
     blurb:
       'The ten steps in order, from the first phone calls to the paperwork after the service, with modeled 2026 costs at each decision point.',
     group: 'Planning',
@@ -365,7 +373,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'funeral-officiant-cost',
-    title: 'How Much Does a Funeral Officiant Cost? Honorariums and Celebrant Fees',
+    title: 'Funeral Officiant Cost (2026): Clergy $150 to $500, Celebrants $300 to $800',
     blurb:
       'Clergy honorariums run $150 to $500 and professional celebrants $300 to $800: what each covers, how to pay, and how to choose.',
     group: 'Costs & data',

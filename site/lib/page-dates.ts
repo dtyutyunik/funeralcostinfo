@@ -63,7 +63,11 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/cremation-cost-2026/": {
     "published": "2026-09-24",
-    "updated": "2026-11-11"
+    "updated": "2026-11-23"
+  },
+  "/guides/nevada-cremation-cost/": {
+    "published": "2026-11-23",
+    "updated": "2026-11-23"
   },
   "/guides/cremation-diamonds-cost/": {
     "published": "2026-10-24",
@@ -107,7 +111,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/funeral-cost-2026-breakdown/": {
     "published": "2026-09-24",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/funeral-costs-by-city/": {
     "published": "2026-09-29",
@@ -143,7 +147,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/funeral-officiant-cost/": {
     "published": "2026-10-26",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/funeral-reception-cost/": {
     "published": "2026-10-28",
@@ -167,7 +171,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/green-burial-composting/": {
     "published": "2026-09-24",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/headstone-costs/": {
     "published": "2026-09-24",
@@ -187,7 +191,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/how-to-plan-a-funeral/": {
     "published": "2026-10-23",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/how-to-write-a-eulogy/": {
     "published": "2026-10-27",
@@ -199,7 +203,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/indigent-burial-assistance/": {
     "published": "2026-10-01",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/infant-funeral-costs/": {
     "published": "2026-10-31",
@@ -211,7 +215,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/mausoleum-cost/": {
     "published": "2026-09-29",
-    "updated": "2026-11-11"
+    "updated": "2026-11-23"
   },
   "/guides/memorial-service-cost/": {
     "published": "2026-10-25",
@@ -243,7 +247,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/prepaid-funeral-plans/": {
     "published": "2026-09-24",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/religious-funeral-costs/": {
     "published": "2026-09-29",
@@ -279,7 +283,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/when-someone-dies-checklist/": {
     "published": "2026-09-24",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/who-can-arrange-funeral/": {
     "published": "2026-09-24",
@@ -295,7 +299,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/": {
     "published": "2026-09-23",
-    "updated": "2026-11-13"
+    "updated": "2026-11-23"
   },
   "/calculator/": {
     "published": "2026-09-23",
@@ -339,10 +343,10 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "state-template": {
     "published": "2026-09-23",
-    "updated": "2026-11-20"
+    "updated": "2026-11-23"
   },
   "city-template": {
     "published": "2026-10-31",
-    "updated": "2026-11-16"
+    "updated": "2026-11-23"
   }
 };

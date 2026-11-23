@@ -8,12 +8,12 @@ import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
-  title: 'What to Do When Someone Dies: The First 48 Hours',
+  title: 'What to Do When Someone Dies: The First 48 Hours Checklist (2026)',
   description:
     'A calm, step-by-step checklist for the first 48 hours after a death: pronouncement, notifying family, choosing a funeral provider, death certificates, and what can wait.',
   alternates: { canonical: SITE_URL + '/guides/when-someone-dies-checklist/' },
   openGraph: {
-    title: 'What to Do When Someone Dies: The First 48 Hours',
+    title: 'What to Do When Someone Dies: The First 48 Hours Checklist (2026)',
     description:
       'A calm checklist for the first 48 hours: what must happen now, what you can decide later, and your rights when choosing a funeral provider.',
     url: SITE_URL + '/guides/when-someone-dies-checklist/',
@@ -55,7 +55,7 @@ export default function WhenSomeoneDiesChecklist() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › When someone dies: the first 48 hours</nav>
       <JsonLd data={articleJsonLd({
-        title: 'What to Do When Someone Dies: The First 48 Hours',
+        title: 'What to Do When Someone Dies: The First 48 Hours Checklist (2026)',
         description: 'A calm, step-by-step checklist for the first 48 hours after a death: pronouncement, notifying family, choosing a funeral provider, death certificates, and what can wait.',
         url: SITE_URL + '/guides/when-someone-dies-checklist/',
         datePublished: '2026-09-24',

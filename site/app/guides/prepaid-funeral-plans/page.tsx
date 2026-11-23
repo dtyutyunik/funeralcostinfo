@@ -8,12 +8,12 @@ import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
-  title: 'Prepaid Funeral Plans: Pros, Cons & Traps',
+  title: 'Prepaid Funeral Plans (2026): Pros, Cons, Costs & Traps',
   description:
     'How prepaid funeral plans work: price-guaranteed vs. non-guaranteed contracts, trust vs. insurance funding, revocable vs. irrevocable — plus the traps to avoid.',
   alternates: { canonical: SITE_URL + '/guides/prepaid-funeral-plans/' },
   openGraph: {
-    title: 'Prepaid Funeral Plans: Pros, Cons & Traps',
+    title: 'Prepaid Funeral Plans (2026): Pros, Cons, Costs & Traps',
     description:
       'Plain-English guide to prepaying a funeral: how the money is held, guaranteed vs. non-guaranteed contracts, revocable vs. irrevocable, Medicaid rules, and the questions to ask before signing.',
     url: SITE_URL + '/guides/prepaid-funeral-plans/',
@@ -59,7 +59,7 @@ export default function PrepaidFuneralPlansGuide() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Prepaid funeral plans</nav>
       <JsonLd data={articleJsonLd({
-        title: 'Prepaid Funeral Plans: Pros, Cons & Traps',
+        title: 'Prepaid Funeral Plans (2026): Pros, Cons, Costs & Traps',
         description: 'How prepaid funeral plans work: price-guaranteed vs. non-guaranteed contracts, trust vs. insurance funding, revocable vs. irrevocable — plus the traps to avoid.',
         url: SITE_URL + '/guides/prepaid-funeral-plans/',
         datePublished: '2026-09-24',

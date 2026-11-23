@@ -1078,6 +1078,10 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
     save: `If the $750 state payment might apply, keep the total bill under the $1,500 cap and raise it before signing, because add-ons can disqualify the whole payment. Everyone else saves the same way: decline embalming you do not need, since a body must be embalmed, refrigerated or sealed only if disposition will not occur within 24 hours, and compare at least three General Price Lists.`,
     faqs: (st) => [
       {
+        q: `How much does cremation cost in Pennsylvania?`,
+        a: `Direct cremation in Pennsylvania is modeled at ${fmt(st.estimates.direct_cremation.point)} in 2026 (illustrative range ${fmtRange(st.estimates.direct_cremation)}), and cremation with a viewing and service at ${fmt(st.estimates.cremation_with_service.point)} (range ${fmtRange(st.estimates.cremation_with_service)}). Pennsylvania sits modestly below the national price level (BEA 2024 regional price parity 97.6), so both figures run a little under the national anchors of $3,030 and $6,920. The figures exclude an urn upgrade, a cemetery niche, and certified death certificates. If the deceased received cash assistance such as TANF or SSI, the Department of Human Services payment of up to $750 (55 Pa. Code 283.21) can cover a large share of a direct cremation, as long as the total bill stays under $1,500.`,
+      },
+      {
         q: `How long do you have to wait before cremation in Pennsylvania?`,
         a: `At least 24 hours beyond the time of death (49 Pa. Code 13.212). The body can be moved to the crematory sooner, but only with written instructions that cremation cannot happen before the 24 hours have elapsed. The coroner's review and the death certificate, which must be filed within 96 hours, usually set the real pace.`,
       },
@@ -1366,10 +1370,11 @@ const META_OVERRIDES: Record<string, { title: string; description: string }> = {
     description:
       `Average funeral cost in North Carolina in 2026: traditional burial $8,620, cremation with a service $6,530, direct cremation $2,860. Cheapest options, state rules, and county help explained.`,
   },
+  // South Carolina: second pass 2026-11-23. The Nov 15 numbers-first title still drew zero clicks at position 10.0 (681 impressions, Oct 24-Nov 20 window), so the title now leads with the exact "average funeral cost" phrasing, the same second-pass treatment Missouri got on Nov 16.
   'south-carolina': {
-    title: `Funeral Costs in South Carolina 2026: Burial $8,570, Cremation $2,840`,
+    title: `Average Funeral Cost in South Carolina (2026): Burial $8,570, Cremation $2,840`,
     description:
-      `Average funeral cost in South Carolina in 2026: traditional burial $8,570, cremation with a service $6,490, direct cremation $2,840. Cheapest options, state rules, and county help explained.`,
+      `The average cost of a funeral in South Carolina in 2026 is $8,570 for a traditional burial, $6,490 for cremation with a service, and $2,840 for direct cremation. Cheapest options, state rules, and county help explained.`,
   },
   pennsylvania: {
     title: `Funeral Costs in Pennsylvania 2026: Burial $8,920, Cremation $2,960`,
@@ -1725,6 +1730,8 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
               </li>
             </ul>
             <p>
+              Our dedicated <Link href="/guides/nevada-cremation-cost/">Nevada cremation cost guide</Link>{' '}
+              walks through the two options, what each one includes, and how to compare Nevada providers.
               Once the cremation is done, the{' '}
               <Link href="/guides/what-to-do-with-ashes/">guide to what to do with ashes</Link> covers the
               options and their costs, from keeping an urn at home to scattering.

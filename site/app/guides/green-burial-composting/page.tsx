@@ -258,7 +258,9 @@ export default function GreenBurialCompostingGuide() {
           and legality guide</Link> for the state list and the comparison with cremation. Body donation to science through a
           willed-body program typically costs the family nothing — programs usually cover transport and
           cremation — though acceptance is decided at the time of death and an open-casket funeral
-          isn&apos;t possible. And the conventional options remain: see{' '}
+          isn&apos;t possible. A family-led home funeral is another low-cost, lower-impact route
+          where state law allows it: see our <Link href="/guides/home-funeral-cost/">home funeral cost and legality guide</Link>.
+          And the conventional options remain: see{' '}
           <Link href="/guides/funeral-service-types/">the six service types explained</Link>, the{' '}
           <Link href="/guides/funeral-cost-2026-breakdown/">full cost breakdown</Link>, or the{' '}
           <Link href="/guides/funeral-glossary/">funeral terms glossary</Link> if the terminology is new.

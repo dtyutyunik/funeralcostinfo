@@ -152,6 +152,11 @@ export default function IndigentBurialAssistance() {
         </p>
 
         <h2>How to apply, step by step</h2>
+        <p>
+          If the death just happened and you are not sure what comes first, our{' '}
+          <Link href="/guides/when-someone-dies-checklist/">checklist for the first 48 hours after a death</Link>{' '}
+          walks through the order of calls and paperwork. Then work through the steps below.
+        </p>
         <ol>
           <li><strong>Don't sign a funeral contract first.</strong> Applying for help generally requires that no
           prepaid or contracted arrangement exists.</li>

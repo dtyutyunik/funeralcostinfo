@@ -28,6 +28,10 @@ export default function MausoleumCost() {
       a: 'A single crypt in a community mausoleum typically runs $4,000–$8,000 (Dignity Memorial’s 2026 figures: $4,000–$5,000 outdoor, $7,000–$8,000 indoor at the low end), with real 2025–2026 cemetery price lists ranging from about $5,400 in small markets to $10,000–$40,000 in major metros. A double crypt runs roughly $10,000–$16,000+. Entombment (opening/closing) and inscription fees are extra.',
     },
     {
+      q: 'How much does a 2 person mausoleum cost?',
+      a: 'For two caskets, a double (tandem) crypt in a community mausoleum typically runs $10,000–$16,000+ on 2025–2026 price lists, from $10,000–$12,600 at Oak Ridge Cemetery in Springfield IL to $16,000–$76,000 at Gate of Heaven. For two urns, a double niche runs about $3,400–$7,800 at metro cemeteries. A private 2-crypt mausoleum building starts around $29,000 (Rome Monument 2026). Entombment, inscription, and endowment care fees are extra and are often charged per person.',
+    },
+    {
       q: 'Is a mausoleum cheaper than a traditional burial?',
       a: 'Usually not. A community crypt ($4,000–$8,000+) typically costs more than a burial plot ($1,000–$4,000 in most markets), but a lawn crypt — an underground vault that bundles grave space and vault in one purchase — can be the value option at $1,900–$12,000+. The real comparison is crypt vs. plot + vault + opening/closing combined.',
     },
@@ -125,6 +129,29 @@ export default function MausoleumCost() {
         <p>
           A niche plus a <Link href="/guides/cremation-cost-2026/">direct cremation</Link> is often the lowest-cost
           above-ground option of all — worth knowing if the mausoleum look appeals but the crypt price doesn't.
+        </p>
+
+        <h2>2 person mausoleum prices: what a crypt or niche for two costs</h2>
+        <p>
+          Most mausoleum shoppers are buying for two people, and the price for two is not simply
+          double the price for one. A shared space for two, whether a double crypt for two caskets
+          or a double niche for two urns, usually costs more than a single but well under two
+          singles bought separately. Every figure below is drawn from the same 2025–2026 published
+          price lists used throughout this guide.
+        </p>
+        <ul>
+          <li><strong>Double (tandem) crypts:</strong> typically $10,000–$16,000+. Real lists: Oak Ridge Cemetery, Springfield IL (2025) tandem 2-casket crypts $10,000–$12,600; a small-market list shows doubles at $10,700–$11,600 by row; Madonna Cemetery (2026) crypt for two, interior $10,690–$24,190 and exterior $9,690–$16,190; Gate of Heaven (2026) crypt for two $16,000–$76,000; Lakewood Cemetery, Minneapolis (2025) doubles $19,995–$52,995.</li>
+          <li><strong>Double niches for two urns:</strong> Madonna Cemetery (2026) double marble niche $3,495–$7,195 and double glass-front $4,000–$9,000; Gate of Heaven (2026) interior double marble $3,400–$7,800. Elmwood Cemetery, Memphis sells niches from $2,500 that hold two urns.</li>
+          <li><strong>Double lawn crypts:</strong> Highland Cemetery, Fort Mitchell KY: double $2,550. Ivy Lawn (2025): double $2,800 plus $400 delivery and $1,000 setting. Oak Ridge IL's war-memorial veteran package prices a double at $3,000 all-inclusive.</li>
+          <li><strong>Private 2-crypt mausoleums:</strong> Rome Monument's 2026 pricing puts a 2-crypt private unit at $29,000, and industry surveys put a standalone 2-person outdoor mausoleum at $50,000–$125,000, with the cemetery plot usually a separate purchase.</li>
+        </ul>
+        <p>
+          Two cautions specific to buying for two. First, the add-on fees are often per person:
+          entombment runs $850–$2,050 per opening on the lists above, and inscription is commonly
+          charged per character or per nameplate, so a couple's space can carry two sets of fees
+          over time. Second, endowment care on tandem crypts is sometimes a separate line item
+          ($800–$950 per tandem crypt at one Texas chapel mausoleum). Ask for the full fee
+          schedule for both entombments before signing, not just the price of the space.
         </p>
 
         <h2>Lawn crypts: the value option, $1,900–$12,000+</h2>
