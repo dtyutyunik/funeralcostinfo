@@ -22,7 +22,7 @@ export const GUIDES: GuideMeta[] = [
   },
   {
     slug: 'funeral-costs-by-state-2026',
-    title: 'Funeral Cost Index 2026: Average Funeral Costs by State',
+    title: 'Average Cost of a Funeral 2026: Funeral Cost Index by State',
     blurb:
       'National averages for all six service types, and every jurisdiction ranked most to least expensive, in August 2026 dollars.',
     group: 'Costs & data',

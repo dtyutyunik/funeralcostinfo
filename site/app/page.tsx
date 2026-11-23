@@ -51,7 +51,7 @@ export default function Home() {
   const homeFaqs = [
     {
       q: 'How much does a funeral cost in 2026?',
-      a: `The national median for a funeral with viewing and burial is ${fmt(a.traditional_burial.value)} (NFDA 2023 median restated in August 2026 dollars), or ${fmt(a.burial_with_vault.value)} with a burial vault. That covers funeral-home services and a metal casket; the cemetery plot, opening and closing, and a headstone are extra. State medians in our model run from about ${fmt(dataset.states.reduce((m, s) => Math.min(m, s.estimates.traditional_burial.point), Infinity))} to ${fmt(dataset.states.reduce((m, s) => Math.max(m, s.estimates.traditional_burial.point), 0))}. Pick your state above for its figure.`,
+      a: `The average cost of a funeral in the United States in 2026 is ${fmt(a.traditional_burial.value)} for a funeral with viewing and burial (the NFDA 2023 median restated in August 2026 dollars), or ${fmt(a.burial_with_vault.value)} with a burial vault. That covers funeral-home services and a metal casket; the cemetery plot, opening and closing, and a headstone are extra. State medians in our model run from about ${fmt(dataset.states.reduce((m, s) => Math.min(m, s.estimates.traditional_burial.point), Infinity))} to ${fmt(dataset.states.reduce((m, s) => Math.max(m, s.estimates.traditional_burial.point), 0))}. Pick your state above for its figure.`,
     },
     {
       q: 'How much does cremation cost?',
@@ -152,7 +152,9 @@ export default function Home() {
             <p>
               Every state figure on this site starts from the same six national anchors: NFDA 2023
               medians restated in August 2026 dollars. A traditional funeral with viewing and burial
-              is <strong>{fmt(a.traditional_burial.value)}</strong> nationally.
+              is <strong>{fmt(a.traditional_burial.value)}</strong> nationally. See the{' '}
+              <Link href="/guides/funeral-costs-by-state-2026/">average cost of a funeral</Link> in
+              every state in our Funeral Cost Index.
             </p>
           </div>
           <NationalStats />

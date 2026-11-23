@@ -8,14 +8,14 @@ import GuideHero from '../../../components/GuideHero';
 import RelatedGuides from '../../../components/RelatedGuides';
 
 export const metadata: Metadata = {
-  title: 'Funeral Cost Index 2026: Average Funeral Costs by State',
+  title: 'Average Cost of a Funeral 2026: Funeral Cost Index by State',
   description:
-    'The Funeral Cost Index 2026: national averages for all six funeral service types in August 2026 dollars, plus modeled estimates for all 50 states and D.C., ranked most to least expensive.',
+    'The average cost of a funeral in 2026 is $9,140 for a traditional burial and $3,030 for direct cremation. National averages for all six funeral service types in August 2026 dollars, plus modeled estimates for all 50 states and D.C., ranked most to least expensive.',
   alternates: { canonical: SITE_URL + '/guides/funeral-costs-by-state-2026/' },
   openGraph: {
-    title: 'Funeral Cost Index 2026: Average Funeral Costs by State',
+    title: 'Average Cost of a Funeral 2026: Funeral Cost Index by State',
     description:
-      'National funeral cost averages for all six service types, and every state ranked most to least expensive, in August 2026 dollars.',
+      'The average cost of a funeral in 2026 is $9,140 for a traditional burial and $3,030 for direct cremation. National funeral cost averages for all six service types, and every state ranked most to least expensive, in August 2026 dollars.',
     url: SITE_URL + '/guides/funeral-costs-by-state-2026/',
   },
 };
@@ -30,6 +30,10 @@ export default function FuneralCostsByStateGuide() {
   const maxAnchor = Math.max(...SERVICE_ORDER.map((k) => national[k].value));
 
   const faqs = [
+    {
+      q: 'What is the average cost of a funeral in 2026?',
+      a: `A traditional funeral with viewing and burial averages ${fmt(national.traditional_burial.value)} nationally in August 2026 dollars (the NFDA 2023 median of $8,300, adjusted for inflation), and direct cremation averages ${fmt(national.direct_cremation.value)}. The table below shows the same figures for every state: traditional burial runs from ${fmt(most.estimates.traditional_burial.point)} in ${most.name} to ${fmt(least.estimates.traditional_burial.point)} in ${least.name}. Cemetery costs (plot, opening and closing, headstone) are extra everywhere.`,
+    },
     {
       q: 'Are these real quotes from funeral homes in my state?',
       a: 'No. These are modeled estimates, not surveyed quotes. We start from the NFDA 2023 national medians ($8,300 for a funeral with viewing and burial; $2,750 for direct cremation), adjust them to August 2026 dollars using the BLS Consumer Price Index for funeral expenses, then scale each state by its 2024 BEA regional price parity. Your local quotes can differ, so always get at least two itemized price lists (the GPL every funeral home must provide under the FTC Funeral Rule).',
@@ -67,8 +71,8 @@ export default function FuneralCostsByStateGuide() {
       <div className="wrap prose">
         <nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link> › Guides › Funeral Cost Index 2026</nav>
       <JsonLd data={articleJsonLd({
-        title: 'Funeral Cost Index 2026: Average Funeral Costs by State',
-        description: 'National funeral cost averages for all six service types, and every state ranked most to least expensive, in August 2026 dollars.',
+        title: 'Average Cost of a Funeral 2026: Funeral Cost Index by State',
+        description: 'The average cost of a funeral in 2026 is $9,140 for a traditional burial and $3,030 for direct cremation. National funeral cost averages for all six service types, and every state ranked most to least expensive, in August 2026 dollars.',
         url: SITE_URL + '/guides/funeral-costs-by-state-2026/',
         datePublished: '2026-09-24',
         dateModified: PAGE_DATES['/guides/funeral-costs-by-state-2026/']?.updated ?? LAST_UPDATED,
@@ -78,8 +82,11 @@ export default function FuneralCostsByStateGuide() {
         <Byline published={PAGE_DATES['/guides/funeral-costs-by-state-2026/']?.published} updated={PAGE_DATES['/guides/funeral-costs-by-state-2026/']?.updated} />
 
         <p className="answer-first">
-          <strong>Quick answer:</strong> funeral costs vary enormously by state. For a traditional
-          funeral with burial, <strong>{most.name}</strong> is the most expensive jurisdiction at{' '}
+          <strong>Quick answer:</strong> the average cost of a funeral in the United States in 2026
+          is <strong>{fmt(national.traditional_burial.value)}</strong> for a traditional funeral with
+          viewing and burial, and <strong>{fmt(national.direct_cremation.value)}</strong> for direct
+          cremation. Costs vary enormously by state: for a traditional funeral with burial,{' '}
+          <strong>{most.name}</strong> is the most expensive jurisdiction at{' '}
           <strong>{fmt(most.estimates.traditional_burial.point)}</strong>, while <strong>{least.name}</strong> is
           the least expensive at <strong>{fmt(least.estimates.traditional_burial.point)}</strong>, a gap of
           about {fmt(most.estimates.traditional_burial.point - least.estimates.traditional_burial.point)} on the

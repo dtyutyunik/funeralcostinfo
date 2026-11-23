@@ -38,7 +38,7 @@ const STATES = [...dataset.states]
 export default function FuneralCost2026Breakdown() {
   const faqs = [
     {
-      q: 'What is the average cost of a funeral in 2026?',
+      q: 'What is the average cost of a funeral with viewing and burial in 2026?',
       a: 'A widely quoted industry figure is the NFDA 2023 median of $8,300 for a funeral with viewing and burial. Adjusted for inflation, our model puts the 2026 national estimate at $9,140 in August 2026 dollars. That is a modeled estimate, not a surveyed price — the NFDA has not published a 2026 median. It also excludes cemetery costs like the plot, opening/closing, and headstone, which can add several thousand dollars.',
     },
     {
@@ -235,7 +235,8 @@ export default function FuneralCost2026Breakdown() {
           <Link href="/guides/prepaid-funeral-plans/">prepaid funeral plans guide</Link> before
           signing anything. Build
           a line-item estimate with our <Link href="/calculator/">funeral cost calculator</Link>,
-          or drill into your state:
+          see the <Link href="/guides/funeral-costs-by-state-2026/">average cost of a funeral</Link> in
+          every state, or drill into your state:
         </p>
         <ul>
           {STATES.map((s) => (

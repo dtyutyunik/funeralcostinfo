@@ -217,7 +217,10 @@ export default async function CityPage({
           {Math.abs(diffPct).toFixed(0)} percent {diffWord} the state figures. Metro estimates
           run higher than statewide ones in most of the country because state figures blend in
           rural counties. If the death and services are outside the {c.name} metro, start from
-          the <Link href={`/funeral-costs/${state}/`}>{st.name} state page</Link> instead. Our{' '}
+          the <Link href={`/funeral-costs/${state}/`}>{st.name} state page</Link> instead. For the
+          national picture, see the{' '}
+          <Link href="/guides/funeral-costs-by-state-2026/">average cost of a funeral</Link> in
+          every state. Our{' '}
           <Link href="/guides/funeral-costs-by-city/">funeral costs by city guide</Link> compares
           the 25 largest metros side by side.
         </p>
@@ -272,6 +275,10 @@ export default async function CityPage({
 
         <h2>Official resources for {c.name} families</h2>
         <ul>
+          <li>
+            The <Link href="/guides/funeral-costs-by-state-2026/">average cost of a funeral</Link> nationwide:
+            our Funeral Cost Index compares all 51 jurisdictions.
+          </li>
           <li>
             <Link href={`/funeral-costs/${state}/`}>Funeral costs in {st.name}</Link>: the state
             page lists the state licensing board, any statewide price survey, and {st.name} rules

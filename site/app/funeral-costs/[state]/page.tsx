@@ -1586,8 +1586,10 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           is modeled at <strong>{fmt(trad.point)}</strong> (range {fmtRange(trad)}), versus the
           inflation-adjusted national anchor of {fmt(dataset.anchors.traditional_burial.value)} (the NFDA
           2023 median of {fmt(dataset.anchors.traditional_burial.value_2023)} in August 2026 dollars). Direct cremation
-          is modeled at <strong>{fmt(st.estimates.direct_cremation.point)}</strong>. These are
-          modeled estimates — not surveyed prices or quotes — built from the NFDA 2023 national
+          is modeled at <strong>{fmt(st.estimates.direct_cremation.point)}</strong>. For the
+          national picture, see the{' '}
+          <Link href="/guides/funeral-costs-by-state-2026/">average cost of a funeral</Link> in
+          every state. These are modeled estimates, not surveyed prices or quotes, built from the NFDA 2023 national
           medians, inflated with the BLS funeral-expenses CPI, and adjusted by {st.name}&apos;s BEA 2024 regional price parity ({st.rpp_all_items.toFixed(1)}).
         </div>
 
@@ -1811,7 +1813,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
 
         <h2>Compare {st.name} with the national picture</h2>
         <ul>
-          <li><Link href="/guides/funeral-costs-by-state-2026/">Funeral costs by state</Link> compares all 51 jurisdictions side by side.</li>
+          <li>See the <Link href="/guides/funeral-costs-by-state-2026/">average cost of a funeral</Link> in every state: all 51 jurisdictions compared side by side.</li>
           <li><Link href="/guides/funeral-cost-2026-breakdown/">The 2026 funeral cost breakdown</Link> explains the national service types and what moves a quote.</li>
           <li><Link href="/guides/how-to-plan-a-funeral/">How to plan a funeral</Link> walks through the decisions in order.</li>
           <li><Link href="/guides/burial-vault-cost/">Burial vault costs</Link> explains the cemetery charge that is not in the traditional-burial estimate.</li>
