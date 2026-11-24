@@ -62,6 +62,11 @@ const CITY_META_OVERRIDES: Record<string, { title: string; description: string }
     description:
       `Average funeral cost in Denver in 2026: traditional burial $9,670, cremation with a service $7,320, direct cremation $3,210. Published local prices, cheapest options, and how Denver compares with the Colorado average.`,
   },
+  'florida/tampa': {
+    title: `Funeral Costs in Tampa 2026: Burial $9,220, Cremation $3,060`,
+    description:
+      `Average funeral cost in Tampa in 2026: traditional burial $9,220, cremation with a service $6,980, direct cremation $3,060. Modeled estimates, cheapest options, and how Tampa compares with the Florida average.`,
+  },
 };
 
 export async function generateMetadata({

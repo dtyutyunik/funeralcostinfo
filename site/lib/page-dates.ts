@@ -115,7 +115,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/funeral-costs-by-state-2026/": {
     "published": "2026-09-24",
-    "updated": "2026-11-10"
+    "updated": "2026-11-23"
   },
   "/guides/funeral-etiquette/": {
     "published": "2026-11-03",

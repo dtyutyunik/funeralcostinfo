@@ -259,7 +259,7 @@ export default function FuneralCostsByCity() {
           </li>
         </ol>
 
-        <h2>City cost pages: full modeled estimates for 15 metros</h2>
+        <h2>City cost pages: full modeled estimates for 16 metros</h2>
         <p>
           This guide stays the overview. For a full set of modeled estimates for one metro
           (traditional burial, cremation with a service, direct cremation and more, adjusted by

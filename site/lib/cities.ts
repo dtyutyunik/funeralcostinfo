@@ -548,6 +548,39 @@ const SEEDS: CitySeed[] = [
       },
     ],
   },
+  {
+    slug: 'tampa',
+    name: 'Tampa',
+    stateName: 'Florida',
+    metroName: 'Tampa-St. Petersburg-Clearwater, FL',
+    geoFips: '45300',
+    rppAllItems: 100.89,
+    published: null,
+    context: [
+      'Tampa is one of the few metros in this set that prices below its state: the metro price level (BEA 2024 RPP 100.9) sits just above the national average and about 2 percent below the Florida state figure of 103.4, so modeled Tampa estimates run slightly under the state page.',
+      'The metro spans four counties (Hillsborough, Pinellas, Pasco and Hernando), so a Tampa family can compare providers on both sides of the bay, in St. Petersburg and Clearwater as well as in Tampa itself.',
+      'Tampa\'s oldest public cemetery is Oaklawn Cemetery in downtown Tampa, established in 1850 as the city\'s first public burial ground and listed on the National Register of Historic Places since 2017.',
+    ],
+    caveats: [
+      'No published metro-level price table covers Tampa yet, so the modeled estimates on this page carry more weight than in cities with survey data. Collecting three local General Price Lists matters more here, not less.',
+      'Florida requires cremation to wait at least 48 hours after death, with written authorization from the legally authorized person (Fla. Stat. 872.03), and a body held over 24 hours must be refrigerated at 40 degrees Fahrenheit or below or embalmed (Fla. Stat. 497.386).',
+      'Veterans have a separate option across the bay: Bay Pines National Cemetery in St. Petersburg has space available for cremated remains, and eligible veterans are interred there at no cost to the family.',
+    ],
+    cityFaqs: [
+      {
+        q: 'Can ashes be scattered in Tampa Bay or the Gulf of Mexico?',
+        a: 'Florida places no state restriction on scattering cremated remains, but the federal sea rule requires scattering at least 3 nautical miles from shore with a report to the EPA within 30 days. In practice that means a boat trip out into the Gulf past the barrier islands, not a release from a Tampa Bay beach or pier. Florida State Parks allow scattering at least 200 feet from any body of water, away from developed areas, with no markers. Private land is fine with the landowner\'s permission.',
+      },
+      {
+        q: 'Where can Tampa families compare funeral home prices before choosing?',
+        a: 'Start with the local consumer chapter: FCA Suncoast Florida, the Tampa Bay and Sarasota-Manatee chapter of the Funeral Consumers Alliance, maintains a database of price information from more than 300 funeral homes. No public metro survey table exists for Tampa, so the modeled figures on this page are the planning anchor and the fastest check is still collecting two or three itemized General Price Lists by phone, which the FTC Funeral Rule entitles you to.',
+      },
+      {
+        q: 'Are veterans buried for free anywhere in the Tampa Bay area?',
+        a: 'Yes, at Bay Pines National Cemetery in St. Petersburg, across the bay from Tampa. The VA lists space available there for cremated remains, and burial in a VA national cemetery is open to veterans who met a minimum active duty service requirement and were discharged under conditions other than dishonorable, plus eligible spouses and dependents. The VA provides the gravesite or niche, opening and closing, a government headstone or marker, and perpetual care at no cost to the family. Our veterans burial benefits guide walks through eligibility.',
+      },
+    ],
+  },
 ];
 
 export const CITIES: CityData[] = SEEDS.map((s) => ({
