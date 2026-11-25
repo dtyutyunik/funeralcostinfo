@@ -111,7 +111,7 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "/guides/funeral-costs-by-city/": {
     "published": "2026-09-29",
-    "updated": "2026-11-10"
+    "updated": "2026-11-24"
   },
   "/guides/funeral-costs-by-state-2026/": {
     "published": "2026-09-24",
@@ -351,6 +351,6 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "city-template": {
     "published": "2026-10-31",
-    "updated": "2026-11-23"
+    "updated": "2026-11-24"
   }
 };
