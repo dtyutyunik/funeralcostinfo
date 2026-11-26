@@ -7,8 +7,32 @@ import {
   dataset, getState, fmt, fmtRange, SITE_URL, LAST_UPDATED,
   SERVICE_ORDER, VINTAGE_LABEL, type ServiceKey,
 } from '../../../../lib/data';
-import { CITIES, getCity } from '../../../../lib/cities';
+import { CITIES, getCity, citiesForState } from '../../../../lib/cities';
+import Calculator from '../../../../components/Calculator';
+import NextSteps, { type NextStepItem } from '../../../../components/NextSteps';
 import Link from 'next/link';
+
+// Evergreen guides rotated through the end-of-page next-step module (Sprint 2 v2
+// Queue D, 2026-11-26): two of the three per city, picked by the city's index in
+// CITIES so sibling pages do not all push the same pair. None of the three appears
+// in the city template's closing resources list.
+const NEXT_GUIDE_POOL = [
+  {
+    href: '/guides/funeral-cost-2026-breakdown/',
+    label: 'The 2026 funeral cost breakdown',
+    blurb: 'the national service types, what each one includes, and what moves a quote',
+  },
+  {
+    href: '/guides/how-to-plan-a-funeral/',
+    label: 'How to plan a funeral',
+    blurb: 'the decisions in order, from the first phone calls to the paperwork after the service',
+  },
+  {
+    href: '/guides/burial-vault-cost/',
+    label: 'Burial vault costs',
+    blurb: 'the cemetery charge that is not in the traditional-burial estimate, and when a vault is actually required',
+  },
+];
 
 export function generateStaticParams() {
   return CITIES.map((c) => ({ state: c.stateSlug, city: c.slug }));
@@ -107,6 +131,33 @@ export default async function CityPage({
   const diffPct = ((trad.point - stTrad.point) / stTrad.point) * 100;
   const diffWord = diffPct >= 0 ? 'above' : 'below';
 
+  // End-of-page next-step module (Queue D, 2026-11-26): sibling cities in the same
+  // state, the state page, two rotated evergreen guides, and the calculator anchor.
+  const siblings = citiesForState(state).filter((x) => x.slug !== city);
+  const cityIdx = CITIES.findIndex((x) => x.stateSlug === state && x.slug === city);
+  const guidePicks = [
+    NEXT_GUIDE_POOL[cityIdx % NEXT_GUIDE_POOL.length],
+    NEXT_GUIDE_POOL[(cityIdx + 1) % NEXT_GUIDE_POOL.length],
+  ];
+  const nextSteps: NextStepItem[] = [
+    ...siblings.map((s) => ({
+      href: `/funeral-costs/${state}/${s.slug}/`,
+      label: `Funeral costs in ${s.name}`,
+      blurb: `metro-level estimates for ${s.name} and how they compare with ${c.name}`,
+    })),
+    {
+      href: `/funeral-costs/${state}/`,
+      label: `Funeral costs in ${st.name}`,
+      blurb: `the statewide figures, the ${st.name} licensing board, any statewide price survey, and the state rules that apply in ${c.name} too`,
+    },
+    ...guidePicks,
+    {
+      href: '#calculator',
+      label: `Run your own ${st.name} estimate`,
+      blurb: `the calculator on this page works from statewide ${st.name} figures; the ${c.name} metro table above is the tighter local estimate`,
+    },
+  ];
+
   const faqs = [
     {
       q: `What is the average cost of cremation in ${c.name}?`,
@@ -194,6 +245,14 @@ export default async function CityPage({
             );
           })}
         </div>
+
+        <p>
+          The calculator below works from statewide {st.name} figures, so treat it as a
+          starting point rather than a {c.name} quote: pick the service, add extras like an
+          urn or certificates, and apply a tradition or veteran benefits to price a full
+          plan. The metro table above stays the tighter estimate for {c.name} itself.
+        </p>
+        <Calculator defaultState={st.abbr} compact />
 
         <div className="context-grid">
           <div className="context-box">
@@ -293,6 +352,8 @@ export default async function CityPage({
           <li><Link href="/guides/funeral-rule-rights/">Our plain-English guide to the Funeral Rule</Link></li>
           <li><Link href="/guides/compare-funeral-homes/">How to compare funeral homes</Link> before you commit to one.</li>
         </ul>
+
+        <NextSteps heading={`Keep planning in ${c.name}`} items={nextSteps} />
 
         <h2>Frequently asked questions</h2>
         <div className="faq">

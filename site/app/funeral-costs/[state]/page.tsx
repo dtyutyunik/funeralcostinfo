@@ -9,8 +9,22 @@ import {
 } from '../../../lib/data';
 import Link from 'next/link';
 import NationalStats from '../../../components/NationalStats';
+import Calculator from '../../../components/Calculator';
+import NextSteps, { type NextStepItem } from '../../../components/NextSteps';
 import { citiesForState } from '../../../lib/cities';
 import { getRights } from '../../../lib/rights';
+
+// State-specific guides surfaced in the end-of-page next-step module (Sprint 2 v2
+// Queue D, 2026-11-26). Nevada's guide is also linked inside its dedicated cremation
+// block mid-page; the module repeats it once as navigation so any state with a
+// dedicated guide surfaces it in the same closing place.
+const STATE_GUIDES: Record<string, { href: string; label: string; blurb: string }> = {
+  nevada: {
+    href: '/guides/nevada-cremation-cost/',
+    label: 'Nevada cremation cost guide',
+    blurb: 'the two cremation options, what each one includes, and how to compare Nevada providers',
+  },
+};
 
 interface StateNote {
   boardName: string;
@@ -1491,6 +1505,34 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   );
   const stateCities = citiesForState(state);
 
+  // End-of-page next-step module (Queue D, 2026-11-26): city pages for this state,
+  // the state's dedicated guide where one exists, two evergreen guides not already
+  // in the "Compare with the national picture" list, and the inline calculator anchor.
+  const stateGuide = STATE_GUIDES[state];
+  const nextSteps: NextStepItem[] = [
+    ...stateCities.map((c) => ({
+      href: `/funeral-costs/${state}/${c.slug}/`,
+      label: `Funeral costs in ${c.name}`,
+      blurb: `metro-level estimates for ${c.name}, modeled from the BEA metro price parity rather than the statewide figure`,
+    })),
+    ...(stateGuide ? [stateGuide] : []),
+    {
+      href: '/guides/cremation-cost-2026/',
+      label: 'Cremation cost guide',
+      blurb: 'cremation with a service vs. direct cremation: what each includes and what drives the price',
+    },
+    {
+      href: '/guides/compare-funeral-homes/',
+      label: 'How to compare funeral homes',
+      blurb: 'your Funeral Rule rights, how to compare General Price Lists line by line, and red flags',
+    },
+    {
+      href: '#calculator',
+      label: `Run your own ${st.name} estimate`,
+      blurb: `the calculator on this page is preset to ${st.name}; adjust the service, add-ons, tradition, or veteran benefits and see the total update`,
+    },
+  ];
+
   const rights = getRights(state);
   const spotFaqs = spot ? spot.faqs(st) : [];
   const spotCovers = (kw: string) =>
@@ -1624,6 +1666,14 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             );
           })}
         </div>
+
+        <p>
+          The table above is the statewide model for a typical arrangement. To price a specific
+          plan, use the calculator: it starts from {st.name}&apos;s figures and lets you change
+          the service, add an urn, certificates, or other extras, and apply a religious tradition
+          or veteran benefits.
+        </p>
+        <Calculator defaultState={st.abbr} compact />
 
         <div className="context-grid">
           <div className="context-box">
@@ -1884,6 +1934,8 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
             </p>
           </>
         )}
+
+        <NextSteps heading={`Keep planning in ${st.name}`} items={nextSteps} />
 
         <h2>Frequently asked questions</h2>
         <div className="faq">
