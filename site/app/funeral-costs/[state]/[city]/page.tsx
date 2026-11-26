@@ -91,6 +91,11 @@ const CITY_META_OVERRIDES: Record<string, { title: string; description: string }
     description:
       `Average funeral cost in Tampa in 2026: traditional burial $9,220, cremation with a service $6,980, direct cremation $3,060. Modeled estimates, cheapest options, and how Tampa compares with the Florida average.`,
   },
+  'florida/orlando': {
+    title: `Funeral Costs in Orlando 2026: Burial $9,270, Cremation $3,070`,
+    description:
+      `Average funeral cost in Orlando in 2026: traditional burial $9,270, cremation with a service $7,020, direct cremation $3,070. Modeled estimates, cheapest options, and how Orlando compares with the Florida average.`,
+  },
 };
 
 export async function generateMetadata({

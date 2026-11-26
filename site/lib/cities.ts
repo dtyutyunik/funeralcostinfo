@@ -581,6 +581,39 @@ const SEEDS: CitySeed[] = [
       },
     ],
   },
+  {
+    slug: 'orlando',
+    name: 'Orlando',
+    stateName: 'Florida',
+    metroName: 'Orlando-Kissimmee-Sanford, FL',
+    geoFips: '36740',
+    rppAllItems: 101.418,
+    published: null,
+    context: [
+      'Orlando is one of the few metros in this set that prices below its state: the metro price level (BEA 2024 RPP 101.4) sits just above the national average and about 2 percent below the Florida state figure of 103.4, so modeled Orlando estimates run slightly under the state page.',
+      'The metro spans four counties (Lake, Orange, Osceola and Seminole), so an Orlando family can compare providers in Kissimmee, Sanford and Winter Park as well as in Orlando itself.',
+      'Orlando\'s oldest cemetery is Greenwood Cemetery, established in 1880 as Orlando Cemetery and renamed Greenwood in 1915. It now covers about 86 acres south of downtown and is owned and operated by the City of Orlando.',
+    ],
+    caveats: [
+      'No published metro-level price table covers Orlando yet, so the modeled estimates on this page carry more weight than in cities with survey data. Collecting three local General Price Lists matters more here, not less.',
+      'Florida requires cremation to wait at least 48 hours after death, with written authorization from the legally authorized person (Fla. Stat. 872.03), and a body held over 24 hours must be refrigerated at 40 degrees Fahrenheit or below or embalmed (Fla. Stat. 497.386).',
+      'Veterans have a separate option northwest of the metro: Florida National Cemetery in Bushnell, in Sumter County, lists burial space as open for casketed and cremated remains, and eligible veterans are interred there at no cost to the family.',
+    ],
+    cityFaqs: [
+      {
+        q: 'Can ashes be scattered at Walt Disney World?',
+        a: 'No. Scattering cremated remains on Disney property is prohibited and unlawful, and Disney has said guests who attempt it will be escorted off property. The Wall Street Journal reported in 2018 that it still happens about once a month, most often at the Haunted Mansion, and staff vacuum the remains up. Legal alternatives are scattering at sea at least 3 nautical miles from shore with a report to the EPA within 30 days, or on private land with the landowner\'s permission.',
+      },
+      {
+        q: 'Where can Orlando families compare funeral home prices before choosing?',
+        a: 'There is no current local survey table. The local consumer chapter, Funeral Consumers Alliance of Greater Orlando, was administratively dissolved in 2015, so no Orlando price survey is published. The modeled figures on this page are the planning anchor, and the fastest check is still collecting two or three itemized General Price Lists by phone, which the FTC Funeral Rule entitles you to.',
+      },
+      {
+        q: 'Are veterans buried for free anywhere near Orlando?',
+        a: 'Yes, at Florida National Cemetery in Bushnell, in Sumter County northwest of Orlando. The VA lists burial space there as open for casketed and cremated remains, and burial in a VA national cemetery is open to veterans who met a minimum active duty service requirement and were discharged under conditions other than dishonorable, plus eligible spouses and dependents. The VA provides the gravesite or niche, opening and closing, a government headstone or marker, and perpetual care at no cost to the family. Our veterans burial benefits guide walks through eligibility.',
+      },
+    ],
+  },
 ];
 
 export const CITIES: CityData[] = SEEDS.map((s) => ({

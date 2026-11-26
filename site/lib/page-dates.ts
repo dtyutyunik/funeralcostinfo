@@ -347,10 +347,10 @@ export const PAGE_DATES: Record<string, { published: string; updated: string }> 
   },
   "state-template": {
     "published": "2026-09-23",
-    "updated": "2026-11-25"
+    "updated": "2026-11-26"
   },
   "city-template": {
     "published": "2026-10-31",
-    "updated": "2026-11-24"
+    "updated": "2026-11-26"
   }
 };
