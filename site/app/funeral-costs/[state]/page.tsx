@@ -548,15 +548,15 @@ const STATE_NOTES: Record<string, StateNote> = {
   ohio: {
     boardName: 'State of Ohio Board of Embalmers and Funeral Directors',
     boardUrl: 'https://funeral.ohio.gov/',
-    fcaSurveyName: null,
-    fcaSurveyUrl: null,
+    fcaSurveyName: 'Cleveland Memorial Society',
+    fcaSurveyUrl: 'https://clevememorialsociety.org/price-survey-overview',
     context: [
       'Ohio sits well below the national average price level (RPP 92.8).',
       'Ohio charges a $10 fee on each preneed funeral contract sold (Ohio Revised Code 4717.07(A)(14)), which funds the state Preneed Recovery Fund (ORC 4717.41) — a safety net that reimburses families who paid for preneed services and suffered loss through a seller\u2019s malfeasance, default, or insolvency.',
     ],
     caveats: [
       'The board restored an Indigent Burial and Cremation Support Program for state fiscal year 2025 (board minutes, February 2025) — a rare state-level safety net for families who cannot afford burial or cremation; check current program details with the board.',
-      'No public FCA chapter price survey for Ohio qualifies as a link here — the FCA of Central Ohio\u2019s area GPL summary is member-only — so request itemized GPLs from providers directly.',
+      'The Cleveland Memorial Society publishes a 2023 price survey of Northeast Ohio funeral homes, linked under Official resources below. The FCA of Central Ohio\u2019s area GPL summary is member-only, so for the Columbus area request itemized GPLs from providers directly.',
     ],
   },
   oklahoma: {
@@ -1145,9 +1145,13 @@ const STATE_SPOTLIGHT: Record<string, StateSpotlight> = {
     spread: `Ohio sits well below the national average price level (RPP 92.8). Columbus, Cleveland and Cincinnati metro quotes typically run above the state modeled figure, while rural counties run below it; provider-to-provider variation inside a metro is typically larger than the state-to-state difference.`,
     rule: `Ohio bars cremation until 24 hours have passed since the time of death shown on the completed death certificate (Ohio Rev. Code 4717.23). The only exception is when a local board of health orders earlier cremation because the person died of a virulent communicable disease. Cremation also needs a burial permit authorizing cremation and a cremation authorization form signed by the authorizing agent (ORC 4717.24), who is the person holding the right of disposition under ORC 2108.70 or 2108.81.`,
     help: `Ohio law requires the township or municipal corporation where a person resided or died to bury or cremate an indigent person (ORC 9.15), and the State Board of Embalmers and Funeral Directors reimburses local governments up to $1,000 for an adult and $750 for a child through its Indigent Burial and Cremation Support Program ($250,000 appropriated for each of fiscal years 2026 and 2027, first come first served). Start with the township or municipality where the death occurred; the funeral director must handle the arrangements. Families should also check Social Security's $255 lump-sum death payment and any VA burial benefits.`,
-    benchmark: null,
+    benchmark: `An independent regional benchmark exists, plus published provider prices. The Cleveland Memorial Society, the Funeral Consumers Alliance affiliate for Cleveland and surrounding counties, collected General Price Lists from 40 to 60 Northeast Ohio funeral homes for its 2023 survey and found direct cremation ranging from $725 to $4,373 and immediate burial from $995 to $4,985. Current published General Price Lists agree with that spread. Direct cremation runs from $799 at W.E. Lusain Funeral Home in Dayton (General Price List effective November 1, 2025) to $3,645 at Schoedinger East in Columbus (Dignity Memorial, General Price List effective October 22, 2026, with a container provided by the purchaser). In between, Evans Funeral Home in Norwalk lists a complete direct cremation package at $2,395 on its General Price List effective June 1, 2026. Immediate burial runs from $2,555 in Norwalk to $3,715 in Columbus. Our modeled $2,810 sits inside the published range, above the specialist providers and below the Columbus chain price, though the low end sits well below the modeled range floor of $2,390. The spread is mostly the provider and the place: a Columbus chain location prices well above small-town and specialist providers. Do not average the three homes. Confirm any figure against the provider's current General Price List.`,
     save: `Compare General Price Lists from at least three providers, including a direct-cremation specialist. Ohio does not require embalming, and the board's preneed recovery fund (ORC 4717.41, funded by a $10 fee on each preneed contract) is a safety net if a preneed seller defaults, but it does not pay for a new arrangement, so compare prices before signing anything.`,
     faqs: (st) => [
+      {
+        q: `What is the cheapest cremation option in Ohio?`,
+        a: `Direct cremation, with no viewing or ceremony. Our modeled 2026 estimate is ${fmt(st.estimates.direct_cremation.point)} (illustrative range ${fmtRange(st.estimates.direct_cremation)}), but published prices run lower at specialist providers: W.E. Lusain Funeral Home in Dayton lists direct cremation at $799 on its General Price List effective November 1, 2025, and Evans Funeral Home in Norwalk lists a complete direct cremation package at $2,395 on its June 1, 2026 price list. At the other end, Schoedinger East in Columbus lists direct cremation from $3,645 on its October 22, 2026 General Price List. The gap is mostly the provider: specialists and small-town homes price far below the large chains. Ohio's Indigent Burial and Cremation Support Program reimburses the local government up to $1,000 toward an adult's burial or cremation, so ask the township or municipality where the death occurred whether it handles applications.`,
+      },
       {
         q: `How long do you have to wait before cremation in Ohio?`,
         a: `At least 24 hours after the time of death shown on the completed, non-provisional death certificate (Ohio Rev. Code 4717.23). The only exception is an order from the local board of health for a virulent communicable disease. A burial permit authorizing cremation and the signed cremation authorization form must also be in place.`,
