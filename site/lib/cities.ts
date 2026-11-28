@@ -614,6 +614,49 @@ const SEEDS: CitySeed[] = [
       },
     ],
   },
+  {
+    slug: 'atlanta',
+    name: 'Atlanta',
+    stateName: 'Georgia',
+    metroName: 'Atlanta-Sandy Springs-Roswell, GA',
+    geoFips: '12060',
+    rppAllItems: 100.058,
+    published: {
+      best: '$795',
+      highest: '$3,740',
+      average: null,
+      source: 'DFS Memorials 2026',
+      note: 'Published direct cremation prices across the Atlanta metro, from the DFS 2026 table already cited in the funeral costs by city guide.',
+    },
+    context: [
+      'Atlanta is the rare metro in this set that prices almost exactly at the national average: the metro price level (BEA 2024 RPP 100.1) sits just above 100 and about 4 percent above the Georgia state figure of 96.3, so modeled Atlanta estimates run modestly above the state page.',
+      'The metro spans 29 counties, from Fulton and DeKalb out to Forsyth, Cherokee and Henry, so an Atlanta family can compare providers across the whole north Georgia market, not just inside the perimeter.',
+      'Atlanta\'s anchor cemetery is Oakland Cemetery, opened in 1850 as the city\'s first public burial ground and now 88 acres in southeast Atlanta, holding more than 70,000 interments including author Margaret Mitchell and Mayor Maynard Jackson (City of Atlanta).',
+    ],
+    caveats: [
+      'Georgia sets no waiting period in hours before cremation. A disposition permit from the local registrar (O.C.G.A. 31-10-20), certification of the cause of death, and authorization from the person holding the right of disposition (O.C.G.A. 31-21-7) set the pace instead, and the death certificate must be filed within 72 hours.',
+      'The Funeral Consumers Alliance of Georgia publishes a provider-level pricing comparison for direct cremation and immediate burial. It is the best independent local comparison, but confirm any listed figure against the provider\'s current General Price List, since listed prices change.',
+      'Veterans have a separate option north of the metro: Georgia National Cemetery in Canton lists burial space as open for casketed and cremated remains, and eligible veterans are interred there at no cost to the family.',
+    ],
+    cityFaqs: [
+      {
+        q: 'How much does a funeral cost in Atlanta?',
+        a: 'Our modeled 2026 estimate for a traditional funeral with viewing and burial in the Atlanta metro is $9,150 (range $7,780 to $10,520), against $8,800 on the Georgia state page and $9,140 nationally. Direct cremation is modeled at $3,030. Atlanta sits almost exactly at the national average, so the modeled figures here are a fair national planning anchor as well as a local one.',
+      },
+      {
+        q: 'What is the cheapest cremation option in Atlanta?',
+        a: 'Direct cremation through a cremation specialist. The best published metro price is $795 (DFS Memorials 2026), against our modeled midpoint of $3,030 and a published top end of $3,740. Specialists keep prices down by skipping the full-service facility; the cremation itself, the paperwork and the legal requirements are the same.',
+      },
+      {
+        q: 'Where can Atlanta families compare funeral home prices before choosing?',
+        a: 'Start with the Funeral Consumers Alliance of Georgia, which publishes a provider-level pricing comparison for direct cremation and immediate burial across Georgia funeral homes. It is the best independent local comparison available, and the Georgia state page links it under Official resources. Confirm any listed figure against the provider\'s current General Price List, which the FTC Funeral Rule entitles you to receive, and collect two or three by phone before signing.',
+      },
+      {
+        q: 'Are veterans buried for free anywhere near Atlanta?',
+        a: 'Yes, at Georgia National Cemetery in Canton, in Cherokee County north of the metro. The VA lists burial space there as open for casketed and cremated remains, and burial in a VA national cemetery is open to veterans who met a minimum active duty service requirement and were discharged under conditions other than dishonorable, plus eligible spouses and dependents. The VA provides the gravesite or niche, opening and closing, a government headstone or marker, and perpetual care at no cost to the family. Our veterans burial benefits guide walks through eligibility.',
+      },
+    ],
+  },
 ];
 
 export const CITIES: CityData[] = SEEDS.map((s) => ({

@@ -96,6 +96,11 @@ const CITY_META_OVERRIDES: Record<string, { title: string; description: string }
     description:
       `Average funeral cost in Orlando in 2026: traditional burial $9,270, cremation with a service $7,020, direct cremation $3,070. Modeled estimates, cheapest options, and how Orlando compares with the Florida average.`,
   },
+  'georgia/atlanta': {
+    title: `Funeral Costs in Atlanta 2026: Burial $9,150, Cremation $3,030`,
+    description:
+      `Average funeral cost in Atlanta in 2026: traditional burial $9,150, cremation with a service $6,920, direct cremation $3,030. Published local prices, cheapest options, and how Atlanta compares with the Georgia average.`,
+  },
 };
 
 export async function generateMetadata({
